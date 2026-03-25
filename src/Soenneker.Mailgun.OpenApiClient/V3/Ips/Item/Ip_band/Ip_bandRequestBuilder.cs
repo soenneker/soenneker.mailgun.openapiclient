@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Mailgun.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,22 +36,33 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Ip_band
         /// <summary>
         /// The `Dedicated IP Bands` feature must be enabled for the account.The IP must be a dedicated one belonging to the account.
         /// </summary>
-        /// <returns>A <see cref="string"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 409 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<string?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<string> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The `Dedicated IP Bands` feature must be enabled for the account.The IP must be a dedicated one belonging to the account.

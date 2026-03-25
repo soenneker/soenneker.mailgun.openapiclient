@@ -9,43 +9,45 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Github_com_mailgun_tower_api_account_Item : IAdditionalDataHolder, IParsable
+    public partial class Github_com_mailgun_tower_api_account_getDocResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>domain name</summary>
+        /// <summary>whether the IP is dedicated or shared</summary>
+        public bool? Dedicated { get; set; }
+        /// <summary>IP address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get; set; }
+        public string? Ip { get; set; }
 #nullable restore
 #else
-        public string Domain { get; set; }
+        public string Ip { get; set; }
 #endif
-        /// <summary>list of IPs assigned to the domain</summary>
+        /// <summary>reverse DNS of the IP address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Ips { get; set; }
+        public string? Rdns { get; set; }
 #nullable restore
 #else
-        public List<string> Ips { get; set; }
+        public string Rdns { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_Item"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_getDocResponse"/> and sets the default values.
         /// </summary>
-        public Github_com_mailgun_tower_api_account_Item()
+        public Github_com_mailgun_tower_api_account_getDocResponse()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_Item"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_getDocResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_Item CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_getDocResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_Item();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_getDocResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +57,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "domain", n => { Domain = n.GetStringValue(); } },
-                { "ips", n => { Ips = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "dedicated", n => { Dedicated = n.GetBoolValue(); } },
+                { "ip", n => { Ip = n.GetStringValue(); } },
+                { "rdns", n => { Rdns = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +69,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("domain", Domain);
-            writer.WriteCollectionOfPrimitiveValues<string>("ips", Ips);
+            writer.WriteBoolValue("dedicated", Dedicated);
+            writer.WriteStringValue("ip", Ip);
+            writer.WriteStringValue("rdns", Rdns);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

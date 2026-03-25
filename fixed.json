@@ -4070,12 +4070,12 @@
                     "value": {
                       "items": [
                         {
-                          "pool_id": "69a9d2bf36ff35c139e0fc62",
-                          "subaccount_id": "69a9d2bf36ff35c139e0fc63"
+                          "pool_id": "69c15db8a432c65972c789db",
+                          "subaccount_id": "69c15db8a432c65972c789dc"
                         },
                         {
-                          "pool_id": "69a9d2bf36ff35c139e0fc64",
-                          "subaccount_id": "69a9d2bf36ff35c139e0fc65"
+                          "pool_id": "69c15db8a432c65972c789dd",
+                          "subaccount_id": "69c15db8a432c65972c789de"
                         }
                       ],
                       "total_count": 2
@@ -4406,8 +4406,8 @@
                     "value": {
                       "items": [
                         {
-                          "account_id": "69a9d2bf36ff35c139e0fc54",
-                          "id": "69a9d2bf36ff35c139e0fc53",
+                          "account_id": "69c15db8a432c65972c789cd",
+                          "id": "69c15db8a432c65972c789cc",
                           "name": "example.com"
                         }
                       ]
@@ -4503,7 +4503,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/github_com_mailgun_tower_api_account_list_ips_docResponse"
                 },
                 "examples": {
                   "Example": {
@@ -4563,7 +4563,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/github_com_mailgun_tower_api_account_getDocResponse"
                 },
                 "examples": {
                   "Example": {
@@ -4573,6 +4573,16 @@
                       "rdns": "ip1-2-3-4.mailgun.net"
                     }
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
                 }
               }
             }
@@ -4803,12 +4813,80 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
                 },
                 "examples": {
                   "Example": {
                     "value": {
                       "message": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "error": "invalid parameters"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "A 403 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "error": "\u0022Dedicated IP Bands\u0022 feature is not enabled for this account"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "error": "IP not found or doesn\u0027t belong to the account"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "A 409 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "error": "IP is already locked"
                     }
                   }
                 }
@@ -4969,7 +5047,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/github_com_mailgun_tower_api_account_list_ips_DetailedIPsResponseDoc"
                 },
                 "examples": {
                   "Example": {
@@ -4977,8 +5055,8 @@
                       "items": [
                         {
                           "address": "1.0.0.1",
-                          "parent_account_id": "69a9d2bf36ff35c139e0fc55",
-                          "account_id": "69a9d2bf36ff35c139e0fc55",
+                          "parent_account_id": "69c15db8a432c65972c789ce",
+                          "account_id": "69c15db8a432c65972c789ce",
                           "pool_ids": [],
                           "dedicated": true,
                           "created_at": "2026-02-09T12:30:00Z",
@@ -4987,10 +5065,10 @@
                         },
                         {
                           "address": "1.0.0.2",
-                          "parent_account_id": "69a9d2bf36ff35c139e0fc55",
-                          "account_id": "69a9d2bf36ff35c139e0fc55",
+                          "parent_account_id": "69c15db8a432c65972c789ce",
+                          "account_id": "69c15db8a432c65972c789ce",
                           "pool_ids": [
-                            "69a9d2bf36ff35c139e0fc58"
+                            "69c15db8a432c65972c789d1"
                           ],
                           "dedicated": true,
                           "created_at": "2026-02-09T12:30:00Z",
@@ -4999,8 +5077,8 @@
                         },
                         {
                           "address": "1.0.0.2",
-                          "parent_account_id": "69a9d2bf36ff35c139e0fc55",
-                          "account_id": "69a9d2bf36ff35c139e0fc5a",
+                          "parent_account_id": "69c15db8a432c65972c789ce",
+                          "account_id": "69c15db8a432c65972c789d3",
                           "pool_ids": [],
                           "dedicated": true,
                           "created_at": "2026-02-09T12:30:00Z",
@@ -5011,6 +5089,26 @@
                       "total_count": 3
                     }
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "A 403 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
                 }
               }
             }
@@ -5045,6 +5143,10 @@
                 "examples": {
                   "Example": {
                     "value": {
+                      "good_reputation": [
+                        "1.0.0.1",
+                        "1.0.0.2"
+                      ],
                       "poor_reputation": [
                         "1.0.0.3"
                       ],
@@ -5053,9 +5155,9 @@
                       ],
                       "pools": [
                         {
-                          "account_id": "69a9d2bf36ff35c139e0fc5b",
+                          "account_id": "69c15db8a432c65972c789d4",
                           "enabled": true,
-                          "id": "69a9d2bf36ff35c139e0fc5c",
+                          "id": "69c15db8a432c65972c789d5",
                           "ips": [
                             "1.0.0.1",
                             "1.0.0.2"
@@ -5063,27 +5165,23 @@
                           "name": "dynamic_good"
                         },
                         {
-                          "account_id": "69a9d2bf36ff35c139e0fc5b",
+                          "account_id": "69c15db8a432c65972c789d4",
                           "enabled": true,
-                          "id": "69a9d2bf36ff35c139e0fc5d",
+                          "id": "69c15db8a432c65972c789d6",
                           "ips": [
                             "1.0.0.3"
                           ],
                           "name": "dynamic_poor"
                         },
                         {
-                          "account_id": "69a9d2bf36ff35c139e0fc5b",
+                          "account_id": "69c15db8a432c65972c789d4",
                           "enabled": true,
-                          "id": "69a9d2bf36ff35c139e0fc5e",
+                          "id": "69c15db8a432c65972c789d7",
                           "ips": [
                             "1.0.0.4"
                           ],
                           "name": "dynamic_new"
                         }
-                      ],
-                      "good_reputation": [
-                        "1.0.0.1",
-                        "1.0.0.2"
                       ]
                     }
                   }
@@ -5127,15 +5225,15 @@
                 "examples": {
                   "Example": {
                     "value": {
+                      "good_reputation": [
+                        "1.0.0.1",
+                        "1.0.0.2"
+                      ],
                       "poor_reputation": [
                         "1.0.0.3"
                       ],
                       "new_senders": [
                         "1.0.0.4"
-                      ],
-                      "good_reputation": [
-                        "1.0.0.1",
-                        "1.0.0.2"
                       ]
                     }
                   }
@@ -5303,7 +5401,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/github_com_mailgun_tower_api_ip_pools_list_successResponse"
                 },
                 "examples": {
                   "Example": {
@@ -5322,6 +5420,23 @@
                         }
                       ],
                       "message": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github_com_mailgun_scaffold_httpapi_GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "description of the error"
                     }
                   }
                 }
@@ -5602,20 +5717,20 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "paging": {
-                        "first": "http://api.mailgun.net/v3/ip_pools/69a9d2bf36ff35c139e0fc5f/domains?page=eyJj...",
-                        "next": "http://api.mailgun.net/v3/ip_pools/69a9d2bf36ff35c139e0fc5f/domains?page=eyJj..."
-                      },
                       "domains": [
                         {
-                          "id": "69a9d2bf36ff35c139e0fc60",
+                          "id": "69c15db8a432c65972c789d9",
                           "name": "example1.com"
                         },
                         {
-                          "id": "69a9d2bf36ff35c139e0fc61",
+                          "id": "69c15db8a432c65972c789da",
                           "name": "example2.com"
                         }
-                      ]
+                      ],
+                      "paging": {
+                        "first": "http://api.mailgun.net/v3/ip_pools/69c15db8a432c65972c789d8/domains?page=eyJj...",
+                        "next": "http://api.mailgun.net/v3/ip_pools/69c15db8a432c65972c789d8/domains?page=eyJj..."
+                      }
                     }
                   }
                 }
@@ -22006,6 +22121,91 @@
           }
         }
       },
+      "github_com_mailgun_tower_api_account_list_ips_detailsDocResponse": {
+        "required": [
+          "ip",
+          "is_on_warmup",
+          "dedicated",
+          "enabled"
+        ],
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "description": "the IP address"
+          },
+          "is_on_warmup": {
+            "type": "boolean",
+            "description": "whether the IP is on warmup"
+          },
+          "dedicated": {
+            "type": "boolean",
+            "description": "whether the IP is dedicated"
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "whether the IP is enabled"
+          }
+        }
+      },
+      "github_com_mailgun_tower_api_account_list_ips_docResponse": {
+        "required": [
+          "details",
+          "items",
+          "total_count"
+        ],
+        "type": "object",
+        "properties": {
+          "assignable_to_pools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "list of IPs that can be assigned to dedicated IP pools."
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github_com_mailgun_tower_api_account_list_ips_detailsDocResponse"
+            },
+            "description": "list of detailed information for each IP"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "list of IPs"
+          },
+          "total_count": {
+            "type": "integer",
+            "description": "total number of IPs for the given query",
+            "format": "int32"
+          }
+        }
+      },
+      "github_com_mailgun_tower_api_account_getDocResponse": {
+        "required": [
+          "dedicated",
+          "ip",
+          "rdns"
+        ],
+        "type": "object",
+        "properties": {
+          "dedicated": {
+            "type": "boolean",
+            "description": "whether the IP is dedicated or shared"
+          },
+          "ip": {
+            "type": "string",
+            "description": "IP address"
+          },
+          "rdns": {
+            "type": "string",
+            "description": "reverse DNS of the IP address"
+          }
+        }
+      },
       "github_com_mailgun_tower_api_account_Item": {
         "required": [
           "ips",
@@ -22017,10 +22217,12 @@
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "description": "list of IPs assigned to the domain"
           },
           "domain": {
-            "type": "string"
+            "type": "string",
+            "description": "domain name"
           }
         }
       },
@@ -22035,10 +22237,12 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/github_com_mailgun_tower_api_account_Item"
-            }
+            },
+            "description": "list of domains with the IP assigned, along with the IPs assigned to each domain"
           },
           "total_count": {
             "type": "integer",
+            "description": "total number of domains with the IP assigned for the given query",
             "format": "int32"
           }
         }
@@ -22052,6 +22256,79 @@
           "ip_band": {
             "type": "string",
             "description": "Dedicated IP band to place the IP address into"
+          }
+        }
+      },
+      "github_com_mailgun_tower_api_account_list_ips_AccountIPDoc": {
+        "required": [
+          "address",
+          "parent_account_id",
+          "account_id",
+          "pool_ids",
+          "dedicated",
+          "pool_last_modified_at",
+          "domains_last_modified_at"
+        ],
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "the IP address"
+          },
+          "parent_account_id": {
+            "type": "string",
+            "description": "the id of the parent account"
+          },
+          "account_id": {
+            "type": "string",
+            "description": "the id of the account"
+          },
+          "pool_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "list of pool ids"
+          },
+          "dedicated": {
+            "type": "boolean",
+            "description": "whether the IP is dedicated"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "the time the IP was created",
+            "format": "date-time"
+          },
+          "pool_last_modified_at": {
+            "type": "string",
+            "description": "the last time the pool was modified",
+            "format": "date-time"
+          },
+          "domains_last_modified_at": {
+            "type": "string",
+            "description": "the last time the domains were modified",
+            "format": "date-time"
+          }
+        }
+      },
+      "github_com_mailgun_tower_api_account_list_ips_DetailedIPsResponseDoc": {
+        "required": [
+          "items",
+          "total_count"
+        ],
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github_com_mailgun_tower_api_account_list_ips_AccountIPDoc"
+            },
+            "description": "list of IPs belonging to the account and subaccounts"
+          },
+          "total_count": {
+            "type": "integer",
+            "description": "total number of account IPs",
+            "format": "int64"
           }
         }
       },
@@ -22097,6 +22374,66 @@
           "remove_ip": {
             "type": "string",
             "description": "IP(s) to remove from the pool"
+          }
+        }
+      },
+      "github_com_mailgun_tower_api_ip_pools_list_DIPPDetailsResponse": {
+        "required": [
+          "description",
+          "ips",
+          "is_inherited",
+          "is_linked",
+          "name",
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "long description of the dedicated IP pool"
+          },
+          "ips": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "list of IPs in the dedicated IP pool"
+          },
+          "is_inherited": {
+            "type": "boolean",
+            "description": "indicates if the IP pool is inherited"
+          },
+          "is_linked": {
+            "type": "boolean",
+            "description": "indicates if the IP pool is linked to any domains"
+          },
+          "name": {
+            "type": "string",
+            "description": "short name of the dedicated IP pool"
+          },
+          "pool_id": {
+            "type": "string",
+            "description": "the id of the dedicated IP pool"
+          }
+        }
+      },
+      "github_com_mailgun_tower_api_ip_pools_list_successResponse": {
+        "required": [
+          "ip_pools",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "ip_pools": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github_com_mailgun_tower_api_ip_pools_list_DIPPDetailsResponse"
+            },
+            "description": "list of dedicated IP pools of the account"
+          },
+          "message": {
+            "type": "string",
+            "description": "success if the request was successful, otherwise contains a description of the error"
           }
         }
       },
@@ -29344,31 +29681,16 @@
       "POST_v3_domain_name_messages_mime_401": {
         "type": "string"
       },
-      "GET_v3_ips_200": {
-        "type": "string"
-      },
-      "GET_v3_ips_ip_200": {
-        "type": "string"
-      },
-      "POST_v3_ips_addr_ip_band_200": {
-        "type": "string"
-      },
       "GET_v3_ips_request_new_200": {
         "type": "string"
       },
       "POST_v3_ips_request_new_200": {
         "type": "string"
       },
-      "GET_v3_ips_details_all_200": {
-        "type": "string"
-      },
       "POST_v3_dynamic_pools_pool_name_ip_200": {
         "type": "string"
       },
       "PATCH_v3_dynamic_pools_pool_name_200": {
-        "type": "string"
-      },
-      "GET_v3_ip_pools_200": {
         "type": "string"
       },
       "POST_v3_ip_pools_200": {

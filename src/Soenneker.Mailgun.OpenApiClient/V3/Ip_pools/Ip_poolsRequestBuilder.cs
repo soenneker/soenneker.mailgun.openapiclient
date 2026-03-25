@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Mailgun.OpenApiClient.Models;
 using Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item;
 using System.Collections.Generic;
 using System.IO;
@@ -48,20 +49,25 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools
         /// <summary>
         /// #### DescriptionLists all dedicated IP pools of the account. For each poolreturns its basic properties (name, description, the list of IPs)and indicates whether the pool is linked to any domains andwhether it&apos;s an inherited one.
         /// </summary>
-        /// <returns>A <see cref="string"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_ip_pools_list_successResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<string?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_ip_pools_list_successResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<string> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_ip_pools_list_successResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_ip_pools_list_successResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_ip_pools_list_successResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The account must have &apos;DIPPs&apos; feature enabled.Returns the id of the newly created DIPP.

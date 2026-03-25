@@ -14,7 +14,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The items property</summary>
+        /// <summary>list of domains with the IP assigned, along with the IPs assigned to each domain</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_Item>? Items { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_Item> Items { get; set; }
 #endif
-        /// <summary>The total_count property</summary>
+        /// <summary>total number of domains with the IP assigned for the given query</summary>
         public int? TotalCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_tower_api_account_domainsResponse"/> and sets the default values.
