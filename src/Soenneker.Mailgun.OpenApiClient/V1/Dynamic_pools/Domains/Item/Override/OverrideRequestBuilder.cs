@@ -41,34 +41,15 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideDeleteResponse?> DeleteAsOverrideDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideDeleteResponse> DeleteAsOverrideDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideDeleteResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideDeleteResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Removes any dynamic IP pool override for a domain. The domain&apos;s pool assignment will be managed by health checks.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use DeleteAsOverrideDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Overrides a domain&apos;s dynamic IP pool assignment. A domain&apos;s pool will not be updated by health checks while an override is present.
@@ -80,11 +61,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_InvalidParameterError">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverridePutResponse?> PutAsOverridePutResponseAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverridePutResponse?> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverridePutResponse> PutAsOverridePutResponseAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverridePutResponse> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -94,32 +75,6 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_InvalidParameterError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverridePutResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverridePutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Overrides a domain&apos;s dynamic IP pool assignment. A domain&apos;s pool will not be updated by health checks while an override is present.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_InvalidParameterError">When receiving a 400 status code</exception>
-        [Obsolete("This method is obsolete. Use PutAsOverridePutResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse?> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_InvalidParameterError.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes any dynamic IP pool override for a domain. The domain&apos;s pool assignment will be managed by health checks.
@@ -170,22 +125,6 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override
         public global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Override.OverrideRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class OverrideRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class OverrideRequestBuilderPutRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }
