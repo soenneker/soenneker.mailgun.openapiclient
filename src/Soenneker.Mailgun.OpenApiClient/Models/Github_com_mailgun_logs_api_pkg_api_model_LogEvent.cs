@@ -15,10 +15,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_account? Account { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Account? Account { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_account Account { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Account Account { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -41,10 +41,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The clientInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_clientInfo? ClientInfo { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_ClientInfo? ClientInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_clientInfo ClientInfo { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_ClientInfo ClientInfo { get; set; }
 #endif
         /// <summary>The deliveredAt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,26 +57,26 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The deliveryStatus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_deliveryStatus? DeliveryStatus { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_DeliveryStatus? DeliveryStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_deliveryStatus DeliveryStatus { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_DeliveryStatus DeliveryStatus { get; set; }
 #endif
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_domain? Domain { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Domain? Domain { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_domain Domain { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Domain Domain { get; set; }
 #endif
         /// <summary>The envelope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_envelope? Envelope { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope? Envelope { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_envelope Envelope { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope Envelope { get; set; }
 #endif
         /// <summary>The event property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,18 +89,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The flags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_flags? Flags { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Flags? Flags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_flags Flags { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Flags Flags { get; set; }
 #endif
         /// <summary>The geolocation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_geolocation? Geolocation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_GeoLocation? Geolocation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_geolocation Geolocation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_GeoLocation Geolocation { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,18 +137,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The mailingList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_mailingList? MailingList { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MailingList? MailingList { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_mailingList MailingList { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MailingList MailingList { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_message? Message { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Message? Message { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_message Message { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Message Message { get; set; }
 #endif
         /// <summary>The method property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -209,10 +209,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The routes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_routes? Routes { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Routes? Routes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_routes Routes { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Routes Routes { get; set; }
 #endif
         /// <summary>The severity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,10 +225,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The storage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_storage? Storage { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Storage? Storage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_storage Storage { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Storage Storage { get; set; }
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -241,10 +241,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_template? Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Template? Template { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_template Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Template Template { get; set; }
 #endif
         /// <summary>The Timestamp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -295,23 +295,23 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_account>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_account.CreateFromDiscriminatorValue); } },
+                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Account>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Account.CreateFromDiscriminatorValue); } },
                 { "api-key-id", n => { ApiKeyId = n.GetStringValue(); } },
                 { "campaigns", n => { Campaigns = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Campaign>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Campaign.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "client-info", n => { ClientInfo = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_clientInfo>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_clientInfo.CreateFromDiscriminatorValue); } },
+                { "client-info", n => { ClientInfo = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_ClientInfo>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_ClientInfo.CreateFromDiscriminatorValue); } },
                 { "delivered-at", n => { DeliveredAt = n.GetStringValue(); } },
-                { "delivery-status", n => { DeliveryStatus = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_deliveryStatus>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_deliveryStatus.CreateFromDiscriminatorValue); } },
-                { "domain", n => { Domain = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_domain>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_domain.CreateFromDiscriminatorValue); } },
-                { "envelope", n => { Envelope = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_envelope>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_envelope.CreateFromDiscriminatorValue); } },
+                { "delivery-status", n => { DeliveryStatus = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_DeliveryStatus>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_DeliveryStatus.CreateFromDiscriminatorValue); } },
+                { "domain", n => { Domain = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Domain>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Domain.CreateFromDiscriminatorValue); } },
+                { "envelope", n => { Envelope = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope.CreateFromDiscriminatorValue); } },
                 { "event", n => { Event = n.GetStringValue(); } },
-                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_flags>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_flags.CreateFromDiscriminatorValue); } },
-                { "geolocation", n => { Geolocation = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_geolocation>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_geolocation.CreateFromDiscriminatorValue); } },
+                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Flags>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Flags.CreateFromDiscriminatorValue); } },
+                { "geolocation", n => { Geolocation = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_GeoLocation>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_GeoLocation.CreateFromDiscriminatorValue); } },
                 { "i-delivery-optimizer", n => { IDeliveryOptimizer = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
                 { "log-level", n => { LogLevel = n.GetStringValue(); } },
-                { "mailing-list", n => { MailingList = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_mailingList>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_mailingList.CreateFromDiscriminatorValue); } },
-                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_message>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_message.CreateFromDiscriminatorValue); } },
+                { "mailing-list", n => { MailingList = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MailingList>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MailingList.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Message>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Message.CreateFromDiscriminatorValue); } },
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "originating-ip", n => { OriginatingIp = n.GetStringValue(); } },
                 { "primary-dkim", n => { PrimaryDkim = n.GetStringValue(); } },
@@ -319,11 +319,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
                 { "recipient-domain", n => { RecipientDomain = n.GetStringValue(); } },
                 { "recipient-provider", n => { RecipientProvider = n.GetStringValue(); } },
-                { "routes", n => { Routes = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_routes>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_routes.CreateFromDiscriminatorValue); } },
+                { "routes", n => { Routes = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Routes>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Routes.CreateFromDiscriminatorValue); } },
                 { "severity", n => { Severity = n.GetStringValue(); } },
-                { "storage", n => { Storage = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_storage>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_storage.CreateFromDiscriminatorValue); } },
+                { "storage", n => { Storage = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Storage>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Storage.CreateFromDiscriminatorValue); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_template>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_template.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Template>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Template.CreateFromDiscriminatorValue); } },
                 { "@timestamp", n => { Timestamp = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "user-variables", n => { UserVariables = n.GetStringValue(); } },
@@ -336,23 +336,23 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_account>("account", Account);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Account>("account", Account);
             writer.WriteStringValue("api-key-id", ApiKeyId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Campaign>("campaigns", Campaigns);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_clientInfo>("client-info", ClientInfo);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_ClientInfo>("client-info", ClientInfo);
             writer.WriteStringValue("delivered-at", DeliveredAt);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_deliveryStatus>("delivery-status", DeliveryStatus);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_domain>("domain", Domain);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_envelope>("envelope", Envelope);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_DeliveryStatus>("delivery-status", DeliveryStatus);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Domain>("domain", Domain);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope>("envelope", Envelope);
             writer.WriteStringValue("event", Event);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_flags>("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_geolocation>("geolocation", Geolocation);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Flags>("flags", Flags);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_GeoLocation>("geolocation", Geolocation);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("i-delivery-optimizer", IDeliveryOptimizer);
             writer.WriteStringValue("ip", Ip);
             writer.WriteStringValue("log-level", LogLevel);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_mailingList>("mailing-list", MailingList);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_message>("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MailingList>("mailing-list", MailingList);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Message>("message", Message);
             writer.WriteStringValue("method", Method);
             writer.WriteStringValue("originating-ip", OriginatingIp);
             writer.WriteStringValue("primary-dkim", PrimaryDkim);
@@ -360,11 +360,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("recipient", Recipient);
             writer.WriteStringValue("recipient-domain", RecipientDomain);
             writer.WriteStringValue("recipient-provider", RecipientProvider);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_routes>("routes", Routes);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Routes>("routes", Routes);
             writer.WriteStringValue("severity", Severity);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_storage>("storage", Storage);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Storage>("storage", Storage);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_LogEvent_template>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Template>("template", Template);
             writer.WriteStringValue("@timestamp", Timestamp);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("user-variables", UserVariables);

@@ -9,59 +9,67 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Github_com_mailgun_cerberus_credentials_CredentialMetadata : IAdditionalDataHolder, IParsable
+    public partial class Github_com_mailgun_logs_api_pkg_api_model_Envelope : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When the credential was created in RFC 2822 format with numeric timezone offset (UTC time)</summary>
+        /// <summary>The iIpPoolId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? IIpPoolId { get; set; }
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string IIpPoolId { get; set; }
 #endif
-        /// <summary>The email address-style username associated with this credential</summary>
+        /// <summary>The sender property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Login { get; set; }
+        public string? Sender { get; set; }
 #nullable restore
 #else
-        public string Login { get; set; }
+        public string Sender { get; set; }
 #endif
-        /// <summary>The email address-style username associated with this credential</summary>
+        /// <summary>The sendingIp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mailbox { get; set; }
+        public string? SendingIp { get; set; }
 #nullable restore
 #else
-        public string Mailbox { get; set; }
+        public string SendingIp { get; set; }
 #endif
-        /// <summary>The size_bytes property</summary>
+        /// <summary>The targets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? SizeBytes { get; set; }
+        public string? Targets { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch SizeBytes { get; set; }
+        public string Targets { get; set; }
+#endif
+        /// <summary>The transport property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Transport { get; set; }
+#nullable restore
+#else
+        public string Transport { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope"/> and sets the default values.
         /// </summary>
-        public Github_com_mailgun_cerberus_credentials_CredentialMetadata()
+        public Github_com_mailgun_logs_api_pkg_api_model_Envelope()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_Envelope();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,10 +79,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "login", n => { Login = n.GetStringValue(); } },
-                { "mailbox", n => { Mailbox = n.GetStringValue(); } },
-                { "size_bytes", n => { SizeBytes = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "i-ip-pool-id", n => { IIpPoolId = n.GetStringValue(); } },
+                { "sender", n => { Sender = n.GetStringValue(); } },
+                { "sending-ip", n => { SendingIp = n.GetStringValue(); } },
+                { "targets", n => { Targets = n.GetStringValue(); } },
+                { "transport", n => { Transport = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +93,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("login", Login);
-            writer.WriteStringValue("mailbox", Mailbox);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("size_bytes", SizeBytes);
+            writer.WriteStringValue("i-ip-pool-id", IIpPoolId);
+            writer.WriteStringValue("sender", Sender);
+            writer.WriteStringValue("sending-ip", SendingIp);
+            writer.WriteStringValue("targets", Targets);
+            writer.WriteStringValue("transport", Transport);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -27,10 +27,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The sending_dns_records property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_ReassignDkimAuthorityResp_sending_dns_records>? SendingDnsRecords { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Record>? SendingDnsRecords { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_ReassignDkimAuthorityResp_sending_dns_records> SendingDnsRecords { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Record> SendingDnsRecords { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_ReassignDkimAuthorityResp"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "changed", n => { Changed = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "sending_dns_records", n => { SendingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_ReassignDkimAuthorityResp_sending_dns_records>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_ReassignDkimAuthorityResp_sending_dns_records.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sending_dns_records", n => { SendingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Record>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Record.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("changed", Changed);
             writer.WriteStringValue("message", Message);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_ReassignDkimAuthorityResp_sending_dns_records>("sending_dns_records", SendingDnsRecords);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Record>("sending_dns_records", SendingDnsRecords);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,59 +9,61 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Github_com_mailgun_cerberus_credentials_CredentialMetadata : IAdditionalDataHolder, IParsable
+    public partial class Github_com_mailgun_domains_client_golang_Disabled : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When the credential was created in RFC 2822 format with numeric timezone offset (UTC time)</summary>
+        /// <summary>Code indicating the reason for the domain being disabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? Code { get; set; }
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string Code { get; set; }
 #endif
-        /// <summary>The email address-style username associated with this credential</summary>
+        /// <summary>Additional information about why the domain was disabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Login { get; set; }
+        public string? Note { get; set; }
 #nullable restore
 #else
-        public string Login { get; set; }
+        public string Note { get; set; }
 #endif
-        /// <summary>The email address-style username associated with this credential</summary>
+        /// <summary>Indicates whether the domain is permanently disabled</summary>
+        public bool? Permanently { get; set; }
+        /// <summary>Additional information about why the domain was disabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mailbox { get; set; }
+        public string? Reason { get; set; }
 #nullable restore
 #else
-        public string Mailbox { get; set; }
+        public string Reason { get; set; }
 #endif
-        /// <summary>The size_bytes property</summary>
+        /// <summary>Timestamp in RFC1123 format indicating when the domain will be re-enabled if the disablement is temporary</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? SizeBytes { get; set; }
+        public string? Until { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch SizeBytes { get; set; }
+        public string Until { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled"/> and sets the default values.
         /// </summary>
-        public Github_com_mailgun_cerberus_credentials_CredentialMetadata()
+        public Github_com_mailgun_domains_client_golang_Disabled()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_cerberus_credentials_CredentialMetadata();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,10 +73,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "login", n => { Login = n.GetStringValue(); } },
-                { "mailbox", n => { Mailbox = n.GetStringValue(); } },
-                { "size_bytes", n => { SizeBytes = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "code", n => { Code = n.GetStringValue(); } },
+                { "note", n => { Note = n.GetStringValue(); } },
+                { "permanently", n => { Permanently = n.GetBoolValue(); } },
+                { "reason", n => { Reason = n.GetStringValue(); } },
+                { "until", n => { Until = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +87,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("login", Login);
-            writer.WriteStringValue("mailbox", Mailbox);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("size_bytes", SizeBytes);
+            writer.WriteStringValue("code", Code);
+            writer.WriteStringValue("note", Note);
+            writer.WriteBoolValue("permanently", Permanently);
+            writer.WriteStringValue("reason", Reason);
+            writer.WriteStringValue("until", Until);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

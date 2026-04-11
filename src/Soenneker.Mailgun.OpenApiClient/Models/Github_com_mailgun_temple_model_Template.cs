@@ -65,10 +65,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Active version information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template_version? Version { get; private set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version? Version { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template_version Version { get; private set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version Version { get; private set; }
 #endif
         /// <summary>List of template&apos;s versions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template_version>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template_version.CreateFromDiscriminatorValue); } },
+                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version.CreateFromDiscriminatorValue); } },
                 { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

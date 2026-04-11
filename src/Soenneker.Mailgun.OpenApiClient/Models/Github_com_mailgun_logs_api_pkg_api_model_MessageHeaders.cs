@@ -9,43 +9,59 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Github_com_mailgun_temple_httpapi_templateUpdate : IAdditionalDataHolder, IParsable
+    public partial class Github_com_mailgun_logs_api_pkg_api_model_MessageHeaders : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Name of the template</summary>
+        /// <summary>The from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? From { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string From { get; set; }
 #endif
-        /// <summary>Template version details</summary>
+        /// <summary>The messageId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionUpdate? Version { get; set; }
+        public string? MessageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionUpdate Version { get; set; }
+        public string MessageId { get; set; }
+#endif
+        /// <summary>The subject property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Subject { get; set; }
+#nullable restore
+#else
+        public string Subject { get; set; }
+#endif
+        /// <summary>The to property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? To { get; set; }
+#nullable restore
+#else
+        public string To { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_templateUpdate"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MessageHeaders"/> and sets the default values.
         /// </summary>
-        public Github_com_mailgun_temple_httpapi_templateUpdate()
+        public Github_com_mailgun_logs_api_pkg_api_model_MessageHeaders()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_templateUpdate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MessageHeaders"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_templateUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MessageHeaders CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_templateUpdate();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_logs_api_pkg_api_model_MessageHeaders();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +71,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionUpdate>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionUpdate.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetStringValue(); } },
+                { "message-id", n => { MessageId = n.GetStringValue(); } },
+                { "subject", n => { Subject = n.GetStringValue(); } },
+                { "to", n => { To = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +84,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionUpdate>("version", Version);
+            writer.WriteStringValue("from", From);
+            writer.WriteStringValue("message-id", MessageId);
+            writer.WriteStringValue("subject", Subject);
+            writer.WriteStringValue("to", To);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

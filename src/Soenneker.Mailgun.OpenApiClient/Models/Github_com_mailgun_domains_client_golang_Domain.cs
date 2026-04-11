@@ -33,10 +33,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Optional field containing additional details about the domain&apos;s disabled status if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Domain_disabled? Disabled { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled? Disabled { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Domain_disabled Disabled { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled Disabled { get; set; }
 #endif
         /// <summary>If true incoming messages to this domain will be encrypted</summary>
         public bool? EncryptIncomingMessage { get; set; }
@@ -167,7 +167,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "archive_to", n => { ArchiveTo = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Domain_disabled>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Domain_disabled.CreateFromDiscriminatorValue); } },
+                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled.CreateFromDiscriminatorValue); } },
                 { "encrypt_incoming_message", n => { EncryptIncomingMessage = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
@@ -197,7 +197,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("archive_to", ArchiveTo);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Domain_disabled>("disabled", Disabled);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_client_golang_Disabled>("disabled", Disabled);
             writer.WriteBoolValue("encrypt_incoming_message", EncryptIncomingMessage);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_disabled", IsDisabled);

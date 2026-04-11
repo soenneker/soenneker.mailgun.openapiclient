@@ -26,18 +26,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_template? Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version? Template { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_template Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version Template { get; set; }
 #endif
         /// <summary>Created version details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_version? Version { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version? Version { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_version Version { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version Version { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse"/> and sets the default values.
@@ -65,8 +65,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_template>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_template.CreateFromDiscriminatorValue); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_version>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_version.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version.CreateFromDiscriminatorValue); } },
+                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,8 +77,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_template>("template", Template);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_versionCopyResponse_version>("version", Version);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Version>("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

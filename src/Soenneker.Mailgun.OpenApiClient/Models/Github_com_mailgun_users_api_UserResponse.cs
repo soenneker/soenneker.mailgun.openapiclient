@@ -51,10 +51,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The github_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_github_user_id? GithubUserId { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? GithubUserId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_github_user_id GithubUserId { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch GithubUserId { get; set; }
 #endif
         /// <summary>the user ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,10 +103,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The password_updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_password_updated_at? PasswordUpdatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? PasswordUpdatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_password_updated_at PasswordUpdatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch PasswordUpdatedAt { get; set; }
 #endif
         /// <summary>The preferences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,20 +127,20 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The salesforce_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_salesforce_user_id? SalesforceUserId { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? SalesforceUserId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_salesforce_user_id SalesforceUserId { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch SalesforceUserId { get; set; }
 #endif
         /// <summary>whether 2-factor auth has been activated for the user</summary>
         public bool? TfaActive { get; set; }
         /// <summary>The tfa_created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_tfa_created_at? TfaCreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? TfaCreatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_tfa_created_at TfaCreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch TfaCreatedAt { get; set; }
 #endif
         /// <summary>whether 2-factor auth has been enabled for the user</summary>
         public bool? TfaEnabled { get; set; }
@@ -174,7 +174,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "auth", n => { Auth = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserAuthResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserAuthResponse.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "email_details", n => { EmailDetails = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_email_details>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_email_details.CreateFromDiscriminatorValue); } },
-                { "github_user_id", n => { GithubUserId = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_github_user_id>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_github_user_id.CreateFromDiscriminatorValue); } },
+                { "github_user_id", n => { GithubUserId = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
                 { "is_master", n => { IsMaster = n.GetBoolValue(); } },
@@ -182,12 +182,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "migration_status", n => { MigrationStatus = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "opened_ip", n => { OpenedIp = n.GetStringValue(); } },
-                { "password_updated_at", n => { PasswordUpdatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_password_updated_at>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_password_updated_at.CreateFromDiscriminatorValue); } },
+                { "password_updated_at", n => { PasswordUpdatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "preferences", n => { Preferences = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_preferences>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_preferences.CreateFromDiscriminatorValue); } },
                 { "role", n => { Role = n.GetStringValue(); } },
-                { "salesforce_user_id", n => { SalesforceUserId = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_salesforce_user_id>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_salesforce_user_id.CreateFromDiscriminatorValue); } },
+                { "salesforce_user_id", n => { SalesforceUserId = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "tfa_active", n => { TfaActive = n.GetBoolValue(); } },
-                { "tfa_created_at", n => { TfaCreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_tfa_created_at>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_tfa_created_at.CreateFromDiscriminatorValue); } },
+                { "tfa_created_at", n => { TfaCreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "tfa_enabled", n => { TfaEnabled = n.GetBoolValue(); } },
             };
         }
@@ -203,7 +203,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserAuthResponse>("auth", Auth);
             writer.WriteStringValue("email", Email);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_email_details>("email_details", EmailDetails);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_github_user_id>("github_user_id", GithubUserId);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("github_user_id", GithubUserId);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_disabled", IsDisabled);
             writer.WriteBoolValue("is_master", IsMaster);
@@ -211,12 +211,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("migration_status", MigrationStatus);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("opened_ip", OpenedIp);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_password_updated_at>("password_updated_at", PasswordUpdatedAt);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("password_updated_at", PasswordUpdatedAt);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_preferences>("preferences", Preferences);
             writer.WriteStringValue("role", Role);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_salesforce_user_id>("salesforce_user_id", SalesforceUserId);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("salesforce_user_id", SalesforceUserId);
             writer.WriteBoolValue("tfa_active", TfaActive);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_users_api_UserResponse_tfa_created_at>("tfa_created_at", TfaCreatedAt);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("tfa_created_at", TfaCreatedAt);
             writer.WriteBoolValue("tfa_enabled", TfaEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }

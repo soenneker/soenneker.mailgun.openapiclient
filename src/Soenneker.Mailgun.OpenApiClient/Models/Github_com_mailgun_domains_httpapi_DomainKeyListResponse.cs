@@ -17,18 +17,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_items>? Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_items> Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse> Items { get; set; }
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_paging? Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_paging_PagingResponse? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_paging Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_paging_PagingResponse Paging { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_items>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_items.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_paging>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_paging.CreateFromDiscriminatorValue); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_paging_PagingResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_paging_PagingResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_items>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse_paging>("paging", Paging);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>("items", Items);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_paging_PagingResponse>("paging", Paging);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

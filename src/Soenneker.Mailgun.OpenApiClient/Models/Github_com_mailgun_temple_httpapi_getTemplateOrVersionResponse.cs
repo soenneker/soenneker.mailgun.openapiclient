@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Template details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_getTemplateOrVersionResponse_template? Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template? Template { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_getTemplateOrVersionResponse_template Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template Template { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_getTemplateOrVersionResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_getTemplateOrVersionResponse_template>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_getTemplateOrVersionResponse_template.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_httpapi_getTemplateOrVersionResponse_template>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_temple_model_Template>("template", Template);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

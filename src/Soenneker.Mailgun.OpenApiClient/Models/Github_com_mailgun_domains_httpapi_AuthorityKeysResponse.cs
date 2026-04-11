@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_AuthorityKeysResponse_items>? Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_AuthorityKeysResponse_items> Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse> Items { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_AuthorityKeysResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_AuthorityKeysResponse_items>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_AuthorityKeysResponse_items.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_AuthorityKeysResponse_items>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>("items", Items);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

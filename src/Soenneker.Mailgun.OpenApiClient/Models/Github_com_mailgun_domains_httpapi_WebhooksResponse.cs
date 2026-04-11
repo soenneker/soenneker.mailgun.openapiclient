@@ -15,68 +15,68 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Accepted webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_accepted? Accepted { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? Accepted { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_accepted Accepted { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs Accepted { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Clicked webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_clicked? Clicked { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? Clicked { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_clicked Clicked { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs Clicked { get; set; }
 #endif
         /// <summary>Complained webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_complained? Complained { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? Complained { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_complained Complained { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs Complained { get; set; }
 #endif
         /// <summary>Delivered webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_delivered? Delivered { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? Delivered { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_delivered Delivered { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs Delivered { get; set; }
 #endif
         /// <summary>Opened webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_opened? Opened { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? Opened { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_opened Opened { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs Opened { get; set; }
 #endif
         /// <summary>Permanent fail webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_permanent_fail? PermanentFail { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? PermanentFail { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_permanent_fail PermanentFail { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs PermanentFail { get; set; }
 #endif
         /// <summary>Temporary fail webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_temporary_fail? TemporaryFail { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? TemporaryFail { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_temporary_fail TemporaryFail { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs TemporaryFail { get; set; }
 #endif
         /// <summary>Unsubscribed webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_unsubscribed? Unsubscribed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs? Unsubscribed { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_unsubscribed Unsubscribed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs Unsubscribed { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse"/> and sets the default values.
@@ -103,14 +103,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accepted", n => { Accepted = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_accepted>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_accepted.CreateFromDiscriminatorValue); } },
-                { "clicked", n => { Clicked = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_clicked>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_clicked.CreateFromDiscriminatorValue); } },
-                { "complained", n => { Complained = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_complained>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_complained.CreateFromDiscriminatorValue); } },
-                { "delivered", n => { Delivered = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_delivered>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_delivered.CreateFromDiscriminatorValue); } },
-                { "opened", n => { Opened = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_opened>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_opened.CreateFromDiscriminatorValue); } },
-                { "permanent_fail", n => { PermanentFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_permanent_fail>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_permanent_fail.CreateFromDiscriminatorValue); } },
-                { "temporary_fail", n => { TemporaryFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_temporary_fail>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_temporary_fail.CreateFromDiscriminatorValue); } },
-                { "unsubscribed", n => { Unsubscribed = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_unsubscribed>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_unsubscribed.CreateFromDiscriminatorValue); } },
+                { "accepted", n => { Accepted = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "clicked", n => { Clicked = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "complained", n => { Complained = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "delivered", n => { Delivered = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "opened", n => { Opened = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "permanent_fail", n => { PermanentFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "temporary_fail", n => { TemporaryFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
+                { "unsubscribed", n => { Unsubscribed = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,14 +120,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_accepted>("accepted", Accepted);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_clicked>("clicked", Clicked);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_complained>("complained", Complained);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_delivered>("delivered", Delivered);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_opened>("opened", Opened);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_permanent_fail>("permanent_fail", PermanentFail);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_temporary_fail>("temporary_fail", TemporaryFail);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhooksResponse_unsubscribed>("unsubscribed", Unsubscribed);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("accepted", Accepted);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("clicked", Clicked);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("complained", Complained);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("delivered", Delivered);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("opened", Opened);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("permanent_fail", PermanentFail);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("temporary_fail", TemporaryFail);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_WebhookURLs>("unsubscribed", Unsubscribed);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
