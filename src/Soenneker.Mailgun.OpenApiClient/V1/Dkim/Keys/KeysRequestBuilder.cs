@@ -36,79 +36,79 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dkim.Keys
         /// <summary>
         /// Domain keys are not recoverable after deletion so use with care
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Dkim.Keys.KeysRequestBuilder.KeysRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Dkim.Keys.KeysRequestBuilder.KeysRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Dkim.Keys.KeysRequestBuilder.KeysRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Dkim.Keys.KeysRequestBuilder.KeysRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List domain keys, and optionally filter by signing domain or selector. Results are paginated - use the &apos;limit&apos; parameter to control page size (default 10, max 100). Use the &apos;page&apos; parameter from the paging response URLs to navigate through pages.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse?> GetAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse?> GetAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse> GetAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse> GetAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a domain key. Note that once private keys are created or imported they are never exported.Alternatively, you can import an existing PEM file containing a RSA private key in PKCS #1, ASn.1 DER   format. Note, the pem can be passed as a file attachment or as a form-string parameter.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_domains_httpapi_DomainKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Domain keys are not recoverable after deletion so use with care

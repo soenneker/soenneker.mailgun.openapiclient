@@ -36,73 +36,73 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Routes.Item
         /// <summary>
         /// Remove the rotue from the account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId404">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_200?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId200?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_200> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId200> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_404.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId404.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Delete_v3_routes_id_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.DeleteV3RoutesId200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a detailed view of the route
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId404">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_404.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId404.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Get_v3_routes_id_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesId200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates a given route. All parameters are optional. This only updates the specified fields, leaving others unchanged.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId404">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_200?> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId200?> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_200> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId200> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_404.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId404.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove the rotue from the account.
@@ -150,11 +150,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Routes.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.Put_v3_routes_id body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.PutV3RoutesId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

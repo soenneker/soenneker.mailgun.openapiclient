@@ -36,20 +36,20 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Dynamic_pools.Assignable
         /// <summary>
         /// Lists all domains that are not already enrolled in dynamic IP pools.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Dynamic_pools.Assignable.AssignableRequestBuilder.AssignableRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Dynamic_pools.Assignable.AssignableRequestBuilder.AssignableRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Dynamic_pools.Assignable.AssignableRequestBuilder.AssignableRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Dynamic_pools.Assignable.AssignableRequestBuilder.AssignableRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all domains that are not already enrolled in dynamic IP pools.

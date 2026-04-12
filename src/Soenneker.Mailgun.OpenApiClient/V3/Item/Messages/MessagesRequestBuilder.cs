@@ -36,31 +36,31 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Messages
         /// <summary>
         /// &quot;Pass the components of the messages such as To, From, Subject, HTML, text parts, attachments, etc. Mailgun will build a MIME representation of the message and send it. In order to send you must provide one of the following parameters: &apos;text&apos;, &apos;html&apos;, &apos;amp-html&apos; or &apos;template&apos;. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_SendMessageResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_GetMessageResponseNotFound">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_GetMessageResponseNotFound">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_GetMessageResponseNotFound">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_SendMessageResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_SendMessageResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_GetMessageResponseNotFound.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_GetMessageResponseNotFound.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_GetMessageResponseNotFound.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_SendMessageResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_influx_httpapi_SendMessageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Pass the components of the messages such as To, From, Subject, HTML, text parts, attachments, etc. Mailgun will build a MIME representation of the message and send it. In order to send you must provide one of the following parameters: &apos;text&apos;, &apos;html&apos;, &apos;amp-html&apos; or &apos;template&apos;. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total&quot;

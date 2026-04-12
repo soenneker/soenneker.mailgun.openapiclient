@@ -36,20 +36,20 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.All.Dynamic_pools.Enroll
         /// <summary>
         /// Begins an asynchronous background job to assign all domains to Dynamic IP Pools.This can also include domains belonging to subaccounts depending on the provided parameters.The Dynamic IP Pools feature must be enabled for the account and the request must come from a parent account user.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.All.Dynamic_pools.Enroll.EnrollRequestBuilder.EnrollRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.All.Dynamic_pools.Enroll.EnrollRequestBuilder.EnrollRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.All.Dynamic_pools.Enroll.EnrollRequestBuilder.EnrollRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.All.Dynamic_pools.Enroll.EnrollRequestBuilder.EnrollRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Begins an asynchronous background job to assign all domains to Dynamic IP Pools.This can also include domains belonging to subaccounts depending on the provided parameters.The Dynamic IP Pools feature must be enabled for the account and the request must come from a parent account user.

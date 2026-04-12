@@ -36,27 +36,27 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersJson
         /// <summary>
         /// Adds multiple members, up to 1000 per call, to a mailing list, using JSON array format.If the request includes more than 100 entries, the mailing list will be updated asynchronously.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson429">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_200?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersJson.MembersJsonRequestBuilder.MembersJsonRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson200?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersJson.MembersJsonRequestBuilder.MembersJsonRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_200> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersJson.MembersJsonRequestBuilder.MembersJsonRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson200> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersJson.MembersJsonRequestBuilder.MembersJsonRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_404.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_429.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson404.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson429.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Post_lists_list_address_members_json_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersJson200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds multiple members, up to 1000 per call, to a mailing list, using JSON array format.If the request includes more than 100 entries, the mailing list will be updated asynchronously.

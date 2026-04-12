@@ -17,18 +17,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The batch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_batch? Batch { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseBatch? Batch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_batch Batch { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseBatch Batch { get; set; }
 #endif
         /// <summary>The clientInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_clientInfo? ClientInfo { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseClientInfo? ClientInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_clientInfo ClientInfo { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseClientInfo ClientInfo { get; set; }
 #endif
         /// <summary>The deliveryStatus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,18 +51,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The flags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_flags? Flags { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags? Flags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_flags Flags { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags Flags { get; set; }
 #endif
         /// <summary>Location data based on the client IP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_geolocation? Geolocation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation? Geolocation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_geolocation Geolocation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation Geolocation { get; set; }
 #endif
         /// <summary>GUID identifying the individual event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,20 +117,20 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The reject property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_reject? Reject { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseReject? Reject { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_reject Reject { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseReject Reject { get; set; }
 #endif
         /// <summary>Filter by event severity, if exists. Currently for failed events only. See [Tracking Failures](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/#tracking-failures)</summary>
         public global::Soenneker.Mailgun.OpenApiClient.Models.EventSeverityType? Severity { get; set; }
         /// <summary>The storage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_storage? Storage { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseStorage? Storage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_storage Storage { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseStorage Storage { get; set; }
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,10 +143,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_template? Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate? Template { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_template Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate Template { get; set; }
 #endif
         /// <summary>Unix epoch, in nanoseconds, when the event was first created</summary>
         public double? Timestamp { get; set; }
@@ -183,13 +183,13 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "batch", n => { Batch = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_batch>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_batch.CreateFromDiscriminatorValue); } },
-                { "client-info", n => { ClientInfo = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_clientInfo>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_clientInfo.CreateFromDiscriminatorValue); } },
+                { "batch", n => { Batch = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseBatch>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseBatch.CreateFromDiscriminatorValue); } },
+                { "client-info", n => { ClientInfo = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseClientInfo>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseClientInfo.CreateFromDiscriminatorValue); } },
                 { "delivery-status", n => { DeliveryStatus = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject>(global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject.CreateFromDiscriminatorValue); } },
                 { "envelope", n => { Envelope = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EnvelopeObject>(global::Soenneker.Mailgun.OpenApiClient.Models.EnvelopeObject.CreateFromDiscriminatorValue); } },
                 { "event", n => { Event = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventType>(); } },
-                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_flags>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_flags.CreateFromDiscriminatorValue); } },
-                { "geolocation", n => { Geolocation = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_geolocation>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_geolocation.CreateFromDiscriminatorValue); } },
+                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags.CreateFromDiscriminatorValue); } },
+                { "geolocation", n => { Geolocation = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
                 { "log-level", n => { LogLevel = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_logLevel>(); } },
@@ -197,11 +197,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "recipient-domain", n => { RecipientDomain = n.GetStringValue(); } },
                 { "recipient-provider", n => { RecipientProvider = n.GetStringValue(); } },
-                { "reject", n => { Reject = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_reject>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_reject.CreateFromDiscriminatorValue); } },
+                { "reject", n => { Reject = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseReject>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseReject.CreateFromDiscriminatorValue); } },
                 { "severity", n => { Severity = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventSeverityType>(); } },
-                { "storage", n => { Storage = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_storage>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_storage.CreateFromDiscriminatorValue); } },
+                { "storage", n => { Storage = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseStorage>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseStorage.CreateFromDiscriminatorValue); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_template>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_template.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "user-variables", n => { UserVariables = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables.CreateFromDiscriminatorValue); } },
             };
@@ -213,13 +213,13 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_batch>("batch", Batch);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_clientInfo>("client-info", ClientInfo);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseBatch>("batch", Batch);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseClientInfo>("client-info", ClientInfo);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject>("delivery-status", DeliveryStatus);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EnvelopeObject>("envelope", Envelope);
             writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventType>("event", Event);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_flags>("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_geolocation>("geolocation", Geolocation);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags>("flags", Flags);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation>("geolocation", Geolocation);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip", Ip);
             writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_logLevel>("log-level", LogLevel);
@@ -227,11 +227,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("method", Method);
             writer.WriteStringValue("recipient-domain", RecipientDomain);
             writer.WriteStringValue("recipient-provider", RecipientProvider);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_reject>("reject", Reject);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseReject>("reject", Reject);
             writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventSeverityType>("severity", Severity);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_storage>("storage", Storage);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseStorage>("storage", Storage);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_template>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate>("template", Template);
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables>("user-variables", UserVariables);
             writer.WriteAdditionalData(AdditionalData);

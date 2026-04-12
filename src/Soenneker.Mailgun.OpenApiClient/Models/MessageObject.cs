@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The headers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_headers? Headers { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders? Headers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_headers Headers { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders Headers { get; set; }
 #endif
         /// <summary>Date/Time the message was scheduled for delivery on ingest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_headers>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_headers.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders.CreateFromDiscriminatorValue); } },
                 { "scheduled-for", n => { ScheduledFor = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments>("attachments", Attachments);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_headers>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders>("headers", Headers);
             writer.WriteStringValue("scheduled-for", ScheduledFor);
             writer.WriteIntValue("size", Size);
             writer.WriteAdditionalData(AdditionalData);

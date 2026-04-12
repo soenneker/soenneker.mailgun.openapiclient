@@ -49,31 +49,31 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Alerts.Settings.Events
         /// <summary>
         /// &quot;Use this endpoint to add new alert settings record. This service facilitates notifications (Webhook, Slack, or Email) for both Mailgun Optimize and Send Alert threshold breaches.### WebhooksThis section covers details around consuming alerts via webhooks. If you are familiar with Mailgun Send webhooks (which provide status updates on individual email deliveries), there is a lot of overlapping similarity, however, there are also a few minor nuances to account for.#### Securing WebhooksHMAC is used to verify the integrity as well as the authenticity of received webhooks. To verify the origin of a webhook:1. Encode the webhook’s entire POST request body with the HMAC algorithm (using your webhook signing key and SHA256 digest mode)2. Compare the resulting hexdigest to the signature provided in the POST request’s X-Sign header.NOTE: If you’re consuming Mailgun Send webhooks, please note that your Mailgun Send webhook signing key differs from your Alerts webhook signing key. Your Alerts webhook signing keys, used for both Optimize and Send Alert products, are available within the Mailgun Alerts UI.#### Webhook URL ValidationWhen adding or updating a webhook URL for alerts, we will ensure the endpoint is reachable by sending a GET request to the provided URL. If a 200 response is not returned from your endpoint, the request will be rejected and your alert setting will not be saved. We intentionally chose to send a GET request instead of a POST when validating URLs so that your webhook endpoint does not have to account for test requests.Additionally, when a POST request is sent to your webhook URL, if a 2xx is not returned, we will attempt retries via an exponential backoff strategy for up to ~8 hours. If the max retry count is reached, the alert will be disabled and the related alert settings record’s disabled_at field will be populated.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_settings_EventSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_settings_EventSettings?> PostAsync(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_api_mutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings?> PostAsync(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_settings_EventSettings> PostAsync(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_api_mutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings> PostAsync(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
-                { "XXX", global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_settings_EventSettings>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_settings_EventSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Use this endpoint to add new alert settings record. This service facilitates notifications (Webhook, Slack, or Email) for both Mailgun Optimize and Send Alert threshold breaches.### WebhooksThis section covers details around consuming alerts via webhooks. If you are familiar with Mailgun Send webhooks (which provide status updates on individual email deliveries), there is a lot of overlapping similarity, however, there are also a few minor nuances to account for.#### Securing WebhooksHMAC is used to verify the integrity as well as the authenticity of received webhooks. To verify the origin of a webhook:1. Encode the webhook’s entire POST request body with the HMAC algorithm (using your webhook signing key and SHA256 digest mode)2. Compare the resulting hexdigest to the signature provided in the POST request’s X-Sign header.NOTE: If you’re consuming Mailgun Send webhooks, please note that your Mailgun Send webhook signing key differs from your Alerts webhook signing key. Your Alerts webhook signing keys, used for both Optimize and Send Alert products, are available within the Mailgun Alerts UI.#### Webhook URL ValidationWhen adding or updating a webhook URL for alerts, we will ensure the endpoint is reachable by sending a GET request to the provided URL. If a 200 response is not returned from your endpoint, the request will be rejected and your alert setting will not be saved. We intentionally chose to send a GET request instead of a POST when validating URLs so that your webhook endpoint does not have to account for test requests.Additionally, when a POST request is sent to your webhook URL, if a 2xx is not returned, we will attempt retries via an exponential backoff strategy for up to ~8 hours. If the max retry count is reached, the alert will be disabled and the related alert settings record’s disabled_at field will be populated.&quot;
@@ -83,11 +83,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Alerts.Settings.Events
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_api_mutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_alerts_internal_api_mutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -36,38 +36,38 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
         /// <summary>
         /// &quot;The behavior of this endpoint depends on the value of the `replacement_ip` and `replacement_pool_id` parameters.One of these parameters (but not both) must be provided. If `replacement_ip` is provided, the IP(s) will be assigned to the domain.`replacement_ip` can include one of the following: * valid IP(s): this IP address or addresses will be added to the domain * string `shared`: if the account is eligible for shared IPs, a suitable shared IP will be chosen and added to the domainThe &apos;replacement_ip&apos; parameter cannot include any IPs that are already assigned to a Dedicated IP Pool or a Dynamic IP Pool.If `replacement_pool_id` is provided, the Dedicated IP Pool will be assigned to the domain.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Domains enrolled in the Dynamic IP pools feature will be assigned an IP pool based on reputation.The feature must be enabled and configured before enrolling domains.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.Github_com_mailgun_scaffold_httpapi_GenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;The behavior of this endpoint depends on the value of the `replacement_ip` and `replacement_pool_id` parameters.One of these parameters (but not both) must be provided. If `replacement_ip` is provided, the IP(s) will be assigned to the domain.`replacement_ip` can include one of the following: * valid IP(s): this IP address or addresses will be added to the domain * string `shared`: if the account is eligible for shared IPs, a suitable shared IP will be chosen and added to the domainThe &apos;replacement_ip&apos; parameter cannot include any IPs that are already assigned to a Dedicated IP Pool or a Dynamic IP Pool.If `replacement_pool_id` is provided, the Dedicated IP Pool will be assigned to the domain.&quot;
