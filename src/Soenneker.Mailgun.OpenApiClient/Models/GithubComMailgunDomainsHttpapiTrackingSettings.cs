@@ -17,26 +17,26 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Click tracking settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick? Click { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_click? Click { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick Click { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_click Click { get; set; }
 #endif
         /// <summary>Open tracking settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen? Open { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_open? Open { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen Open { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_open Open { get; set; }
 #endif
         /// <summary>Unsubscribe tracking settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe? Unsubscribe { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_unsubscribe? Unsubscribe { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe Unsubscribe { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_unsubscribe Unsubscribe { get; set; }
 #endif
         /// <summary>The web scheme for the domain</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,9 +71,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "click", n => { Click = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick.CreateFromDiscriminatorValue); } },
-                { "open", n => { Open = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen.CreateFromDiscriminatorValue); } },
-                { "unsubscribe", n => { Unsubscribe = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe.CreateFromDiscriminatorValue); } },
+                { "click", n => { Click = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_click>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_click.CreateFromDiscriminatorValue); } },
+                { "open", n => { Open = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_open>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_open.CreateFromDiscriminatorValue); } },
+                { "unsubscribe", n => { Unsubscribe = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_unsubscribe>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_unsubscribe.CreateFromDiscriminatorValue); } },
                 { "web_scheme", n => { WebScheme = n.GetStringValue(); } },
             };
         }
@@ -84,9 +84,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick>("click", Click);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen>("open", Open);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe>("unsubscribe", Unsubscribe);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_click>("click", Click);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_open>("open", Open);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettings_unsubscribe>("unsubscribe", Unsubscribe);
             writer.WriteStringValue("web_scheme", WebScheme);
             writer.WriteAdditionalData(AdditionalData);
         }

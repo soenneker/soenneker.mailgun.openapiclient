@@ -41,10 +41,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Filters to apply to the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequestFilter? Filter { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequest_filter? Filter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequestFilter Filter { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequest_filter Filter { get; set; }
 #endif
         /// <summary>Include logs from all subaccounts.</summary>
         public bool? IncludeSubaccounts { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "duration", n => { Duration = n.GetStringValue(); } },
                 { "end", n => { End = n.GetStringValue(); } },
                 { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelEvent>()?.AsList(); } },
-                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequestFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequestFilter.CreateFromDiscriminatorValue); } },
+                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequest_filter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequest_filter.CreateFromDiscriminatorValue); } },
                 { "include_subaccounts", n => { IncludeSubaccounts = n.GetBoolValue(); } },
                 { "include_totals", n => { IncludeTotals = n.GetBoolValue(); } },
                 { "metric_events", n => { MetricEvents = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelMetricEvent>()?.AsList(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("duration", Duration);
             writer.WriteStringValue("end", End);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelEvent>("events", Events);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequestFilter>("filter", Filter);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogsRequest_filter>("filter", Filter);
             writer.WriteBoolValue("include_subaccounts", IncludeSubaccounts);
             writer.WriteBoolValue("include_totals", IncludeTotals);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelMetricEvent>("metric_events", MetricEvents);

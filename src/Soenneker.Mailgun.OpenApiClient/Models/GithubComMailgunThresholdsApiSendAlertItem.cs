@@ -33,10 +33,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The comparison operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemComparator? Comparator { get; set; }
+        public string? Comparator { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemComparator Comparator { get; set; }
+        public string Comparator { get; set; }
 #endif
         /// <summary>Timestamp of when the alert was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -51,10 +51,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The dimension to apply to the metric.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemDimension? Dimension { get; set; }
+        public string? Dimension { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemDimension Dimension { get; set; }
+        public string Dimension { get; set; }
 #endif
         /// <summary>A list of filters to apply to the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The metric being monitored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemMetric? Metric { get; set; }
+        public string? Metric { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemMetric Metric { get; set; }
+        public string Metric { get; set; }
 #endif
         /// <summary>A user-friendly name for the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -151,15 +151,15 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "account_group", n => { AccountGroup = n.GetStringValue(); } },
                 { "alert_channels", n => { AlertChannels = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel>()?.AsList(); } },
-                { "comparator", n => { Comparator = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemComparator>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemComparator.CreateFromDiscriminatorValue); } },
+                { "comparator", n => { Comparator = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemDimension>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemDimension.CreateFromDiscriminatorValue); } },
+                { "dimension", n => { Dimension = n.GetStringValue(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last_checked", n => { LastChecked = n.GetDateTimeOffsetValue(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "metric", n => { Metric = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemMetric>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemMetric.CreateFromDiscriminatorValue); } },
+                { "metric", n => { Metric = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parent_account_id", n => { ParentAccountId = n.GetStringValue(); } },
                 { "period", n => { Period = n.GetStringValue(); } },
@@ -176,15 +176,15 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_group", AccountGroup);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel>("alert_channels", AlertChannels);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemComparator>("comparator", Comparator);
+            writer.WriteStringValue("comparator", Comparator);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemDimension>("dimension", Dimension);
+            writer.WriteStringValue("dimension", Dimension);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>("filters", Filters);
             writer.WriteStringValue("id", Id);
             writer.WriteDateTimeOffsetValue("last_checked", LastChecked);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItemMetric>("metric", Metric);
+            writer.WriteStringValue("metric", Metric);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parent_account_id", ParentAccountId);
             writer.WriteStringValue("period", Period);

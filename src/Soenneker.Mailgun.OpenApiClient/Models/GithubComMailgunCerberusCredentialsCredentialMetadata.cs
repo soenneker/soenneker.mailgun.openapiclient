@@ -41,10 +41,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The size_bytes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes? SizeBytes { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch? SizeBytes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes SizeBytes { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch SizeBytes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusCredentialsCredentialMetadata"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "login", n => { Login = n.GetStringValue(); } },
                 { "mailbox", n => { Mailbox = n.GetStringValue(); } },
-                { "size_bytes", n => { SizeBytes = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes.CreateFromDiscriminatorValue); } },
+                { "size_bytes", n => { SizeBytes = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("login", Login);
             writer.WriteStringValue("mailbox", Mailbox);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes>("size_bytes", SizeBytes);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("size_bytes", SizeBytes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

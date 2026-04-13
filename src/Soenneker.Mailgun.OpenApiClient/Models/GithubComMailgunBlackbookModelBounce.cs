@@ -33,10 +33,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Timestamp for when the Bounce event was received in RFC822 format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounceCreatedAt? CreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounce_created_at? CreatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounceCreatedAt CreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounce_created_at CreatedAt { get; set; }
 #endif
         /// <summary>SMTP error message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounceCreatedAt>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounceCreatedAt.CreateFromDiscriminatorValue); } },
+                { "created_at", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounce_created_at>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounce_created_at.CreateFromDiscriminatorValue); } },
                 { "error", n => { Error = n.GetStringValue(); } },
             };
         }
@@ -86,7 +86,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounceCreatedAt>("created_at", CreatedAt);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelBounce_created_at>("created_at", CreatedAt);
             writer.WriteStringValue("error", Error);
             writer.WriteAdditionalData(AdditionalData);
         }

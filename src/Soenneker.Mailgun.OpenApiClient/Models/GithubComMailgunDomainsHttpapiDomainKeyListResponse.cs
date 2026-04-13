@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging? Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse Paging { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse>("paging", Paging);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

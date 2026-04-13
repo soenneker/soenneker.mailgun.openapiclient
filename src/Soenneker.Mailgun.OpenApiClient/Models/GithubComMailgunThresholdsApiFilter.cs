@@ -14,15 +14,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Filter Comparator</summary>
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterComparator? Comparator { get; set; }
+        /// <summary>The comparison operator.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Comparator { get; set; }
+#nullable restore
+#else
+        public string Comparator { get; set; }
+#endif
         /// <summary>The dimension to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterDimension? Dimension { get; set; }
+        public string? Dimension { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterDimension Dimension { get; set; }
+        public string Dimension { get; set; }
 #endif
         /// <summary>The dimension values to apply to filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,8 +63,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "comparator", n => { Comparator = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterComparator>(); } },
-                { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterDimension>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterDimension.CreateFromDiscriminatorValue); } },
+                { "comparator", n => { Comparator = n.GetStringValue(); } },
+                { "dimension", n => { Dimension = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -69,8 +75,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterComparator>("comparator", Comparator);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterDimension>("dimension", Dimension);
+            writer.WriteStringValue("comparator", Comparator);
+            writer.WriteStringValue("dimension", Dimension);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);
         }

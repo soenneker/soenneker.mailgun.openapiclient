@@ -49,35 +49,35 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
         /// <summary>
         /// Get webhook signing key saved on the account
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsGetResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add authorized email recipient for a sandbox domain
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsRequestBuilder.Auth_recipientsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsPostResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsRequestBuilder.Auth_recipientsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsRequestBuilder.Auth_recipientsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsPostResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsRequestBuilder.Auth_recipientsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
@@ -85,7 +85,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
             {
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsPostResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get webhook signing key saved on the account

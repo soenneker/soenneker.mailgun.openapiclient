@@ -41,10 +41,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Filters to apply to the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQueryFilter? Filter { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQuery_filter? Filter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQueryFilter Filter { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQuery_filter Filter { get; set; }
 #endif
         /// <summary>Include top-level aggregate metrics.</summary>
         public bool? IncludeAggregates { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "dimensions", n => { Dimensions = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangDimensionName>()?.AsList(); } },
                 { "duration", n => { Duration = n.GetStringValue(); } },
                 { "end", n => { End = n.GetStringValue(); } },
-                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQueryFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQueryFilter.CreateFromDiscriminatorValue); } },
+                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQuery_filter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQuery_filter.CreateFromDiscriminatorValue); } },
                 { "include_aggregates", n => { IncludeAggregates = n.GetBoolValue(); } },
                 { "include_subaccounts", n => { IncludeSubaccounts = n.GetBoolValue(); } },
                 { "metrics", n => { Metrics = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangMetric>()?.AsList(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangDimensionName>("dimensions", Dimensions);
             writer.WriteStringValue("duration", Duration);
             writer.WriteStringValue("end", End);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQueryFilter>("filter", Filter);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangQuery_filter>("filter", Filter);
             writer.WriteBoolValue("include_aggregates", IncludeAggregates);
             writer.WriteBoolValue("include_subaccounts", IncludeSubaccounts);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangMetric>("metrics", Metrics);

@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Unsubscribe settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe? Unsubscribe { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeResp_unsubscribe? Unsubscribe { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe Unsubscribe { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeResp_unsubscribe Unsubscribe { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeResp"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "unsubscribe", n => { Unsubscribe = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe.CreateFromDiscriminatorValue); } },
+                { "unsubscribe", n => { Unsubscribe = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeResp_unsubscribe>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeResp_unsubscribe.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe>("unsubscribe", Unsubscribe);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeResp_unsubscribe>("unsubscribe", Unsubscribe);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

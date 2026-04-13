@@ -12237,7 +12237,16 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3Routes200"
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "A string describing the result of the operation"
+                    },
+                    "route": {
+                      "$ref": "#/components/schemas/RouteResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12297,7 +12306,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3Routes200"
+                  "type": "object",
+                  "properties": {
+                    "total_count": {
+                      "type": "integer",
+                      "description": "Total number of routes in the account"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/RouteResponse"
+                      },
+                      "description": "List of routes"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12372,7 +12394,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3RoutesId200"
+                  "type": "object",
+                  "properties": {
+                    "route": {
+                      "$ref": "#/components/schemas/RouteResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12464,7 +12491,16 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutV3RoutesId200"
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "A string describing the result of the operation"
+                    },
+                    "route": {
+                      "$ref": "#/components/schemas/RouteResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12598,7 +12634,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3RoutesMatch200"
+                  "type": "object",
+                  "properties": {
+                    "route": {
+                      "$ref": "#/components/schemas/RouteResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12679,7 +12720,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3Lists201"
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "$ref": "#/components/schemas/MailingListResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12785,7 +12831,18 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3Lists200"
+                  "type": "object",
+                  "properties": {
+                    "total_count": {
+                      "type": "integer"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MailingListResponse"
+                      }
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12889,7 +12946,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetListsStringListAddressMembers200"
+                  "type": "object",
+                  "properties": {
+                    "total_count": {
+                      "type": "integer",
+                      "description": "Total number of members in the mailing list"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListMemberResponse"
+                      }
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -12983,7 +13052,16 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostListsStringListAddressMembers200"
+                  "type": "object",
+                  "properties": {
+                    "member": {
+                      "$ref": "#/components/schemas/ListMemberResponse"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Success message"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -13102,7 +13180,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostListsListAddressMembersJson200"
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "$ref": "#/components/schemas/MailingListResponse"
+                    },
+                    "task-id": {
+                      "type": "string",
+                      "description": "Unique identifier for the background upload task"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Success message"
+                    }
+                  }
                 },
                 "examples": {
                   "Async update": {
@@ -13209,7 +13300,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostListsListAddressMembersCsv200"
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "$ref": "#/components/schemas/MailingListResponse"
+                    },
+                    "task-id": {
+                      "type": "string",
+                      "description": "Unique identifier for the background upload task"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Success message"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -13422,7 +13526,16 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutListsListAddressMembersMemberAddress200"
+                  "type": "object",
+                  "properties": {
+                    "member": {
+                      "$ref": "#/components/schemas/ListMemberResponse"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Success message"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -13603,7 +13716,16 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutV3ListsAddress200"
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "Success message"
+                    },
+                    "list": {
+                      "$ref": "#/components/schemas/MailingListResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -13767,7 +13889,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3ListsAddress200"
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "$ref": "#/components/schemas/MailingListResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -17215,7 +17342,15 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV5SandboxAuthRecipients200"
+                  "type": "object",
+                  "properties": {
+                    "recipients": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/GithubComMailgunAccountsApiRecipientResponse"
+                      }
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -17263,7 +17398,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV5SandboxAuthRecipients200"
+                  "type": "object",
+                  "properties": {
+                    "recipient": {
+                      "$ref": "#/components/schemas/GithubComMailgunAccountsApiRecipientResponse"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -18393,7 +18533,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutV5AccountsSubaccountsSubaccountIdFeatures200"
+                  "type": "object",
+                  "properties": {
+                    "features": {
+                      "type": "object"
+                    }
+                  }
                 },
                 "examples": {
                   "Example": {
@@ -20569,7 +20714,14 @@
             "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
           },
           "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
+              }
+            ],
+            "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable",
+            "nullable": true
           },
           "encrypt_incoming_message": {
             "type": "boolean",
@@ -20639,7 +20791,14 @@
             "description": "Response message"
           },
           "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespDomain"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+              }
+            ],
+            "description": "Details of the newly created domain",
+            "nullable": true
           },
           "receiving_dns_records": {
             "type": "array",
@@ -20804,7 +20963,14 @@
         "type": "object",
         "properties": {
           "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+              }
+            ],
+            "description": "Domain details",
+            "nullable": true
           },
           "receiving_dns_records": {
             "type": "array",
@@ -20848,7 +21014,14 @@
             "description": "Response message"
           },
           "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiVerifyDomainResponseDomain"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+              }
+            ],
+            "description": "Domain record information",
+            "nullable": true
           },
           "sending_dns_records": {
             "type": "array",
@@ -20902,7 +21075,13 @@
             "description": "A message indicating success"
           },
           "webhook": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainWebhookRespWebhook"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookResponse"
+              }
+            ],
+            "description": "Webhook details"
           }
         }
       },
@@ -20963,7 +21142,13 @@
         "type": "object",
         "properties": {
           "webhook": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiGetDomainWebhookRespWebhook"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookResponse"
+              }
+            ],
+            "description": "List of webhooks"
           }
         }
       },
@@ -20986,28 +21171,84 @@
         "type": "object",
         "properties": {
           "accepted": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseAccepted"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Accepted webhook URLs",
+            "nullable": true
           },
           "delivered": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseDelivered"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Delivered webhook URLs",
+            "nullable": true
           },
           "opened": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseOpened"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Opened webhook URLs",
+            "nullable": true
           },
           "clicked": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseClicked"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Clicked webhook URLs",
+            "nullable": true
           },
           "unsubscribed": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Unsubscribed webhook URLs",
+            "nullable": true
           },
           "complained": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseComplained"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Complained webhook URLs",
+            "nullable": true
           },
           "temporary_fail": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Temporary fail webhook URLs",
+            "nullable": true
           },
           "permanent_fail": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+              }
+            ],
+            "description": "Permanent fail webhook URLs",
+            "nullable": true
           }
         }
       },
@@ -21018,7 +21259,13 @@
         "type": "object",
         "properties": {
           "webhooks": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiGetAllDomainWebhooksRespWebhooks"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponse"
+              }
+            ],
+            "description": "List of webhooks"
           }
         }
       },
@@ -21159,13 +21406,31 @@
         "type": "object",
         "properties": {
           "open": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiTrackingSettingsOpen"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiOpenSettings"
+              }
+            ],
+            "description": "Open tracking settings"
           },
           "click": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiTrackingSettingsClick"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiClickSettings"
+              }
+            ],
+            "description": "Click tracking settings"
           },
           "unsubscribe": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUnsubscribeSettings"
+              }
+            ],
+            "description": "Unsubscribe tracking settings"
           },
           "web_scheme": {
             "type": "string",
@@ -21196,7 +21461,13 @@
             "description": "A message indicating success"
           },
           "click": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUpdateDomainTrackingClickRespClick"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiClickSettings"
+              }
+            ],
+            "description": "Click settings"
           }
         }
       },
@@ -21221,7 +21492,13 @@
             "description": "A message indicating success"
           },
           "open": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUpdateDomainTrackingOpenRespOpen"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiOpenSettings"
+              }
+            ],
+            "description": "Open settings"
           }
         }
       },
@@ -21250,7 +21527,13 @@
             "description": "A message indicating success"
           },
           "unsubscribe": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUnsubscribeSettings"
+              }
+            ],
+            "description": "Unsubscribe settings"
           }
         }
       },
@@ -21285,7 +21568,13 @@
             "type": "string"
           },
           "dns_record": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+              }
+            ],
+            "nullable": true
           }
         }
       },
@@ -21383,7 +21672,13 @@
             }
           },
           "paging": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
+              }
+            ],
+            "nullable": true
           }
         }
       },
@@ -21673,7 +21968,14 @@
             "description": "Success message"
           },
           "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUpdateDomainRespDomain"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+              }
+            ],
+            "description": "Domain object",
+            "nullable": true
           },
           "receiving_dns_records": {
             "type": "array",
@@ -21780,7 +22082,13 @@
             "description": "Flag indicating no new messages are able to be submitted"
           },
           "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaDisabledJSON"
+              }
+            ],
+            "description": "Disabled info"
           }
         }
       },
@@ -21792,10 +22100,22 @@
         "type": "object",
         "properties": {
           "regular": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"
+              }
+            ],
+            "description": "Message queue response"
           },
           "scheduled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"
+              }
+            ],
+            "description": "Scheduled message queue response"
           }
         }
       },
@@ -23992,7 +24312,13 @@
             "description": "Name of the metrics to receive the stats for such as \u0027processed_count\u0027. See [metrics](https://documentation.mailgun.com/docs/mailgun/user-manual/reporting/metric-definitions)"
           },
           "filter": {
-            "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangQueryFilter"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicateGroup"
+              }
+            ],
+            "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
             "type": "boolean",
@@ -24250,7 +24576,13 @@
             "description": "Name of the metrics to receive the stats for such as \u0027processed_count\u0027."
           },
           "filter": {
-            "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangUsageQueryFilter"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicateGroup"
+              }
+            ],
+            "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
             "type": "boolean",
@@ -24441,7 +24773,13 @@
         "type": "object",
         "properties": {
           "headers": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
+              }
+            ],
+            "nullable": true
           },
           "attachments": {
             "type": "array",
@@ -24577,7 +24915,13 @@
             "format": "int32"
           },
           "match": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
+              }
+            ],
+            "nullable": true
           }
         }
       },
@@ -24614,7 +24958,13 @@
             "type": "string"
           },
           "account": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventAccount"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
+              }
+            ],
+            "nullable": true
           },
           "campaigns": {
             "type": "array",
@@ -24641,13 +24991,25 @@
             "type": "string"
           },
           "delivery-status": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventDeliveryStatus"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
+              }
+            ],
+            "nullable": true
           },
           "i-delivery-optimizer": {
             "type": "string"
           },
           "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventDomain"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
+              }
+            ],
+            "nullable": true
           },
           "recipient": {
             "type": "string"
@@ -24659,13 +25021,31 @@
             "type": "string"
           },
           "envelope": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventEnvelope"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
+              }
+            ],
+            "nullable": true
           },
           "storage": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventStorage"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
+              }
+            ],
+            "nullable": true
           },
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventTemplate"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
+              }
+            ],
+            "nullable": true
           },
           "log-level": {
             "type": "string"
@@ -24674,10 +25054,22 @@
             "type": "string"
           },
           "message": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventMessage"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
+              }
+            ],
+            "nullable": true
           },
           "flags": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventFlags"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
+              }
+            ],
+            "nullable": true
           },
           "primary-dkim": {
             "type": "string"
@@ -24686,10 +25078,22 @@
             "type": "string"
           },
           "geolocation": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventGeolocation"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
+              }
+            ],
+            "nullable": true
           },
           "client-info": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventClientInfo"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
+              }
+            ],
+            "nullable": true
           },
           "severity": {
             "type": "string"
@@ -24698,10 +25102,22 @@
             "type": "string"
           },
           "routes": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventRoutes"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
+              }
+            ],
+            "nullable": true
           },
           "mailing-list": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogEventMailingList"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
+              }
+            ],
+            "nullable": true
           },
           "url": {
             "type": "string"
@@ -25072,7 +25488,13 @@
             "description": "Optional set of analytics metric events. Will be converted into corresponding events."
           },
           "filter": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelLogsRequestFilter"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFilterPredicateGroup"
+              }
+            ],
+            "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
             "type": "boolean",
@@ -25595,10 +26017,22 @@
         "type": "object",
         "properties": {
           "dimension": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiFilterDimension"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
+              }
+            ],
+            "description": "The dimension to filter by."
           },
           "comparator": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiFilterComparator"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiFilterComparator_Wrapper"
+              }
+            ],
+            "description": "The comparison operator."
           },
           "values": {
             "type": "array",
@@ -25742,17 +26176,35 @@
             "description": "A list of filters to apply to the alert."
           },
           "metric": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiSendAlertItemMetric"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric_Wrapper"
+              }
+            ],
+            "description": "The metric being monitored."
           },
           "comparator": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiSendAlertItemComparator"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
+              }
+            ],
+            "description": "The comparison operator."
           },
           "limit": {
             "type": "string",
             "description": "The threshold limit for the alert."
           },
           "dimension": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiSendAlertItemDimension"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
+              }
+            ],
+            "description": "The dimension to apply to the metric."
           },
           "period": {
             "type": "string",
@@ -25775,17 +26227,35 @@
             "description": "A user-friendly name for the alert."
           },
           "metric": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiSendAlertRequestMetric"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric_Wrapper"
+              }
+            ],
+            "description": "The metric being monitored."
           },
           "comparator": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiSendAlertRequestComparator"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
+              }
+            ],
+            "description": "The comparison operator."
           },
           "limit": {
             "type": "string",
             "description": "The threshold limit for the alert."
           },
           "dimension": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiSendAlertRequestDimension"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
+              }
+            ],
+            "description": "The dimension to apply to the metric."
           },
           "alert_channels": {
             "type": "array",
@@ -25903,17 +26373,35 @@
             "description": "A list of filters to apply to the limit."
           },
           "metric": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiThresholdLimitItemMetric"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric_Wrapper"
+              }
+            ],
+            "description": "The metric being monitored."
           },
           "comparator": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiThresholdLimitItemComparator"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
+              }
+            ],
+            "description": "The comparison operator."
           },
           "limit": {
             "type": "string",
             "description": "The value of the limit."
           },
           "dimension": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiThresholdLimitItemDimension"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
+              }
+            ],
+            "description": "The dimension to apply to the metric."
           },
           "period": {
             "type": "string",
@@ -25936,17 +26424,35 @@
             "description": "A user-friendly name for the limit."
           },
           "metric": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitRequestMetric"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric_Wrapper"
+              }
+            ],
+            "description": "The metric being monitored."
           },
           "comparator": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitRequestComparator"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
+              }
+            ],
+            "description": "The comparison operator."
           },
           "limit": {
             "type": "string",
             "description": "The threshold limit."
           },
           "dimension": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitRequestDimension"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
+              }
+            ],
+            "description": "The dimension to apply to the metric."
           },
           "filters": {
             "type": "array",
@@ -26162,10 +26668,22 @@
             "description": "The event type that is alerted on. Check GET /v1/alerts/events for possible values."
           },
           "channel": {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsEventSettingsChannel"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel_Wrapper"
+              }
+            ],
+            "description": "The delivery channel for the alert."
           },
           "settings": {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsEventSettingsSettings"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettings"
+              }
+            ],
+            "description": "This object contains channel-specific settings."
           },
           "disabled_at": {
             "type": "string",
@@ -26188,10 +26706,22 @@
             "description": "The type of event for which you would like to receive alerts."
           },
           "channel": {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalApiMutateEventSettingReqChannel"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel_Wrapper"
+              }
+            ],
+            "description": "The delivery method for the alert."
           },
           "settings": {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalApiMutateEventSettingReqSettings"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettings"
+              }
+            ],
+            "description": "The details pertaining to the specified channel. Please note that the contents of this object differ per channel type."
           }
         }
       },
@@ -26426,7 +26956,13 @@
             "description": "SMTP error message"
           },
           "created_at": {
-            "$ref": "#/components/schemas/GithubComMailgunBlackbookModelBounceCreatedAt"
+            "type": "object",
+            "allOf": [
+              {
+                "type": "object"
+              }
+            ],
+            "description": "Timestamp for when the Bounce event was received in RFC822 format"
           }
         }
       },
@@ -26515,7 +27051,13 @@
             "description": "Any tags present on the message the user clicked Unsubscribe on"
           },
           "created_at": {
-            "$ref": "#/components/schemas/GithubComMailgunBlackbookModelUnsubscribeCreatedAt"
+            "type": "object",
+            "allOf": [
+              {
+                "type": "object"
+              }
+            ],
+            "description": "Timestamp for when the unsubscribe request was received in RFC822 format"
           }
         }
       },
@@ -26575,7 +27117,13 @@
             "description": "Email address for the original recipient"
           },
           "created_at": {
-            "$ref": "#/components/schemas/GithubComMailgunBlackbookModelComplaintCreatedAt"
+            "type": "object",
+            "allOf": [
+              {
+                "type": "object"
+              }
+            ],
+            "description": "Timestamp for when the Complaint event was received in RFC822 format"
           }
         }
       },
@@ -26637,7 +27185,13 @@
             "description": "Domain or address allowlisted"
           },
           "createdAt": {
-            "$ref": "#/components/schemas/GithubComMailgunBlackbookModelWhitelistCreatedAt"
+            "type": "object",
+            "allOf": [
+              {
+                "type": "object"
+              }
+            ],
+            "description": "Timestamp for when the entry was created in RFC822 format"
           },
           "reason": {
             "type": "string",
@@ -26943,7 +27497,15 @@
             "description": "Domain of the template"
           },
           "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+              }
+            ],
+            "description": "Active version information",
+            "nullable": true,
+            "readOnly": true
           },
           "versions": {
             "type": "array",
@@ -26968,7 +27530,14 @@
             "description": "Response message"
           },
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+              }
+            ],
+            "description": "Template details",
+            "nullable": true
           }
         }
       },
@@ -27044,7 +27613,14 @@
         "type": "object",
         "properties": {
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetTemplateOrVersionResponseTemplate"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+              }
+            ],
+            "description": "Template details",
+            "nullable": true
           }
         }
       },
@@ -27056,10 +27632,23 @@
         "type": "object",
         "properties": {
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+              }
+            ],
+            "description": "Template details",
+            "nullable": true
           },
           "paging": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
+              }
+            ],
+            "description": "Pagination details"
           }
         }
       },
@@ -27079,7 +27668,13 @@
             "nullable": true
           },
           "paging": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetPageResponsePaging"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
+              }
+            ],
+            "description": "Pagination details"
           }
         }
       },
@@ -27179,10 +27774,25 @@
             "description": "Response message"
           },
           "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionCopyResponseVersion"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+              }
+            ],
+            "description": "Created version details",
+            "nullable": true
           },
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionCopyResponseTemplate"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+              }
+            ],
+            "description": "\u0022Deprecated: Use \u0027version\u0027 field\u0022",
+            "nullable": true,
+            "deprecated": true
           }
         }
       },
@@ -27209,7 +27819,14 @@
             "description": "Name of the template"
           },
           "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiTemplateUpdateVersion"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
+              }
+            ],
+            "description": "Template version details",
+            "nullable": true
           }
         }
       },
@@ -27225,7 +27842,13 @@
             "description": "Response message"
           },
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponseTemplate"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiTemplateUpdate"
+              }
+            ],
+            "description": "Template change details"
           }
         }
       },
@@ -27561,10 +28184,22 @@
             "description": "The description provided for the key upon its creation"
           },
           "kind": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespKind"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind_Wrapper"
+              }
+            ],
+            "description": "The type of the key which determines how it can be used"
           },
           "role": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespRole"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole_Wrapper"
+              }
+            ],
+            "description": "The role of the key which determines its scope in CRUD operations that have role-based access control"
           },
           "created_at": {
             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$",
@@ -27593,13 +28228,31 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespDomainName"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "requestor": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespRequestor"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "user_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespUserName"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           }
         }
       },
@@ -27648,10 +28301,22 @@
             "description": "The description provided for the key upon its creation"
           },
           "kind": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespKind"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind_Wrapper"
+              }
+            ],
+            "description": "The type of the key which determines how it can be used"
           },
           "role": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespRole"
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole_Wrapper"
+              }
+            ],
+            "description": "The role of the key which determines its scope in CRUD operations that have role-based access control"
           },
           "created_at": {
             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$",
@@ -27680,13 +28345,31 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "requestor": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "user_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespUserName"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "secret": {
             "type": "string",
@@ -27816,7 +28499,13 @@
             "example": "Fri, 23 Jan 2026 10:16:00 \u002B0000"
           },
           "size_bytes": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           }
         }
       },
@@ -28036,10 +28725,22 @@
         "type": "object",
         "properties": {
           "subaccount": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStatSubaccount"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesSubaccount"
+              }
+            ],
+            "nullable": true
           },
           "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStatDomain"
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
+              }
+            ],
+            "nullable": true
           },
           "rule-id": {
             "type": "string"
@@ -28481,7 +29182,13 @@
             "nullable": true
           },
           "metrics": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsCountsAndRates"
+              }
+            ],
+            "description": "Counts and rates"
           }
         }
       },
@@ -28504,7 +29211,7 @@
             "description": "\u0022An end timestamp in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
           },
           "resolution": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution"
+            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
           },
           "duration": {
             "type": "string",
@@ -28645,13 +29352,25 @@
         "type": "object",
         "properties": {
           "start": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiMetricsRequestStart"
+            "type": "object",
+            "allOf": [
+              {
+                "type": "object"
+              }
+            ],
+            "description": "\u0022A start timestamp (default: 7 days before current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
           },
           "end": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiMetricsRequestEnd"
+            "type": "object",
+            "allOf": [
+              {
+                "type": "object"
+              }
+            ],
+            "description": "\u0022An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
           },
           "resolution": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution"
+            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
           },
           "duration": {
             "type": "string",
@@ -28672,14 +29391,26 @@
             "description": "Metrics to return. See example."
           },
           "filter": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiMetricsRequestFilter"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiFilterPredicateGroup"
+              }
+            ],
+            "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
             "type": "boolean",
             "description": "Include stats from all subaccounts."
           },
           "pagination": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiMetricsRequestPagination"
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiPaginationReq"
+              }
+            ],
+            "description": "Attributes used for pagination and sorting."
           }
         }
       },
@@ -28753,10 +29484,24 @@
             "description": "whether 2-factor auth has been activated for the user"
           },
           "tfa_created_at": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseTfaCreatedAt"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true,
+            "example": "2022-12-20T16:52:01.892000"
           },
           "password_updated_at": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponsePasswordUpdatedAt"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true,
+            "example": "2022-12-20T16:52:01.892000"
           },
           "preferences": {
             "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponsePreferences"
@@ -28765,10 +29510,22 @@
             "$ref": "#/components/schemas/GithubComMailgunUsersApiUserAuthResponse"
           },
           "github_user_id": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseGithubUserId"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "salesforce_user_id": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseSalesforceUserId"
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UnionBranch"
+              }
+            ],
+            "nullable": true
           },
           "migration_status": {
             "type": "string",
@@ -28811,491 +29568,6 @@
       "POST_v1_analytics_usage_metricsnone": {
         "type": "string"
       },
-      "GithubComMailgunDomainsClientGolangDomainDisabled": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsClientGolangDisabled": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiCreateDomainRespDomain": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Details of the newly created domain",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsClientGolangDomain": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Domain details",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsClientGolangDomain": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiVerifyDomainResponseDomain": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Domain record information",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsClientGolangDomain": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiCreateDomainWebhookRespWebhook": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookResponse"
-          }
-        ],
-        "description": "Webhook details"
-      },
-      "GithubComMailgunDomainsHttpapiGetDomainWebhookRespWebhook": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookResponse"
-          }
-        ],
-        "description": "List of webhooks"
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseAccepted": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Accepted webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseDelivered": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Delivered webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseOpened": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Opened webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseClicked": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Clicked webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Unsubscribed webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseComplained": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Complained webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Temporary fail webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Permanent fail webhook URLs",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsHttpapiWebhookURLs": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiGetAllDomainWebhooksRespWebhooks": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponse"
-          }
-        ],
-        "description": "List of webhooks"
-      },
-      "GithubComMailgunDomainsHttpapiTrackingSettingsOpen": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiOpenSettings"
-          }
-        ],
-        "description": "Open tracking settings"
-      },
-      "GithubComMailgunDomainsHttpapiTrackingSettingsClick": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiClickSettings"
-          }
-        ],
-        "description": "Click tracking settings"
-      },
-      "GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUnsubscribeSettings"
-          }
-        ],
-        "description": "Unsubscribe tracking settings"
-      },
-      "GithubComMailgunDomainsHttpapiUpdateDomainTrackingClickRespClick": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiClickSettings"
-          }
-        ],
-        "description": "Click settings"
-      },
-      "GithubComMailgunDomainsHttpapiUpdateDomainTrackingOpenRespOpen": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiOpenSettings"
-          }
-        ],
-        "description": "Open settings"
-      },
-      "GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUnsubscribeSettings"
-          }
-        ],
-        "description": "Unsubscribe settings"
-      },
-      "GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsClientGolangRecord": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunScaffoldHttpapiPagingPagingResponse": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiUpdateDomainRespDomain": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Domain object",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunDomainsClientGolangDomain": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaDisabledJSON"
-          }
-        ],
-        "description": "Disabled info"
-      },
-      "GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"
-          }
-        ],
-        "description": "Message queue response"
-      },
-      "GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"
-          }
-        ],
-        "description": "Scheduled message queue response"
-      },
-      "GithubComMailgunTerminatorHttpapiStatusResponseStatus": {
-        "type": "object",
-        "description": "Status of certificate. Either \u0027expired\u0027 \u0027processing\u0027 \u0027active\u0027 or \u0027error\u0027"
-      },
       "EventResponseFlags": {
         "type": "object",
         "properties": {
@@ -29331,10 +29603,6 @@
             "type": "string"
           }
         }
-      },
-      "EventResponseUserVariables": {
-        "type": "object",
-        "description": "Variables included in the email"
       },
       "EventResponseStorage": {
         "type": "object",
@@ -29565,530 +29833,12 @@
           }
         }
       },
-      "GithubComMailgunAnalyticsClientGolangQueryFilter": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicateGroup"
-          }
-        ],
-        "description": "Filters to apply to the query."
-      },
-      "GithubComMailgunAnalyticsClientGolangUsageQueryFilter": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicateGroup"
-          }
-        ],
-        "description": "Filters to apply to the query."
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventAccount": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelAccount": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventDeliveryStatus": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelDeliveryStatus": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventDomain": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelDomain": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventEnvelope": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelEnvelope": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventStorage": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelStorage": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventTemplate": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelTemplate": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventMessage": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelMessage": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventFlags": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelFlags": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventGeolocation": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelGeoLocation": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventClientInfo": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelClientInfo": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventRoutes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelRoutes": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogEventMailingList": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunLogsApiPkgApiModelMailingList": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
-          }
-        }
-      },
       "GithubComMailgunLogsApiPkgApiModelAggregatesMetrics": {
         "type": "object",
         "additionalProperties": {
           "type": "integer",
           "format": "int64"
         }
-      },
-      "GithubComMailgunLogsApiPkgApiModelLogsRequestFilter": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFilterPredicateGroup"
-          }
-        ],
-        "description": "Filters to apply to the query."
-      },
-      "GithubComMailgunThresholdsApiFilterDimension": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
-          }
-        ],
-        "description": "The dimension to filter by."
-      },
-      "GithubComMailgunThresholdsApiSendAlertItemMetric": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric_Wrapper"
-          }
-        ],
-        "description": "The metric being monitored."
-      },
-      "GithubComMailgunThresholdsApiSendAlertItemComparator": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
-          }
-        ],
-        "description": "The comparison operator."
-      },
-      "GithubComMailgunThresholdsApiSendAlertItemDimension": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper_2"
-          }
-        ],
-        "description": "The dimension to apply to the metric."
-      },
-      "GithubComMailgunThresholdsApiSendAlertRequestMetric": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric_Wrapper_2"
-          }
-        ],
-        "description": "The metric being monitored."
-      },
-      "GithubComMailgunThresholdsApiSendAlertRequestComparator": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper_2"
-          }
-        ],
-        "description": "The comparison operator."
-      },
-      "GithubComMailgunThresholdsApiSendAlertRequestDimension": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper_3"
-          }
-        ],
-        "description": "The dimension to apply to the metric."
-      },
-      "GithubComMailgunThresholdsApiThresholdLimitItemMetric": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric_Wrapper"
-          }
-        ],
-        "description": "The metric being monitored."
-      },
-      "GithubComMailgunThresholdsApiThresholdLimitItemComparator": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper_3"
-          }
-        ],
-        "description": "The comparison operator."
-      },
-      "GithubComMailgunThresholdsApiThresholdLimitItemDimension": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper_4"
-          }
-        ],
-        "description": "The dimension to apply to the metric."
-      },
-      "GithubComMailgunThresholdsApiLimitRequestMetric": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric_Wrapper_2"
-          }
-        ],
-        "description": "The metric being monitored."
-      },
-      "GithubComMailgunThresholdsApiLimitRequestComparator": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper_4"
-          }
-        ],
-        "description": "The comparison operator."
-      },
-      "GithubComMailgunThresholdsApiLimitRequestDimension": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper_5"
-          }
-        ],
-        "description": "The dimension to apply to the metric."
-      },
-      "GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIds": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
-        },
-        "description": "List of disabled Slack channels."
-      },
-      "GithubComMailgunAlertsInternalSettingsEventSettingsChannel": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel_Wrapper"
-          }
-        ],
-        "description": "The delivery channel for the alert."
-      },
-      "GithubComMailgunAlertsInternalSettingsEventSettingsSettings": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettings"
-          }
-        ],
-        "description": "This object contains channel-specific settings."
-      },
-      "GithubComMailgunAlertsInternalApiMutateEventSettingReqChannel": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel_Wrapper_2"
-          }
-        ],
-        "description": "The delivery method for the alert."
-      },
-      "GithubComMailgunAlertsInternalApiMutateEventSettingReqSettings": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettings"
-          }
-        ],
-        "description": "The details pertaining to the specified channel. Please note that the contents of this object differ per channel type."
-      },
-      "GithubComMailgunBlackbookModelBounceCreatedAt": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
-        "description": "Timestamp for when the Bounce event was received in RFC822 format"
-      },
-      "GithubComMailgunBlackbookModelUnsubscribeCreatedAt": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
-        "description": "Timestamp for when the unsubscribe request was received in RFC822 format"
-      },
-      "GithubComMailgunBlackbookModelComplaintCreatedAt": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
-        "description": "Timestamp for when the Complaint event was received in RFC822 format"
-      },
-      "GithubComMailgunBlackbookModelWhitelistCreatedAt": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
-        "description": "Timestamp for when the entry was created in RFC822 format"
-      },
-      "ListMemberRequestVars": {
-        "type": "object"
-      },
-      "ListMemberResponseVars": {
-        "type": "object",
-        "description": "A JSON-encoded dictionary string with arbitrary parameters, e.g. {\u0022gender\u0022:\u0022female\u0022,\u0022age\u0022:27}"
       },
       "PaginateMailingListResponsePaging": {
         "type": "object",
@@ -30135,536 +29885,12 @@
         },
         "description": "Key value JSON object of headers to be stored with the template. Where key is the header name and value is the header value. The header names \u0060From\u0060"
       },
-      "GithubComMailgunTempleModelTemplateVersion": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Active version information",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleModelVersion": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          }
-        },
-        "readOnly": true
-      },
-      "GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Template details",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleModelTemplate": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          }
-        }
-      },
-      "GithubComMailgunTempleHttpapiGetTemplateOrVersionResponseTemplate": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Template details",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleModelTemplate": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          }
-        }
-      },
-      "GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Template details",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleModelTemplate": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          }
-        }
-      },
-      "GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
-          }
-        ],
-        "description": "Pagination details"
-      },
-      "GithubComMailgunTempleHttpapiGetPageResponsePaging": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
-          }
-        ],
-        "description": "Pagination details"
-      },
-      "GithubComMailgunScaffoldHttpapiResponseWithStatusResponse": {
-        "type": "object"
-      },
-      "GithubComMailgunTempleHttpapiVersionCopyResponseVersion": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Created version details",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleModelVersion": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          }
-        }
-      },
-      "GithubComMailgunTempleHttpapiVersionCopyResponseTemplate": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "\u0022Deprecated: Use \u0027version\u0027 field\u0022",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleModelVersion": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          }
-        },
-        "deprecated": true
-      },
-      "GithubComMailgunTempleHttpapiTemplateUpdateVersion": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "description": "Template version details",
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunTempleHttpapiVersionUpdate": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
-          }
-        }
-      },
-      "GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponseTemplate": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiTemplateUpdate"
-          }
-        ],
-        "description": "Template change details"
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespKind": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind_Wrapper"
-          }
-        ],
-        "description": "The type of the key which determines how it can be used"
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespRole": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole_Wrapper"
-          }
-        ],
-        "description": "The role of the key which determines its scope in CRUD operations that have role-based access control"
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespDomainName": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespDomainName_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusKeysKeyInfoRespDomainName_1": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespDomainName_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespRequestor": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespRequestor_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusKeysKeyInfoRespRequestor_1": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespRequestor_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespUserName": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespUserName_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusKeysKeyInfoRespUserName_1": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespUserName_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespKind": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind_Wrapper_2"
-          }
-        ],
-        "description": "The type of the key which determines how it can be used"
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespRole": {
-        "type": "string",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole_Wrapper_2"
-          }
-        ],
-        "description": "The role of the key which determines its scope in CRUD operations that have role-based access control"
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName_1": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor_1": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespUserName": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespUserName_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusKeysKeyInfoSecretRespUserName_1": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespUserName_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes_1": "#/components/schemas/GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes_Branch1"
-          }
-        }
-      },
       "GithubComMailgunCerberusCredentialsCreateCredsRespCredentials": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         },
         "description": "Credential username/password values (when generated by Mailgun)"
-      },
-      "GithubComMailgunBounceClassificationEntitiesStatSubaccount": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesSubaccount"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunBounceClassificationEntitiesSubaccount": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesSubaccount"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesStatDomain": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunBounceClassificationEntitiesDomain": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListAccountStatsRespReq": {
-        "type": "object"
-      },
-      "GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsCountsAndRates"
-          }
-        ],
-        "description": "Counts and rates"
-      },
-      "GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution_Wrapper"
-          }
-        ],
-        "description": "\u0027resolution\u0027 from the request"
-      },
-      "GithubComMailgunBounceClassificationInternalApiMetricsRequestStart": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
-        "description": "\u0022A start timestamp (default: 7 days before current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
-      },
-      "GithubComMailgunBounceClassificationInternalApiMetricsRequestEnd": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
-        "description": "\u0022An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
-      },
-      "GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution_Wrapper_2"
-          }
-        ]
-      },
-      "GithubComMailgunBounceClassificationInternalApiMetricsRequestFilter": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiFilterPredicateGroup"
-          }
-        ],
-        "description": "Filters to apply to the query."
-      },
-      "GithubComMailgunBounceClassificationInternalApiMetricsRequestPagination": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiPaginationReq"
-          }
-        ],
-        "description": "Attributes used for pagination and sorting."
       },
       "GithubComMailgunUsersApiUserResponseEmailDetails": {
         "type": "object",
@@ -30686,60 +29912,6 @@
           }
         }
       },
-      "GithubComMailgunUsersApiUserResponseMetadata": {
-        "type": "object",
-        "description": "any optional metadata for the user"
-      },
-      "GithubComMailgunUsersApiUserResponseTfaCreatedAt": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseTfaCreatedAt_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunUsersApiUserResponseTfaCreatedAt_1": "#/components/schemas/GithubComMailgunUsersApiUserResponseTfaCreatedAt_Branch1"
-          }
-        },
-        "example": "2022-12-20T16:52:01.892000"
-      },
-      "GithubComMailgunUsersApiUserResponsePasswordUpdatedAt": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponsePasswordUpdatedAt_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunUsersApiUserResponsePasswordUpdatedAt_1": "#/components/schemas/GithubComMailgunUsersApiUserResponsePasswordUpdatedAt_Branch1"
-          }
-        },
-        "example": "2022-12-20T16:52:01.892000"
-      },
       "GithubComMailgunUsersApiUserResponsePreferences": {
         "type": "object",
         "properties": {
@@ -30756,58 +29928,6 @@
             "description": "preferred programming language"
           }
         }
-      },
-      "GithubComMailgunUsersApiUserResponseGithubUserId": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseGithubUserId_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunUsersApiUserResponseGithubUserId_1": "#/components/schemas/GithubComMailgunUsersApiUserResponseGithubUserId_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunUsersApiUserResponseSalesforceUserId": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseSalesforceUserId_Branch1"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "nullable": true,
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GithubComMailgunUsersApiUserResponseSalesforceUserId_1": "#/components/schemas/GithubComMailgunUsersApiUserResponseSalesforceUserId_Branch1"
-          }
-        }
-      },
-      "GithubComMailgunUsersApiUserAuthResponsePriorDetails": {
-        "type": "object",
-        "description": "Details that may be needed for an auth method"
       },
       "GithubComMailgunUsersApiUserResponseEmailDetailsParts": {
         "type": "object",
@@ -30923,48 +30043,12 @@
           }
         }
       },
-      "PostV3Routes200": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "description": "A string describing the result of the operation"
-          },
-          "route": {
-            "$ref": "#/components/schemas/RouteResponse"
-          }
-        }
-      },
-      "GetV3Routes200": {
-        "type": "object",
-        "properties": {
-          "total_count": {
-            "type": "integer",
-            "description": "Total number of routes in the account"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RouteResponse"
-            },
-            "description": "List of routes"
-          }
-        }
-      },
       "GetV3Routes400": {
         "type": "object",
         "properties": {
           "message": {
             "type": "string",
             "description": "A string describing the error"
-          }
-        }
-      },
-      "GetV3RoutesId200": {
-        "type": "object",
-        "properties": {
-          "route": {
-            "$ref": "#/components/schemas/RouteResponse"
           }
         }
       },
@@ -31005,18 +30089,6 @@
           }
         }
       },
-      "PutV3RoutesId200": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "description": "A string describing the result of the operation"
-          },
-          "route": {
-            "$ref": "#/components/schemas/RouteResponse"
-          }
-        }
-      },
       "PutV3RoutesId404": {
         "type": "object",
         "properties": {
@@ -31044,14 +30116,6 @@
         "properties": {
           "message": {
             "type": "string"
-          }
-        }
-      },
-      "GetV3RoutesMatch200": {
-        "type": "object",
-        "properties": {
-          "route": {
-            "$ref": "#/components/schemas/RouteResponse"
           }
         }
       },
@@ -31092,14 +30156,6 @@
           }
         }
       },
-      "PostV3Lists201": {
-        "type": "object",
-        "properties": {
-          "list": {
-            "$ref": "#/components/schemas/MailingListResponse"
-          }
-        }
-      },
       "PostV3Lists400": {
         "type": "object",
         "properties": {
@@ -31118,41 +30174,12 @@
           }
         }
       },
-      "GetV3Lists200": {
-        "type": "object",
-        "properties": {
-          "total_count": {
-            "type": "integer"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MailingListResponse"
-            }
-          }
-        }
-      },
       "GetV3Lists429": {
         "type": "object",
         "properties": {
           "message": {
             "type": "string",
             "description": "Error message"
-          }
-        }
-      },
-      "GetListsStringListAddressMembers200": {
-        "type": "object",
-        "properties": {
-          "total_count": {
-            "type": "integer",
-            "description": "Total number of members in the mailing list"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListMemberResponse"
-            }
           }
         }
       },
@@ -31190,18 +30217,6 @@
           }
         }
       },
-      "PostListsStringListAddressMembers200": {
-        "type": "object",
-        "properties": {
-          "member": {
-            "$ref": "#/components/schemas/ListMemberResponse"
-          },
-          "message": {
-            "type": "string",
-            "description": "Success message"
-          }
-        }
-      },
       "PostListsStringListAddressMembers400": {
         "type": "object",
         "properties": {
@@ -31217,22 +30232,6 @@
           "message": {
             "type": "string",
             "description": "Error message"
-          }
-        }
-      },
-      "PostListsListAddressMembersJson200": {
-        "type": "object",
-        "properties": {
-          "list": {
-            "$ref": "#/components/schemas/MailingListResponse"
-          },
-          "task-id": {
-            "type": "string",
-            "description": "Unique identifier for the background upload task"
-          },
-          "message": {
-            "type": "string",
-            "description": "Success message"
           }
         }
       },
@@ -31266,22 +30265,6 @@
           "members": {
             "type": "string",
             "description": "Absolute path to the CSV file"
-          }
-        }
-      },
-      "PostListsListAddressMembersCsv200": {
-        "type": "object",
-        "properties": {
-          "list": {
-            "$ref": "#/components/schemas/MailingListResponse"
-          },
-          "task-id": {
-            "type": "string",
-            "description": "Unique identifier for the background upload task"
-          },
-          "message": {
-            "type": "string",
-            "description": "Success message"
           }
         }
       },
@@ -31339,18 +30322,6 @@
           "subscribed": {
             "type": "boolean",
             "description": "Set the member to subscribed or not. Defaults to True."
-          }
-        }
-      },
-      "PutListsListAddressMembersMemberAddress200": {
-        "type": "object",
-        "properties": {
-          "member": {
-            "$ref": "#/components/schemas/ListMemberResponse"
-          },
-          "message": {
-            "type": "string",
-            "description": "Success message"
           }
         }
       },
@@ -31421,18 +30392,6 @@
           }
         }
       },
-      "PutV3ListsAddress200": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "description": "Success message"
-          },
-          "list": {
-            "$ref": "#/components/schemas/MailingListResponse"
-          }
-        }
-      },
       "PutV3ListsAddress404": {
         "type": "object",
         "properties": {
@@ -31482,14 +30441,6 @@
           }
         }
       },
-      "GetV3ListsAddress200": {
-        "type": "object",
-        "properties": {
-          "list": {
-            "$ref": "#/components/schemas/MailingListResponse"
-          }
-        }
-      },
       "GetV3ListsAddress404": {
         "type": "object",
         "properties": {
@@ -31526,25 +30477,6 @@
           }
         }
       },
-      "GetV5SandboxAuthRecipients200": {
-        "type": "object",
-        "properties": {
-          "recipients": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunAccountsApiRecipientResponse"
-            }
-          }
-        }
-      },
-      "PostV5SandboxAuthRecipients200": {
-        "type": "object",
-        "properties": {
-          "recipient": {
-            "$ref": "#/components/schemas/GithubComMailgunAccountsApiRecipientResponse"
-          }
-        }
-      },
       "PutV5AccountsSubaccountsSubaccountIdFeatures": {
         "type": "object",
         "properties": {
@@ -31565,13 +30497,9 @@
           }
         }
       },
-      "PutV5AccountsSubaccountsSubaccountIdFeatures200": {
+      "ExamplePayload": {
         "type": "object",
-        "properties": {
-          "features": {
-            "type": "object"
-          }
-        }
+        "description": "Placeholder schema for path example refs"
       },
       "GithubComMailgunThresholdsApiDimension_Wrapper": {
         "required": [
@@ -31581,6 +30509,17 @@
         "properties": {
           "value": {
             "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
+          }
+        }
+      },
+      "GithubComMailgunThresholdsApiFilterComparator_Wrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiFilterComparator"
           }
         }
       },
@@ -31606,50 +30545,6 @@
           }
         }
       },
-      "GithubComMailgunThresholdsApiDimension_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiMetric_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiMetricComparator_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiDimension_Wrapper_3": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
-          }
-        }
-      },
       "GithubComMailgunThresholdsApiLimitMetric_Wrapper": {
         "required": [
           "value"
@@ -31661,73 +30556,7 @@
           }
         }
       },
-      "GithubComMailgunThresholdsApiMetricComparator_Wrapper_3": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiDimension_Wrapper_4": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiLimitMetric_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiMetricComparator_Wrapper_4": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
-          }
-        }
-      },
-      "GithubComMailgunThresholdsApiDimension_Wrapper_5": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
-          }
-        }
-      },
       "GithubComMailgunAlertsChannelsChannel_Wrapper": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel"
-          }
-        }
-      },
-      "GithubComMailgunAlertsChannelsChannel_Wrapper_2": {
         "required": [
           "value"
         ],
@@ -31760,51 +30589,7 @@
           }
         }
       },
-      "GithubComMailgunCerberusKeysKind_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysRole_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesResolution_Wrapper": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesResolution_Wrapper_2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespDomainName_Branch1": {
+      "UnionBranch": {
         "required": [
           "value"
         ],
@@ -31815,131 +30600,6 @@
             "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys"
           }
         }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespRequestor_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "An email address associated with the key"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespUserName_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The API key user\u0027s name"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "An email address associated with the key"
-          }
-        }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespUserName_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The API key user\u0027s name"
-          }
-        }
-      },
-      "GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunUsersApiUserResponseTfaCreatedAt_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
-            "type": "string",
-            "description": "the date and time at which 2-factor auth was activated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds"
-          }
-        }
-      },
-      "GithubComMailgunUsersApiUserResponsePasswordUpdatedAt_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
-            "type": "string",
-            "description": "the date and time at which the user password was last updated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds"
-          }
-        }
-      },
-      "GithubComMailgunUsersApiUserResponseGithubUserId_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "Github ID, if part of Github Student Developer Pack account"
-          }
-        }
-      },
-      "GithubComMailgunUsersApiUserResponseSalesforceUserId_Branch1": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "Salesforce ID, if part of Salesforce platform account"
-          }
-        }
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
       }
     },
     "securitySchemes": {

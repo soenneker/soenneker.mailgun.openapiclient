@@ -17,18 +17,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Pagination details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging? Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponse_paging? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponse_paging Paging { get; set; }
 #endif
         /// <summary>Template details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate? Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate? Template { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate Template { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate Template { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponse"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging.CreateFromDiscriminatorValue); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponse_paging>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponse_paging.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging>("paging", Paging);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetVersionsPageResponse_paging>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate>("template", Template);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

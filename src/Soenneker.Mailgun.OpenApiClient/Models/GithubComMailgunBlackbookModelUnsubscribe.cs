@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Timestamp for when the unsubscribe request was received in RFC822 format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribeCreatedAt? CreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribe_created_at? CreatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribeCreatedAt CreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribe_created_at CreatedAt { get; set; }
 #endif
         /// <summary>Any tags present on the message the user clicked Unsubscribe on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribeCreatedAt>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribeCreatedAt.CreateFromDiscriminatorValue); } },
+                { "created_at", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribe_created_at>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribe_created_at.CreateFromDiscriminatorValue); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribeCreatedAt>("created_at", CreatedAt);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelUnsubscribe_created_at>("created_at", CreatedAt);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteAdditionalData(AdditionalData);
         }

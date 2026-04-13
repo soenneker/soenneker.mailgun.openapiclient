@@ -105,10 +105,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Counts and rates</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics? Metrics { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem_metrics? Metrics { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics Metrics { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem_metrics Metrics { get; set; }
 #endif
         /// <summary>The recipientDomain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -202,7 +202,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "envelope.sending-ip", n => { EnvelopeSendingIp = n.GetStringValue(); } },
                 { "explanation", n => { Explanation = n.GetStringValue(); } },
                 { "group-id", n => { GroupId = n.GetStringValue(); } },
-                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem_metrics>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem_metrics.CreateFromDiscriminatorValue); } },
                 { "recipient-domain", n => { RecipientDomain = n.GetStringValue(); } },
                 { "recipient-provider", n => { RecipientProvider = n.GetStringValue(); } },
                 { "sample-text", n => { SampleText = n.GetStringValue(); } },
@@ -230,7 +230,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("envelope.sending-ip", EnvelopeSendingIp);
             writer.WriteStringValue("explanation", Explanation);
             writer.WriteStringValue("group-id", GroupId);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics>("metrics", Metrics);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem_metrics>("metrics", Metrics);
             writer.WriteStringValue("recipient-domain", RecipientDomain);
             writer.WriteStringValue("recipient-provider", RecipientProvider);
             writer.WriteStringValue("sample-text", SampleText);

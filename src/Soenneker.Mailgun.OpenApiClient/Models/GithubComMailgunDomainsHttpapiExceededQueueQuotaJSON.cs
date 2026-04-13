@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Disabled info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled? Disabled { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON_disabled? Disabled { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled Disabled { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON_disabled Disabled { get; set; }
 #endif
         /// <summary>Flag indicating no new messages are able to be submitted</summary>
         public bool? IsDisabled { get; set; }
@@ -32,6 +32,16 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
+        /// Creates a new instance of the appropriate class based on discriminator value
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"/></returns>
+        /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON CreateFromDiscriminatorValue(IParseNode parseNode)
+        {
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON();
+        }
+        /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
@@ -39,7 +49,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled.CreateFromDiscriminatorValue); } },
+                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON_disabled>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON_disabled.CreateFromDiscriminatorValue); } },
                 { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
             };
         }
@@ -50,7 +60,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSONDisabled>("disabled", Disabled);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON_disabled>("disabled", Disabled);
             writer.WriteBoolValue("is_disabled", IsDisabled);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -36,7 +36,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features
         /// <summary>
         /// Update subaccount feature
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesPutResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,11 +44,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures200?> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesPutResponse?> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures200> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesPutResponse> PutAsync(global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -58,7 +58,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesPutResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update subaccount feature

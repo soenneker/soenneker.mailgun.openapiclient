@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Timestamp for when the entry was created in RFC822 format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelistCreatedAt? CreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelist_createdAt? CreatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelistCreatedAt CreatedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelist_createdAt CreatedAt { get; set; }
 #endif
         /// <summary>User-provided reason for allowlisting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "createdAt", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelistCreatedAt>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelistCreatedAt.CreateFromDiscriminatorValue); } },
+                { "createdAt", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelist_createdAt>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelist_createdAt.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelistCreatedAt>("createdAt", CreatedAt);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBlackbookModelWhitelist_createdAt>("createdAt", CreatedAt);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("value", Value);
