@@ -2,7 +2,7 @@
   "descriptionHash": "6AE5AFCE30F8BF3656E713F785397022536A65B344E60DB80C751D561371543A2DC32FAAE976B447B03FD8B6A79BC488DBECA88D0DC2CE4562511DD0518397A0",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.0",
+  "kiotaVersion": "1.31.1",
   "clientClassName": "MailgunOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Mailgun.OpenApiClient",
