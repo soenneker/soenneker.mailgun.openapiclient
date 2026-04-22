@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Mailgun.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class MailgunOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class MailgunOpenApiClientTests : HostedUnitTest
 {
-    public MailgunOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public MailgunOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
