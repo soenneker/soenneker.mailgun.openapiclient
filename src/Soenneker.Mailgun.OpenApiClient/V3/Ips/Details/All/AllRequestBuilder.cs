@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Details.All
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AllRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/details/all{?domain_id*,limit*,pool_id*,skip*,sort_by*,sort_order*,subaccount_id*}", pathParameters)
+        public AllRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/details/all{?domain_id*,ip*,limit*,pool_id*,skip*,sort_by*,sort_order*,subaccount_id*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Details.All
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AllRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/details/all{?domain_id*,limit*,pool_id*,skip*,sort_by*,sort_order*,subaccount_id*}", rawUrl)
+        public AllRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/details/all{?domain_id*,ip*,limit*,pool_id*,skip*,sort_by*,sort_order*,subaccount_id*}", rawUrl)
         {
         }
         /// <summary>
@@ -101,6 +101,16 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Details.All
 #else
             [QueryParameter("domain_id")]
             public string DomainId { get; set; }
+#endif
+            /// <summary>Search for IPs containing this text (supports partial matching)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("ip")]
+            public string? Ip { get; set; }
+#nullable restore
+#else
+            [QueryParameter("ip")]
+            public string Ip { get; set; }
 #endif
             /// <summary>Maximum records to return</summary>
             [QueryParameter("limit")]

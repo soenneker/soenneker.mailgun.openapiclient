@@ -14,45 +14,45 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The email_preview property</summary>
+        /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam? EmailPreview { get; set; }
+        public string? EmailPreview { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam EmailPreview { get; set; }
+        public string EmailPreview { get; set; }
 #endif
-        /// <summary>The inbox_placement property</summary>
+        /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam? InboxPlacement { get; set; }
+        public string? InboxPlacement { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam InboxPlacement { get; set; }
+        public string InboxPlacement { get; set; }
 #endif
-        /// <summary>The sending property</summary>
+        /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam? Sending { get; set; }
+        public string? Sending { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam Sending { get; set; }
+        public string Sending { get; set; }
 #endif
-        /// <summary>The validations property</summary>
+        /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam? Validations { get; set; }
+        public string? Validations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam Validations { get; set; }
+        public string Validations { get; set; }
 #endif
-        /// <summary>The validations_bulk property</summary>
+        /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam? ValidationsBulk { get; set; }
+        public string? ValidationsBulk { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam ValidationsBulk { get; set; }
+        public string ValidationsBulk { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeatures"/> and sets the default values.
@@ -79,11 +79,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "email_preview", n => { EmailPreview = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam.CreateFromDiscriminatorValue); } },
-                { "inbox_placement", n => { InboxPlacement = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam.CreateFromDiscriminatorValue); } },
-                { "sending", n => { Sending = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam.CreateFromDiscriminatorValue); } },
-                { "validations", n => { Validations = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam.CreateFromDiscriminatorValue); } },
-                { "validations_bulk", n => { ValidationsBulk = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam.CreateFromDiscriminatorValue); } },
+                { "email_preview", n => { EmailPreview = n.GetStringValue(); } },
+                { "inbox_placement", n => { InboxPlacement = n.GetStringValue(); } },
+                { "sending", n => { Sending = n.GetStringValue(); } },
+                { "validations", n => { Validations = n.GetStringValue(); } },
+                { "validations_bulk", n => { ValidationsBulk = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>("email_preview", EmailPreview);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>("inbox_placement", InboxPlacement);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>("sending", Sending);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>("validations", Validations);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiFeatureOverrideEnabledParam>("validations_bulk", ValidationsBulk);
+            writer.WriteStringValue("email_preview", EmailPreview);
+            writer.WriteStringValue("inbox_placement", InboxPlacement);
+            writer.WriteStringValue("sending", Sending);
+            writer.WriteStringValue("validations", Validations);
+            writer.WriteStringValue("validations_bulk", ValidationsBulk);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

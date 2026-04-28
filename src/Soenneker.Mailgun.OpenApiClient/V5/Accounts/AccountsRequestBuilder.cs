@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Mailgun.OpenApiClient.Models;
+using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Features;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Http_signing_key;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Resend_activation_email;
@@ -21,6 +22,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The features property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Features.FeaturesRequestBuilder Features
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Features.FeaturesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The http_signing_key property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Http_signing_key.Http_signing_keyRequestBuilder Http_signing_key
         {

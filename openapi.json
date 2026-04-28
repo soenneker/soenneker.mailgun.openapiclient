@@ -4286,12 +4286,12 @@
                     "value": {
                       "items": [
                         {
-                          "pool_id": "69c15db8a432c65972c789db",
-                          "subaccount_id": "69c15db8a432c65972c789dc"
+                          "pool_id": "69c42eba4fac947ac7bb340b",
+                          "subaccount_id": "69c42eba4fac947ac7bb340c"
                         },
                         {
-                          "pool_id": "69c15db8a432c65972c789dd",
-                          "subaccount_id": "69c15db8a432c65972c789de"
+                          "pool_id": "69c42eba4fac947ac7bb340d",
+                          "subaccount_id": "69c42eba4fac947ac7bb340e"
                         }
                       ],
                       "total_count": 2
@@ -4354,7 +4354,7 @@
                   "Example": {
                     "value": {
                       "message": "started",
-                      "reference_id": "69c15db8a432c65972c789e0"
+                      "reference_id": "69c42eba4fac947ac7bb3410"
                     }
                   }
                 }
@@ -4442,7 +4442,7 @@
                   "Example": {
                     "value": {
                       "message": "started",
-                      "reference_id": "69c15db8a432c65972c789df"
+                      "reference_id": "69c42eba4fac947ac7bb340f"
                     }
                   }
                 }
@@ -4791,8 +4791,8 @@
                     "value": {
                       "items": [
                         {
-                          "account_id": "69c15db8a432c65972c789cd",
-                          "id": "69c15db8a432c65972c789cc",
+                          "account_id": "69c42eba4fac947ac7bb33fc",
+                          "id": "69c42eba4fac947ac7bb33fb",
                           "name": "example.com"
                         }
                       ]
@@ -5410,6 +5410,14 @@
             }
           },
           {
+            "name": "ip",
+            "in": "query",
+            "description": "Search for IPs containing this text (supports partial matching)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "sort_by",
             "in": "query",
             "description": "Name of the field to sort results by",
@@ -5440,36 +5448,45 @@
                     "value": {
                       "items": [
                         {
-                          "address": "1.0.0.1",
-                          "parent_account_id": "69c15db8a432c65972c789ce",
-                          "account_id": "69c15db8a432c65972c789ce",
-                          "pool_ids": [],
-                          "dedicated": true,
-                          "created_at": "2026-02-09T12:30:00Z",
-                          "pool_last_modified_at": "2026-02-09T15:30:00Z",
-                          "domains_last_modified_at": "2026-02-10T12:30:00Z"
+                          "GroupedAccountIP": {
+                            "address": "1.0.0.1",
+                            "account_ids": [
+                              "69c42eba4fac947ac7bb33fd",
+                              "69c42eba4fac947ac7bb33fe",
+                              "69c42eba4fac947ac7bb33ff"
+                            ],
+                            "parent_account_id": "69c42eba4fac947ac7bb33fd",
+                            "created_at": "2026-02-09T12:30:00Z"
+                          },
+                          "warmup_stage": {
+                            "Number": 1,
+                            "StartVolume": 50,
+                            "Quota": {
+                              "StartTime": "2026-02-09T12:00:00Z",
+                              "VolumeLimit": 200
+                            }
+                          }
                         },
                         {
-                          "address": "1.0.0.2",
-                          "parent_account_id": "69c15db8a432c65972c789ce",
-                          "account_id": "69c15db8a432c65972c789ce",
-                          "pool_ids": [
-                            "69c15db8a432c65972c789d1"
-                          ],
-                          "dedicated": true,
-                          "created_at": "2026-02-09T12:30:00Z",
-                          "pool_last_modified_at": "2026-02-09T15:30:00Z",
-                          "domains_last_modified_at": "2026-02-10T12:30:00Z"
+                          "GroupedAccountIP": {
+                            "address": "1.0.0.2",
+                            "account_ids": [
+                              "69c42eba4fac947ac7bb33fd"
+                            ],
+                            "parent_account_id": "69c42eba4fac947ac7bb33fd",
+                            "pool_count": 1,
+                            "created_at": "2026-02-09T12:30:00Z"
+                          }
                         },
                         {
-                          "address": "1.0.0.2",
-                          "parent_account_id": "69c15db8a432c65972c789ce",
-                          "account_id": "69c15db8a432c65972c789d3",
-                          "pool_ids": [],
-                          "dedicated": true,
-                          "created_at": "2026-02-09T12:30:00Z",
-                          "pool_last_modified_at": "2026-02-09T15:30:00Z",
-                          "domains_last_modified_at": "2026-02-10T12:30:00Z"
+                          "GroupedAccountIP": {
+                            "address": "1.0.0.3",
+                            "account_ids": [
+                              "69c42eba4fac947ac7bb33fd"
+                            ],
+                            "parent_account_id": "69c42eba4fac947ac7bb33fd",
+                            "created_at": "2026-02-09T12:30:00Z"
+                          }
                         }
                       ],
                       "total_count": 3
@@ -5538,9 +5555,9 @@
                       ],
                       "pools": [
                         {
-                          "account_id": "69c15db8a432c65972c789d4",
+                          "account_id": "69c42eba4fac947ac7bb3401",
                           "enabled": true,
-                          "id": "69c15db8a432c65972c789d5",
+                          "id": "69c42eba4fac947ac7bb3402",
                           "ips": [
                             "1.0.0.1",
                             "1.0.0.2"
@@ -5548,18 +5565,18 @@
                           "name": "dynamic_good"
                         },
                         {
-                          "account_id": "69c15db8a432c65972c789d4",
+                          "account_id": "69c42eba4fac947ac7bb3401",
                           "enabled": true,
-                          "id": "69c15db8a432c65972c789d6",
+                          "id": "69c42eba4fac947ac7bb3403",
                           "ips": [
                             "1.0.0.3"
                           ],
                           "name": "dynamic_poor"
                         },
                         {
-                          "account_id": "69c15db8a432c65972c789d4",
+                          "account_id": "69c42eba4fac947ac7bb3401",
                           "enabled": true,
-                          "id": "69c15db8a432c65972c789d7",
+                          "id": "69c42eba4fac947ac7bb3404",
                           "ips": [
                             "1.0.0.4"
                           ],
@@ -6106,17 +6123,17 @@
                     "value": {
                       "domains": [
                         {
-                          "id": "69c15db8a432c65972c789d9",
+                          "id": "69c42eba4fac947ac7bb3406",
                           "name": "example1.com"
                         },
                         {
-                          "id": "69c15db8a432c65972c789da",
+                          "id": "69c42eba4fac947ac7bb3407",
                           "name": "example2.com"
                         }
                       ],
                       "paging": {
-                        "first": "http://api.mailgun.net/v3/ip_pools/69c15db8a432c65972c789d8/domains?page=eyJj...",
-                        "next": "http://api.mailgun.net/v3/ip_pools/69c15db8a432c65972c789d8/domains?page=eyJj..."
+                        "first": "http://api.mailgun.net/v3/ip_pools/69c42eba4fac947ac7bb3405/domains?page=eyJj...",
+                        "next": "http://api.mailgun.net/v3/ip_pools/69c42eba4fac947ac7bb3405/domains?page=eyJj..."
                       }
                     }
                   }
@@ -9922,6 +9939,8 @@
                       "email_validation_valid_count",
                       "image_validation_count",
                       "image_validation_failed_count",
+                      "spam_content_check_count",
+                      "spam_content_check_failed_count",
                       "ip_blocklist_monitoring_count",
                       "link_validation_count",
                       "link_validation_failed_count",
@@ -19922,6 +19941,79 @@
         ]
       }
     },
+    "/v5/accounts/features": {
+      "put": {
+        "tags": [
+          "Account Management"
+        ],
+        "summary": "Update account feature",
+        "description": "Update account feature",
+        "operationId": "put-v5-accounts-features",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "webhooks_redact_pii": {
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
+                  }
+                }
+              },
+              "encoding": {
+                "webhooks_redact_pii": {
+                  "contentType": "application/json"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-accounts-api-GenericSuccess"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "success": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-accounts-api-GenericMessage"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "No valid updates provided"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
     "/v5/accounts/subaccounts/{subaccount_id}": {
       "get": {
         "tags": [
@@ -20887,19 +20979,34 @@
                 "type": "object",
                 "properties": {
                   "email_preview": {
-                    "$ref": "#/components/schemas/github.com-mailgun-accounts-api-FeatureOverrideEnabledParam"
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   },
                   "inbox_placement": {
-                    "$ref": "#/components/schemas/github.com-mailgun-accounts-api-FeatureOverrideEnabledParam"
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   },
                   "sending": {
-                    "$ref": "#/components/schemas/github.com-mailgun-accounts-api-FeatureOverrideEnabledParam"
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   },
                   "validations": {
-                    "$ref": "#/components/schemas/github.com-mailgun-accounts-api-FeatureOverrideEnabledParam"
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   },
                   "validations_bulk": {
-                    "$ref": "#/components/schemas/github.com-mailgun-accounts-api-FeatureOverrideEnabledParam"
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   }
                 }
               },
@@ -27667,6 +27774,8 @@
           "accessibility_failed_count",
           "image_validation_count",
           "image_validation_failed_count",
+          "spam_content_check_count",
+          "spam_content_check_failed_count",
           "archived_count",
           "processed_count"
         ],
@@ -27691,6 +27800,8 @@
           "accessibility_failed_count": "Number of accessibility checks that failed",
           "image_validation_count": "Total number of image validations performed",
           "image_validation_failed_count": "Number of image validations that failed",
+          "spam_content_check_count": "Total number of spam content checks performed",
+          "spam_content_check_failed_count": "Number of spam content checks that failed",
           "archived_count": "Number of items archived",
           "processed_count": "Messages processed after being accepted. Processed messages are billed to your account at the end of the month."
         }
@@ -31340,18 +31451,6 @@
       "github.com-mailgun-accounts-api-FeaturesResponse": {
         "type": "object",
         "additionalProperties": true
-      },
-      "github.com-mailgun-accounts-api-FeatureOverrideEnabledParam": {
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "type": "boolean",
-            "description": "The enabled status of the feature"
-          }
-        },
-        "required": [
-          "enabled"
-        ]
       },
       "github.com-mailgun-accounts-api-GenericSuccess": {
         "type": "object",

@@ -83,6 +83,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning disable CS1591
         Image_validation_failed_count,
         #pragma warning restore CS1591
+        [EnumMember(Value = "spam_content_check_count")]
+        #pragma warning disable CS1591
+        Spam_content_check_count,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "spam_content_check_failed_count")]
+        #pragma warning disable CS1591
+        Spam_content_check_failed_count,
+        #pragma warning restore CS1591
         [EnumMember(Value = "archived_count")]
         #pragma warning disable CS1591
         Archived_count,
