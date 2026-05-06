@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains;
 using Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools;
+using Soenneker.Mailgun.OpenApiClient.V3.Forwards;
 using Soenneker.Mailgun.OpenApiClient.V3.Ip_pools;
 using Soenneker.Mailgun.OpenApiClient.V3.Ip_warmups;
 using Soenneker.Mailgun.OpenApiClient.V3.Ips;
@@ -31,6 +32,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3
         public global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsRequestBuilder Dynamic_pools
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The forwards property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.ForwardsRequestBuilder Forwards
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.ForwardsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The ip_pools property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Ip_poolsRequestBuilder Ip_pools

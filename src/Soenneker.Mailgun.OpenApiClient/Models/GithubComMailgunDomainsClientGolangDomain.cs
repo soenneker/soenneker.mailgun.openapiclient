@@ -122,6 +122,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #endif
         /// <summary>If true Mailgun manages DKIM key generation and DNS record configuration automatically</summary>
         public bool? UseAutomaticSenderSecurity { get; set; }
+        /// <summary>If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain</summary>
+        public bool? WebhooksRedactPii { get; set; }
         /// <summary>Subdomain prefix used for open and click tracking</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -185,6 +187,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "use_automatic_sender_security", n => { UseAutomaticSenderSecurity = n.GetBoolValue(); } },
                 { "web_prefix", n => { WebPrefix = n.GetStringValue(); } },
                 { "web_scheme", n => { WebScheme = n.GetStringValue(); } },
+                { "webhooks_redact_pii", n => { WebhooksRedactPii = n.GetBoolValue(); } },
                 { "wildcard", n => { Wildcard = n.GetBoolValue(); } },
             };
         }
@@ -213,6 +216,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("tracking_host", TrackingHost);
             writer.WriteStringValue("type", Type);
             writer.WriteBoolValue("use_automatic_sender_security", UseAutomaticSenderSecurity);
+            writer.WriteBoolValue("webhooks_redact_pii", WebhooksRedactPii);
             writer.WriteStringValue("web_prefix", WebPrefix);
             writer.WriteStringValue("web_scheme", WebScheme);
             writer.WriteBoolValue("wildcard", Wildcard);

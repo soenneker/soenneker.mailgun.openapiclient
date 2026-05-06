@@ -201,6 +201,11 @@
       "x-displayName": "Bounce Classification"
     },
     {
+      "name": "Forwards",
+      "description": "This API allows you to manage forwarding of incoming emails.",
+      "x-displayName": "Forwards"
+    },
+    {
       "name": "Users",
       "description": "Mailgun API supports viewing user entities.",
       "x-displayName": "Users"
@@ -22590,6 +22595,533 @@
         ]
       }
     },
+    "/v3/forwards/{id}": {
+      "get": {
+        "tags": [
+          "Forwards"
+        ],
+        "summary": "Get a single forward rule by ID",
+        "description": "Retrieve a forward rule by ID",
+        "operationId": "GET-v3-forwards--id-",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the forward rule",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-pathfinder-httpapi-ForwardsRule"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "id": "60d9431e582ecdc84b886284",
+                      "account_id": "646634cc58ea2b8fe43e0000",
+                      "domain_name": "my-domain.com",
+                      "domain_id": "642134nn58ea2b8fe43e0000",
+                      "match": "wild*card@example.com",
+                      "forward": {
+                        "urls": [
+                          "https://example.com/webhook"
+                        ],
+                        "recipients": [
+                          "destination@gmail.com"
+                        ],
+                        "store": "https://my-store-url.com/store"
+                      },
+                      "created_at": "Mon, 28 Jun 2021 03:33:50 UTC",
+                      "updated_at": "Mon, 28 Jun 2021 03:33:50 UTC"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A 401 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A 500 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Forwards"
+        ],
+        "summary": "Update a single forward rule by ID",
+        "description": "All parameters are optional, only the provided fields will be updated",
+        "operationId": "PUT-v3-forwards--id-",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the forward rule",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "match",
+            "in": "query",
+            "description": "A wildcard expression which matches the recipient address to forward. This is a insensitive match address",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forward.url",
+            "in": "query",
+            "description": "A URL to forward when the rule matches the recipient. May be repeated up to 3 times. Must be a valid URL that resolves",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forward.recipient",
+            "in": "query",
+            "description": "A email address to forward to when the rule matches the recipient. May be repeated up to 5 times",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forward.store",
+            "in": "query",
+            "description": "A URL which will be used to notify you when the email arrives along with a URL you can use to retrieve the message. Must be a valid URL that resolves",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-pathfinder-httpapi-ForwardsRule"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "id": "60d9431e582ecdc84b886284",
+                      "account_id": "646634cc58ea2b8fe43e0000",
+                      "domain_name": "my-domain.com",
+                      "domain_id": "642134nn58ea2b8fe43e0000",
+                      "match": "wild*card@example.com",
+                      "forward": {
+                        "urls": [
+                          "https://example.com/webhook"
+                        ],
+                        "recipients": [
+                          "destination@gmail.com"
+                        ],
+                        "store": "https://my-store-url.com/store"
+                      },
+                      "created_at": "Mon, 28 Jun 2021 03:33:50 UTC",
+                      "updated_at": "Mon, 28 Jun 2021 03:33:50 UTC"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A 401 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A 500 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Forwards"
+        ],
+        "summary": "Delete a single forward rule by ID",
+        "description": "By default this call is scoped to the entire account. You can scope the request by providing the 'domain.name' query parameter. If the 'domain.name' parameter is provided and the requested rule is not defined for that domain the call will return 404 Not Found",
+        "operationId": "DELETE-v3-forwards--id-",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the forward rule",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "domain.name",
+            "in": "query",
+            "description": "The name of the domain the rule is scoped to",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "forward rule '1234' deleted"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A 401 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A 500 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/v3/forwards": {
+      "get": {
+        "tags": [
+          "Forwards"
+        ],
+        "summary": "List forward rules",
+        "description": "By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain by providing the 'domain.name' query parameter.",
+        "operationId": "GET-v3-forwards",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Encoded paging information, provided via 'next', 'previous' links",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limits the number of items returned in a request",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "domain.name",
+            "in": "query",
+            "description": "The name of the domain the rule is scoped to",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-pathfinder-httpapi-ListForwardsRulesResp"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "items": [
+                        {
+                          "id": "60d9431e582ecdc84b886284",
+                          "account_id": "646634cc58ea2b8fe43e0000",
+                          "domain_name": "my-domain.com",
+                          "domain_id": "642134nn58ea2b8fe43e0000",
+                          "match": "wild*card@example.com",
+                          "forward": {
+                            "urls": [
+                              "https://example.com/webhook"
+                            ],
+                            "recipients": [
+                              "destination@gmail.com"
+                            ],
+                            "store": "https://my-store-url.com/store"
+                          },
+                          "created_at": "Mon, 28 Jun 2021 03:33:50 UTC",
+                          "updated_at": "Mon, 28 Jun 2021 03:33:50 UTC"
+                        }
+                      ],
+                      "paging": {
+                        "previous": "https://api.mailgun.net/page=0",
+                        "first": "https://api.mailgun.net/page=0",
+                        "next": "https://api.mailgun.net/page=1",
+                        "last": "https://api.mailgun.net/page=22"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A 401 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A 500 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Forwards"
+        ],
+        "summary": "Create a forward rule",
+        "description": "### Examples\nYou can add multiple email recipients by including the 'forward.recipient' parameter multiple times up to a maximum of 5.\n```\n$ curl -X POST https://api.mailgun.net/v3/forwards\n  -F match='email@mg.example.com'\n  -F forward.recipient=destination1@gmail.com\n  -F forward.recipient=destination2@gmail.com\n```\nThe `match` parameter can contain a wild card expression\n```\n$ curl -X POST https://api.mailgun.net/v3/forwards\n  -F match='match*@mg.example.com'\n  -F forward.recipient=catchall@gmail.com\n```\nRules only support `*` or literal characters where `*` matches any sequence of characters.  So `a.*@example.com` matches email addresses that start with `a.` not email addresses that start with `a` like a regex match would.",
+        "operationId": "POST-v3-forwards",
+        "parameters": [
+          {
+            "name": "match",
+            "in": "query",
+            "description": "A wildcard expression which matches the recipient address to forward. This is a insensitive match address",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forward.url",
+            "in": "query",
+            "description": "A URL to forward when the rule matches the recipient. May be repeated up to 3 times. Must be a valid URL that resolves",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forward.recipient",
+            "in": "query",
+            "description": "A email address to forward to when the rule matches the recipient. May be repeated up to 5 times",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forward.store",
+            "in": "query",
+            "description": "A URL which will be used to notify you when the email arrives along with a URL you can use to retrieve the message. Must be a valid URL that resolves",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-pathfinder-httpapi-ForwardsRule"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "id": "60d9431e582ecdc84b886284",
+                      "account_id": "646634cc58ea2b8fe43e0000",
+                      "domain_name": "my-domain.com",
+                      "domain_id": "642134nn58ea2b8fe43e0000",
+                      "match": "wild*card@example.com",
+                      "forward": {
+                        "urls": [
+                          "https://example.com/webhook"
+                        ],
+                        "recipients": [
+                          "destination@gmail.com"
+                        ],
+                        "store": "https://my-store-url.com/store"
+                      },
+                      "created_at": "Mon, 28 Jun 2021 03:33:50 UTC",
+                      "updated_at": "Mon, 28 Jun 2021 03:33:50 UTC"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A 401 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A 500 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
     "/v5/users": {
       "get": {
         "tags": [
@@ -23652,6 +24184,10 @@
             "type": "boolean",
             "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
           },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
+          },
           "web_prefix": {
             "type": "string",
             "description": "Subdomain prefix used for open and click tracking"
@@ -23890,6 +24426,10 @@
           "use_automatic_sender_security": {
             "type": "boolean",
             "description": "Enable Automatic Sender Security. This requires setting DNS CNAME entries for DKIM keys instead of a TXT record. Defaults to false."
+          },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If set to true, Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
           },
           "web_prefix": {
             "type": "string",
@@ -25029,6 +25569,10 @@
           "use_automatic_sender_security": {
             "type": "boolean",
             "description": "Enable or disable Automatic Sender Security. If enabled, requires setting DNS CNAME entries for DKIM keys instead of a TXT record. Domain must be reverified after changing this field. Defaults to false"
+          },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If set to true, Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
           },
           "web_scheme": {
             "type": "string",
@@ -32833,6 +33377,86 @@
             "description": "Attributes used for pagination and sorting."
           }
         }
+      },
+      "github.com-mailgun-pathfinder-httpapi-Forward": {
+        "type": "object",
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "store": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "urls"
+        ]
+      },
+      "github.com-mailgun-pathfinder-httpapi-ForwardsRule": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "account_id": {
+            "type": "string"
+          },
+          "domain_name": {
+            "type": "string"
+          },
+          "domain_id": {
+            "type": "string"
+          },
+          "match": {
+            "type": "string"
+          },
+          "forward": {
+            "$ref": "#/components/schemas/github.com-mailgun-pathfinder-httpapi-Forward"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "account_id",
+          "domain_name",
+          "domain_id",
+          "match",
+          "forward",
+          "created_at",
+          "updated_at"
+        ]
+      },
+      "github.com-mailgun-pathfinder-httpapi-ListForwardsRulesResp": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-pathfinder-httpapi-ForwardsRule"
+            }
+          },
+          "paging": {
+            "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-paging-PagingResponse"
+          }
+        },
+        "required": [
+          "items",
+          "paging"
+        ]
       },
       "github.com-mailgun-users-api-UserListResponse": {
         "type": "object",
