@@ -17,6 +17,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+        public string? AiInsights { get; set; }
+#nullable restore
+#else
+        public string AiInsights { get; set; }
+#endif
+        /// <summary>JSON object encoded as a string</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public string? WebhooksRedactPii { get; set; }
 #nullable restore
 #else
@@ -47,6 +55,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "ai_insights", n => { AiInsights = n.GetStringValue(); } },
                 { "webhooks_redact_pii", n => { WebhooksRedactPii = n.GetStringValue(); } },
             };
         }
@@ -57,6 +66,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("ai_insights", AiInsights);
             writer.WriteStringValue("webhooks_redact_pii", WebhooksRedactPii);
             writer.WriteAdditionalData(AdditionalData);
         }

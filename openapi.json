@@ -19965,11 +19965,20 @@
                     "format": "json",
                     "description": "JSON object encoded as a string",
                     "example": "{\"enabled\": false}"
+                  },
+                  "ai_insights": {
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   }
                 }
               },
               "encoding": {
                 "webhooks_redact_pii": {
+                  "contentType": "application/json"
+                },
+                "ai_insights": {
                   "contentType": "application/json"
                 }
               }
@@ -33737,7 +33746,8 @@
     {
       "name": "Routes",
       "tags": [
-        "Routes"
+        "Routes",
+        "Forwards"
       ]
     },
     {

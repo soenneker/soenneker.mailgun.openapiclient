@@ -17575,6 +17575,9 @@
               "encoding": {
                 "webhooks_redact_pii": {
                   "contentType": "application/json"
+                },
+                "ai_insights": {
+                  "contentType": "application/json"
                 }
               }
             }
@@ -31176,6 +31179,12 @@
         "type": "object",
         "properties": {
           "webhooks_redact_pii": {
+            "type": "string",
+            "description": "JSON object encoded as a string",
+            "format": "json",
+            "example": "{\u0022enabled\u0022: false}"
+          },
+          "ai_insights": {
             "type": "string",
             "description": "JSON object encoded as a string",
             "format": "json",
