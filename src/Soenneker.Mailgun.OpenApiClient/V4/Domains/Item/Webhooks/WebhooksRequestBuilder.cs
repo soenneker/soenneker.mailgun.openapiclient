@@ -34,7 +34,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         {
         }
         /// <summary>
-        /// Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by providing a comma-separated list.
+        /// Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by repeating the `url` query parameter.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetAllDomainWebhooksResp"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -119,7 +119,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetAllDomainWebhooksResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetAllDomainWebhooksResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by providing a comma-separated list.
+        /// Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by repeating the `url` query parameter.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -191,20 +191,20 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
             return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks.WebhooksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by providing a comma-separated list.
+        /// Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by repeating the `url` query parameter.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WebhooksRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The webhook URL(s) to delete. Supports comma-separated URLs to delete multiple at once (e.g., `url1,url2,url3`). Each URL will be removed from all event types.</summary>
+            /// <summary>The webhook URL to delete. The URL is removed from all event types it&apos;s associated with. To delete multiple URLs in one request, repeat the parameter (e.g., `?url=https://a.example&amp;url=https://b.example`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("url")]
-            public string? Url { get; set; }
+            public string[]? Url { get; set; }
 #nullable restore
 #else
             [QueryParameter("url")]
-            public string Url { get; set; }
+            public string[] Url { get; set; }
 #endif
         }
     }

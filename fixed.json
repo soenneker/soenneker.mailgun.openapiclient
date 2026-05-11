@@ -2038,7 +2038,7 @@
           "Domain Webhooks"
         ],
         "summary": "Delete domain webhooks (v4)",
-        "description": "Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by providing a comma-separated list.",
+        "description": "Delete webhook URLs from all event types they are associated with. Supports deleting multiple URLs at once by repeating the \u0060url\u0060 query parameter.",
         "operationId": "DELETE-v4-domains-domain-webhooks",
         "parameters": [
           {
@@ -2053,10 +2053,14 @@
           {
             "name": "url",
             "in": "query",
-            "description": "The webhook URL(s) to delete. Supports comma-separated URLs to delete multiple at once (e.g., \u0060url1,url2,url3\u0060). Each URL will be removed from all event types.",
+            "description": "The webhook URL to delete. The URL is removed from all event types it\u0027s associated with. To delete multiple URLs in one request, repeat the parameter (e.g., \u0060?url=https://a.example\u0026url=https://b.example\u0060).",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              }
             }
           }
         ],
