@@ -17,18 +17,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The comparison operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comparator { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator? Comparator { get; set; }
 #nullable restore
 #else
-        public string Comparator { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator Comparator { get; set; }
 #endif
         /// <summary>The dimension to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dimension { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_dimension? Dimension { get; set; }
 #nullable restore
 #else
-        public string Dimension { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_dimension Dimension { get; set; }
 #endif
         /// <summary>The dimension values to apply to filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,8 +63,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "comparator", n => { Comparator = n.GetStringValue(); } },
-                { "dimension", n => { Dimension = n.GetStringValue(); } },
+                { "comparator", n => { Comparator = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator.CreateFromDiscriminatorValue); } },
+                { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_dimension>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_dimension.CreateFromDiscriminatorValue); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -75,8 +75,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("comparator", Comparator);
-            writer.WriteStringValue("dimension", Dimension);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator>("comparator", Comparator);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_dimension>("dimension", Dimension);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);
         }

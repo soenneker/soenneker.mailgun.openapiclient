@@ -7,33 +7,32 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
+    /// <summary>
+    /// The comparison operator.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubComMailgunDomainsHttpapiOpenSettings : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubComMailgunThresholdsApiFilter_comparator : IAdditionalDataHolder, IParsable
     {
-        /// <summary>Whether open tracking is enabled or not</summary>
-        public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If the pixel should be placed at the top of the email</summary>
-        public bool? PlaceAtTheTop { get; set; }
+        /// <summary>Filter Comparator</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterComparator? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiOpenSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsHttpapiOpenSettings()
+        public GithubComMailgunThresholdsApiFilter_comparator()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiOpenSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiOpenSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiOpenSettings();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter_comparator();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +42,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active", n => { Active = n.GetBoolValue(); } },
-                { "place_at_the_top", n => { PlaceAtTheTop = n.GetBoolValue(); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterComparator>(); } },
             };
         }
         /// <summary>
@@ -54,8 +52,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("active", Active);
-            writer.WriteBoolValue("place_at_the_top", PlaceAtTheTop);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilterComparator>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

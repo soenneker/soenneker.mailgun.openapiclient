@@ -7,45 +7,46 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
+    /// <summary>
+    /// Disabled info
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubComMailgunTempleHttpapiTemplateUpdate : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp_regular_disabled : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Name of the template</summary>
+        /// <summary>Cause description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Reason { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Reason { get; set; }
 #endif
-        /// <summary>Template version details</summary>
+        /// <summary>End date in RFC-822 date format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionUpdate? Version { get; set; }
+        public string? Until { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionUpdate Version { get; set; }
+        public string Until { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiTemplateUpdate"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp_regular_disabled"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunTempleHttpapiTemplateUpdate()
+        public GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp_regular_disabled()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiTemplateUpdate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp_regular_disabled"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiTemplateUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp_regular_disabled CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiTemplateUpdate();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp_regular_disabled();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +56,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionUpdate>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionUpdate.CreateFromDiscriminatorValue); } },
+                { "reason", n => { Reason = n.GetStringValue(); } },
+                { "until", n => { Until = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +67,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionUpdate>("version", Version);
+            writer.WriteStringValue("reason", Reason);
+            writer.WriteStringValue("until", Until);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -7,47 +7,32 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
+    /// <summary>
+    /// The dimension to apply to the metric.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubComMailgunDomainsHttpapiUnsubscribeSettings : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubComMailgunThresholdsApiSendAlertItem_dimension : IAdditionalDataHolder, IParsable
     {
-        /// <summary>Whether unsubscribe tracking is enabled or not</summary>
-        public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The HTML footer for the unsubscribe link</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HtmlFooter { get; set; }
-#nullable restore
-#else
-        public string HtmlFooter { get; set; }
-#endif
-        /// <summary>The text footer for the unsubscribe link</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TextFooter { get; set; }
-#nullable restore
-#else
-        public string TextFooter { get; set; }
-#endif
+        /// <summary>Dimension</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiDimension? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUnsubscribeSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItem_dimension"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsHttpapiUnsubscribeSettings()
+        public GithubComMailgunThresholdsApiSendAlertItem_dimension()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUnsubscribeSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItem_dimension"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUnsubscribeSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItem_dimension CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUnsubscribeSettings();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItem_dimension();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,9 +42,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active", n => { Active = n.GetBoolValue(); } },
-                { "html_footer", n => { HtmlFooter = n.GetStringValue(); } },
-                { "text_footer", n => { TextFooter = n.GetStringValue(); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiDimension>(); } },
             };
         }
         /// <summary>
@@ -69,9 +52,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("active", Active);
-            writer.WriteStringValue("html_footer", HtmlFooter);
-            writer.WriteStringValue("text_footer", TextFooter);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiDimension>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

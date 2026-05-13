@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The comparison operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comparator { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_comparator? Comparator { get; set; }
 #nullable restore
 #else
-        public string Comparator { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_comparator Comparator { get; set; }
 #endif
         /// <summary>A description of what the alert does.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The dimension to apply to the metric.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dimension { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_dimension? Dimension { get; set; }
 #nullable restore
 #else
-        public string Dimension { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_dimension Dimension { get; set; }
 #endif
         /// <summary>A list of filters to apply to the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The metric being monitored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metric { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_metric? Metric { get; set; }
 #nullable restore
 #else
-        public string Metric { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_metric Metric { get; set; }
 #endif
         /// <summary>A user-friendly name for the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,12 +112,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alert_channels", n => { AlertChannels = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel>()?.AsList(); } },
-                { "comparator", n => { Comparator = n.GetStringValue(); } },
+                { "comparator", n => { Comparator = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_comparator>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_comparator.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "dimension", n => { Dimension = n.GetStringValue(); } },
+                { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_dimension>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_dimension.CreateFromDiscriminatorValue); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "metric", n => { Metric = n.GetStringValue(); } },
+                { "metric", n => { Metric = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_metric>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_metric.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "period", n => { Period = n.GetStringValue(); } },
             };
@@ -130,12 +130,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel>("alert_channels", AlertChannels);
-            writer.WriteStringValue("comparator", Comparator);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_comparator>("comparator", Comparator);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("dimension", Dimension);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_dimension>("dimension", Dimension);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>("filters", Filters);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteStringValue("metric", Metric);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertRequest_metric>("metric", Metric);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("period", Period);
             writer.WriteAdditionalData(AdditionalData);

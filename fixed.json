@@ -10877,7 +10877,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GithubComMailgunBlackbookApiBouncesList"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunBlackbookModelBounce"
+                }
               },
               "examples": {
                 "Example": {
@@ -11315,7 +11318,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GithubComMailgunBlackbookApiUnsubscribesList"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunBlackbookModelUnsubscribe"
+                }
               },
               "examples": {
                 "Example": {
@@ -11728,7 +11734,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GithubComMailgunBlackbookApiComplaintsList"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunBlackbookModelComplaint"
+                }
               },
               "examples": {
                 "Example": {
@@ -21702,11 +21711,15 @@
           },
           "webhook": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookResponse"
+            "properties": {
+              "urls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of webhooks"
               }
-            ],
+            },
             "description": "Webhook details"
           }
         }
@@ -21769,11 +21782,15 @@
         "properties": {
           "webhook": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookResponse"
+            "properties": {
+              "urls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of webhooks"
               }
-            ],
+            },
             "description": "List of webhooks"
           }
         }
@@ -21886,11 +21903,88 @@
         "properties": {
           "webhooks": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponse"
+            "properties": {
+              "accepted": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Accepted webhook URLs",
+                "nullable": true
+              },
+              "delivered": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Delivered webhook URLs",
+                "nullable": true
+              },
+              "opened": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Opened webhook URLs",
+                "nullable": true
+              },
+              "clicked": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Clicked webhook URLs",
+                "nullable": true
+              },
+              "unsubscribed": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Unsubscribed webhook URLs",
+                "nullable": true
+              },
+              "complained": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Complained webhook URLs",
+                "nullable": true
+              },
+              "temporary_fail": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Temporary fail webhook URLs",
+                "nullable": true
+              },
+              "permanent_fail": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookURLs"
+                  }
+                ],
+                "description": "Permanent fail webhook URLs",
+                "nullable": true
               }
-            ],
+            },
             "description": "List of webhooks"
           }
         }
@@ -22032,30 +22126,57 @@
         "type": "object",
         "properties": {
           "open": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiOpenSettings"
-              }
+            "required": [
+              "active",
+              "place_at_the_top"
             ],
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "boolean",
+                "description": "Whether open tracking is enabled or not"
+              },
+              "place_at_the_top": {
+                "type": "boolean",
+                "description": "If the pixel should be placed at the top of the email"
+              }
+            },
             "description": "Open tracking settings"
           },
           "click": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiClickSettings"
-              }
+            "required": [
+              "active"
             ],
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "boolean",
+                "description": "Whether click tracking is enabled or not"
+              }
+            },
             "description": "Click tracking settings"
           },
           "unsubscribe": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUnsubscribeSettings"
-              }
+            "required": [
+              "active",
+              "html_footer",
+              "text_footer"
             ],
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "boolean",
+                "description": "Whether unsubscribe tracking is enabled or not"
+              },
+              "html_footer": {
+                "type": "string",
+                "description": "The HTML footer for the unsubscribe link"
+              },
+              "text_footer": {
+                "type": "string",
+                "description": "The text footer for the unsubscribe link"
+              }
+            },
             "description": "Unsubscribe tracking settings"
           },
           "web_scheme": {
@@ -22087,12 +22208,16 @@
             "description": "A message indicating success"
           },
           "click": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiClickSettings"
-              }
+            "required": [
+              "active"
             ],
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "boolean",
+                "description": "Whether click tracking is enabled or not"
+              }
+            },
             "description": "Click settings"
           }
         }
@@ -22118,12 +22243,21 @@
             "description": "A message indicating success"
           },
           "open": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiOpenSettings"
-              }
+            "required": [
+              "active",
+              "place_at_the_top"
             ],
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "boolean",
+                "description": "Whether open tracking is enabled or not"
+              },
+              "place_at_the_top": {
+                "type": "boolean",
+                "description": "If the pixel should be placed at the top of the email"
+              }
+            },
             "description": "Open settings"
           }
         }
@@ -22153,12 +22287,26 @@
             "description": "A message indicating success"
           },
           "unsubscribe": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUnsubscribeSettings"
-              }
+            "required": [
+              "active",
+              "html_footer",
+              "text_footer"
             ],
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "boolean",
+                "description": "Whether unsubscribe tracking is enabled or not"
+              },
+              "html_footer": {
+                "type": "string",
+                "description": "The HTML footer for the unsubscribe link"
+              },
+              "text_footer": {
+                "type": "string",
+                "description": "The text footer for the unsubscribe link"
+              }
+            },
             "description": "Unsubscribe settings"
           }
         }
@@ -22712,12 +22860,21 @@
             "description": "Flag indicating no new messages are able to be submitted"
           },
           "disabled": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaDisabledJSON"
-              }
+            "required": [
+              "until",
+              "reason"
             ],
+            "type": "object",
+            "properties": {
+              "until": {
+                "type": "string",
+                "description": "End date in RFC-822 date format"
+              },
+              "reason": {
+                "type": "string",
+                "description": "Cause description"
+              }
+            },
             "description": "Disabled info"
           }
         }
@@ -22730,21 +22887,65 @@
         "type": "object",
         "properties": {
           "regular": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"
-              }
+            "required": [
+              "is_disabled"
             ],
+            "type": "object",
+            "properties": {
+              "is_disabled": {
+                "type": "boolean",
+                "description": "Flag indicating no new messages are able to be submitted"
+              },
+              "disabled": {
+                "required": [
+                  "until",
+                  "reason"
+                ],
+                "type": "object",
+                "properties": {
+                  "until": {
+                    "type": "string",
+                    "description": "End date in RFC-822 date format"
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Cause description"
+                  }
+                },
+                "description": "Disabled info"
+              }
+            },
             "description": "Message queue response"
           },
           "scheduled": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJSON"
-              }
+            "required": [
+              "is_disabled"
             ],
+            "type": "object",
+            "properties": {
+              "is_disabled": {
+                "type": "boolean",
+                "description": "Flag indicating no new messages are able to be submitted"
+              },
+              "disabled": {
+                "required": [
+                  "until",
+                  "reason"
+                ],
+                "type": "object",
+                "properties": {
+                  "until": {
+                    "type": "string",
+                    "description": "End date in RFC-822 date format"
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Cause description"
+                  }
+                },
+                "description": "Disabled info"
+              }
+            },
             "description": "Scheduled message queue response"
           }
         }
@@ -24942,12 +25143,18 @@
             "description": "Name of the metrics to receive the stats for such as \u0027processed_count\u0027. See [metrics](https://documentation.mailgun.com/docs/mailgun/user-manual/reporting/metric-definitions)"
           },
           "filter": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicateGroup"
-              }
+            "required": [
+              "AND"
             ],
+            "type": "object",
+            "properties": {
+              "AND": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicate"
+                }
+              }
+            },
             "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
@@ -25210,12 +25417,18 @@
             "description": "Name of the metrics to receive the stats for such as \u0027processed_count\u0027."
           },
           "filter": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicateGroup"
-              }
+            "required": [
+              "AND"
             ],
+            "type": "object",
+            "properties": {
+              "AND": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicate"
+                }
+              }
+            },
             "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
@@ -26122,12 +26335,18 @@
             "description": "Optional set of analytics metric events. Will be converted into corresponding events."
           },
           "filter": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFilterPredicateGroup"
-              }
+            "required": [
+              "AND"
             ],
+            "type": "object",
+            "properties": {
+              "AND": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFilterPredicate"
+                }
+              }
+            },
             "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
@@ -26651,21 +26870,27 @@
         "type": "object",
         "properties": {
           "dimension": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
+              }
+            },
             "description": "The dimension to filter by."
           },
           "comparator": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiFilterComparator_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiFilterComparator"
+              }
+            },
             "description": "The comparison operator."
           },
           "values": {
@@ -26810,21 +27035,27 @@
             "description": "A list of filters to apply to the alert."
           },
           "metric": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric"
+              }
+            },
             "description": "The metric being monitored."
           },
           "comparator": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
+              }
+            },
             "description": "The comparison operator."
           },
           "limit": {
@@ -26832,12 +27063,15 @@
             "description": "The threshold limit for the alert."
           },
           "dimension": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
+              }
+            },
             "description": "The dimension to apply to the metric."
           },
           "period": {
@@ -26861,21 +27095,27 @@
             "description": "A user-friendly name for the alert."
           },
           "metric": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetric"
+              }
+            },
             "description": "The metric being monitored."
           },
           "comparator": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
+              }
+            },
             "description": "The comparison operator."
           },
           "limit": {
@@ -26883,12 +27123,15 @@
             "description": "The threshold limit for the alert."
           },
           "dimension": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
+              }
+            },
             "description": "The dimension to apply to the metric."
           },
           "alert_channels": {
@@ -27007,21 +27250,27 @@
             "description": "A list of filters to apply to the limit."
           },
           "metric": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric"
+              }
+            },
             "description": "The metric being monitored."
           },
           "comparator": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
+              }
+            },
             "description": "The comparison operator."
           },
           "limit": {
@@ -27029,12 +27278,15 @@
             "description": "The value of the limit."
           },
           "dimension": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
+              }
+            },
             "description": "The dimension to apply to the metric."
           },
           "period": {
@@ -27058,21 +27310,27 @@
             "description": "A user-friendly name for the limit."
           },
           "metric": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiLimitMetric"
+              }
+            },
             "description": "The metric being monitored."
           },
           "comparator": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiMetricComparator"
+              }
+            },
             "description": "The comparison operator."
           },
           "limit": {
@@ -27080,12 +27338,15 @@
             "description": "The threshold limit."
           },
           "dimension": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunThresholdsApiDimension"
+              }
+            },
             "description": "The dimension to apply to the metric."
           },
           "filters": {
@@ -27302,21 +27563,46 @@
             "description": "The event type that is alerted on. Check GET /v1/alerts/events for possible values."
           },
           "channel": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel"
+              }
+            },
             "description": "The delivery channel for the alert."
           },
           "settings": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettings"
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "For webhook channel."
+              },
+              "emails": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "For email channel"
+              },
+              "channel_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "For slack channel"
+              },
+              "disabled_channel_ids": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
+                },
+                "description": "List of disabled Slack channels."
               }
-            ],
+            },
             "description": "This object contains channel-specific settings."
           },
           "disabled_at": {
@@ -27340,21 +27626,46 @@
             "description": "The type of event for which you would like to receive alerts."
           },
           "channel": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunAlertsChannelsChannel"
+              }
+            },
             "description": "The delivery method for the alert."
           },
           "settings": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettings"
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "For webhook channel."
+              },
+              "emails": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "For email channel"
+              },
+              "channel_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "For slack channel"
+              },
+              "disabled_channel_ids": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
+                },
+                "description": "List of disabled Slack channels."
               }
-            ],
+            },
             "description": "The details pertaining to the specified channel. Please note that the contents of this object differ per channel type."
           }
         }
@@ -28276,12 +28587,31 @@
             "nullable": true
           },
           "paging": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
-              }
+            "required": [
+              "previous",
+              "first",
+              "next",
+              "last"
             ],
+            "type": "object",
+            "properties": {
+              "previous": {
+                "type": "string",
+                "description": "Previous page URL"
+              },
+              "first": {
+                "type": "string",
+                "description": "First page URL"
+              },
+              "next": {
+                "type": "string",
+                "description": "Next page URL"
+              },
+              "last": {
+                "type": "string",
+                "description": "Last page URL"
+              }
+            },
             "description": "Pagination details"
           }
         }
@@ -28302,12 +28632,31 @@
             "nullable": true
           },
           "paging": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
-              }
+            "required": [
+              "previous",
+              "first",
+              "next",
+              "last"
             ],
+            "type": "object",
+            "properties": {
+              "previous": {
+                "type": "string",
+                "description": "Previous page URL"
+              },
+              "first": {
+                "type": "string",
+                "description": "First page URL"
+              },
+              "next": {
+                "type": "string",
+                "description": "Next page URL"
+              },
+              "last": {
+                "type": "string",
+                "description": "Last page URL"
+              }
+            },
             "description": "Pagination details"
           }
         }
@@ -28476,12 +28825,26 @@
             "description": "Response message"
           },
           "template": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiTemplateUpdate"
-              }
+            "required": [
+              "name"
             ],
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the template"
+              },
+              "version": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
+                  }
+                ],
+                "description": "Template version details",
+                "nullable": true
+              }
+            },
             "description": "Template change details"
           }
         }
@@ -28806,21 +29169,27 @@
             "description": "The description provided for the key upon its creation"
           },
           "kind": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind"
+              }
+            },
             "description": "The type of the key which determines how it can be used"
           },
           "role": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole"
+              }
+            },
             "description": "The role of the key which determines its scope in CRUD operations that have role-based access control"
           },
           "created_at": {
@@ -28923,21 +29292,27 @@
             "description": "The description provided for the key upon its creation"
           },
           "kind": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKind"
+              }
+            },
             "description": "The type of the key which determines how it can be used"
           },
           "role": {
-            "type": "string",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole_Wrapper"
-              }
+            "required": [
+              "value"
             ],
+            "type": "object",
+            "properties": {
+              "value": {
+                "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole"
+              }
+            },
             "description": "The role of the key which determines its scope in CRUD operations that have role-based access control"
           },
           "created_at": {
@@ -29804,12 +30179,72 @@
             "nullable": true
           },
           "metrics": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsCountsAndRates"
-              }
+            "required": [
+              "critical_bounce_count",
+              "non_critical_bounce_count",
+              "critical_delay_count",
+              "non_critical_delay_count",
+              "classified_failures_count",
+              "delivered_smtp_count",
+              "critical_bounce_rate",
+              "non_critical_bounce_rate",
+              "critical_delay_rate",
+              "non_critical_delay_rate"
             ],
+            "type": "object",
+            "properties": {
+              "critical_bounce_count": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "non_critical_bounce_count": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "critical_delay_count": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "non_critical_delay_count": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "classified_failures_count": {
+                "type": "integer",
+                "description": "Total bounces and delays",
+                "format": "int64"
+              },
+              "delivered_smtp_count": {
+                "type": "integer",
+                "description": "null for Spam Filters",
+                "format": "int64",
+                "nullable": true
+              },
+              "critical_bounce_rate": {
+                "type": "integer",
+                "description": "Percentages; null for Spam Filters",
+                "format": "int64",
+                "nullable": true
+              },
+              "non_critical_bounce_rate": {
+                "type": "integer",
+                "description": "Percentages; null for Spam Filters",
+                "format": "int64",
+                "nullable": true
+              },
+              "critical_delay_rate": {
+                "type": "integer",
+                "description": "Percentages; null for Spam Filters",
+                "format": "int64",
+                "nullable": true
+              },
+              "non_critical_delay_rate": {
+                "type": "integer",
+                "description": "Percentages; null for Spam Filters",
+                "format": "int64",
+                "nullable": true
+              }
+            },
             "description": "Counts and rates"
           }
         }
@@ -30013,12 +30448,18 @@
             "description": "Metrics to return. See example."
           },
           "filter": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiFilterPredicateGroup"
-              }
+            "required": [
+              "AND"
             ],
+            "type": "object",
+            "properties": {
+              "AND": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiFilterPredicate"
+                }
+              }
+            },
             "description": "Filters to apply to the query."
           },
           "include_subaccounts": {
@@ -30027,11 +30468,24 @@
           },
           "pagination": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiPaginationReq"
+            "properties": {
+              "sort": {
+                "type": "string",
+                "description": "Colon-separated value indicating column name and sort direction e.g. \u0027entity-name:asc\u0027."
+              },
+              "skip": {
+                "type": "integer",
+                "description": "The number of items to skip over when satisfying the request. To get the first page of data set skip to zero. Then increment the skip by the limit for subsequent calls.",
+                "format": "int64"
+              },
+              "limit": {
+                "maximum": 50,
+                "type": "integer",
+                "description": "The maximum number of items returned in the response.",
+                "format": "int64",
+                "default": 10
               }
-            ],
+            },
             "description": "Attributes used for pagination and sorting."
           }
         }

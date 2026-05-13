@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The delivery method for the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Channel { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_channel? Channel { get; set; }
 #nullable restore
 #else
-        public string Channel { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_channel Channel { get; set; }
 #endif
         /// <summary>The type of event for which you would like to receive alerts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetStringValue(); } },
+                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_channel>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_channel.CreateFromDiscriminatorValue); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
                 { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_settings>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_settings.CreateFromDiscriminatorValue); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("channel", Channel);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_channel>("channel", Channel);
             writer.WriteStringValue("event_type", EventType);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalApiMutateEventSettingReq_settings>("settings", Settings);
             writer.WriteAdditionalData(AdditionalData);

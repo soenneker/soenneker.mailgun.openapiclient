@@ -67,10 +67,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The type of the key which determines how it can be used</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Kind { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_kind? Kind { get; set; }
 #nullable restore
 #else
-        public string Kind { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_kind Kind { get; set; }
 #endif
         /// <summary>The requestor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The role of the key which determines its scope in CRUD operations that have role-based access control</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Role { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_role? Role { get; set; }
 #nullable restore
 #else
-        public string Role { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_role Role { get; set; }
 #endif
         /// <summary>The full API key secret in plain text returned only once upon key creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,9 +144,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "expires_at", n => { ExpiresAt = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
-                { "kind", n => { Kind = n.GetStringValue(); } },
+                { "kind", n => { Kind = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_kind>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_kind.CreateFromDiscriminatorValue); } },
                 { "requestor", n => { Requestor = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "role", n => { Role = n.GetStringValue(); } },
+                { "role", n => { Role = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_role>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_role.CreateFromDiscriminatorValue); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
                 { "user_name", n => { UserName = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>(global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
@@ -166,9 +166,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_disabled", IsDisabled);
-            writer.WriteStringValue("kind", Kind);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_kind>("kind", Kind);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("requestor", Requestor);
-            writer.WriteStringValue("role", Role);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoSecretResp_role>("role", Role);
             writer.WriteStringValue("secret", Secret);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.UnionBranch>("user_name", UserName);

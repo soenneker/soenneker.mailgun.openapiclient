@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The delivery channel for the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Channel { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings_channel? Channel { get; set; }
 #nullable restore
 #else
-        public string Channel { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings_channel Channel { get; set; }
 #endif
         /// <summary>When present, the timestamp indicating when a webhook endpoint was disabled.</summary>
         public DateTimeOffset? DisabledAt { get; set; }
@@ -67,7 +67,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetStringValue(); } },
+                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings_channel>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings_channel.CreateFromDiscriminatorValue); } },
                 { "disabled_at", n => { DisabledAt = n.GetDateTimeOffsetValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetGuidValue(); } },
@@ -81,7 +81,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("channel", Channel);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsEventSettings_channel>("channel", Channel);
             writer.WriteDateTimeOffsetValue("disabled_at", DisabledAt);
             writer.WriteStringValue("event_type", EventType);
             writer.WriteGuidValue("id", Id);

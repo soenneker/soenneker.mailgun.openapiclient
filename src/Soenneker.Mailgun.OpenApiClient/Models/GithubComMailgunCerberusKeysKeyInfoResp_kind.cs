@@ -8,29 +8,31 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     /// <summary>
-    /// List of disabled Slack channels.
+    /// The type of the key which determines how it can be used
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GithubComMailgunAlertsInternalSettingsChannelSettings_disabled_channel_ids : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunCerberusKeysKeyInfoResp_kind : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Kind</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKind? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsChannelSettings_disabled_channel_ids"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoResp_kind"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunAlertsInternalSettingsChannelSettings_disabled_channel_ids()
+        public GithubComMailgunCerberusKeysKeyInfoResp_kind()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsChannelSettings_disabled_channel_ids"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoResp_kind"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsChannelSettings_disabled_channel_ids CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoResp_kind CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAlertsInternalSettingsChannelSettings_disabled_channel_ids();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKeyInfoResp_kind();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +42,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKind>(); } },
             };
         }
         /// <summary>
@@ -49,6 +52,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunCerberusKeysKind>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
