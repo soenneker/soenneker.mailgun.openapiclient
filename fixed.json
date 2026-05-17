@@ -29219,30 +29219,18 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
             "nullable": true
           },
           "requestor": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "An email address associated with the key",
             "nullable": true
           },
           "user_name": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "The API key user\u0027s name",
             "nullable": true
           }
         }
@@ -29342,30 +29330,18 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
             "nullable": true
           },
           "requestor": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "An email address associated with the key",
             "nullable": true
           },
           "user_name": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "The API key user\u0027s name",
             "nullable": true
           },
           "secret": {
@@ -29496,12 +29472,7 @@
             "example": "Fri, 23 Jan 2026 10:16:00 \u002B0000"
           },
           "size_bytes": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
             "nullable": true
           }
         }
@@ -30640,22 +30611,16 @@
             "description": "whether 2-factor auth has been activated for the user"
           },
           "tfa_created_at": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
+            "type": "string",
+            "description": "the date and time at which 2-factor auth was activated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
             "nullable": true,
             "example": "2022-12-20T16:52:01.892000"
           },
           "password_updated_at": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
+            "type": "string",
+            "description": "the date and time at which the user password was last updated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
             "nullable": true,
             "example": "2022-12-20T16:52:01.892000"
           },
@@ -30666,21 +30631,13 @@
             "$ref": "#/components/schemas/GithubComMailgunUsersApiUserAuthResponse"
           },
           "github_user_id": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "Github ID, if part of Github Student Developer Pack account",
             "nullable": true
           },
           "salesforce_user_id": {
-            "type": "object",
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              }
-            ],
+            "type": "string",
+            "description": "Salesforce ID, if part of Salesforce platform account",
             "nullable": true
           },
           "migration_status": {
@@ -31774,18 +31731,6 @@
         "properties": {
           "value": {
             "$ref": "#/components/schemas/GithubComMailgunCerberusKeysRole"
-          }
-        }
-      },
-      "UnionBranch": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys"
           }
         }
       }
