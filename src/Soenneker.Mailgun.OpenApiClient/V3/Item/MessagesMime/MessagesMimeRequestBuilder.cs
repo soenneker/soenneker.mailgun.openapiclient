@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\messages.mime
+    /// Builds and executes requests for operations under \v3\{domainName}\messages.mime
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagesMimeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesMimeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/messages.mime", pathParameters)
+        public MessagesMimeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/messages.mime", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesMimeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/messages.mime", rawUrl)
+        public MessagesMimeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/messages.mime", rawUrl)
         {
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\whitelists\{value}
+    /// Builds and executes requests for operations under \v3\{domainName}\whitelists\{value}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithValueItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithValueItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/whitelists/{value}", pathParameters)
+        public WithValueItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/whitelists/{value}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithValueItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/whitelists/{value}", rawUrl)
+        public WithValueItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/whitelists/{value}", rawUrl)
         {
         }
         /// <summary>

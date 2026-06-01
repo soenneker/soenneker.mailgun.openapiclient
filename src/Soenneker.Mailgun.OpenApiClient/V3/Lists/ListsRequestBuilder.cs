@@ -26,14 +26,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.lists.item collection</summary>
         /// <param name="position">The mailing list&apos;s address</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.WithList_addressItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.WithList_addressItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.WithListAddressItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.WithListAddressItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("list_address", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.WithList_addressItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("listAddress", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.WithListAddressItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,52 +55,52 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists
         /// <summary>
         /// A mailing list is a group of members (recipients) which itself has an email address. This address becomes an ID for this mailing list.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists429.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsGetResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3Lists200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a mailing list to the account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists201Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsPostResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists201Response?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsPostResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists201Response> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists400.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists429.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists400Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsPostResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V3.Lists.ListsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists201Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PostV3Lists201Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// A mailing list is a group of members (recipients) which itself has an email address. This address becomes an ID for this mailing list.

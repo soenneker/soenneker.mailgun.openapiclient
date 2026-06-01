@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking.Unsubscribe
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\domains\{domain_name-id}\tracking\unsubscribe
+    /// Builds and executes requests for operations under \v3\domains\{domainName-id}\tracking\unsubscribe
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UnsubscribeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking.Unsubscribe
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnsubscribeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/tracking/unsubscribe", pathParameters)
+        public UnsubscribeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/tracking/unsubscribe", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking.Unsubscribe
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnsubscribeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/tracking/unsubscribe", rawUrl)
+        public UnsubscribeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/tracking/unsubscribe", rawUrl)
         {
         }
         /// <summary>

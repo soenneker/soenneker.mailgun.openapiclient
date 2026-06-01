@@ -20,14 +20,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.ip_pools.item collection</summary>
         /// <param name="position">Id of the DIPP to get details about</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.WithPool_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.WithPool_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.WithPoolItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.WithPoolItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("pool_id", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.WithPool_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("poolId", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.WithPoolItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

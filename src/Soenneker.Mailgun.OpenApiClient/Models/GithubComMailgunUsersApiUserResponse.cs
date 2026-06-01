@@ -71,10 +71,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>any optional metadata for the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponse_metadata? Metadata { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponseMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponse_metadata Metadata { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponseMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>status of migration to Sinch ID for user authentication, if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,7 +178,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
                 { "is_master", n => { IsMaster = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponse_metadata>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponseMetadataProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponseMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "migration_status", n => { MigrationStatus = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "opened_ip", n => { OpenedIp = n.GetStringValue(); } },
@@ -207,7 +207,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_disabled", IsDisabled);
             writer.WriteBoolValue("is_master", IsMaster);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserResponseMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("migration_status", MigrationStatus);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("opened_ip", OpenedIp);

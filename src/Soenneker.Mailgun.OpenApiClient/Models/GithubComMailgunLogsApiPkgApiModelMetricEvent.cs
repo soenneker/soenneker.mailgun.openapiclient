@@ -9,11 +9,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         [EnumMember(Value = "accepted_incoming")]
         #pragma warning disable CS1591
-        Accepted_incoming,
+        AcceptedIncoming,
         #pragma warning restore CS1591
         [EnumMember(Value = "accepted_outgoing")]
         #pragma warning disable CS1591
-        Accepted_outgoing,
+        AcceptedOutgoing,
         #pragma warning restore CS1591
         [EnumMember(Value = "accepted")]
         #pragma warning disable CS1591
@@ -21,15 +21,15 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_smtp")]
         #pragma warning disable CS1591
-        Delivered_smtp,
+        DeliveredSmtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_http")]
         #pragma warning disable CS1591
-        Delivered_http,
+        DeliveredHttp,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_optimized")]
         #pragma warning disable CS1591
-        Delivered_optimized,
+        DeliveredOptimized,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered")]
         #pragma warning disable CS1591
@@ -49,11 +49,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_opened")]
         #pragma warning disable CS1591
-        Unique_opened,
+        UniqueOpened,
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_clicked")]
         #pragma warning disable CS1591
-        Unique_clicked,
+        UniqueClicked,
         #pragma warning restore CS1591
         [EnumMember(Value = "complained")]
         #pragma warning disable CS1591
@@ -77,35 +77,35 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "temporary_failed")]
         #pragma warning disable CS1591
-        Temporary_failed,
+        TemporaryFailed,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed")]
         #pragma warning disable CS1591
-        Permanent_failed,
+        PermanentFailed,
         #pragma warning restore CS1591
         [EnumMember(Value = "esp_block")]
         #pragma warning disable CS1591
-        Esp_block,
+        EspBlock,
         #pragma warning restore CS1591
         [EnumMember(Value = "temporary_failed_esp_block")]
         #pragma warning disable CS1591
-        Temporary_failed_esp_block,
+        TemporaryFailedEspBlock,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_esp_block")]
         #pragma warning disable CS1591
-        Permanent_failed_esp_block,
+        PermanentFailedEspBlock,
         #pragma warning restore CS1591
         [EnumMember(Value = "webhook_failure")]
         #pragma warning disable CS1591
-        Webhook_failure,
+        WebhookFailure,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_optimized")]
         #pragma warning disable CS1591
-        Permanent_failed_optimized,
+        PermanentFailedOptimized,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_old")]
         #pragma warning disable CS1591
-        Permanent_failed_old,
+        PermanentFailedOld,
         #pragma warning restore CS1591
         [EnumMember(Value = "bounced")]
         #pragma warning disable CS1591
@@ -113,43 +113,43 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "hard_bounces")]
         #pragma warning disable CS1591
-        Hard_bounces,
+        HardBounces,
         #pragma warning restore CS1591
         [EnumMember(Value = "soft_bounces")]
         #pragma warning disable CS1591
-        Soft_bounces,
+        SoftBounces,
         #pragma warning restore CS1591
         [EnumMember(Value = "delayed_bounce")]
         #pragma warning disable CS1591
-        Delayed_bounce,
+        DelayedBounce,
         #pragma warning restore CS1591
         [EnumMember(Value = "suppressed_bounces")]
         #pragma warning disable CS1591
-        Suppressed_bounces,
+        SuppressedBounces,
         #pragma warning restore CS1591
         [EnumMember(Value = "suppressed_unsubscribed")]
         #pragma warning disable CS1591
-        Suppressed_unsubscribed,
+        SuppressedUnsubscribed,
         #pragma warning restore CS1591
         [EnumMember(Value = "suppressed_complaints")]
         #pragma warning disable CS1591
-        Suppressed_complaints,
+        SuppressedComplaints,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_first_attempt")]
         #pragma warning disable CS1591
-        Delivered_first_attempt,
+        DeliveredFirstAttempt,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_subsequent")]
         #pragma warning disable CS1591
-        Delivered_subsequent,
+        DeliveredSubsequent,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_two_plus_attempts")]
         #pragma warning disable CS1591
-        Delivered_two_plus_attempts,
+        DeliveredTwoPlusAttempts,
         #pragma warning restore CS1591
         [EnumMember(Value = "delayed_first_attempt")]
         #pragma warning disable CS1591
-        Delayed_first_attempt,
+        DelayedFirstAttempt,
         #pragma warning restore CS1591
     }
 }

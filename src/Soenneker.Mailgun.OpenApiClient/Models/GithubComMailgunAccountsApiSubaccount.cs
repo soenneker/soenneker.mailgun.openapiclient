@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount_features? Features { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountFeatures? Features { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount_features Features { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountFeatures Features { get; set; }
 #endif
         /// <summary>The ID of the subaccount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "features", n => { Features = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount_features>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount_features.CreateFromDiscriminatorValue); } },
+                { "features", n => { Features = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountFeatures>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountFeatures.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountStatus>(); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount_features>("features", Features);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountFeatures>("features", Features);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountStatus>("status", Status);

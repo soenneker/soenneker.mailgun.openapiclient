@@ -9,183 +9,183 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         [EnumMember(Value = "accepted_incoming_count")]
         #pragma warning disable CS1591
-        Accepted_incoming_count,
+        AcceptedIncomingCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "accepted_outgoing_count")]
         #pragma warning disable CS1591
-        Accepted_outgoing_count,
+        AcceptedOutgoingCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "accepted_count")]
         #pragma warning disable CS1591
-        Accepted_count,
+        AcceptedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_smtp_count")]
         #pragma warning disable CS1591
-        Delivered_smtp_count,
+        DeliveredSmtpCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_http_count")]
         #pragma warning disable CS1591
-        Delivered_http_count,
+        DeliveredHttpCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_optimized_count")]
         #pragma warning disable CS1591
-        Delivered_optimized_count,
+        DeliveredOptimizedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_count")]
         #pragma warning disable CS1591
-        Delivered_count,
+        DeliveredCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "processed_count")]
         #pragma warning disable CS1591
-        Processed_count,
+        ProcessedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "sent_count")]
         #pragma warning disable CS1591
-        Sent_count,
+        SentCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "opened_count")]
         #pragma warning disable CS1591
-        Opened_count,
+        OpenedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "clicked_count")]
         #pragma warning disable CS1591
-        Clicked_count,
+        ClickedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_opened_count")]
         #pragma warning disable CS1591
-        Unique_opened_count,
+        UniqueOpenedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_clicked_count")]
         #pragma warning disable CS1591
-        Unique_clicked_count,
+        UniqueClickedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "unsubscribed_count")]
         #pragma warning disable CS1591
-        Unsubscribed_count,
+        UnsubscribedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "complained_count")]
         #pragma warning disable CS1591
-        Complained_count,
+        ComplainedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "failed_count")]
         #pragma warning disable CS1591
-        Failed_count,
+        FailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "temporary_failed_count")]
         #pragma warning disable CS1591
-        Temporary_failed_count,
+        TemporaryFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_count")]
         #pragma warning disable CS1591
-        Permanent_failed_count,
+        PermanentFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "temporary_failed_esp_block_count")]
         #pragma warning disable CS1591
-        Temporary_failed_esp_block_count,
+        TemporaryFailedEspBlockCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_esp_block_count")]
         #pragma warning disable CS1591
-        Permanent_failed_esp_block_count,
+        PermanentFailedEspBlockCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "webhook_count")]
         #pragma warning disable CS1591
-        Webhook_count,
+        WebhookCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "rate_limit_count")]
         #pragma warning disable CS1591
-        Rate_limit_count,
+        RateLimitCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_optimized_count")]
         #pragma warning disable CS1591
-        Permanent_failed_optimized_count,
+        PermanentFailedOptimizedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_failed_old_count")]
         #pragma warning disable CS1591
-        Permanent_failed_old_count,
+        PermanentFailedOldCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "bounced_count")]
         #pragma warning disable CS1591
-        Bounced_count,
+        BouncedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "hard_bounces_count")]
         #pragma warning disable CS1591
-        Hard_bounces_count,
+        HardBouncesCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "soft_bounces_count")]
         #pragma warning disable CS1591
-        Soft_bounces_count,
+        SoftBouncesCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delayed_bounce_count")]
         #pragma warning disable CS1591
-        Delayed_bounce_count,
+        DelayedBounceCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "suppressed_bounces_count")]
         #pragma warning disable CS1591
-        Suppressed_bounces_count,
+        SuppressedBouncesCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "suppressed_unsubscribed_count")]
         #pragma warning disable CS1591
-        Suppressed_unsubscribed_count,
+        SuppressedUnsubscribedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "suppressed_complaints_count")]
         #pragma warning disable CS1591
-        Suppressed_complaints_count,
+        SuppressedComplaintsCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_first_attempt_count")]
         #pragma warning disable CS1591
-        Delivered_first_attempt_count,
+        DeliveredFirstAttemptCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delayed_first_attempt_count")]
         #pragma warning disable CS1591
-        Delayed_first_attempt_count,
+        DelayedFirstAttemptCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_two_plus_attempts_count")]
         #pragma warning disable CS1591
-        Delivered_two_plus_attempts_count,
+        DeliveredTwoPlusAttemptsCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_rate")]
         #pragma warning disable CS1591
-        Delivered_rate,
+        DeliveredRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "opened_rate")]
         #pragma warning disable CS1591
-        Opened_rate,
+        OpenedRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "clicked_rate")]
         #pragma warning disable CS1591
-        Clicked_rate,
+        ClickedRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_opened_rate")]
         #pragma warning disable CS1591
-        Unique_opened_rate,
+        UniqueOpenedRate1,
         #pragma warning restore CS1591
         [EnumMember(Value = "unsubscribed_rate")]
         #pragma warning disable CS1591
-        Unsubscribed_rate,
+        UnsubscribedRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "complained_rate")]
         #pragma warning disable CS1591
-        Complained_rate,
+        ComplainedRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "bounce_rate")]
         #pragma warning disable CS1591
-        Bounce_rate,
+        BounceRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "permanent_fail_rate")]
         #pragma warning disable CS1591
-        Permanent_fail_rate,
+        PermanentFailRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "temporary_fail_rate")]
         #pragma warning disable CS1591
-        Temporary_fail_rate,
+        TemporaryFailRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "delayed_rate")]
         #pragma warning disable CS1591
-        Delayed_rate,
+        DelayedRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "delayed_first_attempt_rate")]
         #pragma warning disable CS1591
-        Delayed_first_attempt_rate,
+        DelayedFirstAttemptRate,
         #pragma warning restore CS1591
     }
 }

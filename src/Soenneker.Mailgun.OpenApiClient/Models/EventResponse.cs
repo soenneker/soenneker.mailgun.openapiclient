@@ -81,7 +81,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public string Ip { get; set; }
 #endif
         /// <summary>Logging categorization between</summary>
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_logLevel? LogLevel { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseLogLevel? LogLevel { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,10 +153,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Variables included in the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables? UserVariables { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseUserVariablesProperty? UserVariables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables UserVariables { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseUserVariablesProperty UserVariables { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse"/> and sets the default values.
@@ -192,7 +192,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "geolocation", n => { Geolocation = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
-                { "log-level", n => { LogLevel = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_logLevel>(); } },
+                { "log-level", n => { LogLevel = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseLogLevel>(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject.CreateFromDiscriminatorValue); } },
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "recipient-domain", n => { RecipientDomain = n.GetStringValue(); } },
@@ -203,7 +203,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
-                { "user-variables", n => { UserVariables = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables.CreateFromDiscriminatorValue); } },
+                { "user-variables", n => { UserVariables = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseUserVariablesProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseUserVariablesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -222,7 +222,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseGeolocation>("geolocation", Geolocation);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip", Ip);
-            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_logLevel>("log-level", LogLevel);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseLogLevel>("log-level", LogLevel);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject>("message", Message);
             writer.WriteStringValue("method", Method);
             writer.WriteStringValue("recipient-domain", RecipientDomain);
@@ -233,7 +233,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseTemplate>("template", Template);
             writer.WriteDoubleValue("timestamp", Timestamp);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponse_userVariables>("user-variables", UserVariables);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseUserVariablesProperty>("user-variables", UserVariables);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

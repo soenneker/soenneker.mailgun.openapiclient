@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Mailgun.OpenApiClient.Models;
 using Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.All;
 using Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item;
 using System.Collections.Generic;
@@ -25,14 +26,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.dynamic_pools.item collection</summary>
         /// <param name="position">The name of the dynamic IP pool</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item.WithPool_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item.WithPool_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item.WithPoolNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item.WithPoolNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("pool_name", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item.WithPool_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("poolName", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Item.WithPoolNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -54,20 +55,20 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools
         /// <summary>
         /// Returns the list of IPs belonging to each of the account&apos;s Dynamic IP Pools.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DynamicPools200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DynamicPools200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DynamicPools200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsGetResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V3.Dynamic_pools.Dynamic_poolsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DynamicPools200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DynamicPools200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the list of IPs belonging to each of the account&apos;s Dynamic IP Pools.

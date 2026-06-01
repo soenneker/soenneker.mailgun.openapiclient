@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\templates
+    /// Builds and executes requests for operations under \v3\{domainName}\templates
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.item.templates.item collection</summary>
         /// <param name="position">Template name to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplate_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplate_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplateNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplateNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("template_name", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplate_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("templateName", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplateNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TemplatesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/templates{?limit*,p*,page*}", pathParameters)
+        public TemplatesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates{?limit*,p*,page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TemplatesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/templates{?limit*,p*,page*}", rawUrl)
+        public TemplatesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates{?limit*,p*,page*}", rawUrl)
         {
         }
         /// <summary>
@@ -217,7 +217,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates
 #endif
             /// <summary>Name of the page to retrieve. Value can be `first`, `last`, `next`, or `previous`. Defaults to `first`.</summary>
             [QueryParameter("page")]
-            public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.GetPageQueryParameterType? Page { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameTemplatesPageParameter? Page { get; set; }
         }
     }
 }

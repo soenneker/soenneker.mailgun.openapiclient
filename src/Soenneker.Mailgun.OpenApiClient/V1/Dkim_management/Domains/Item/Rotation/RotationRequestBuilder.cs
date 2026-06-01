@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dkim_management.Domains.Item.Rotati
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiNotFoundError">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +55,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dkim_management.Domains.Item.Rotati
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiNotFoundError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumApiDomainResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumApiDomainResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

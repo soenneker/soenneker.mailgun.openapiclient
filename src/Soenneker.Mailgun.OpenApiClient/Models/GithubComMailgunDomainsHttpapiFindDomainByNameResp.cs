@@ -17,26 +17,26 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Domain details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain? Domain { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain? Domain { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain Domain { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain Domain { get; set; }
 #endif
         /// <summary>List of DNS records required for receiving emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>? ReceivingDnsRecords { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem>? ReceivingDnsRecords { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord> ReceivingDnsRecords { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem> ReceivingDnsRecords { get; set; }
 #endif
         /// <summary>List of DNS records required for sending emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>? SendingDnsRecords { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem>? SendingDnsRecords { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord> SendingDnsRecords { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem> SendingDnsRecords { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameResp"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "domain", n => { Domain = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain.CreateFromDiscriminatorValue); } },
-                { "receiving_dns_records", n => { ReceivingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "sending_dns_records", n => { SendingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "domain", n => { Domain = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain.CreateFromDiscriminatorValue); } },
+                { "receiving_dns_records", n => { ReceivingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sending_dns_records", n => { SendingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain>("domain", Domain);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>("receiving_dns_records", ReceivingDnsRecords);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>("sending_dns_records", SendingDnsRecords);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain>("domain", Domain);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem>("receiving_dns_records", ReceivingDnsRecords);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem>("sending_dns_records", SendingDnsRecords);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

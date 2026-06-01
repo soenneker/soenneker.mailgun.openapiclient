@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Unsubscribes.Import
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\unsubscribes\import
+    /// Builds and executes requests for operations under \v3\{domainName}\unsubscribes\import
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImportRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Unsubscribes.Import
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/unsubscribes/import", pathParameters)
+        public ImportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/unsubscribes/import", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Unsubscribes.Import
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/unsubscribes/import", rawUrl)
+        public ImportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/unsubscribes/import", rawUrl)
         {
         }
         /// <summary>

@@ -9,95 +9,95 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         [EnumMember(Value = "email_validation_count")]
         #pragma warning disable CS1591
-        Email_validation_count,
+        EmailValidationCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_public_count")]
         #pragma warning disable CS1591
-        Email_validation_public_count,
+        EmailValidationPublicCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_valid_count")]
         #pragma warning disable CS1591
-        Email_validation_valid_count,
+        EmailValidationValidCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_single_count")]
         #pragma warning disable CS1591
-        Email_validation_single_count,
+        EmailValidationSingleCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_bulk_count")]
         #pragma warning disable CS1591
-        Email_validation_bulk_count,
+        EmailValidationBulkCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_list_count")]
         #pragma warning disable CS1591
-        Email_validation_list_count,
+        EmailValidationListCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_mailgun_count")]
         #pragma warning disable CS1591
-        Email_validation_mailgun_count,
+        EmailValidationMailgunCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation_mailjet_count")]
         #pragma warning disable CS1591
-        Email_validation_mailjet_count,
+        EmailValidationMailjetCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_preview_count")]
         #pragma warning disable CS1591
-        Email_preview_count,
+        EmailPreviewCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_preview_failed_count")]
         #pragma warning disable CS1591
-        Email_preview_failed_count,
+        EmailPreviewFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "link_validation_count")]
         #pragma warning disable CS1591
-        Link_validation_count,
+        LinkValidationCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "link_validation_failed_count")]
         #pragma warning disable CS1591
-        Link_validation_failed_count,
+        LinkValidationFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "seed_test_count")]
         #pragma warning disable CS1591
-        Seed_test_count,
+        SeedTestCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "ip_blocklist_monitoring_count")]
         #pragma warning disable CS1591
-        Ip_blocklist_monitoring_count,
+        IpBlocklistMonitoringCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "domain_blocklist_monitoring_count")]
         #pragma warning disable CS1591
-        Domain_blocklist_monitoring_count,
+        DomainBlocklistMonitoringCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "accessibility_count")]
         #pragma warning disable CS1591
-        Accessibility_count,
+        AccessibilityCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "accessibility_failed_count")]
         #pragma warning disable CS1591
-        Accessibility_failed_count,
+        AccessibilityFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "image_validation_count")]
         #pragma warning disable CS1591
-        Image_validation_count,
+        ImageValidationCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "image_validation_failed_count")]
         #pragma warning disable CS1591
-        Image_validation_failed_count,
+        ImageValidationFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "spam_content_check_count")]
         #pragma warning disable CS1591
-        Spam_content_check_count,
+        SpamContentCheckCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "spam_content_check_failed_count")]
         #pragma warning disable CS1591
-        Spam_content_check_failed_count,
+        SpamContentCheckFailedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "archived_count")]
         #pragma warning disable CS1591
-        Archived_count,
+        ArchivedCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "processed_count")]
         #pragma warning disable CS1591
-        Processed_count,
+        ProcessedCount,
         #pragma warning restore CS1591
     }
 }

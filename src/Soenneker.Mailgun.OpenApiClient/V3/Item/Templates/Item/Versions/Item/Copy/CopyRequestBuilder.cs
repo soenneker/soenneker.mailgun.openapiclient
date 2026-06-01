@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\templates\{template_name}\versions\{version_name}\copy
+    /// Builds and executes requests for operations under \v3\{domainName}\templates\{templateName}\versions\{versionName}\copy
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CopyRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.item.templates.item.versions.item.copy.item collection</summary>
         /// <param name="position">The name for the new version. If the version name already exists, the copy will fail.</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy.Item.WithNew_version_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy.Item.WithNew_version_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy.Item.WithNewVersionNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy.Item.WithNewVersionNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("new_version_name", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy.Item.WithNew_version_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("newVersionName", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy.Item.WithNewVersionNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.C
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CopyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/templates/{template_name}/versions/{version_name}/copy", pathParameters)
+        public CopyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions/{versionName}/copy", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.C
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CopyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/templates/{template_name}/versions/{version_name}/copy", rawUrl)
+        public CopyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions/{versionName}/copy", rawUrl)
         {
         }
     }

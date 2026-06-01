@@ -14,14 +14,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The comparison operator.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_comparator? Comparator { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_comparator Comparator { get; set; }
-#endif
+        /// <summary>Metric Comparator</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestComparator? Comparator { get; set; }
         /// <summary>A description of what the limit does.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,14 +24,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The dimension to apply to the metric.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_dimension? Dimension { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_dimension Dimension { get; set; }
-#endif
+        /// <summary>Dimension</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestDimension? Dimension { get; set; }
         /// <summary>A list of filters to apply to the limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,14 +42,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Limit { get; set; }
 #endif
-        /// <summary>The metric being monitored.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_metric? Metric { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_metric Metric { get; set; }
-#endif
+        /// <summary>Limit Metric</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestMetric? Metric { get; set; }
         /// <summary>A user-friendly name for the limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,12 +85,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "comparator", n => { Comparator = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_comparator>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_comparator.CreateFromDiscriminatorValue); } },
+                { "comparator", n => { Comparator = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestComparator>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_dimension>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_dimension.CreateFromDiscriminatorValue); } },
+                { "dimension", n => { Dimension = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestDimension>(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "metric", n => { Metric = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_metric>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_metric.CreateFromDiscriminatorValue); } },
+                { "metric", n => { Metric = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestMetric>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "period", n => { Period = n.GetStringValue(); } },
             };
@@ -120,12 +102,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_comparator>("comparator", Comparator);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestComparator>("comparator", Comparator);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_dimension>("dimension", Dimension);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestDimension>("dimension", Dimension);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>("filters", Filters);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequest_metric>("metric", Metric);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitRequestMetric>("metric", Metric);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("period", Period);
             writer.WriteAdditionalData(AdditionalData);

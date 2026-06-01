@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\lists\{list_address}\members.csv
+    /// Builds and executes requests for operations under \v3\lists\{listAddress}\members.csv
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembersCsvRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersCsvRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{list_address}/members.csv", pathParameters)
+        public MembersCsvRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{listAddress}/members.csv", pathParameters)
         {
         }
         /// <summary>
@@ -30,37 +30,37 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersCsvRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{list_address}/members.csv", rawUrl)
+        public MembersCsvRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{listAddress}/members.csv", rawUrl)
         {
         }
         /// <summary>
         /// Adds multiple members, up to 1000 per call, to a mailing list via CSV file.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv.MembersPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv.MembersPostResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv200Response?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv.MembersPostResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv200Response> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv400.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv404.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv429.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv400Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv.MembersPostResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.MembersCsv.MembersPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PostListsListAddressMembersCsv200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds multiple members, up to 1000 per call, to a mailing list via CSV file.

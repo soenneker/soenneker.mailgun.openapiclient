@@ -17,11 +17,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "ip_pool")]
         #pragma warning disable CS1591
-        Ip_pool,
+        IpPool,
         #pragma warning restore CS1591
         [EnumMember(Value = "recipient_provider")]
         #pragma warning disable CS1591
-        Recipient_provider,
+        RecipientProvider,
         #pragma warning restore CS1591
         [EnumMember(Value = "subaccount")]
         #pragma warning disable CS1591

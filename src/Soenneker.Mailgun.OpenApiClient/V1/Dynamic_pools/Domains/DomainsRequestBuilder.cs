@@ -128,10 +128,10 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains
 #endif
             /// <summary>Specify which field to use to sort domains</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsSortByParameter? SortBy { get; set; }
             /// <summary>Specify which field to use to sort domains</summary>
             [QueryParameter("sort_order")]
-            public global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.GetSort_orderQueryParameterType? SortOrder { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsSortOrderParameter? SortOrder { get; set; }
         }
     }
 }

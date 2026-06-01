@@ -36,17 +36,17 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Http_signing_key
         /// <summary>
         /// Get webhook signing key saved on the account
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,25 +54,25 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Http_signing_key
             {
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create or regenerate webhook signing key on an account
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHTTPSigningKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiHttpSigningKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get webhook signing key saved on the account

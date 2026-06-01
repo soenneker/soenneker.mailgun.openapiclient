@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments>? Attachments { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments> Attachments { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem> Attachments { get; set; }
 #endif
         /// <summary>The headers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders.CreateFromDiscriminatorValue); } },
                 { "scheduled-for", n => { ScheduledFor = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObject_attachments>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem>("attachments", Attachments);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders>("headers", Headers);
             writer.WriteStringValue("scheduled-for", ScheduledFor);
             writer.WriteIntValue("size", Size);

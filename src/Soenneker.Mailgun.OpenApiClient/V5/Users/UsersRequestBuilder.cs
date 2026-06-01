@@ -26,14 +26,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Users
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v5.users.item collection</summary>
         /// <param name="position">The ID of the user on the account</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Users.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V5.Users.Item.WithUser_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Users.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V5.Users.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V5.Users.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V5.Users.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -109,7 +109,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Users
             public int? Limit { get; set; }
             /// <summary>The user role by which to filter results (basic == analyst)</summary>
             [QueryParameter("role")]
-            public global::Soenneker.Mailgun.OpenApiClient.V5.Users.GetRoleQueryParameterType? Role { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV5UsersRoleParameter? Role { get; set; }
             /// <summary>The number of users to skip</summary>
             [QueryParameter("skip")]
             public int? Skip { get; set; }

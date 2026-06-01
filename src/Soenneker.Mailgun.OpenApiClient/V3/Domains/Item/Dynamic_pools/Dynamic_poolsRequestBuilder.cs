@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\domains\{domain_name-id}\dynamic_pools
+    /// Builds and executes requests for operations under \v3\domains\{domainName-id}\dynamic_pools
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Dynamic_poolsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Dynamic_poolsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/dynamic_pools?replacement_ip={replacement_ip}&replacement_pool_id={replacement_pool_id}", pathParameters)
+        public Dynamic_poolsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/dynamic_pools?replacement_ip={replacement_ip}&replacement_pool_id={replacement_pool_id}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Dynamic_poolsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/dynamic_pools?replacement_ip={replacement_ip}&replacement_pool_id={replacement_pool_id}", rawUrl)
+        public Dynamic_poolsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/dynamic_pools?replacement_ip={replacement_ip}&replacement_pool_id={replacement_pool_id}", rawUrl)
         {
         }
         /// <summary>
@@ -102,7 +102,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v3/domains/{domain_name%2Did}/dynamic_pools?replacement_ip={replacement_ip}", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v3/domains/{domainName%2Did}/dynamic_pools?replacement_ip={replacement_ip}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

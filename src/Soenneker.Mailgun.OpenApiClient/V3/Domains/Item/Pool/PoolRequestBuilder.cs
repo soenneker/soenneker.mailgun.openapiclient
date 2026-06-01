@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\domains\{domain_name-id}\pool
+    /// Builds and executes requests for operations under \v3\domains\{domainName-id}\pool
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PoolRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PoolRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/pool", pathParameters)
+        public PoolRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/pool", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PoolRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/pool", rawUrl)
+        public PoolRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/pool", rawUrl)
         {
         }
     }

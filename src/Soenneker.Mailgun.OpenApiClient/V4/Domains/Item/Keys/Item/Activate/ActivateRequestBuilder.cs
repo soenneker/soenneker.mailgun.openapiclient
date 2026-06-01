@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Keys.Item.Activate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v4\domains\{authority_name-id}\keys\{selector}\activate
+    /// Builds and executes requests for operations under \v4\domains\{authorityName-id}\keys\{selector}\activate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Keys.Item.Activate
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authority_name%2Did}/keys/{selector}/activate", pathParameters)
+        public ActivateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authorityName%2Did}/keys/{selector}/activate", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Keys.Item.Activate
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authority_name%2Did}/keys/{selector}/activate", rawUrl)
+        public ActivateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authorityName%2Did}/keys/{selector}/activate", rawUrl)
         {
         }
         /// <summary>

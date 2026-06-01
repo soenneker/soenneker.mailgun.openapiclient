@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\lists\{list_address}\members
+    /// Builds and executes requests for operations under \v3\lists\{listAddress}\members
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembersRequestBuilder : BaseRequestBuilder
@@ -26,14 +26,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.lists.item.members.item collection</summary>
         /// <param name="position">The member&apos;s address</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Item.WithMember_addressItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Item.WithMember_addressItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Item.WithMemberAddressItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Item.WithMemberAddressItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("member_address", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Item.WithMember_addressItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("memberAddress", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Item.WithMemberAddressItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{list_address}/members{?address*,limit*,skip*,subscribed*}", pathParameters)
+        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{listAddress}/members{?address*,limit*,skip*,subscribed*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,58 +49,58 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{list_address}/members{?address*,limit*,skip*,subscribed*}", rawUrl)
+        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{listAddress}/members{?address*,limit*,skip*,subscribed*}", rawUrl)
         {
         }
         /// <summary>
         /// Lists members in a given mailing list
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersRequestBuilder.MembersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersRequestBuilder.MembersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersRequestBuilder.MembersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersRequestBuilder.MembersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers429.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersGetResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetListsStringListAddressMembers200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a new member to the mailing list.  For adding many list members, consider bulk upload endpoints &quot;POST /v3/lists/{list_address}/members.json&quot; or &quot;members.csv&quot;.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersPostResponse?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers200Response?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersPostResponse> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers200Response> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers400.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers429.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers400Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersPostResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.MembersPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PostListsStringListAddressMembers200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists members in a given mailing list

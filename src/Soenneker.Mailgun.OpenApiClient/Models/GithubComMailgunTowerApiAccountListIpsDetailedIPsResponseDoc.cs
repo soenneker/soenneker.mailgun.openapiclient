@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>list of IPs belonging to the account and subaccounts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIPDoc>? Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIpDoc>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIPDoc> Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIpDoc> Items { get; set; }
 #endif
         /// <summary>total number of account IPs</summary>
         public long? TotalCount { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIPDoc>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIPDoc.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIpDoc>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIpDoc.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_count", n => { TotalCount = n.GetLongValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIPDoc>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsAccountIpDoc>("items", Items);
             writer.WriteLongValue("total_count", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -45,8 +45,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V2.X509.Item
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiGenerateResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiNotFoundError">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiConflictError">When receiving a 409 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -61,8 +61,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V2.X509.Item
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiNotFoundError.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiConflictError.CreateFromDiscriminatorValue },
             };
@@ -74,8 +74,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V2.X509.Item
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiGenerateResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiNotFoundError">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiConflictError">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiConflictError">When receiving a 429 status code</exception>
@@ -91,8 +91,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V2.X509.Item
             var requestInfo = ToPutRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiNotFoundError.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiConflictError.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiConflictError.CreateFromDiscriminatorValue },

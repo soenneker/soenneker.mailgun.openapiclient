@@ -9,19 +9,19 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     {
         [EnumMember(Value = "hard_bounce_rate")]
         #pragma warning disable CS1591
-        Hard_bounce_rate,
+        HardBounceRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "temporary_fail_rate")]
         #pragma warning disable CS1591
-        Temporary_fail_rate,
+        TemporaryFailRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_rate")]
         #pragma warning disable CS1591
-        Delivered_rate,
+        DeliveredRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "complained_rate")]
         #pragma warning disable CS1591
-        Complained_rate,
+        ComplainedRate,
         #pragma warning restore CS1591
     }
 }

@@ -26,14 +26,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v5.accounts.subaccounts.item collection</summary>
         /// <param name="position">The ID of the subaccount</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.WithSubaccount_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.WithSubaccount_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.WithSubaccountItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.WithSubaccountItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("subaccount_id", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.WithSubaccount_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("subaccountId", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.WithSubaccountItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -214,7 +214,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts
             public int? Skip { get; set; }
             /// <summary>Sort order</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV5AccountsSubaccountsSortParameter? Sort { get; set; }
         }
         /// <summary>
         /// Create a subaccount

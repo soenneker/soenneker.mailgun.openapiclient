@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\domains\{domain_name-id}\webhooks
+    /// Builds and executes requests for operations under \v3\domains\{domainName-id}\webhooks
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebhooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.domains.item.webhooks.item collection</summary>
         /// <param name="position">The webhook type you wish to retrieve.</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item.WithWebhook_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item.WithWebhook_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item.WithWebhookNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item.WithWebhookNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("webhook_name", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item.WithWebhook_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("webhookName", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item.WithWebhookNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/webhooks", pathParameters)
+        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/webhooks", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/webhooks", rawUrl)
+        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/webhooks", rawUrl)
         {
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };

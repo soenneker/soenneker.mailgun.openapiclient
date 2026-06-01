@@ -20,14 +20,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v4.domains.item collection</summary>
         /// <param name="position">The name of the domain you want to fetch</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Authority_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Authority_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("authority_name%2Did", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Authority_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("authorityName%2Did", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +91,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericAPIError.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericApiError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

@@ -20,14 +20,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Templates
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v4.templates.item collection</summary>
         /// <param name="position">Template name to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.WithTemplate_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.WithTemplate_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.WithTemplateNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.WithTemplateNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("template_name", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.WithTemplate_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("templateName", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.WithTemplateNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -217,7 +217,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Templates
 #endif
             /// <summary>Name of the page to retrieve. Value can be `first`, `last`, `next`, or `previous`. Defaults to `first`.</summary>
             [QueryParameter("page")]
-            public global::Soenneker.Mailgun.OpenApiClient.V4.Templates.GetPageQueryParameterType? Page { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV4TemplatesPageParameter? Page { get; set; }
         }
     }
 }

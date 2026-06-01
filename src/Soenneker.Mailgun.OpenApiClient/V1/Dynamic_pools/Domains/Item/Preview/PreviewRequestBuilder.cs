@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Mailgun.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,20 +36,20 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview
         /// <summary>
         /// Runs a health check on a domain and returns which pool it would be placed in. It does NOT enroll the domain or set the band
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview.PreviewGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview.PreviewGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview.PreviewGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview.PreviewGetResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview.PreviewGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Runs a health check on a domain and returns which pool it would be placed in. It does NOT enroll the domain or set the band

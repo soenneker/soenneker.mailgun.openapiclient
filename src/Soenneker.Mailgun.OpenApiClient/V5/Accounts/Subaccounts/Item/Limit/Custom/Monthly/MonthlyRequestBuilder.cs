@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Custom.Monthly
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v5\accounts\subaccounts\{subaccount_id}\limit\custom\monthly
+    /// Builds and executes requests for operations under \v5\accounts\subaccounts\{subaccountId}\limit\custom\monthly
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MonthlyRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Cus
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MonthlyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/limit/custom/monthly?limit={limit}", pathParameters)
+        public MonthlyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/limit/custom/monthly?limit={limit}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Cus
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MonthlyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/limit/custom/monthly?limit={limit}", rawUrl)
+        public MonthlyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/limit/custom/monthly?limit={limit}", rawUrl)
         {
         }
         /// <summary>
@@ -120,7 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Cus
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/limit/custom/monthly", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/limit/custom/monthly", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -139,7 +139,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Cus
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/limit/custom/monthly", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/limit/custom/monthly", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

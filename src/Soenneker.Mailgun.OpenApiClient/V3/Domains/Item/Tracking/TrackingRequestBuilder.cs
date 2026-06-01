@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\domains\{domain_name-id}\tracking
+    /// Builds and executes requests for operations under \v3\domains\{domainName-id}\tracking
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TrackingRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TrackingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/tracking", pathParameters)
+        public TrackingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/tracking", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TrackingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domain_name%2Did}/tracking", rawUrl)
+        public TrackingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/domains/{domainName%2Did}/tracking", rawUrl)
         {
         }
         /// <summary>

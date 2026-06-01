@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.DelegateNamespace
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\ip_pools\{pool_id}\delegate
+    /// Builds and executes requests for operations under \v3\ip_pools\{poolId}\delegate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DelegateRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.DelegateNamespace
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DelegateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{pool_id}/delegate", pathParameters)
+        public DelegateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/delegate", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.DelegateNamespace
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DelegateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{pool_id}/delegate", rawUrl)
+        public DelegateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/delegate", rawUrl)
         {
         }
         /// <summary>

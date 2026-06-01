@@ -49,10 +49,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The records property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDNSRecord>? Records { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDnsRecord>? Records { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDNSRecord> Records { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDnsRecord> Records { get; set; }
 #endif
         /// <summary>The rotation_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,7 +115,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "active_selector", n => { ActiveSelector = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "records", n => { Records = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDNSRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDNSRecord.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "records", n => { Records = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDnsRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDnsRecord.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "rotation_enabled", n => { RotationEnabled = n.GetStringValue(); } },
                 { "rotation_interval", n => { RotationInterval = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -133,7 +133,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("active_selector", ActiveSelector);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDNSRecord>("records", Records);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPendulumDkimDnsRecord>("records", Records);
             writer.WriteStringValue("rotation_enabled", RotationEnabled);
             writer.WriteStringValue("rotation_interval", RotationInterval);
             writer.WriteStringValue("sid", Sid);

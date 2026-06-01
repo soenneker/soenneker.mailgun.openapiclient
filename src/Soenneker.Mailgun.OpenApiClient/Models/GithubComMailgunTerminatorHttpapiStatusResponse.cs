@@ -33,10 +33,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Status of certificate. Either &apos;expired&apos; &apos;processing&apos; &apos;active&apos; or &apos;error&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponse_status? Status { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponse_status Status { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty Status { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponse"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "certificate", n => { Certificate = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponse_status>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponse_status.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("certificate", Certificate);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponse_status>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

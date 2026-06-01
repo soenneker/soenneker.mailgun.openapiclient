@@ -20,10 +20,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The Response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatus_Response? Response { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatusResponseProperty? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatus_Response Response { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatusResponseProperty Response { get; set; }
 #endif
         /// <summary>The Status property</summary>
         public int? Status { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatus_Response>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatus_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatusResponseProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatusResponseProperty.CreateFromDiscriminatorValue); } },
                 { "Status", n => { Status = n.GetIntValue(); } },
             };
         }
@@ -63,7 +63,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatus_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiResponseWithStatusResponseProperty>("Response", Response);
             writer.WriteIntValue("Status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

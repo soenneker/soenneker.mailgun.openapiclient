@@ -21,15 +21,15 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "ip_pool")]
         #pragma warning disable CS1591
-        Ip_pool,
+        IpPool,
         #pragma warning restore CS1591
         [EnumMember(Value = "recipient_domain")]
         #pragma warning disable CS1591
-        Recipient_domain,
+        RecipientDomain,
         #pragma warning restore CS1591
         [EnumMember(Value = "recipient_provider")]
         #pragma warning disable CS1591
-        Recipient_provider,
+        RecipientProvider,
         #pragma warning restore CS1591
         [EnumMember(Value = "country")]
         #pragma warning disable CS1591
@@ -49,11 +49,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "event")]
         #pragma warning disable CS1591
-        Event,
+        EventValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "attachment_filename")]
         #pragma warning disable CS1591
-        Attachment_filename,
+        AttachmentFilename,
         #pragma warning restore CS1591
         [EnumMember(Value = "from")]
         #pragma warning disable CS1591
@@ -61,7 +61,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "message_id")]
         #pragma warning disable CS1591
-        Message_id,
+        MessageId,
         #pragma warning restore CS1591
         [EnumMember(Value = "subject")]
         #pragma warning disable CS1591
@@ -69,7 +69,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "mailing_list_address")]
         #pragma warning disable CS1591
-        Mailing_list_address,
+        MailingListAddress,
         #pragma warning restore CS1591
         [EnumMember(Value = "to")]
         #pragma warning disable CS1591
@@ -93,35 +93,35 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "user_variables")]
         #pragma warning disable CS1591
-        User_variables,
+        UserVariables,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivered_at")]
         #pragma warning disable CS1591
-        Delivered_at,
+        DeliveredAt,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivery_status_code")]
         #pragma warning disable CS1591
-        Delivery_status_code,
+        DeliveryStatusCode,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivery_status_bounce_type")]
         #pragma warning disable CS1591
-        Delivery_status_bounce_type,
+        DeliveryStatusBounceType,
         #pragma warning restore CS1591
         [EnumMember(Value = "delivery_status_message")]
         #pragma warning disable CS1591
-        Delivery_status_message,
+        DeliveryStatusMessage,
         #pragma warning restore CS1591
         [EnumMember(Value = "is_routed")]
         #pragma warning disable CS1591
-        Is_routed,
+        IsRouted,
         #pragma warning restore CS1591
         [EnumMember(Value = "i_classification_rule_id")]
         #pragma warning disable CS1591
-        I_classification_rule_id,
+        IClassificationRuleId,
         #pragma warning restore CS1591
         [EnumMember(Value = "i_classification_group_id")]
         #pragma warning disable CS1591
-        I_classification_group_id,
+        IClassificationGroupId,
         #pragma warning restore CS1591
         [EnumMember(Value = "recipients")]
         #pragma warning disable CS1591

@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingURLs? Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingUrLs? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingURLs Paging { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingUrLs Paging { get; set; }
 #endif
         /// <summary>The total_items property</summary>
         public int? TotalItems { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBandersnatchModelHistoryRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBandersnatchModelHistoryRecord.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingURLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingURLs.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingUrLs.CreateFromDiscriminatorValue); } },
                 { "total_items", n => { TotalItems = n.GetIntValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBandersnatchModelHistoryRecord>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingURLs>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingUrLs>("paging", Paging);
             writer.WriteIntValue("total_items", TotalItems);
             writer.WriteAdditionalData(AdditionalData);
         }

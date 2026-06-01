@@ -43,10 +43,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Key value JSON object of headers to be stored with the template. Where key is the header name and value is the header value. The header names `From`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion_headers? Headers { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersionHeadersProperty? Headers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion_headers Headers { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersionHeadersProperty Headers { get; set; }
 #endif
         /// <summary>Template ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "engine", n => { Engine = n.GetStringValue(); } },
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion_headers>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion_headers.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersionHeadersProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersionHeadersProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "mjml", n => { Mjml = n.GetStringValue(); } },
                 { "tag", n => { Tag = n.GetStringValue(); } },
@@ -126,7 +126,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("comment", Comment);
             writer.WriteStringValue("engine", Engine);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion_headers>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersionHeadersProperty>("headers", Headers);
             writer.WriteStringValue("mjml", Mjml);
             writer.WriteStringValue("tag", Tag);
             writer.WriteStringValue("template", Template);

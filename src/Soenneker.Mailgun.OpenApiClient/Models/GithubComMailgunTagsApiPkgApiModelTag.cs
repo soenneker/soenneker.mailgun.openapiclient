@@ -41,18 +41,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The first_seen property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_first_seen? FirstSeen { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagFirstSeen? FirstSeen { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_first_seen FirstSeen { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagFirstSeen FirstSeen { get; set; }
 #endif
         /// <summary>The last_seen property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_last_seen? LastSeen { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagLastSeen? LastSeen { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_last_seen LastSeen { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagLastSeen LastSeen { get; set; }
 #endif
         /// <summary>The metrics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,8 +106,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "account_name", n => { AccountName = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "first_seen", n => { FirstSeen = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_first_seen>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_first_seen.CreateFromDiscriminatorValue); } },
-                { "last_seen", n => { LastSeen = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_last_seen>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_last_seen.CreateFromDiscriminatorValue); } },
+                { "first_seen", n => { FirstSeen = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagFirstSeen>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagFirstSeen.CreateFromDiscriminatorValue); } },
+                { "last_seen", n => { LastSeen = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagLastSeen>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagLastSeen.CreateFromDiscriminatorValue); } },
                 { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangMetrics>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangMetrics.CreateFromDiscriminatorValue); } },
                 { "parent_account_id", n => { ParentAccountId = n.GetStringValue(); } },
                 { "tag", n => { Tag = n.GetStringValue(); } },
@@ -123,8 +123,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteStringValue("account_name", AccountName);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_first_seen>("first_seen", FirstSeen);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTag_last_seen>("last_seen", LastSeen);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagFirstSeen>("first_seen", FirstSeen);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTagsApiPkgApiModelTagLastSeen>("last_seen", LastSeen);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsClientGolangMetrics>("metrics", Metrics);
             writer.WriteStringValue("parent_account_id", ParentAccountId);
             writer.WriteStringValue("tag", Tag);

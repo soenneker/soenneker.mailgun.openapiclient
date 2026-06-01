@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Events
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\events
+    /// Builds and executes requests for operations under \v3\{domainName}\events
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Events
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/events{?ascending*,attachment*,begin*,end*,event*,from*,limit*,list*,message%2Did*,recipient*,recipients*,severity*,size*,subject*,tags*,to*}", pathParameters)
+        public EventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/events{?ascending*,attachment*,begin*,end*,event*,from*,limit*,list*,message%2Did*,recipient*,recipients*,severity*,size*,subject*,tags*,to*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,26 +30,26 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Events
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/events{?ascending*,attachment*,begin*,end*,event*,from*,limit*,list*,message%2Did*,recipient*,recipients*,severity*,size*,subject*,tags*,to*}", rawUrl)
+        public EventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/events{?ascending*,attachment*,begin*,end*,event*,from*,limit*,list*,message%2Did*,recipient*,recipients*,severity*,size*,subject*,tags*,to*}", rawUrl)
         {
         }
         /// <summary>
         /// Mailgun tracks every inbound and outbound message event and retains this data for at least 3 days.See [Filter expression](https://documentation.mailgun.com/docs/mailgun/user-manual/events/#filter-expression) for details about filtering expressions
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Events.EventsRequestBuilder.EventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Events.EventsRequestBuilder.EventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Events.EventsRequestBuilder.EventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Events.EventsRequestBuilder.EventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Mailgun tracks every inbound and outbound message event and retains this data for at least 3 days.See [Filter expression](https://documentation.mailgun.com/docs/mailgun/user-manual/events/#filter-expression) for details about filtering expressions
@@ -87,7 +87,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Events
         {
             /// <summary>Sort direction by time. Must be provided if the range end time is not specified. Can be either yes or no</summary>
             [QueryParameter("ascending")]
-            public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Events.GetAscendingQueryParameterType? Ascending { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEventsAscendingParameter? Ascending { get; set; }
             /// <summary>Filter by the name of an attached file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

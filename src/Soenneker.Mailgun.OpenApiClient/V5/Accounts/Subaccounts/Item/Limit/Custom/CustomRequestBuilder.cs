@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Custom
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v5\accounts\subaccounts\{subaccount_id}\limit\custom
+    /// Builds and executes requests for operations under \v5\accounts\subaccounts\{subaccountId}\limit\custom
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Cus
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CustomRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/limit/custom", pathParameters)
+        public CustomRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/limit/custom", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.Cus
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CustomRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/limit/custom", rawUrl)
+        public CustomRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/limit/custom", rawUrl)
         {
         }
     }

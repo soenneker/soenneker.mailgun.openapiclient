@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Enable
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v5\accounts\subaccounts\{subaccount_id}\enable
+    /// Builds and executes requests for operations under \v5\accounts\subaccounts\{subaccountId}\enable
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EnableRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Enable
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnableRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/enable", pathParameters)
+        public EnableRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/enable", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Enable
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnableRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccount_id}/enable", rawUrl)
+        public EnableRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/enable", rawUrl)
         {
         }
         /// <summary>

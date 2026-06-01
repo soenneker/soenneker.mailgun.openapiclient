@@ -35,10 +35,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>A JSON-encoded dictionary string with arbitrary parameters, e.g. {&quot;gender&quot;:&quot;female&quot;,&quot;age&quot;:27}</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponse_vars? Vars { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponseVarsProperty? Vars { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponse_vars Vars { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponseVarsProperty Vars { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponse"/> and sets the default values.
@@ -68,7 +68,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
-                { "vars", n => { Vars = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponse_vars>(global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponse_vars.CreateFromDiscriminatorValue); } },
+                { "vars", n => { Vars = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponseVarsProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponseVarsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("subscribed", Subscribed);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponse_vars>("vars", Vars);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.ListMemberResponseVarsProperty>("vars", Vars);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

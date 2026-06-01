@@ -29,14 +29,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.domains.item collection</summary>
         /// <param name="position">The name of the domain to delete</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Domain_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Domain_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.DomainNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.DomainNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("domain_name%2Did", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Domain_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("domainName%2Did", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.DomainNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

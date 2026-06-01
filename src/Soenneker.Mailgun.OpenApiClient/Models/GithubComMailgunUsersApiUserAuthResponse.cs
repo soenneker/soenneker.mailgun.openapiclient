@@ -25,10 +25,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Details that may be needed for an auth method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponse_prior_details? PriorDetails { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty? PriorDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponse_prior_details PriorDetails { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty PriorDetails { get; set; }
 #endif
         /// <summary>The previous auth method for the user, if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "method", n => { Method = n.GetStringValue(); } },
-                { "prior_details", n => { PriorDetails = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponse_prior_details>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponse_prior_details.CreateFromDiscriminatorValue); } },
+                { "prior_details", n => { PriorDetails = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty.CreateFromDiscriminatorValue); } },
                 { "prior_method", n => { PriorMethod = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("method", Method);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponse_prior_details>("prior_details", PriorDetails);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty>("prior_details", PriorDetails);
             writer.WriteStringValue("prior_method", PriorMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

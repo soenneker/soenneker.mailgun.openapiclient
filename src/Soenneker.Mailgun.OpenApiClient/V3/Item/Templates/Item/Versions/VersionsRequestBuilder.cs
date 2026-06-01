@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domain_name}\templates\{template_name}\versions
+    /// Builds and executes requests for operations under \v3\{domainName}\templates\{templateName}\versions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VersionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.item.templates.item.versions.item collection</summary>
         /// <param name="position">Tag of the version of the template to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.WithVersion_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.WithVersion_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.WithVersionNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.WithVersionNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("version_name", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.WithVersion_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("versionName", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.WithVersionNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/templates/{template_name}/versions{?limit*,p*,page*}", pathParameters)
+        public VersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions{?limit*,p*,page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domain_name}/templates/{template_name}/versions{?limit*,p*,page*}", rawUrl)
+        public VersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions{?limit*,p*,page*}", rawUrl)
         {
         }
         /// <summary>
@@ -177,7 +177,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
 #endif
             /// <summary>Name of the page to retrieve. Value can be `first`, `last`, `next`, or `previous`. Defaults to `first`.</summary>
             [QueryParameter("page")]
-            public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.GetPageQueryParameterType? Page { get; set; }
+            public global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameTemplatesTemplateNameVersionsPageParameter? Page { get; set; }
         }
     }
 }

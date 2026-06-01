@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>list of dedicated IP pools of the account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDIPPDetailsResponse>? IpPools { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponse>? IpPools { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDIPPDetailsResponse> IpPools { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponse> IpPools { get; set; }
 #endif
         /// <summary>success if the request was successful, otherwise contains a description of the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ip_pools", n => { IpPools = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDIPPDetailsResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDIPPDetailsResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ip_pools", n => { IpPools = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDIPPDetailsResponse>("ip_pools", IpPools);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponse>("ip_pools", IpPools);
             writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }

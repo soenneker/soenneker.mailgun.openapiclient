@@ -25,7 +25,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_opened")]
         #pragma warning disable CS1591
-        Unique_opened,
+        UniqueOpened,
         #pragma warning restore CS1591
         [EnumMember(Value = "clicked")]
         #pragma warning disable CS1591
@@ -33,7 +33,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "unique_clicked")]
         #pragma warning disable CS1591
-        Unique_clicked,
+        UniqueClicked,
         #pragma warning restore CS1591
         [EnumMember(Value = "unsubscribed")]
         #pragma warning disable CS1591
@@ -53,19 +53,19 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation")]
         #pragma warning disable CS1591
-        Email_validation,
+        EmailValidation,
         #pragma warning restore CS1591
         [EnumMember(Value = "list_uploaded")]
         #pragma warning disable CS1591
-        List_uploaded,
+        ListUploaded,
         #pragma warning restore CS1591
         [EnumMember(Value = "list_member_uploaded")]
         #pragma warning disable CS1591
-        List_member_uploaded,
+        ListMemberUploaded,
         #pragma warning restore CS1591
         [EnumMember(Value = "list_member_upload_error")]
         #pragma warning disable CS1591
-        List_member_upload_error,
+        ListMemberUploadError,
         #pragma warning restore CS1591
         [EnumMember(Value = "trapped")]
         #pragma warning disable CS1591

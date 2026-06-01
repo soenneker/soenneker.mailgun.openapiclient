@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Ips.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\ip_pools\{pool_id}\ips\{ip}
+    /// Builds and executes requests for operations under \v3\ip_pools\{poolId}\ips\{ip}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithIpItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Ips.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIpItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{pool_id}/ips/{ip}", pathParameters)
+        public WithIpItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/ips/{ip}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Ips.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIpItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{pool_id}/ips/{ip}", rawUrl)
+        public WithIpItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/ips/{ip}", rawUrl)
         {
         }
         /// <summary>

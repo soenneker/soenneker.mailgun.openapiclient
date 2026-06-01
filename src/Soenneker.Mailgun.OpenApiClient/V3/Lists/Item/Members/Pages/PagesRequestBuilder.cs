@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\lists\{list_address}\members\pages
+    /// Builds and executes requests for operations under \v3\lists\{listAddress}\members\pages
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PagesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{list_address}/members/pages{?address*,limit*,page*,subscribed*}", pathParameters)
+        public PagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{listAddress}/members/pages{?address*,limit*,page*,subscribed*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{list_address}/members/pages{?address*,limit*,page*,subscribed*}", rawUrl)
+        public PagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/lists/{listAddress}/members/pages{?address*,limit*,page*,subscribed*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,7 +39,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PaginateListMemberResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetListsListAddressMembersPages429">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GetListsListAddressMembersPages429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Mailgun.OpenApiClient.Models.PaginateListMemberResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages.PagesRequestBuilder.PagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetListsListAddressMembersPages429.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetListsListAddressMembersPages429Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PaginateListMemberResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PaginateListMemberResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

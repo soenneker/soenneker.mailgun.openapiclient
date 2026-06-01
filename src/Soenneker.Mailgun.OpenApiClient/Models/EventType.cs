@@ -45,19 +45,19 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "email_validation")]
         #pragma warning disable CS1591
-        Email_validation,
+        EmailValidation,
         #pragma warning restore CS1591
         [EnumMember(Value = "list_member_uploaded")]
         #pragma warning disable CS1591
-        List_member_uploaded,
+        ListMemberUploaded,
         #pragma warning restore CS1591
         [EnumMember(Value = "list_member_upload_error")]
         #pragma warning disable CS1591
-        List_member_upload_error,
+        ListMemberUploadError,
         #pragma warning restore CS1591
         [EnumMember(Value = "list_uploaded")]
         #pragma warning disable CS1591
-        List_uploaded,
+        ListUploaded,
         #pragma warning restore CS1591
     }
 }
