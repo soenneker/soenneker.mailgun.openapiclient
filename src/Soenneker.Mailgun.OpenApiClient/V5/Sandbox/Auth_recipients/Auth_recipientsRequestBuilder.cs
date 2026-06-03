@@ -35,7 +35,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Auth_recipientsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/sandbox/auth_recipients?email={email}", pathParameters)
+        public Auth_recipientsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Auth_recipientsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/sandbox/auth_recipients?email={email}", rawUrl)
+        public Auth_recipientsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
@@ -120,7 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients.Auth_recipientsRequestBuilder.Auth_recipientsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v5/sandbox/auth_recipients?email={email}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

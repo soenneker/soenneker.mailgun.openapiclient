@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit.Custom.Monthly
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MonthlyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/limit/custom/monthly?limit={limit}", pathParameters)
+        public MonthlyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/limit/custom/monthly", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit.Custom.Monthly
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MonthlyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/limit/custom/monthly?limit={limit}", rawUrl)
+        public MonthlyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v5/accounts/limit/custom/monthly", rawUrl)
         {
         }
         /// <summary>
@@ -116,7 +116,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit.Custom.Monthly
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v5/accounts/limit/custom/monthly", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -135,7 +135,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit.Custom.Monthly
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v5/accounts/limit/custom/monthly", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -154,7 +154,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit.Custom.Monthly
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Limit.Custom.Monthly.MonthlyRequestBuilder.MonthlyRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/v5/accounts/limit/custom/monthly?limit={limit}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

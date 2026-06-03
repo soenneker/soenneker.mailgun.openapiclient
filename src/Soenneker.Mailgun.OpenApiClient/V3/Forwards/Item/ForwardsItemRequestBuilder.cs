@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForwardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards/{id}?forward.recipient={forward%2Erecipient}&forward.store={forward%2Estore}&forward.url={forward%2Eurl}&match={match}{&domain%2Ename*}", pathParameters)
+        public ForwardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForwardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards/{id}?forward.recipient={forward%2Erecipient}&forward.store={forward%2Estore}&forward.url={forward%2Eurl}&match={match}{&domain%2Ename*}", rawUrl)
+        public ForwardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
