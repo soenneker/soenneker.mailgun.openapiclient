@@ -110,7 +110,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V4.Domains.DomainsRequestBuilder.DomainsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v4/domains{?authority*,include_subaccounts*,limit*,search*,skip*,sort*,state*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -131,7 +131,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v4/domains", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);

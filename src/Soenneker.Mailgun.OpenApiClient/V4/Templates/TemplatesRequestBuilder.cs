@@ -160,7 +160,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Templates
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V4.Templates.TemplatesRequestBuilder.TemplatesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v4/templates{?limit*,p*,page*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

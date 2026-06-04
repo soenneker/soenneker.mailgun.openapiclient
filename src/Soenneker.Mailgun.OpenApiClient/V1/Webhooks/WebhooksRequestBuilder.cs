@@ -141,7 +141,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v1/webhooks{?all*,webhook_ids*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -160,7 +160,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/webhooks{?webhook_ids*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -181,7 +181,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v1/webhooks", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);

@@ -150,7 +150,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Credentials
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Credentials.CredentialsRequestBuilder.CredentialsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/domains/{domainName%2Did}/credentials{?limit*,skip*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
