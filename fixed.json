@@ -4051,6 +4051,134 @@
         ]
       }
     },
+    "/v3/ips/domain/{name}": {
+      "get": {
+        "tags": [
+          "IPs"
+        ],
+        "summary": "Get the dedicated IP pool used for spillover for a domain",
+        "description": "This endpoint retrieves the DIPP spillover settings for a specific domain.",
+        "operationId": "GetV3IpsDomainName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Id of the domain to get DIPP spillover settings for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "extra_dedicated_ips": {
+                        "pool_id": "6a219e7515415d72b6e47358"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "IPs"
+        ],
+        "summary": "Set or modify the dediciated IP pool used for spillover for a domain",
+        "description": "This endpoint allows you to set or update the DIPP spillover settings for a specific domain.\nYou can specify the ID of the IP pool that spillover IPs are assigned to. The IP pool must contain at least one fully warmed IP address to be valild.\nTo disable DIPP spillover, set the pool_id to an empty string (\u0022\u0022).",
+        "operationId": "PatchV3IpsDomainName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Id of the domain to update DIPP spillover settings for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverSettingsRequest"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "extra_dedicated_ips": {
+                      "pool_id": "6a219e7515415d72b6e47359"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
     "/v3/domains/{name}/ips/{ip}": {
       "delete": {
         "tags": [
@@ -4400,6 +4528,102 @@
                       "message": "started"
                     }
                   }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/v3/ips/account/settings": {
+      "get": {
+        "tags": [
+          "IPs"
+        ],
+        "summary": "Get DIPP spillover settings for an account",
+        "description": "This endpoint retrieves the DIPP spillover settings for a specific account.",
+        "operationId": "GetV3IpsAccountSettings",
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "extra_dedicated_ips": {
+                        "pool_id": "6a219e7515415d72b6e4735f"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "IPs"
+        ],
+        "summary": "Set or Modify the dedicated IP pool used for IP spillover",
+        "description": "This endpoint allows you to set or update the DIPP spillover settings for an account .\nYou can specify the ID of the IP pool that spillover IPs are assigned to. The IP pool must contain at least one fully warmed IP address to be valid.\nTo disable DIPP spillover, set the pool_id to an empty string (\u0022\u0022).",
+        "operationId": "PatchV3IpsAccountSettings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverSettingsRequest"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "extra_dedicated_ips": {
+                      "pool_id": "6a219e7515415d72b6e47360"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 }
               }
             }
@@ -5098,10 +5322,6 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "good_reputation": [
-                        "1.0.0.1",
-                        "1.0.0.2"
-                      ],
                       "poor_reputation": [
                         "1.0.0.3"
                       ],
@@ -5137,6 +5357,10 @@
                           ],
                           "name": "dynamic_new"
                         }
+                      ],
+                      "good_reputation": [
+                        "1.0.0.1",
+                        "1.0.0.2"
                       ]
                     }
                   }
@@ -5368,6 +5592,16 @@
                             "1.0.0.1",
                             "1.0.0.2"
                           ],
+                          "metadata": {
+                            "assignments": {
+                              "1.0.0.1": {
+                                "linked_at": "2006-01-02T15:04:05Z"
+                              },
+                              "1.0.0.2": {
+                                "linked_at": "2006-01-02T15:04:05Z"
+                              }
+                            }
+                          },
                           "is_inherited": true,
                           "is_linked": true,
                           "name": "short name of the dedicated IP pool",
@@ -5962,6 +6196,91 @@
                   "Example": {
                     "value": {
                       "message": "success"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/v3/ips/subaccounts": {
+      "patch": {
+        "tags": [
+          "IPs"
+        ],
+        "summary": "Update subaccount IP assignments",
+        "description": "#### Description\nLinks and/or unlinks dedicated IPs to/from one or more subaccounts in a single operation.\nIPs linked to subaccounts can be linked to subaccount domains and placed in subaccount IP pools.\nThe account must have the centralized IP assignment feature enabled.\n\nEither subaccount_id (one or more) or all_subaccounts=true must be specified, but not both.\nWhen all_subaccounts=true or over 100 subaccounts are specified, the operation is applied to every subaccount asynchronously\nand the response will contain \u0027queued\u0027 instead of \u0027success\u0027.\n\nRules for linking an IP:\nThe IP must be a dedicated IP belonging to the parent account.\nThe IP must not be assigned to a Dynamic IP Pool on the parent account.\n\nRules for unlinking an IP:\nThe IP must not be assigned to any IP pools on the subaccount.\nThe IP must not be assigned to any domains on the subaccount.\n\n#### Request Schema\nRequest parameters are encoded as form data.\n\nName | Description | Required | Type\n--- | --- | --- | ---\nsubaccount_id | Id of a subaccount to update (may be specified multiple times). Required unless all_subaccounts is true. | false | string\nall_subaccounts | When true, applies the operation to all subaccounts of the parent account asynchronously. Cannot be combined with subaccount_id. | false | string\nlink_ip | Dedicated IP address to link to the subaccount (may be specified multiple times) | false | string\nunlink_ip | Dedicated IP address to unlink from the subaccount (may be specified multiple times) | false | string",
+        "operationId": "PatchV3IpsSubaccounts",
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "invalid request parameters"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "A 403 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "centralized assignment is not enabled for account"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "subaccount not found"
                     }
                   }
                 }
@@ -21967,6 +22286,100 @@
           }
         }
       },
+      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverDoc": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
+          }
+        }
+      },
+      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc": {
+        "required": [
+          "extra_dedicated_ips"
+        ],
+        "type": "object",
+        "properties": {
+          "extra_dedicated_ips": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps"
+          }
+        }
+      },
+      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverRequest": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to",
+            "nullable": true
+          }
+        }
+      },
+      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverSettingsRequest": {
+        "required": [
+          "extra_dedicated_ips"
+        ],
+        "type": "object",
+        "properties": {
+          "extra_dedicated_ips": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverSettingsRequestExtraDedicatedIps"
+          }
+        }
+      },
+      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverDoc": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
+          }
+        }
+      },
+      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc": {
+        "required": [
+          "extra_dedicated_ips"
+        ],
+        "type": "object",
+        "properties": {
+          "extra_dedicated_ips": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDocExtraDedicatedIps"
+          }
+        }
+      },
+      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverRequest": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to",
+            "nullable": true
+          }
+        }
+      },
+      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverSettingsRequest": {
+        "required": [
+          "extra_dedicated_ips"
+        ],
+        "type": "object",
+        "properties": {
+          "extra_dedicated_ips": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverSettingsRequestExtraDedicatedIps"
+          }
+        }
+      },
       "GithubComMailgunTowerApiAccountListIpsDetailsDocResponse": {
         "required": [
           "ip",
@@ -22064,11 +22477,15 @@
             "items": {
               "type": "string"
             },
-            "description": "list of IPs assigned to the domain"
+            "description": "list of IPs linked to the domain"
           },
           "domain": {
             "type": "string",
             "description": "domain name"
+          },
+          "linked_at": {
+            "type": "string",
+            "description": "a UTC timestamp in RFC3339 format representing when the IP was linked to the domain"
           }
         }
       },
@@ -22223,10 +22640,34 @@
           }
         }
       },
+      "GithubComMailgunTowerApiIpPoolsListIpAssignment": {
+        "required": [
+          "linked_at"
+        ],
+        "type": "object",
+        "properties": {
+          "linked_at": {
+            "type": "string",
+            "description": "a UTC timestamp in RFC3339 format representing when the IP was linked to the pool"
+          }
+        }
+      },
+      "GithubComMailgunTowerApiIpPoolsListPoolMetadata": {
+        "required": [
+          "assignments"
+        ],
+        "type": "object",
+        "properties": {
+          "assignments": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignmentsProperty"
+          }
+        }
+      },
       "GithubComMailgunTowerApiIpPoolsListDippDetailsResponse": {
         "required": [
           "description",
           "ips",
+          "metadata",
           "is_inherited",
           "is_linked",
           "name",
@@ -22244,6 +22685,9 @@
               "type": "string"
             },
             "description": "list of IPs in the dedicated IP pool"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata"
           },
           "is_inherited": {
             "type": "boolean",
@@ -30715,6 +31159,72 @@
         },
         "description": "Scheduled message queue response"
       },
+      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
+          }
+        },
+        "description": "the DIPP spillover settings for the account"
+      },
+      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverSettingsRequestExtraDedicatedIps": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to",
+            "nullable": true
+          }
+        },
+        "description": "the DIPP spillover settings for the account"
+      },
+      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDocExtraDedicatedIps": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
+          }
+        },
+        "description": "the DIPP spillover settings for the account.  This value will apply to all domains under the account"
+      },
+      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverSettingsRequestExtraDedicatedIps": {
+        "required": [
+          "pool_id"
+        ],
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "string",
+            "description": "the ID of the IP pool that spillover IPs are assigned to",
+            "nullable": true
+          }
+        },
+        "description": "the DIPP spillover settings for the account.  This value will apply to all domains under the account"
+      },
+      "GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata": {
+        "required": [
+          "assignments"
+        ],
+        "type": "object",
+        "properties": {
+          "assignments": {
+            "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments"
+          }
+        },
+        "description": "metadata for the dedicated IP pool"
+      },
       "GithubComMailgunAnalyticsClientGolangQueryFilter": {
         "required": [
           "AND"
@@ -32645,6 +33155,13 @@
       "GithubComMailgunScaffoldHttpapiResponseAdditionalProperties": {
         "type": "object"
       },
+      "GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignments": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
+        },
+        "description": "assignment metadata keyed by IP address"
+      },
       "GithubComMailgunTerminatorHttpapiStatusResponseStatus": {
         "type": "object",
         "description": "Status of certificate. Either \u0027expired\u0027 \u0027processing\u0027 \u0027active\u0027 or \u0027error\u0027"
@@ -33981,6 +34498,13 @@
       "GithubComMailgunScaffoldHttpapiResponseAdditionalPropertiesProperty": {
         "type": "object"
       },
+      "GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignmentsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
+        },
+        "description": "assignment metadata keyed by IP address"
+      },
       "GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty": {
         "type": "object",
         "description": "Status of certificate. Either \u0027expired\u0027 \u0027processing\u0027 \u0027active\u0027 or \u0027error\u0027"
@@ -34082,6 +34606,13 @@
       "GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty": {
         "type": "object",
         "description": "Details that may be needed for an auth method"
+      },
+      "GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
+        },
+        "description": "assignment metadata keyed by IP address"
       },
       "GithubComMailgunAlertsInternalSettingsEventSettingsSettingsDisabledChannelIds": {
         "type": "object",

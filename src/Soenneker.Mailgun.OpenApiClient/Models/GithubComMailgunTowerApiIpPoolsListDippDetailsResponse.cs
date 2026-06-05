@@ -34,6 +34,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public bool? IsInherited { get; set; }
         /// <summary>indicates if the IP pool is linked to any domains</summary>
         public bool? IsLinked { get; set; }
+        /// <summary>metadata for the dedicated IP pool</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata Metadata { get; set; }
+#endif
         /// <summary>short name of the dedicated IP pool</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,6 +87,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "ips", n => { Ips = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_inherited", n => { IsInherited = n.GetBoolValue(); } },
                 { "is_linked", n => { IsLinked = n.GetBoolValue(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pool_id", n => { PoolId = n.GetStringValue(); } },
             };
@@ -94,6 +103,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("ips", Ips);
             writer.WriteBoolValue("is_inherited", IsInherited);
             writer.WriteBoolValue("is_linked", IsLinked);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pool_id", PoolId);
             writer.WriteAdditionalData(AdditionalData);

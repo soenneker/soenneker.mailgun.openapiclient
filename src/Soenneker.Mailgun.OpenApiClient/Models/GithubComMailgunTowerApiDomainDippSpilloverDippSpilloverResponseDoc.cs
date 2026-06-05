@@ -9,51 +9,35 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunTowerApiAccountItem : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>domain name</summary>
+        /// <summary>the DIPP spillover settings for the account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps? ExtraDedicatedIps { get; set; }
 #nullable restore
 #else
-        public string Domain { get; set; }
-#endif
-        /// <summary>list of IPs linked to the domain</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? Ips { get; set; }
-#nullable restore
-#else
-        public List<string> Ips { get; set; }
-#endif
-        /// <summary>a UTC timestamp in RFC3339 format representing when the IP was linked to the domain</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LinkedAt { get; set; }
-#nullable restore
-#else
-        public string LinkedAt { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps ExtraDedicatedIps { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunTowerApiAccountItem()
+        public GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountItem();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +47,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "domain", n => { Domain = n.GetStringValue(); } },
-                { "ips", n => { Ips = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "linked_at", n => { LinkedAt = n.GetStringValue(); } },
+                { "extra_dedicated_ips", n => { ExtraDedicatedIps = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +57,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("domain", Domain);
-            writer.WriteCollectionOfPrimitiveValues<string>("ips", Ips);
-            writer.WriteStringValue("linked_at", LinkedAt);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps>("extra_dedicated_ips", ExtraDedicatedIps);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

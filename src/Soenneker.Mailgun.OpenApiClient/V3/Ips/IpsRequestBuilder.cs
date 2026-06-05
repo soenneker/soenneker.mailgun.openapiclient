@@ -4,9 +4,12 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Mailgun.OpenApiClient.Models;
+using Soenneker.Mailgun.OpenApiClient.V3.Ips.Account;
 using Soenneker.Mailgun.OpenApiClient.V3.Ips.Details;
+using Soenneker.Mailgun.OpenApiClient.V3.Ips.Domain;
 using Soenneker.Mailgun.OpenApiClient.V3.Ips.Item;
 using Soenneker.Mailgun.OpenApiClient.V3.Ips.Request;
+using Soenneker.Mailgun.OpenApiClient.V3.Ips.Subaccounts;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -20,15 +23,30 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IpsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The account property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Account.AccountRequestBuilder Account
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Account.AccountRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The details property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Details.DetailsRequestBuilder Details
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Details.DetailsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The domain property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Domain.DomainRequestBuilder Domain
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Domain.DomainRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The request property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Request.RequestRequestBuilder Request
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Request.RequestRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The subaccounts property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Subaccounts.SubaccountsRequestBuilder Subaccounts
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Subaccounts.SubaccountsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.ips.item collection</summary>
         /// <param name="position">IP address to get details about</param>
