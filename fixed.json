@@ -32352,38 +32352,18 @@
       },
       "GithubComMailgunBlackbookModelBounceCreatedAt": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
         "description": "Timestamp for when the Bounce event was received in RFC822 format"
       },
       "GithubComMailgunBlackbookModelUnsubscribeCreatedAt": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
         "description": "Timestamp for when the unsubscribe request was received in RFC822 format"
       },
       "GithubComMailgunBlackbookModelComplaintCreatedAt": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
         "description": "Timestamp for when the Complaint event was received in RFC822 format"
       },
       "GithubComMailgunBlackbookModelWhitelistCreatedAt": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
         "description": "Timestamp for when the entry was created in RFC822 format"
       },
       "GithubComMailgunTempleModelTemplateVersion": {
@@ -33064,20 +33044,10 @@
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestStart": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
         "description": "\u0022A start timestamp (default: 7 days before current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestEnd": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object"
-          }
-        ],
         "description": "\u0022An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format\u0022"
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution": {
@@ -36035,7 +36005,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "name",
         "x-enumDescriptions": {
           "bounce_rate": "Sort domains by bounce rate",
           "complaint_rate": "Sort domains by complaint rate",
@@ -36067,7 +36036,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "ascending",
         "x-enumDescriptions": {
           "ascending": "Sort domains ascending by the specified sort_by field",
           "descending": "Sort domains descending by the specified sort_by field"
