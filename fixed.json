@@ -30316,6 +30316,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30325,7 +30330,6 @@
           }
         },
         "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30341,6 +30345,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30350,7 +30359,6 @@
           }
         },
         "description": "Details of the newly created domain",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30366,6 +30374,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30374,7 +30387,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30390,6 +30402,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30398,7 +30415,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30414,6 +30430,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30423,7 +30444,6 @@
           }
         },
         "description": "Domain details",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30439,6 +30459,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30447,7 +30472,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30463,6 +30487,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30471,7 +30500,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30487,6 +30515,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30496,7 +30529,6 @@
           }
         },
         "description": "Domain record information",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30512,6 +30544,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30520,7 +30557,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30536,6 +30572,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30544,7 +30585,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30586,6 +30626,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30595,7 +30640,6 @@
           }
         },
         "description": "Accepted webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30611,6 +30655,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30620,7 +30669,6 @@
           }
         },
         "description": "Delivered webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30636,6 +30684,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30645,7 +30698,6 @@
           }
         },
         "description": "Opened webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30661,6 +30713,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30670,7 +30727,6 @@
           }
         },
         "description": "Clicked webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30686,6 +30742,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30695,7 +30756,6 @@
           }
         },
         "description": "Unsubscribed webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30711,6 +30771,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30720,7 +30785,6 @@
           }
         },
         "description": "Complained webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30736,6 +30800,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30745,7 +30814,6 @@
           }
         },
         "description": "Temporary fail webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30761,6 +30829,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30770,7 +30843,6 @@
           }
         },
         "description": "Permanent fail webhook URLs",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30924,6 +30996,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30932,7 +31009,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30948,6 +31024,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30956,7 +31037,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30972,6 +31052,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -30980,7 +31065,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -30996,6 +31080,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31004,7 +31093,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31020,6 +31108,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31028,7 +31121,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31044,6 +31136,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31053,7 +31150,6 @@
           }
         },
         "description": "Domain object",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31069,6 +31165,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31077,7 +31178,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31093,6 +31193,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31101,7 +31206,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31263,6 +31367,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31271,7 +31380,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31287,6 +31395,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31295,7 +31408,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31311,6 +31423,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31319,7 +31436,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31335,6 +31451,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31343,7 +31464,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31359,6 +31479,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31367,7 +31492,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31383,6 +31507,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31391,7 +31520,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31407,6 +31535,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31415,7 +31548,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31431,6 +31563,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31439,7 +31576,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31455,6 +31591,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31463,7 +31604,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31479,6 +31619,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31487,7 +31632,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31503,6 +31647,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31511,7 +31660,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31527,6 +31675,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31535,7 +31688,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31551,6 +31703,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31559,7 +31716,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -31575,6 +31731,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -31583,7 +31744,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32374,6 +32534,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32383,7 +32548,6 @@
           }
         },
         "description": "Active version information",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32400,6 +32564,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32409,7 +32578,6 @@
           }
         },
         "description": "Template details",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32425,6 +32593,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32434,7 +32607,6 @@
           }
         },
         "description": "Template details",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32450,6 +32622,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32459,7 +32636,6 @@
           }
         },
         "description": "Template details",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32531,6 +32707,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32540,7 +32721,6 @@
           }
         },
         "description": "Created version details",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32556,6 +32736,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32565,7 +32750,6 @@
           }
         },
         "description": "\u0022Deprecated: Use \u0027version\u0027 field\u0022",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32582,6 +32766,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32591,7 +32780,6 @@
           }
         },
         "description": "Template version details",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32801,6 +32989,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesSubaccount"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32809,7 +33002,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32825,6 +33017,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32833,7 +33030,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32849,6 +33045,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStat"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32857,7 +33058,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32873,6 +33073,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesAccountStat"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32881,7 +33086,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32897,6 +33101,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomainStat"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32905,7 +33114,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -32921,6 +33129,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesEntityStat"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -32929,7 +33142,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -33026,6 +33238,11 @@
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItem"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -33034,7 +33251,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
