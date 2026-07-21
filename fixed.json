@@ -672,7 +672,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericApiError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -1372,7 +1372,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericApiError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -1581,7 +1581,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericApiError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -1793,7 +1793,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericApiError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -1917,7 +1917,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericApiError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -2035,7 +2035,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericApiError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3316,7 +3316,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiNotFoundError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3333,7 +3333,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiConflictError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3417,7 +3417,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiNotFoundError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3504,7 +3504,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiNotFoundError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3591,7 +3591,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiNotFoundError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3608,7 +3608,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiConflictError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3651,7 +3651,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiInvalidParameterError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3686,7 +3686,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiNotFoundError"
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -21165,17 +21165,6 @@
           }
         }
       },
-      "GithubComMailgunScaffoldHttpapiGenericApiError": {
-        "required": [
-          "Reason"
-        ],
-        "type": "object",
-        "properties": {
-          "Reason": {
-            "type": "string"
-          }
-        }
-      },
       "GithubComMailgunScaffoldHttpapiGenericResponse": {
         "required": [
           "message"
@@ -21882,28 +21871,6 @@
           }
         }
       },
-      "GithubComMailgunScaffoldHttpapiNotFoundError": {
-        "required": [
-          "Description"
-        ],
-        "type": "object",
-        "properties": {
-          "Description": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunScaffoldHttpapiConflictError": {
-        "required": [
-          "Description"
-        ],
-        "type": "object",
-        "properties": {
-          "Description": {
-            "type": "string"
-          }
-        }
-      },
       "PostV1WebhooksMultipartFormDataRequestBody": {
         "required": [
           "event_types",
@@ -21991,21 +21958,6 @@
           "url": {
             "type": "string",
             "description": "URL for webhook to be sent to"
-          }
-        }
-      },
-      "GithubComMailgunScaffoldHttpapiInvalidParameterError": {
-        "required": [
-          "Field",
-          "Value"
-        ],
-        "type": "object",
-        "properties": {
-          "Field": {
-            "type": "string"
-          },
-          "Value": {
-            "type": "string"
           }
         }
       },
@@ -22218,6 +22170,28 @@
         "properties": {
           "domain": {
             "$ref": "#/components/schemas/GithubComMailgunPendulumApiDomain"
+          }
+        }
+      },
+      "GithubComMailgunScaffoldHttpapiGenericApiError": {
+        "required": [
+          "Reason"
+        ],
+        "type": "object",
+        "properties": {
+          "Reason": {
+            "type": "string"
+          }
+        }
+      },
+      "GithubComMailgunScaffoldHttpapiNotFoundError": {
+        "required": [
+          "Description"
+        ],
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string"
           }
         }
       },
@@ -22980,6 +22954,21 @@
           }
         }
       },
+      "GithubComMailgunScaffoldHttpapiInvalidParameterError": {
+        "required": [
+          "Field",
+          "Value"
+        ],
+        "type": "object",
+        "properties": {
+          "Field": {
+            "type": "string"
+          },
+          "Value": {
+            "type": "string"
+          }
+        }
+      },
       "PutV1DynamicPoolsDomainsNameOverrideMultipartFormDataRequestBody": {
         "required": [
           "pool"
@@ -23050,6 +23039,17 @@
           "location": {
             "type": "string",
             "description": "The URL path to check the status of the certificate."
+          }
+        }
+      },
+      "GithubComMailgunScaffoldHttpapiConflictError": {
+        "required": [
+          "Description"
+        ],
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string"
           }
         }
       },

@@ -872,7 +872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericAPIError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -1574,7 +1574,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericAPIError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -1824,7 +1824,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericAPIError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -2057,7 +2057,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericAPIError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -2182,7 +2182,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericAPIError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -2300,7 +2300,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericAPIError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3589,7 +3589,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-NotFoundError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3606,7 +3606,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-ConflictError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3693,7 +3693,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-NotFoundError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3780,7 +3780,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-NotFoundError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3871,7 +3871,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-NotFoundError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3888,7 +3888,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-ConflictError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3934,7 +3934,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-InvalidParameterError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -3969,7 +3969,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-NotFoundError"
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
                 },
                 "examples": {
                   "Example": {
@@ -24671,17 +24671,6 @@
           "sending_dns_records"
         ]
       },
-      "github.com-mailgun-scaffold-httpapi-GenericAPIError": {
-        "type": "object",
-        "properties": {
-          "Reason": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "Reason"
-        ]
-      },
       "github.com-mailgun-scaffold-httpapi-GenericResponse": {
         "type": "object",
         "properties": {
@@ -25648,28 +25637,6 @@
           "webhook_id"
         ]
       },
-      "github.com-mailgun-scaffold-httpapi-NotFoundError": {
-        "type": "object",
-        "properties": {
-          "Description": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "Description"
-        ]
-      },
-      "github.com-mailgun-scaffold-httpapi-ConflictError": {
-        "type": "object",
-        "properties": {
-          "Description": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "Description"
-        ]
-      },
       "POST-v1-webhooks-multipart-form-data-RequestBody": {
         "type": "object",
         "properties": {
@@ -25800,21 +25767,6 @@
         "required": [
           "event_types",
           "url"
-        ]
-      },
-      "github.com-mailgun-scaffold-httpapi-InvalidParameterError": {
-        "type": "object",
-        "properties": {
-          "Field": {
-            "type": "string"
-          },
-          "Value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "Field",
-          "Value"
         ]
       },
       "github.com-mailgun-domains-httpapi-UpdateDomainResp": {
@@ -26067,6 +26019,28 @@
         },
         "required": [
           "domain"
+        ]
+      },
+      "github.com-mailgun-scaffold-httpapi-GenericAPIError": {
+        "type": "object",
+        "properties": {
+          "Reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Reason"
+        ]
+      },
+      "github.com-mailgun-scaffold-httpapi-NotFoundError": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Description"
         ]
       },
       "PUT-v1-dkim_management-domains-name-rotation-multipart-form-data-RequestBody": {
@@ -26878,6 +26852,21 @@
           "timestamp"
         ]
       },
+      "github.com-mailgun-scaffold-httpapi-InvalidParameterError": {
+        "type": "object",
+        "properties": {
+          "Field": {
+            "type": "string"
+          },
+          "Value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Field",
+          "Value"
+        ]
+      },
       "PUT-v1-dynamic_pools-domains-name-override-multipart-form-data-RequestBody": {
         "type": "object",
         "properties": {
@@ -26952,6 +26941,17 @@
         "required": [
           "message",
           "location"
+        ]
+      },
+      "github.com-mailgun-scaffold-httpapi-ConflictError": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Description"
         ]
       },
       "EventResponse": {
