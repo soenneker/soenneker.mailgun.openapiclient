@@ -85,7 +85,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3DomainNameMessages401ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostV3DomainNameMessages401ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -206,7 +206,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3DomainNameMessagesMime401ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostV3DomainNameMessagesMime401ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5080,7 +5080,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3IpsRequestNew200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetV3IpsRequestNew200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5115,7 +5115,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3IpsRequestNew200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostV3IpsRequestNew200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5494,7 +5494,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3DynamicPoolsPoolNameIp200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostV3DynamicPoolsPoolNameIp200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5546,7 +5546,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatchV3DynamicPoolsPoolName200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PatchV3DynamicPoolsPoolName200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5661,7 +5661,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3IpPools200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostV3IpPools200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5707,7 +5707,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3IpPoolsPoolId200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetV3IpPoolsPoolId200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5782,7 +5782,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteV3IpPoolsPoolId200ResponseResponseJson"
+                  "$ref": "#/components/schemas/DeleteV3IpPoolsPoolId200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5837,7 +5837,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatchV3IpPoolsPoolId200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PatchV3IpPoolsPoolId200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5901,7 +5901,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetV3IpPoolsPoolIdDomains200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetV3IpPoolsPoolIdDomains200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -5968,7 +5968,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutV3IpPoolsPoolIdIpsIp200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PutV3IpPoolsPoolIdIpsIp200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -6020,7 +6020,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteV3IpPoolsPoolIdIpsIp200ResponseResponseJson"
+                  "$ref": "#/components/schemas/DeleteV3IpPoolsPoolIdIpsIp200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -6084,7 +6084,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3IpPoolsPoolIdIpsJson200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostV3IpPoolsPoolIdIpsJson200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -6138,7 +6138,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutV3IpPoolsPoolIdDelegate200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PutV3IpPoolsPoolIdDelegate200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -6190,7 +6190,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteV3IpPoolsPoolIdDelegate200ResponseResponseJson"
+                  "$ref": "#/components/schemas/DeleteV3IpPoolsPoolIdDelegate200ResponseSchema"
                 },
                 "examples": {
                   "Example": {
@@ -34395,16 +34395,16 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "PostV3DomainNameMessages401ResponseResponseJson": {
+      "PostV3DomainNameMessages401ResponseSchema": {
         "type": "string"
       },
-      "PostV3DomainNameMessagesMime401ResponseResponseJson": {
+      "PostV3DomainNameMessagesMime401ResponseSchema": {
         "type": "string"
       },
-      "GetV3IpsRequestNew200ResponseResponseJson": {
+      "GetV3IpsRequestNew200ResponseSchema": {
         "type": "string"
       },
-      "PostV3IpsRequestNew200ResponseResponseJson": {
+      "PostV3IpsRequestNew200ResponseSchema": {
         "type": "string"
       },
       "GetV3DynamicPools200Response": {
@@ -34413,40 +34413,40 @@
           "$ref": "#/components/schemas/GetV3DynamicPools200ResponseAdditionalProperties"
         }
       },
-      "PostV3DynamicPoolsPoolNameIp200ResponseResponseJson": {
+      "PostV3DynamicPoolsPoolNameIp200ResponseSchema": {
         "type": "string"
       },
-      "PatchV3DynamicPoolsPoolName200ResponseResponseJson": {
+      "PatchV3DynamicPoolsPoolName200ResponseSchema": {
         "type": "string"
       },
-      "PostV3IpPools200ResponseResponseJson": {
+      "PostV3IpPools200ResponseSchema": {
         "type": "string"
       },
-      "GetV3IpPoolsPoolId200ResponseResponseJson": {
+      "GetV3IpPoolsPoolId200ResponseSchema": {
         "type": "string"
       },
-      "DeleteV3IpPoolsPoolId200ResponseResponseJson": {
+      "DeleteV3IpPoolsPoolId200ResponseSchema": {
         "type": "string"
       },
-      "PatchV3IpPoolsPoolId200ResponseResponseJson": {
+      "PatchV3IpPoolsPoolId200ResponseSchema": {
         "type": "string"
       },
-      "GetV3IpPoolsPoolIdDomains200ResponseResponseJson": {
+      "GetV3IpPoolsPoolIdDomains200ResponseSchema": {
         "type": "string"
       },
-      "PutV3IpPoolsPoolIdIpsIp200ResponseResponseJson": {
+      "PutV3IpPoolsPoolIdIpsIp200ResponseSchema": {
         "type": "string"
       },
-      "DeleteV3IpPoolsPoolIdIpsIp200ResponseResponseJson": {
+      "DeleteV3IpPoolsPoolIdIpsIp200ResponseSchema": {
         "type": "string"
       },
-      "PostV3IpPoolsPoolIdIpsJson200ResponseResponseJson": {
+      "PostV3IpPoolsPoolIdIpsJson200ResponseSchema": {
         "type": "string"
       },
-      "PutV3IpPoolsPoolIdDelegate200ResponseResponseJson": {
+      "PutV3IpPoolsPoolIdDelegate200ResponseSchema": {
         "type": "string"
       },
-      "DeleteV3IpPoolsPoolIdDelegate200ResponseResponseJson": {
+      "DeleteV3IpPoolsPoolIdDelegate200ResponseSchema": {
         "type": "string"
       },
       "GetV1DynamicPoolsDomainsNamePreview200Response": {
