@@ -28946,13 +28946,19 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespDomainName"
+            "type": "string",
+            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
+            "nullable": true
           },
           "requestor": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespRequestor"
+            "type": "string",
+            "description": "An email address associated with the key",
+            "nullable": true
           },
           "user_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoRespUserName"
+            "type": "string",
+            "description": "The API key user\u0027s name",
+            "nullable": true
           }
         }
       },
@@ -29033,13 +29039,19 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName"
+            "type": "string",
+            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
+            "nullable": true
           },
           "requestor": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor"
+            "type": "string",
+            "description": "An email address associated with the key",
+            "nullable": true
           },
           "user_name": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusKeysKeyInfoSecretRespUserName"
+            "type": "string",
+            "description": "The API key user\u0027s name",
+            "nullable": true
           },
           "secret": {
             "type": "string",
@@ -29143,7 +29155,8 @@
             "example": "Fri, 23 Jan 2026 10:16:00 \u002B0000"
           },
           "size_bytes": {
-            "$ref": "#/components/schemas/GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes"
+            "type": "string",
+            "nullable": true
           }
         }
       },
@@ -30251,10 +30264,18 @@
             "description": "whether 2-factor auth has been activated for the user"
           },
           "tfa_created_at": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseTfaCreatedAt"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
+            "type": "string",
+            "description": "the date and time at which 2-factor auth was activated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
+            "nullable": true,
+            "example": "2022-12-20T16:52:01.892000"
           },
           "password_updated_at": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponsePasswordUpdatedAt"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
+            "type": "string",
+            "description": "the date and time at which the user password was last updated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
+            "nullable": true,
+            "example": "2022-12-20T16:52:01.892000"
           },
           "preferences": {
             "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponsePreferences"
@@ -30263,10 +30284,14 @@
             "$ref": "#/components/schemas/GithubComMailgunUsersApiUserAuthResponse"
           },
           "github_user_id": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseGithubUserId"
+            "type": "string",
+            "description": "Github ID, if part of Github Student Developer Pack account",
+            "nullable": true
           },
           "salesforce_user_id": {
-            "$ref": "#/components/schemas/GithubComMailgunUsersApiUserResponseSalesforceUserId"
+            "type": "string",
+            "description": "Salesforce ID, if part of Salesforce platform account",
+            "nullable": true
           },
           "migration_status": {
             "type": "string",
@@ -32875,21 +32900,6 @@
           ]
         }
       },
-      "GithubComMailgunCerberusKeysKeyInfoRespDomainName": {
-        "type": "string",
-        "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
-        "nullable": true
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespRequestor": {
-        "type": "string",
-        "description": "An email address associated with the key",
-        "nullable": true
-      },
-      "GithubComMailgunCerberusKeysKeyInfoRespUserName": {
-        "type": "string",
-        "description": "The API key user\u0027s name",
-        "nullable": true
-      },
       "GithubComMailgunCerberusKeysKeyInfoSecretRespKind": {
         "enum": [
           "domain",
@@ -32961,25 +32971,6 @@
             }
           ]
         }
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespDomainName": {
-        "type": "string",
-        "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
-        "nullable": true
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespRequestor": {
-        "type": "string",
-        "description": "An email address associated with the key",
-        "nullable": true
-      },
-      "GithubComMailgunCerberusKeysKeyInfoSecretRespUserName": {
-        "type": "string",
-        "description": "The API key user\u0027s name",
-        "nullable": true
-      },
-      "GithubComMailgunCerberusCredentialsCredentialMetadataSizeBytes": {
-        "type": "string",
-        "nullable": true
       },
       "GithubComMailgunBounceClassificationEntitiesStatSubaccount": {
         "required": [
@@ -33313,30 +33304,6 @@
           }
         },
         "description": "Attributes used for pagination and sorting."
-      },
-      "GithubComMailgunUsersApiUserResponseTfaCreatedAt": {
-        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
-        "type": "string",
-        "description": "the date and time at which 2-factor auth was activated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
-        "nullable": true,
-        "example": "2022-12-20T16:52:01.892000"
-      },
-      "GithubComMailgunUsersApiUserResponsePasswordUpdatedAt": {
-        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
-        "type": "string",
-        "description": "the date and time at which the user password was last updated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
-        "nullable": true,
-        "example": "2022-12-20T16:52:01.892000"
-      },
-      "GithubComMailgunUsersApiUserResponseGithubUserId": {
-        "type": "string",
-        "description": "Github ID, if part of Github Student Developer Pack account",
-        "nullable": true
-      },
-      "GithubComMailgunUsersApiUserResponseSalesforceUserId": {
-        "type": "string",
-        "description": "Salesforce ID, if part of Salesforce platform account",
-        "nullable": true
       },
       "GithubComMailgunScaffoldHttpapiResponseAdditionalProperties": {
         "type": "object"
