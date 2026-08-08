@@ -34027,7 +34027,7 @@
           },
           "upsert": {
             "type": "boolean",
-            "description": "Set to True to update member if present, false to raise error in case of a duplicate member. Defaults to false."
+            "description": "Set to True to update member if present, False to raise error in case of a duplicate member. Defaults to false."
           }
         }
       },
