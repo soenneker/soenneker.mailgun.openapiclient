@@ -20688,6 +20688,10 @@
             "type": "string",
             "description": "\u0022Removes specified X-Mailgun headers from the delivered message. Provide header names separated by commas (e.g., \u0027X-Mailgun-Variables,X-Mailgun-Tag\u0027) or use \u0027all\u0027 to remove all X-Mailgun headers.Note: X-Mailgun-Sid header is currently used to process complains received via feedback loops.\u0022"
           },
+          "o:inbox-placement-test-key": {
+            "type": "string",
+            "description": "Triggers an Inbox Placement test for this message using the provided value as an idempotency key. Retried or duplicate send requests that use the same key will not create additional tests. Requires Inbox Placement to be enabled for your account."
+          },
           "h:X-My-Header": {
             "type": "string",
             "description": "\u0022Adds custom headers to the email. Use \u0027h:\u0027 prefix followed by header name and value. Example: \u0027h:X-Custom-Header=my-value\u0027\u0022"
@@ -20806,6 +20810,10 @@
           "o:suppress-headers": {
             "type": "string",
             "description": "\u0022Removes specified X-Mailgun headers from the delivered message. Provide header names separated by commas (e.g., \u0027X-Mailgun-Variables,X-Mailgun-Tag\u0027) or use \u0027all\u0027 to remove all X-Mailgun headers.Note: X-Mailgun-Sid header is currently used to process complains received via feedback loops.\u0022"
+          },
+          "o:inbox-placement-test-key": {
+            "type": "string",
+            "description": "Triggers an Inbox Placement test for this message using the provided value as an idempotency key. Retried or duplicate send requests that use the same key will not create additional tests. Requires Inbox Placement to be enabled for your account."
           },
           "h:X-My-Header": {
             "type": "string",
