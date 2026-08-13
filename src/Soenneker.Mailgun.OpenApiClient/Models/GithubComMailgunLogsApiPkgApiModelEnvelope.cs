@@ -9,67 +9,67 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunLogsApiPkgApiModelLogEventGeolocation : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunLogsApiPkgApiModelEnvelope : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The city property</summary>
+        /// <summary>The iIpPoolId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? City { get; set; }
+        public string? IIpPoolId { get; set; }
 #nullable restore
 #else
-        public string City { get; set; }
+        public string IIpPoolId { get; set; }
 #endif
-        /// <summary>The country property</summary>
+        /// <summary>The sender property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get; set; }
+        public string? Sender { get; set; }
 #nullable restore
 #else
-        public string Country { get; set; }
+        public string Sender { get; set; }
 #endif
-        /// <summary>The region property</summary>
+        /// <summary>The sendingIp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get; set; }
+        public string? SendingIp { get; set; }
 #nullable restore
 #else
-        public string Region { get; set; }
+        public string SendingIp { get; set; }
 #endif
-        /// <summary>The timezone property</summary>
+        /// <summary>The targets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timezone { get; set; }
+        public string? Targets { get; set; }
 #nullable restore
 #else
-        public string Timezone { get; set; }
+        public string Targets { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>The transport property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Transport { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Transport { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventGeolocation"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelEnvelope"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunLogsApiPkgApiModelLogEventGeolocation()
+        public GithubComMailgunLogsApiPkgApiModelEnvelope()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventGeolocation"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelEnvelope"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventGeolocation CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelEnvelope CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventGeolocation();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelEnvelope();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,11 +79,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "city", n => { City = n.GetStringValue(); } },
-                { "country", n => { Country = n.GetStringValue(); } },
-                { "region", n => { Region = n.GetStringValue(); } },
-                { "timezone", n => { Timezone = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "i-ip-pool-id", n => { IIpPoolId = n.GetStringValue(); } },
+                { "sender", n => { Sender = n.GetStringValue(); } },
+                { "sending-ip", n => { SendingIp = n.GetStringValue(); } },
+                { "targets", n => { Targets = n.GetStringValue(); } },
+                { "transport", n => { Transport = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("city", City);
-            writer.WriteStringValue("country", Country);
-            writer.WriteStringValue("region", Region);
-            writer.WriteStringValue("timezone", Timezone);
-            writer.WriteStringValue("type", Type);
+            writer.WriteStringValue("i-ip-pool-id", IIpPoolId);
+            writer.WriteStringValue("sender", Sender);
+            writer.WriteStringValue("sending-ip", SendingIp);
+            writer.WriteStringValue("targets", Targets);
+            writer.WriteStringValue("transport", Transport);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

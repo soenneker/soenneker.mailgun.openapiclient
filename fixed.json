@@ -28069,6 +28069,17 @@
             "type": "string",
             "description": "Timestamp indicating when the route was created in RFC1123 format"
           }
+        },
+        "example": {
+          "id": "4f3bad2335335426750048c6",
+          "priority": 0,
+          "description": "Sample route",
+          "expression": "match_recipient(\u0022.*@samples.mailgun.org\u0022)",
+          "actions": [
+            "forward(\u0022http://myhost.com/messages/\u0022)",
+            "stop()"
+          ],
+          "created_at": "Wed, 15 Feb 2012 13:03:31 GMT"
         }
       },
       "ListMemberRequest": {
@@ -28086,6 +28097,16 @@
           },
           "vars": {
             "$ref": "#/components/schemas/ListMemberRequestVarsProperty"
+          }
+        },
+        "example": {
+          "address": "dev@mailgun.net",
+          "name": "Super Developer",
+          "subscribed": true,
+          "vars": {
+            "department": "Support",
+            "rank": "Monarch",
+            "memo": "Give them a raise"
           }
         }
       },
@@ -28121,6 +28142,15 @@
             "type": "integer",
             "description": "The number of members on the mailing list"
           }
+        },
+        "example": {
+          "address": "developers@mailgun.net",
+          "name": "Developers",
+          "description": "Describe the mailing list",
+          "access_level": "readonly",
+          "reply_preference": "list",
+          "created_at": "Tue, 09 Aug 2011 20:50:27 -0000",
+          "members_count": 2
         }
       },
       "ListMemberResponse": {
@@ -28142,6 +28172,15 @@
             "type": "boolean",
             "description": "Whether the member is subscribed or not"
           }
+        },
+        "example": {
+          "address": "alice@example.com",
+          "name": "Alice",
+          "vars": {
+            "gender": "female",
+            "age": 27
+          },
+          "subscribed": true
         }
       },
       "PaginateMailingListResponse": {
@@ -28157,6 +28196,32 @@
               "$ref": "#/components/schemas/MailingListResponse"
             }
           }
+        },
+        "example": {
+          "paging": {
+            "first": "https://url_to_next_page",
+            "last": "https://url_to_last_page",
+            "next": "https://url_to_next_page",
+            "previous": "https://url_to_previous_page"
+          },
+          "items": [
+            {
+              "access_level": "everyone",
+              "address": "dev@samples.mailgun.org",
+              "created_at": "Tue, 06 Mar 2012 05:44:45 GMT",
+              "description": "Mailgun developers list",
+              "members_count": 1,
+              "name": ""
+            },
+            {
+              "access_level": "readonly",
+              "address": "bar@example.com",
+              "created_at": "Wed, 06 Mar 2013 11:39:51 GMT",
+              "description": "",
+              "members_count": 2,
+              "name": ""
+            }
+          ]
         }
       },
       "PaginateListMemberResponse": {
@@ -28171,6 +28236,24 @@
             "items": {
               "$ref": "#/components/schemas/ListMemberResponse"
             }
+          }
+        },
+        "example": {
+          "items": [
+            {
+              "vars": {
+                "age": 26
+              },
+              "name": "Foo Bar",
+              "subscribed": false,
+              "address": "bar@example.com"
+            }
+          ],
+          "paging": {
+            "first": "https://url_to_first_page",
+            "last": "https://url_to_last_page",
+            "next": "http://url_to_next_page",
+            "previous": "http://url_to_previous_page"
           }
         }
       },
@@ -30353,7 +30436,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30382,7 +30466,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30411,7 +30496,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30439,7 +30525,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30467,7 +30554,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30496,7 +30584,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30524,7 +30613,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30552,7 +30642,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30581,7 +30672,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30609,7 +30701,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30663,7 +30756,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30692,7 +30786,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30721,7 +30816,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30750,7 +30846,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30779,7 +30876,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30808,7 +30906,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30837,7 +30936,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -30866,7 +30966,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31033,7 +31134,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31061,7 +31163,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31089,7 +31192,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31117,7 +31221,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31145,7 +31250,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31173,7 +31279,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31202,7 +31309,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31230,7 +31338,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31404,7 +31513,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31432,7 +31542,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31460,7 +31571,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31488,7 +31600,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31516,7 +31629,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31544,7 +31658,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31572,7 +31687,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31600,7 +31716,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31628,7 +31745,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31656,7 +31774,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31684,7 +31803,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31712,7 +31832,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31740,7 +31861,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -31768,7 +31890,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32571,7 +32694,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32601,7 +32725,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32630,7 +32755,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32659,7 +32785,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32744,7 +32871,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32773,7 +32901,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32803,7 +32932,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -32992,7 +33122,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -33020,7 +33151,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -33048,7 +33180,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -33076,7 +33209,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -33104,7 +33238,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -33132,7 +33267,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {
@@ -33241,7 +33377,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "properties": {

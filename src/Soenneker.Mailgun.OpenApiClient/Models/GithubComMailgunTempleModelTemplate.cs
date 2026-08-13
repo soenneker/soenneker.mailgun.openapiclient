@@ -65,10 +65,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Active version information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplateVersion? Version { get; private set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion? Version { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplateVersion Version { get; private set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion Version { get; private set; }
 #endif
         /// <summary>List of template&apos;s versions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplateVersion>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplateVersion.CreateFromDiscriminatorValue); } },
+                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion.CreateFromDiscriminatorValue); } },
                 { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

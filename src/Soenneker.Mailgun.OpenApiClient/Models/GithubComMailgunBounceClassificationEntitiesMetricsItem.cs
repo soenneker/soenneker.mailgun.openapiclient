@@ -9,7 +9,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunBounceClassificationEntitiesMetricsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accountId property</summary>
@@ -166,30 +166,22 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Timestamp { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem()
+        public GithubComMailgunBounceClassificationEntitiesMetricsItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -218,7 +210,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "tag", n => { Tag = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -247,7 +238,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("tag", Tag);
             writer.WriteStringValue("tags", Tags);
             writer.WriteStringValue("timestamp", Timestamp);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

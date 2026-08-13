@@ -7,46 +7,61 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
-    /// <summary>
-    /// Accepted webhook URLs
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GithubComMailgunDomainsHttpapiWebhooksResponseAccepted : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class GithubComMailgunLogsApiPkgApiModelGeoLocation : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Union discriminator</summary>
+        /// <summary>The city property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? City { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string City { get; set; }
 #endif
-        /// <summary>List of URLs</summary>
+        /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Urls { get; set; }
+        public string? Country { get; set; }
 #nullable restore
 #else
-        public List<string> Urls { get; set; }
+        public string Country { get; set; }
+#endif
+        /// <summary>The region property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Region { get; set; }
+#nullable restore
+#else
+        public string Region { get; set; }
+#endif
+        /// <summary>The timezone property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Timezone { get; set; }
+#nullable restore
+#else
+        public string Timezone { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelGeoLocation"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsHttpapiWebhooksResponseAccepted()
+        public GithubComMailgunLogsApiPkgApiModelGeoLocation()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelGeoLocation"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelGeoLocation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelGeoLocation();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,8 +71,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "urls", n => { Urls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "city", n => { City = n.GetStringValue(); } },
+                { "country", n => { Country = n.GetStringValue(); } },
+                { "region", n => { Region = n.GetStringValue(); } },
+                { "timezone", n => { Timezone = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +84,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("type", Type);
-            writer.WriteCollectionOfPrimitiveValues<string>("urls", Urls);
+            writer.WriteStringValue("city", City);
+            writer.WriteStringValue("country", Country);
+            writer.WriteStringValue("region", Region);
+            writer.WriteStringValue("timezone", Timezone);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

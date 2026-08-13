@@ -9,7 +9,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunLogsApiPkgApiModelLogEventClientInfo : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunLogsApiPkgApiModelClientInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -62,14 +62,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Ip { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The userAgent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,21 +71,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public string UserAgent { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventClientInfo"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelClientInfo"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunLogsApiPkgApiModelLogEventClientInfo()
+        public GithubComMailgunLogsApiPkgApiModelClientInfo()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventClientInfo"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelClientInfo"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventClientInfo CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelClientInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelLogEventClientInfo();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelClientInfo();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,7 +101,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "client-type", n => { ClientType = n.GetStringValue(); } },
                 { "device-type", n => { DeviceType = n.GetStringValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "user-agent", n => { UserAgent = n.GetStringValue(); } },
             };
         }
@@ -126,7 +117,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("client-type", ClientType);
             writer.WriteStringValue("device-type", DeviceType);
             writer.WriteStringValue("ip", Ip);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user-agent", UserAgent);
             writer.WriteAdditionalData(AdditionalData);
         }

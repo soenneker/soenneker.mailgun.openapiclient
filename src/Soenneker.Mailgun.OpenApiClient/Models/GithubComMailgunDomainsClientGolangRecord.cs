@@ -9,7 +9,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunDomainsClientGolangRecord : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -48,14 +48,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string RecordType { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Indicates whether the DNS record is valid</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,21 +65,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public string Value { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem()
+        public GithubComMailgunDomainsClientGolangRecord()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,7 +94,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetStringValue(); } },
                 { "record_type", n => { RecordType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "valid", n => { Valid = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
@@ -119,7 +110,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("priority", Priority);
             writer.WriteStringValue("record_type", RecordType);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("valid", Valid);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

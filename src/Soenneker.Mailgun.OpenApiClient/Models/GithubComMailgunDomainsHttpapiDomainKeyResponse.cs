@@ -17,10 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The dns_record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord? DnsRecord { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord? DnsRecord { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord DnsRecord { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord DnsRecord { get; set; }
 #endif
         /// <summary>The selector property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dns_record", n => { DnsRecord = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord.CreateFromDiscriminatorValue); } },
+                { "dns_record", n => { DnsRecord = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord.CreateFromDiscriminatorValue); } },
                 { "selector", n => { Selector = n.GetStringValue(); } },
                 { "signing_domain", n => { SigningDomain = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord>("dns_record", DnsRecord);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>("dns_record", DnsRecord);
             writer.WriteStringValue("selector", Selector);
             writer.WriteStringValue("signing_domain", SigningDomain);
             writer.WriteAdditionalData(AdditionalData);

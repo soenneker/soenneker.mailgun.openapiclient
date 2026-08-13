@@ -41,10 +41,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem>? Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem> Items { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem> Items { get; set; }
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "dimensions", n => { Dimensions = n.GetCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiDimension>()?.AsList(); } },
                 { "duration", n => { Duration = n.GetStringValue(); } },
                 { "end", n => { End = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiPaginationResp>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiPaginationResp.CreateFromDiscriminatorValue); } },
                 { "resolution", n => { Resolution = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution.CreateFromDiscriminatorValue); } },
                 { "start", n => { Start = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiDimension>("dimensions", Dimensions);
             writer.WriteStringValue("duration", Duration);
             writer.WriteStringValue("end", End);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItem>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiPaginationResp>("pagination", Pagination);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution>("resolution", Resolution);
             writer.WriteStringValue("start", Start);

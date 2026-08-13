@@ -9,67 +9,59 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunLogsApiPkgApiModelStorage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The from property</summary>
+        /// <summary>The env property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? From { get; set; }
+        public string? Env { get; set; }
 #nullable restore
 #else
-        public string From { get; set; }
+        public string Env { get; set; }
 #endif
-        /// <summary>The messageId property</summary>
+        /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageId { get; set; }
+        public string? Key { get; set; }
 #nullable restore
 #else
-        public string MessageId { get; set; }
+        public string Key { get; set; }
 #endif
-        /// <summary>The subject property</summary>
+        /// <summary>The region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Region { get; set; }
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Region { get; set; }
 #endif
-        /// <summary>The to property</summary>
+        /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get; set; }
+        public List<string>? Url { get; set; }
 #nullable restore
 #else
-        public string To { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
+        public List<string> Url { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelStorage"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed()
+        public GithubComMailgunLogsApiPkgApiModelStorage()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelStorage"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelStorage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelStorage();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,11 +71,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "from", n => { From = n.GetStringValue(); } },
-                { "message-id", n => { MessageId = n.GetStringValue(); } },
-                { "subject", n => { Subject = n.GetStringValue(); } },
-                { "to", n => { To = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "env", n => { Env = n.GetStringValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
+                { "region", n => { Region = n.GetStringValue(); } },
+                { "url", n => { Url = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -93,11 +84,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("from", From);
-            writer.WriteStringValue("message-id", MessageId);
-            writer.WriteStringValue("subject", Subject);
-            writer.WriteStringValue("to", To);
-            writer.WriteStringValue("type", Type);
+            writer.WriteStringValue("env", Env);
+            writer.WriteStringValue("key", Key);
+            writer.WriteStringValue("region", Region);
+            writer.WriteCollectionOfPrimitiveValues<string>("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

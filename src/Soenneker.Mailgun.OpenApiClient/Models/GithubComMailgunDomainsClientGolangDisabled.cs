@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
-    /// <summary>
-    /// Optional field containing additional details about the domain&apos;s disabled status if applicable
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GithubComMailgunDomainsClientGolangDomainDisabled : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class GithubComMailgunDomainsClientGolangDisabled : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -41,14 +40,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Reason { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Timestamp in RFC1123 format indicating when the domain will be re-enabled if the disablement is temporary</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,21 +49,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public string Until { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsClientGolangDomainDisabled()
+        public GithubComMailgunDomainsClientGolangDisabled()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,7 +77,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "permanently", n => { Permanently = n.GetBoolValue(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "until", n => { Until = n.GetStringValue(); } },
             };
         }
@@ -101,7 +91,6 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("note", Note);
             writer.WriteBoolValue("permanently", Permanently);
             writer.WriteStringValue("reason", Reason);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("until", Until);
             writer.WriteAdditionalData(AdditionalData);
         }
