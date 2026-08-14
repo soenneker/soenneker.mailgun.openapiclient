@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The route property</summary>
+        /// <summary>The created route</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Mailgun.OpenApiClient.Models.RouteResponse? Route { get; set; }

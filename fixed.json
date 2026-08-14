@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.4",
+  "openapi": "3.1.2",
   "info": {
     "title": "Mailgun API",
     "description": "Mailgun API defined by OpenAPI Specification (OAS) 3.1.0",
@@ -22298,9 +22298,11 @@
         "type": "object",
         "properties": {
           "pool_id": {
-            "type": "string",
-            "description": "the ID of the IP pool that spillover IPs are assigned to",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
           }
         }
       },
@@ -22345,9 +22347,11 @@
         "type": "object",
         "properties": {
           "pool_id": {
-            "type": "string",
-            "description": "the ID of the IP pool that spillover IPs are assigned to",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
           }
         }
       },
@@ -22833,19 +22837,25 @@
             "type": "boolean"
           },
           "bounce_rate": {
-            "type": "number",
-            "format": "float",
-            "nullable": true
+            "type": [
+              "null",
+              "number"
+            ],
+            "format": "float"
           },
           "complaint_rate": {
-            "type": "number",
-            "format": "float",
-            "nullable": true
+            "type": [
+              "null",
+              "number"
+            ],
+            "format": "float"
           },
           "processed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           }
         }
       },
@@ -22939,19 +22949,25 @@
             "type": "string"
           },
           "bounce_rate": {
-            "type": "number",
-            "format": "float",
-            "nullable": true
+            "type": [
+              "null",
+              "number"
+            ],
+            "format": "float"
           },
           "complaint_rate": {
-            "type": "number",
-            "format": "float",
-            "nullable": true
+            "type": [
+              "null",
+              "number"
+            ],
+            "format": "float"
           },
           "processed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "initiated_by": {
             "type": "string"
@@ -23023,9 +23039,11 @@
             "$ref": "#/components/schemas/GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty"
           },
           "error": {
-            "type": "string",
-            "description": "An error message if an error occurred. Null if there is no error.",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "An error message if an error occurred. Null if there is no error."
           },
           "certificate": {
             "type": "string",
@@ -23073,6 +23091,7 @@
             "description": "GUID identifying the individual event"
           },
           "event": {
+            "description": "The event name. See [Events](https://documentation.mailgun.com/docs/mailgun/user-manual/events/#introduction-to-events)",
             "$ref": "#/components/schemas/EventType"
           },
           "timestamp": {
@@ -23119,6 +23138,7 @@
             "$ref": "#/components/schemas/EventResponseBatch"
           },
           "severity": {
+            "description": "Filter by event severity, if exists. Currently for failed events only. See [Tracking Failures](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/#tracking-failures)",
             "$ref": "#/components/schemas/EventSeverityType"
           },
           "recipient-domain": {
@@ -23906,185 +23926,257 @@
         "type": "object",
         "properties": {
           "accepted_incoming_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "accepted_outgoing_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "accepted_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_smtp_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_http_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_optimized_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "stored_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "processed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "sent_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "opened_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "clicked_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "unique_opened_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "unique_clicked_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "unsubscribed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "complained_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "failed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "temporary_failed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "permanent_failed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "temporary_failed_esp_block_count": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Use instead of esp_block_count.",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "permanent_failed_esp_block_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "rate_limit_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "webhook_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "permanent_failed_optimized_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "permanent_failed_old_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "bounced_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "hard_bounces_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "soft_bounces_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delayed_bounce_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "suppressed_bounces_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "suppressed_unsubscribed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "suppressed_complaints_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_first_attempt_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delayed_first_attempt_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_subsequent_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_two_plus_attempts_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "delivered_rate": {
             "type": "string"
@@ -24768,84 +24860,116 @@
         "type": "object",
         "properties": {
           "processed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_public_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_valid_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_single_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_bulk_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_list_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_mailgun_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_validation_mailjet_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_preview_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "email_preview_failed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "link_validation_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "link_validation_failed_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "seed_test_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "ip_blocklist_monitoring_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           },
           "domain_blocklist_monitoring_count": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int64"
           }
         }
       },
@@ -27488,10 +27612,12 @@
             "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsEventSettingsSettings"
           },
           "disabled_at": {
-            "type": "string",
+            "type": [
+              "null",
+              "string"
+            ],
             "description": "When present, the timestamp indicating when a webhook endpoint was disabled.",
-            "format": "date-time",
-            "nullable": true
+            "format": "date-time"
           }
         }
       },
@@ -27539,16 +27665,22 @@
             "type": "string"
           },
           "team_id": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "team_name": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "scope": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -28039,6 +28171,19 @@
         }
       },
       "RouteResponse": {
+        "examples": [
+          {
+            "id": "4f3bad2335335426750048c6",
+            "priority": 0,
+            "description": "Sample route",
+            "expression": "match_recipient(\u0022.*@samples.mailgun.org\u0022)",
+            "actions": [
+              "forward(\u0022http://myhost.com/messages/\u0022)",
+              "stop()"
+            ],
+            "created_at": "Wed, 15 Feb 2012 13:03:31 GMT"
+          }
+        ],
         "title": "RouteResponse",
         "type": "object",
         "properties": {
@@ -28069,20 +28214,21 @@
             "type": "string",
             "description": "Timestamp indicating when the route was created in RFC1123 format"
           }
-        },
-        "example": {
-          "id": "4f3bad2335335426750048c6",
-          "priority": 0,
-          "description": "Sample route",
-          "expression": "match_recipient(\u0022.*@samples.mailgun.org\u0022)",
-          "actions": [
-            "forward(\u0022http://myhost.com/messages/\u0022)",
-            "stop()"
-          ],
-          "created_at": "Wed, 15 Feb 2012 13:03:31 GMT"
         }
       },
       "ListMemberRequest": {
+        "examples": [
+          {
+            "address": "dev@mailgun.net",
+            "name": "Super Developer",
+            "subscribed": true,
+            "vars": {
+              "department": "Support",
+              "rank": "Monarch",
+              "memo": "Give them a raise"
+            }
+          }
+        ],
         "title": "Mailing list member",
         "type": "object",
         "properties": {
@@ -28098,19 +28244,20 @@
           "vars": {
             "$ref": "#/components/schemas/ListMemberRequestVarsProperty"
           }
-        },
-        "example": {
-          "address": "dev@mailgun.net",
-          "name": "Super Developer",
-          "subscribed": true,
-          "vars": {
-            "department": "Support",
-            "rank": "Monarch",
-            "memo": "Give them a raise"
-          }
         }
       },
       "MailingListResponse": {
+        "examples": [
+          {
+            "address": "developers@mailgun.net",
+            "name": "Developers",
+            "description": "Describe the mailing list",
+            "access_level": "readonly",
+            "reply_preference": "list",
+            "created_at": "Tue, 09 Aug 2011 20:50:27 -0000",
+            "members_count": 2
+          }
+        ],
         "title": "The mailing list response",
         "type": "object",
         "properties": {
@@ -28142,18 +28289,20 @@
             "type": "integer",
             "description": "The number of members on the mailing list"
           }
-        },
-        "example": {
-          "address": "developers@mailgun.net",
-          "name": "Developers",
-          "description": "Describe the mailing list",
-          "access_level": "readonly",
-          "reply_preference": "list",
-          "created_at": "Tue, 09 Aug 2011 20:50:27 -0000",
-          "members_count": 2
         }
       },
       "ListMemberResponse": {
+        "examples": [
+          {
+            "address": "alice@example.com",
+            "name": "Alice",
+            "vars": {
+              "gender": "female",
+              "age": 27
+            },
+            "subscribed": true
+          }
+        ],
         "title": "ListMemberResponse",
         "type": "object",
         "properties": {
@@ -28172,18 +28321,37 @@
             "type": "boolean",
             "description": "Whether the member is subscribed or not"
           }
-        },
-        "example": {
-          "address": "alice@example.com",
-          "name": "Alice",
-          "vars": {
-            "gender": "female",
-            "age": 27
-          },
-          "subscribed": true
         }
       },
       "PaginateMailingListResponse": {
+        "examples": [
+          {
+            "paging": {
+              "first": "https://url_to_next_page",
+              "last": "https://url_to_last_page",
+              "next": "https://url_to_next_page",
+              "previous": "https://url_to_previous_page"
+            },
+            "items": [
+              {
+                "access_level": "everyone",
+                "address": "dev@samples.mailgun.org",
+                "created_at": "Tue, 06 Mar 2012 05:44:45 GMT",
+                "description": "Mailgun developers list",
+                "members_count": 1,
+                "name": ""
+              },
+              {
+                "access_level": "readonly",
+                "address": "bar@example.com",
+                "created_at": "Wed, 06 Mar 2013 11:39:51 GMT",
+                "description": "",
+                "members_count": 2,
+                "name": ""
+              }
+            ]
+          }
+        ],
         "title": "PaginateMailingListResponse",
         "type": "object",
         "properties": {
@@ -28196,35 +28364,29 @@
               "$ref": "#/components/schemas/MailingListResponse"
             }
           }
-        },
-        "example": {
-          "paging": {
-            "first": "https://url_to_next_page",
-            "last": "https://url_to_last_page",
-            "next": "https://url_to_next_page",
-            "previous": "https://url_to_previous_page"
-          },
-          "items": [
-            {
-              "access_level": "everyone",
-              "address": "dev@samples.mailgun.org",
-              "created_at": "Tue, 06 Mar 2012 05:44:45 GMT",
-              "description": "Mailgun developers list",
-              "members_count": 1,
-              "name": ""
-            },
-            {
-              "access_level": "readonly",
-              "address": "bar@example.com",
-              "created_at": "Wed, 06 Mar 2013 11:39:51 GMT",
-              "description": "",
-              "members_count": 2,
-              "name": ""
-            }
-          ]
         }
       },
       "PaginateListMemberResponse": {
+        "examples": [
+          {
+            "items": [
+              {
+                "vars": {
+                  "age": 26
+                },
+                "name": "Foo Bar",
+                "subscribed": false,
+                "address": "bar@example.com"
+              }
+            ],
+            "paging": {
+              "first": "https://url_to_first_page",
+              "last": "https://url_to_last_page",
+              "next": "http://url_to_next_page",
+              "previous": "http://url_to_previous_page"
+            }
+          }
+        ],
         "title": "PaginateListMemberResponse",
         "type": "object",
         "properties": {
@@ -28236,24 +28398,6 @@
             "items": {
               "$ref": "#/components/schemas/ListMemberResponse"
             }
-          }
-        },
-        "example": {
-          "items": [
-            {
-              "vars": {
-                "age": 26
-              },
-              "name": "Foo Bar",
-              "subscribed": false,
-              "address": "bar@example.com"
-            }
-          ],
-          "paging": {
-            "first": "https://url_to_first_page",
-            "last": "https://url_to_last_page",
-            "next": "http://url_to_next_page",
-            "previous": "http://url_to_previous_page"
           }
         }
       },
@@ -28344,12 +28488,14 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
           },
           "versions": {
-            "type": "array",
+            "type": [
+              "null",
+              "array"
+            ],
             "items": {
               "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
             },
             "description": "List of template\u0027s versions",
-            "nullable": true,
             "readOnly": true
           }
         }
@@ -28469,12 +28615,14 @@
         "type": "object",
         "properties": {
           "items": {
-            "type": "array",
+            "type": [
+              "null",
+              "array"
+            ],
             "items": {
               "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
             },
-            "description": "List of items",
-            "nullable": true
+            "description": "List of items"
           },
           "paging": {
             "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetPageResponsePaging"
@@ -29037,19 +29185,25 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "type": "string",
-            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys"
           },
           "requestor": {
-            "type": "string",
-            "description": "An email address associated with the key",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "An email address associated with the key"
           },
           "user_name": {
-            "type": "string",
-            "description": "The API key user\u0027s name",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The API key user\u0027s name"
           }
         }
       },
@@ -29130,19 +29284,25 @@
             "description": "Whether or not the key is disabled from use"
           },
           "domain_name": {
-            "type": "string",
-            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The sending domain associated with the key required for \u0027domain\u0027 kind keys"
           },
           "requestor": {
-            "type": "string",
-            "description": "An email address associated with the key",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "An email address associated with the key"
           },
           "user_name": {
-            "type": "string",
-            "description": "The API key user\u0027s name",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The API key user\u0027s name"
           },
           "secret": {
             "type": "string",
@@ -29246,8 +29406,10 @@
             "example": "Fri, 23 Jan 2026 10:16:00 \u002B0000"
           },
           "size_bytes": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -29528,9 +29690,11 @@
             }
           },
           "total": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int32"
           },
           "req": {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListAccountStatsRespReqProperty"
@@ -29845,34 +30009,44 @@
             "format": "int64"
           },
           "delivered_smtp_count": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "critical_bounce_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "non_critical_bounce_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "critical_delay_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "non_critical_delay_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           }
         }
       },
@@ -29883,77 +30057,113 @@
         "type": "object",
         "properties": {
           "account.id": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "account.name": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "entity-name": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "recipient-provider": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "recipient-domain": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "domain.name": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "envelope.i-ip-pool-id": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "envelope.i-ip-pool-name": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "envelope.sending-ip": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "timestamp": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "tags": {
-            "type": "string",
-            "description": "Concatenated tags",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Concatenated tags"
           },
           "tag": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "criticality": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "severity": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "category": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "group-id": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "sample-text": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "explanation": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "metrics": {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"
@@ -30356,16 +30566,20 @@
           },
           "tfa_created_at": {
             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
-            "type": "string",
+            "type": [
+              "null",
+              "string"
+            ],
             "description": "the date and time at which 2-factor auth was activated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
-            "nullable": true,
             "example": "2022-12-20T16:52:01.892000"
           },
           "password_updated_at": {
             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}$",
-            "type": "string",
+            "type": [
+              "null",
+              "string"
+            ],
             "description": "the date and time at which the user password was last updated in ISO 8601 date-time format without timezone offset (UTC time) and with microseconds",
-            "nullable": true,
             "example": "2022-12-20T16:52:01.892000"
           },
           "preferences": {
@@ -30375,14 +30589,18 @@
             "$ref": "#/components/schemas/GithubComMailgunUsersApiUserAuthResponse"
           },
           "github_user_id": {
-            "type": "string",
-            "description": "Github ID, if part of Github Student Developer Pack account",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Github ID, if part of Github Student Developer Pack account"
           },
           "salesforce_user_id": {
-            "type": "string",
-            "description": "Salesforce ID, if part of Salesforce platform account",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Salesforce ID, if part of Salesforce platform account"
           },
           "migration_status": {
             "type": "string",
@@ -30434,10 +30652,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30464,10 +30679,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30494,10 +30706,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30523,10 +30732,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30552,10 +30758,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30582,10 +30785,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30611,10 +30811,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30640,10 +30837,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30670,10 +30864,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30699,10 +30890,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30754,10 +30942,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30784,10 +30969,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30814,10 +30996,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30844,10 +31023,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30874,10 +31050,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30904,10 +31077,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30934,10 +31104,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -30964,10 +31131,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31132,10 +31296,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31161,10 +31322,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31190,10 +31348,7 @@
             "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31219,10 +31374,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31248,10 +31400,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31277,10 +31426,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31307,10 +31453,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31336,10 +31479,7 @@
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31425,9 +31565,11 @@
         "type": "object",
         "properties": {
           "pool_id": {
-            "type": "string",
-            "description": "the ID of the IP pool that spillover IPs are assigned to",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
           }
         },
         "description": "the DIPP spillover settings for the account"
@@ -31452,9 +31594,11 @@
         "type": "object",
         "properties": {
           "pool_id": {
-            "type": "string",
-            "description": "the ID of the IP pool that spillover IPs are assigned to",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "the ID of the IP pool that spillover IPs are assigned to"
           }
         },
         "description": "the DIPP spillover settings for the account.  This value will apply to all domains under the account"
@@ -31511,10 +31655,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31540,10 +31681,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31569,10 +31707,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31598,10 +31733,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31627,10 +31759,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31656,10 +31785,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31685,10 +31811,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31714,10 +31837,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31743,10 +31863,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31772,10 +31889,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31801,10 +31915,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31830,10 +31941,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31859,10 +31967,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -31888,10 +31993,7 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32692,10 +32794,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32723,10 +32822,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32753,10 +32849,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32783,10 +32876,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32869,10 +32959,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32899,10 +32986,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -32930,10 +33014,7 @@
             "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33120,10 +33201,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesSubaccount"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33149,10 +33227,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33178,10 +33253,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStat"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33207,10 +33279,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesAccountStat"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33236,10 +33305,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomainStat"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33265,10 +33331,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesEntityStat"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -33321,34 +33384,44 @@
             "format": "int64"
           },
           "delivered_smtp_count": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "critical_bounce_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "non_critical_bounce_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "critical_delay_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           },
           "non_critical_delay_rate": {
-            "type": "integer",
+            "type": [
+              "null",
+              "integer"
+            ],
             "description": "Percentages; null for Spam Filters",
-            "format": "int64",
-            "nullable": true
+            "format": "int64"
           }
         },
         "description": "Counts and rates"
@@ -33375,10 +33448,7 @@
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItem"
           },
           {
-            "enum": [
-              null
-            ],
-            "nullable": true
+            "type": "null"
           }
         ],
         "properties": {
@@ -34605,6 +34675,7 @@
             "description": "A string describing the result of the operation"
           },
           "route": {
+            "description": "The created route",
             "$ref": "#/components/schemas/RouteResponse"
           }
         }
