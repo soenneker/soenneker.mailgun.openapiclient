@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\templates\{templateName}\versions
+    /// Builds and executes requests for operations under \v3\{domainName-id}\templates\{templateName}\versions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VersionsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions{?limit*,p*,page*}", pathParameters)
+        public VersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}/versions{?limit*,p*,page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions{?limit*,p*,page*}", rawUrl)
+        public VersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}/versions{?limit*,p*,page*}", rawUrl)
         {
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\messages.mime
+    /// Builds and executes requests for operations under \v3\{domainName-id}\messages.mime
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagesMimeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesMimeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/messages.mime", pathParameters)
+        public MessagesMimeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/messages.mime", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesMimeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/messages.mime", rawUrl)
+        public MessagesMimeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/messages.mime", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Build a MIME string yourself using a MIME library and submit it to Mailgun. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total&quot;
+        /// Build a MIME string yourself using a MIME library and submit it to Mailgun. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Build a MIME string yourself using a MIME library and submit it to Mailgun. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total&quot;
+        /// Build a MIME string yourself using a MIME library and submit it to Mailgun. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

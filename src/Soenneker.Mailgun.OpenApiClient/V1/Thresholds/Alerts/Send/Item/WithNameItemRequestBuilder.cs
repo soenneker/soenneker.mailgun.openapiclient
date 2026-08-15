@@ -88,7 +88,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Thresholds.Alerts.Send.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItem>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiSendAlertItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Updates the configuration of an existing send alert.NOTE: This endpoint performs a full replacement (PUT) of the alert resource. To update specific fields like &apos;alert_channels&apos; without losing existing configuration, you should first fetch the current alert object via a GET request.Use the attributes from the existing alert to populate the request body, modifying only the &apos;alert_channels&apos; array (or other desired fields) before sending the PUT request. Omitting existing attributes may result in validation errors or the loss of current settings.&quot;
+        /// Updates the configuration of an existing send alert.NOTE: This endpoint performs a full replacement (PUT) of the alert resource. To update specific fields like &apos;alert_channels&apos; without losing existing configuration, you should first fetch the current alert object via a GET request.Use the attributes from the existing alert to populate the request body, modifying only the &apos;alert_channels&apos; array (or other desired fields) before sending the PUT request. Omitting existing attributes may result in validation errors or the loss of current settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -155,7 +155,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Thresholds.Alerts.Send.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Updates the configuration of an existing send alert.NOTE: This endpoint performs a full replacement (PUT) of the alert resource. To update specific fields like &apos;alert_channels&apos; without losing existing configuration, you should first fetch the current alert object via a GET request.Use the attributes from the existing alert to populate the request body, modifying only the &apos;alert_channels&apos; array (or other desired fields) before sending the PUT request. Omitting existing attributes may result in validation errors or the loss of current settings.&quot;
+        /// Updates the configuration of an existing send alert.NOTE: This endpoint performs a full replacement (PUT) of the alert resource. To update specific fields like &apos;alert_channels&apos; without losing existing configuration, you should first fetch the current alert object via a GET request.Use the attributes from the existing alert to populate the request body, modifying only the &apos;alert_channels&apos; array (or other desired fields) before sending the PUT request. Omitting existing attributes may result in validation errors or the loss of current settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

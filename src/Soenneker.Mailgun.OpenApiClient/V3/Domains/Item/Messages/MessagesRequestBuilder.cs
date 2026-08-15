@@ -16,7 +16,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Messages
     public partial class MessagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.domains.item.messages.item collection</summary>
-        /// <param name="position">&quot;Storage key from the email&apos;s associated events (Example: Accepted/Delivered events `storage.key` field). Note: Storage keys are available for the duration of your domain&apos;s message retention policy.&quot;</param>
+        /// <param name="position">Storage key from the email&apos;s associated events (Example: Accepted/Delivered events `storage.key` field). Note: Storage keys are available for the duration of your domain&apos;s message retention policy.</param>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Messages.Item.WithStorageKeyItemRequestBuilder"/></returns>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Messages.Item.WithStorageKeyItemRequestBuilder this[string position]
         {

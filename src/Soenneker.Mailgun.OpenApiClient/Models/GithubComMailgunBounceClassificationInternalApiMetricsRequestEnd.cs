@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format&quot;
+    /// An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GithubComMailgunBounceClassificationInternalApiMetricsRequestEnd : IAdditionalDataHolder, IParsable

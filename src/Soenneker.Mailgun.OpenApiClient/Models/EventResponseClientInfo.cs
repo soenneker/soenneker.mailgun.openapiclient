@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string ClientOs { get; set; }
 #endif
-        /// <summary>&quot;Categorize client between: mobile browser, library, email client, robot, feed reader or other&quot;</summary>
+        /// <summary>Categorize client between: mobile browser, library, email client, robot, feed reader or other</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientType { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string ClientType { get; set; }
 #endif
-        /// <summary>&quot;Could be: desktop, mobile, table or unknown&quot;</summary>
+        /// <summary>Could be: desktop, mobile, table or unknown</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeviceType { get; set; }

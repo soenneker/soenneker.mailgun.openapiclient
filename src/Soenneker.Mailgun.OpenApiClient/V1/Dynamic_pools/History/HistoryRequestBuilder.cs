@@ -90,7 +90,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.History
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class HistoryRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Filter events emitted after a given timestamp (Format: Mon, 02 Jan 2006 15:04:05 MST)&quot;</summary>
+            /// <summary>Filter events emitted after a given timestamp (Format: Mon, 02 Jan 2006 15:04:05 MST)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -100,7 +100,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.History
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>&quot;Filter events emitted before a given timestamp (Format: Mon, 02 Jan 2006 15:04:05 MST)&quot;</summary>
+            /// <summary>Filter events emitted before a given timestamp (Format: Mon, 02 Jan 2006 15:04:05 MST)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("before")]

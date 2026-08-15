@@ -7,6 +7,7 @@ using Soenneker.Mailgun.OpenApiClient.Models;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Disable;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Enable;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features;
+using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool;
 using Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit;
 using System.Collections.Generic;
 using System.IO;
@@ -35,6 +36,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item
         public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesRequestBuilder Features
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ip_pool property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool.Ip_poolRequestBuilder Ip_pool
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool.Ip_poolRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The limit property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Limit.LimitRequestBuilder Limit

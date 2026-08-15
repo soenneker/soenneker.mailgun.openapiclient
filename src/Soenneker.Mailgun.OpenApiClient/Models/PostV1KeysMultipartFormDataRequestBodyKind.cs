@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
-    /// <summary>&quot;Type of API key (&apos;domain&apos;, &apos;user&apos;, or &apos;web&apos;). Defaults to &apos;user&apos; if not provided. Note: web keys are not subject to IP allowlisting and have a default/maximum validity period of 1 day.&quot;</summary>
+    /// <summary>Type of API key (&apos;domain&apos;, &apos;user&apos;, or &apos;web&apos;). Defaults to &apos;user&apos; if not provided. Note: web keys are not subject to IP allowlisting and have a default/maximum validity period of 1 day.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostV1KeysMultipartFormDataRequestBodyKind
     {

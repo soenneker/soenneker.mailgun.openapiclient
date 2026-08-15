@@ -57,7 +57,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Alerts.Settings.Events.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Use this endpoint to update an existing alert setting record.NOTE: When updating a webhook alert, we will ensure the endpoint is reachable by sending a GET request to the provided URL. If a 200 response is not returned, a 400 will be returned and the alert setting update will be rejected.&quot;
+        /// Use this endpoint to update an existing alert setting record.NOTE: When updating a webhook alert, we will ensure the endpoint is reachable by sending a GET request to the provided URL. If a 200 response is not returned, a 400 will be returned and the alert setting update will be rejected.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Alerts.Settings.Events.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Use this endpoint to update an existing alert setting record.NOTE: When updating a webhook alert, we will ensure the endpoint is reachable by sending a GET request to the provided URL. If a 200 response is not returned, a 400 will be returned and the alert setting update will be rejected.&quot;
+        /// Use this endpoint to update an existing alert setting record.NOTE: When updating a webhook alert, we will ensure the endpoint is reachable by sending a GET request to the provided URL. If a 200 response is not returned, a 400 will be returned and the alert setting update will be rejected.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -84,7 +84,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainWebhookResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainWebhookResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Replace the list of urls by the given one with the `url` param. Here is the list of supported webhook: `accepted`, `opened`, `clicked`, `unsubscribed`, `delivered`, `permanent_fail`, `temporary_fail` and `complained`.&quot;
+        /// Replace the list of urls by the given one with the `url` param. Here is the list of supported webhook: `accepted`, `opened`, `clicked`, `unsubscribed`, `delivered`, `permanent_fail`, `temporary_fail` and `complained`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainWebhookResp"/></returns>
         /// <param name="body">The request body</param>
@@ -151,7 +151,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Replace the list of urls by the given one with the `url` param. Here is the list of supported webhook: `accepted`, `opened`, `clicked`, `unsubscribed`, `delivered`, `permanent_fail`, `temporary_fail` and `complained`.&quot;
+        /// Replace the list of urls by the given one with the `url` param. Here is the list of supported webhook: `accepted`, `opened`, `clicked`, `unsubscribed`, `delivered`, `permanent_fail`, `temporary_fail` and `complained`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

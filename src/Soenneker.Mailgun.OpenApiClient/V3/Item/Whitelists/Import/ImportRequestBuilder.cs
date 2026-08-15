@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Import
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\whitelists\import
+    /// Builds and executes requests for operations under \v3\{domainName-id}\whitelists\import
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImportRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Import
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/whitelists/import", pathParameters)
+        public ImportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/whitelists/import", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Import
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/whitelists/import", rawUrl)
+        public ImportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/whitelists/import", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Import a CSV file containing a list of addresses and/or domains to add to the allowlist. The CSV file must be 25MB or under and must contain the following column headers: address, domain. For each row provide either an address or a domain, but not both - choose one, keep the other blank.&quot;
+        /// Import a CSV file containing a list of addresses and/or domains to add to the allowlist. The CSV file must be 25MB or under and must contain the following column headers: address, domain. For each row provide either an address or a domain, but not both - choose one, keep the other blank.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.Import
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Import a CSV file containing a list of addresses and/or domains to add to the allowlist. The CSV file must be 25MB or under and must contain the following column headers: address, domain. For each row provide either an address or a domain, but not both - choose one, keep the other blank.&quot;
+        /// Import a CSV file containing a list of addresses and/or domains to add to the allowlist. The CSV file must be 25MB or under and must contain the following column headers: address, domain. For each row provide either an address or a domain, but not both - choose one, keep the other blank.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

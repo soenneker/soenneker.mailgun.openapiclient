@@ -5,7 +5,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     /// <summary>Enables sending in test mode. Messages are processed normally but not actually delivered to recipients. Useful for testing without sending real emails. See [Sending in Test Mode](https://documentation.mailgun.com/docs/mailgun/user-manual/sending-messages/test-mode)</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PostV3DomainNameMessagesMultipartFormDataRequestBodyOTestmode
+    public enum YesOTestmode
     {
         [EnumMember(Value = "yes")]
         #pragma warning disable CS1591

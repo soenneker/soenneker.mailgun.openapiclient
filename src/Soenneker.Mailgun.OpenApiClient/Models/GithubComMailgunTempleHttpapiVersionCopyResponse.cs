@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Use &apos;version&apos; field&quot;</summary>
+        /// <summary>Deprecated: Use &apos;version&apos; field</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

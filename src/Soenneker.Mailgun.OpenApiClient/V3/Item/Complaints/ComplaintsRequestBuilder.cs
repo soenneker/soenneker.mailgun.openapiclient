@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\complaints
+    /// Builds and executes requests for operations under \v3\{domainName-id}\complaints
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ComplaintsRequestBuilder : BaseRequestBuilder
@@ -41,7 +41,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ComplaintsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/complaints{?limit*,page*}", pathParameters)
+        public ComplaintsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/complaints{?limit*,page*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ComplaintsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/complaints{?limit*,page*}", rawUrl)
+        public ComplaintsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/complaints{?limit*,page*}", rawUrl)
         {
         }
         /// <summary>
@@ -156,7 +156,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints.ComplaintsRequestBuilder.ComplaintsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/{domainName}/complaints?address={address}&term={term}{&limit*,page*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/{domainName%2Did}/complaints?address={address}&term={term}{&limit*,page*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -208,7 +208,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints
             [QueryParameter("address")]
             public string Address { get; set; }
 #endif
-            /// <summary>&quot;Maximum number of records to return (optional, default: 100, max: 1000)&quot;</summary>
+            /// <summary>Maximum number of records to return (optional, default: 100, max: 1000)</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Page direction relative to the above address, can be `next`, `previous` or `last`, if empty, returns the first page</summary>

@@ -12,7 +12,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     public partial class MailingListResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;List access level, one of: readonly, members, everyone&quot;</summary>
+        /// <summary>List access level, one of: readonly, members, everyone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccessLevel { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Set where replies should go: list or sender&quot;</summary>
+        /// <summary>Set where replies should go: list or sender</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReplyPreference { get; set; }

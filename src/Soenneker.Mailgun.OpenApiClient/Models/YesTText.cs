@@ -5,7 +5,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     /// <summary>Generates a plain text version of the template alongside the HTML version when sending templated emails. When set to &apos;yes&apos;, instructs Mailgun to create a text/plain MIME part based on the template content, ensuring compatibility with email clients that don&apos;t support HTML or have HTML rendering disabled. This improves email deliverability and accessibility by providing a fallback text version in multipart emails.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PostV3DomainNameMessagesMultipartFormDataRequestBodyTText
+    public enum YesTText
     {
         [EnumMember(Value = "yes")]
         #pragma warning disable CS1591

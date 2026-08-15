@@ -165,7 +165,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
             /// <summary>Search on every domain that belongs to any subaccounts under this account. Default to false.</summary>
             [QueryParameter("include_subaccounts")]
             public bool? IncludeSubaccounts { get; set; }
-            /// <summary>&quot;Max count of items. Max: 1000. Default: 100&quot;</summary>
+            /// <summary>Max count of items. Max: 1000. Default: 100</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Search domains by the given partial or complete name. Does not support wildcards</summary>
@@ -178,7 +178,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>&quot;Get the list of items starting at the nth element. Default: 0&quot;</summary>
+            /// <summary>Get the list of items starting at the nth element. Default: 0</summary>
             [QueryParameter("skip")]
             public int? Skip { get; set; }
             /// <summary>Valid sort options are `name` which defaults to asc order, `name:asc`, or `name:desc`. If sorting is not specified domains are returned in reverse creation date order.</summary>

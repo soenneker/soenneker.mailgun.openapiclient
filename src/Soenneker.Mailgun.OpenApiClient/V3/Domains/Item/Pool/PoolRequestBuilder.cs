@@ -16,7 +16,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool
     public partial class PoolRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.domains.item.pool.item collection</summary>
-        /// <param name="position">&quot;One of the following: `all`, `ip_pool` or a valid IP address.&quot;</param>
+        /// <param name="position">One of the following: `all`, `ip_pool` or a valid IP address.</param>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool.Item.WithIpItemRequestBuilder"/></returns>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool.Item.WithIpItemRequestBuilder this[string position]
         {

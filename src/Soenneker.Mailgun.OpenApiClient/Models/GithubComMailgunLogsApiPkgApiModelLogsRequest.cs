@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Duration { get; set; }
 #endif
-        /// <summary>&quot;The end date (default: current time). Must be in RFC 2822 format: https://datatracker.ietf.org/doc/html/rfc2822.html#page-14&quot;</summary>
+        /// <summary>The end date (default: current time). Must be in RFC 2822 format: https://datatracker.ietf.org/doc/html/rfc2822.html#page-14</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? End { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelPagination Pagination { get; set; }
 #endif
-        /// <summary>&quot;The start date (default: 1 day before current time). Must be in RFC 2822 format: https://datatracker.ietf.org/doc/html/rfc2822.html#page-14&quot;</summary>
+        /// <summary>The start date (default: 1 day before current time). Must be in RFC 2822 format: https://datatracker.ietf.org/doc/html/rfc2822.html#page-14</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Start { get; set; }

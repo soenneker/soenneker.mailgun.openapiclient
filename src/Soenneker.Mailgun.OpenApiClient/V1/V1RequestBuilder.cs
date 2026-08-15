@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Mailgun.OpenApiClient.V1.Alerts;
 using Soenneker.Mailgun.OpenApiClient.V1.Analytics;
+using Soenneker.Mailgun.OpenApiClient.V1.BounceClassification;
 using Soenneker.Mailgun.OpenApiClient.V1.Dkim;
 using Soenneker.Mailgun.OpenApiClient.V1.Dkim_management;
 using Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools;
@@ -31,6 +32,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V1
         public global::Soenneker.Mailgun.OpenApiClient.V1.Analytics.AnalyticsRequestBuilder Analytics
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V1.Analytics.AnalyticsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The bounceClassification property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V1.BounceClassification.BounceClassificationRequestBuilder BounceClassification
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V1.BounceClassification.BounceClassificationRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dkim property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V1.Dkim.DkimRequestBuilder Dkim

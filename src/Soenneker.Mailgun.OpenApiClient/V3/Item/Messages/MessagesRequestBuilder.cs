@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Messages
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\messages
+    /// Builds and executes requests for operations under \v3\{domainName-id}\messages
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Messages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/messages", pathParameters)
+        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/messages", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Messages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/messages", rawUrl)
+        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/messages", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Pass the components of the messages such as To, From, Subject, HTML, text parts, attachments, etc. Mailgun will build a MIME representation of the message and send it. In order to send you must provide one of the following parameters: &apos;text&apos;, &apos;html&apos;, &apos;amp-html&apos; or &apos;template&apos;. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total&quot;
+        /// Pass the components of the messages such as To, From, Subject, HTML, text parts, attachments, etc. Mailgun will build a MIME representation of the message and send it. In order to send you must provide one of the following parameters: &apos;text&apos;, &apos;html&apos;, &apos;amp-html&apos; or &apos;template&apos;. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Messages
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiSendMessageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Pass the components of the messages such as To, From, Subject, HTML, text parts, attachments, etc. Mailgun will build a MIME representation of the message and send it. In order to send you must provide one of the following parameters: &apos;text&apos;, &apos;html&apos;, &apos;amp-html&apos; or &apos;template&apos;. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total&quot;
+        /// Pass the components of the messages such as To, From, Subject, HTML, text parts, attachments, etc. Mailgun will build a MIME representation of the message and send it. In order to send you must provide one of the following parameters: &apos;text&apos;, &apos;html&apos;, &apos;amp-html&apos; or &apos;template&apos;. Important: Send options (parameters starting with o:, h:, v:, or t:) are limited to 16KB total
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

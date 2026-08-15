@@ -103,7 +103,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
             /// <summary>Set limit for the list length returned. Defaults to 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>&quot;Could be either: first, last, next or prev&quot;</summary>
+            /// <summary>Could be either: first, last, next or prev</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page")]

@@ -47,9 +47,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
         {
         }
         /// <summary>
-        /// &quot;Delete account-level webhooks for the authenticated account. You can either delete all webhooks by setting all=true, or specify specific webhook IDs to delete via webhook_ids. If both are provided, the specific webhook_ids will be deleted. Note: Webhook changes can take up to 10 minutes to become effective due to caching.&quot;
+        /// Delete account-level webhooks for the authenticated account. You can either delete all webhooks by setting all=true, or specify specific webhook IDs to delete via webhook_ids. If both are provided, the specific webhook_ids will be deleted. Note: Webhook changes can take up to 10 minutes to become effective due to caching.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 400 status code</exception>
@@ -57,11 +56,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -71,7 +70,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
                 { "403", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve all account-level webhooks or filter by specific webhook IDs. Returns webhook details including associated event types.
@@ -97,7 +96,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAccountLevelWebhooksResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAccountLevelWebhooksResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Create account-level webhook URLs to receive Mailgun&apos;s POST requests containing event information across all domains in your account. Note: Webhook changes can take up to 10 minutes to become effective due to caching.&quot;
+        /// Create account-level webhook URLs to receive Mailgun&apos;s POST requests containing event information across all domains in your account. Note: Webhook changes can take up to 10 minutes to become effective due to caching.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateAccountLevelWebhookResp"/></returns>
         /// <param name="body">The request body</param>
@@ -128,7 +127,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateAccountLevelWebhookResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateAccountLevelWebhookResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Delete account-level webhooks for the authenticated account. You can either delete all webhooks by setting all=true, or specify specific webhook IDs to delete via webhook_ids. If both are provided, the specific webhook_ids will be deleted. Note: Webhook changes can take up to 10 minutes to become effective due to caching.&quot;
+        /// Delete account-level webhooks for the authenticated account. You can either delete all webhooks by setting all=true, or specify specific webhook IDs to delete via webhook_ids. If both are provided, the specific webhook_ids will be deleted. Note: Webhook changes can take up to 10 minutes to become effective due to caching.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -166,7 +165,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Create account-level webhook URLs to receive Mailgun&apos;s POST requests containing event information across all domains in your account. Note: Webhook changes can take up to 10 minutes to become effective due to caching.&quot;
+        /// Create account-level webhook URLs to receive Mailgun&apos;s POST requests containing event information across all domains in your account. Note: Webhook changes can take up to 10 minutes to become effective due to caching.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -197,7 +196,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Webhooks
             return new global::Soenneker.Mailgun.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Delete account-level webhooks for the authenticated account. You can either delete all webhooks by setting all=true, or specify specific webhook IDs to delete via webhook_ids. If both are provided, the specific webhook_ids will be deleted. Note: Webhook changes can take up to 10 minutes to become effective due to caching.&quot;
+        /// Delete account-level webhooks for the authenticated account. You can either delete all webhooks by setting all=true, or specify specific webhook IDs to delete via webhook_ids. If both are provided, the specific webhook_ids will be deleted. Note: Webhook changes can take up to 10 minutes to become effective due to caching.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WebhooksRequestBuilderDeleteQueryParameters 

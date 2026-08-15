@@ -11,6 +11,7 @@ using Soenneker.Mailgun.OpenApiClient.V3.Ips;
 using Soenneker.Mailgun.OpenApiClient.V3.Item;
 using Soenneker.Mailgun.OpenApiClient.V3.Lists;
 using Soenneker.Mailgun.OpenApiClient.V3.Routes;
+using Soenneker.Mailgun.OpenApiClient.V3.Stats;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -63,16 +64,21 @@ namespace Soenneker.Mailgun.OpenApiClient.V3
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Routes.RoutesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The stats property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Stats.StatsRequestBuilder Stats
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Stats.StatsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.item collection</summary>
         /// <param name="position">Domain name used to send the message</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.WithDomainNameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.WithDomainNameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.DomainNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Item.DomainNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("domainName", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.WithDomainNameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("domainName%2Did", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.DomainNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

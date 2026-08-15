@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Envelopes
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\envelopes
+    /// Builds and executes requests for operations under \v3\{domainName-id}\envelopes
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EnvelopesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Envelopes
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnvelopesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/envelopes", pathParameters)
+        public EnvelopesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/envelopes", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Envelopes
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnvelopesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/envelopes", rawUrl)
+        public EnvelopesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/envelopes", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Deletes all scheduled and undelivered mail from the domain queue.  This endpoint must be called on the same storage API host as the mail&apos;s generated storage URL.  e.g. https://storage-us-east4.api.mailgun.net/v3/example.com/envelopesThe storage hosts are: `storage-us-east4.api.mailgun.net`, `storage-us-west1.api.mailgun.net`, and `storage-europe-west1.api.mailgun.net`.&quot;
+        /// Deletes all scheduled and undelivered mail from the domain queue.  This endpoint must be called on the same storage API host as the mail&apos;s generated storage URL.  e.g. https://storage-us-east4.api.mailgun.net/v3/example.com/envelopesThe storage hosts are: `storage-us-east4.api.mailgun.net`, `storage-us-west1.api.mailgun.net`, and `storage-europe-west1.api.mailgun.net`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Envelopes
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Deletes all scheduled and undelivered mail from the domain queue.  This endpoint must be called on the same storage API host as the mail&apos;s generated storage URL.  e.g. https://storage-us-east4.api.mailgun.net/v3/example.com/envelopesThe storage hosts are: `storage-us-east4.api.mailgun.net`, `storage-us-west1.api.mailgun.net`, and `storage-europe-west1.api.mailgun.net`.&quot;
+        /// Deletes all scheduled and undelivered mail from the domain queue.  This endpoint must be called on the same storage API host as the mail&apos;s generated storage URL.  e.g. https://storage-us-east4.api.mailgun.net/v3/example.com/envelopesThe storage hosts are: `storage-us-east4.api.mailgun.net`, `storage-us-west1.api.mailgun.net`, and `storage-europe-west1.api.mailgun.net`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

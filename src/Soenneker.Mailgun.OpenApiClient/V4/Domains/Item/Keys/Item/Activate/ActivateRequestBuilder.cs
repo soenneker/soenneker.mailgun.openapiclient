@@ -34,7 +34,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Keys.Item.Activate
         {
         }
         /// <summary>
-        /// &quot;Activate a key to be used to DKIM sign emails with. Note: dns records must be valid for a domain key to be activated&quot;
+        /// Activate a key to be used to DKIM sign emails with. Note: dns records must be valid for a domain key to be activated
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainKeyResp"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Keys.Item.Activate
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainKeyResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainKeyResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Activate a key to be used to DKIM sign emails with. Note: dns records must be valid for a domain key to be activated&quot;
+        /// Activate a key to be used to DKIM sign emails with. Note: dns records must be valid for a domain key to be activated
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

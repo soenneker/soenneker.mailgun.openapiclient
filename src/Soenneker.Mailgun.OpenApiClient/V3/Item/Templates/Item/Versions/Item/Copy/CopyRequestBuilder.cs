@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.Copy
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\templates\{templateName}\versions\{versionName}\copy
+    /// Builds and executes requests for operations under \v3\{domainName-id}\templates\{templateName}\versions\{versionName}\copy
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CopyRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.C
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CopyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions/{versionName}/copy", pathParameters)
+        public CopyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}/versions/{versionName}/copy", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.Versions.Item.C
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CopyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}/versions/{versionName}/copy", rawUrl)
+        public CopyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}/versions/{versionName}/copy", rawUrl)
         {
         }
     }

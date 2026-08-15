@@ -9,9 +9,11 @@ using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dkim_authority;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dkim_selector;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Ips;
+using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Limits;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Messages;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Pool;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Sending_queues;
+using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tag;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking;
 using Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Webhooks;
 using System.Collections.Generic;
@@ -52,6 +54,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Ips.IpsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The limits property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Limits.LimitsRequestBuilder Limits
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Limits.LimitsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The messages property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Messages.MessagesRequestBuilder Messages
         {
@@ -66,6 +73,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item
         public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Sending_queues.Sending_queuesRequestBuilder Sending_queues
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Sending_queues.Sending_queuesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tag property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tag.TagRequestBuilder Tag
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tag.TagRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tracking property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Tracking.TrackingRequestBuilder Tracking

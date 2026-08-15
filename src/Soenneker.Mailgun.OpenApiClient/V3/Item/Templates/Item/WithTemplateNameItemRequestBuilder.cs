@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\templates\{templateName}
+    /// Builds and executes requests for operations under \v3\{domainName-id}\templates\{templateName}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithTemplateNameItemRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplateNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}{?active*}", pathParameters)
+        public WithTemplateNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}{?active*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,11 +48,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplateNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}{?active*}", rawUrl)
+        public WithTemplateNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}{?active*}", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Delete the template specified in the url. NOTE: This method deletes all versions of the specified template.&quot;
+        /// Delete the template specified in the url. NOTE: This method deletes all versions of the specified template.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -79,7 +79,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Returns metadata information about the stored template specified in the url. If the active flag is provided, the content of the active version of the template is returned. If the version_name flag is provided, version information will be included as well. By default: the `version` field is not provided. To see available versions other than the active version, use the `/versions` API instead&quot;
+        /// Returns metadata information about the stored template specified in the url. If the active flag is provided, the content of the active version of the template is returned. If the version_name flag is provided, version information will be included as well. By default: the `version` field is not provided. To see available versions other than the active version, use the `/versions` API instead
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetTemplateOrVersionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -135,7 +135,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Delete the template specified in the url. NOTE: This method deletes all versions of the specified template.&quot;
+        /// Delete the template specified in the url. NOTE: This method deletes all versions of the specified template.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Returns metadata information about the stored template specified in the url. If the active flag is provided, the content of the active version of the template is returned. If the version_name flag is provided, version information will be included as well. By default: the `version` field is not provided. To see available versions other than the active version, use the `/versions` API instead&quot;
+        /// Returns metadata information about the stored template specified in the url. If the active flag is provided, the content of the active version of the template is returned. If the version_name flag is provided, version information will be included as well. By default: the `version` field is not provided. To see available versions other than the active version, use the `/versions` API instead
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -204,7 +204,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
             return new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item.WithTemplateNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Returns metadata information about the stored template specified in the url. If the active flag is provided, the content of the active version of the template is returned. If the version_name flag is provided, version information will be included as well. By default: the `version` field is not provided. To see available versions other than the active version, use the `/versions` API instead&quot;
+        /// Returns metadata information about the stored template specified in the url. If the active flag is provided, the content of the active version of the template is returned. If the version_name flag is provided, version information will be included as well. By default: the `version` field is not provided. To see available versions other than the active version, use the `/versions` API instead
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTemplateNameItemRequestBuilderGetQueryParameters 

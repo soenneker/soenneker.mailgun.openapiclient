@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints.Import
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName}\complaints\import
+    /// Builds and executes requests for operations under \v3\{domainName-id}\complaints\import
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImportRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints.Import
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/complaints/import", pathParameters)
+        public ImportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/complaints/import", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints.Import
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ImportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/complaints/import", rawUrl)
+        public ImportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/complaints/import", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Import a CSV file containing a list of addresses to add to the complaint list. The CSV file must be 25MB or under and can contain the following column headers: address, created_at. address is a valid email address (required). created_at is timestamp of complaint event in RFC2822 format (optional, default: current time)&quot;
+        /// Import a CSV file containing a list of addresses to add to the complaint list. The CSV file must be 25MB or under and can contain the following column headers: address, created_at. address is a valid email address (required). created_at is timestamp of complaint event in RFC2822 format (optional, default: current time)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Complaints.Import
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Import a CSV file containing a list of addresses to add to the complaint list. The CSV file must be 25MB or under and can contain the following column headers: address, created_at. address is a valid email address (required). created_at is timestamp of complaint event in RFC2822 format (optional, default: current time)&quot;
+        /// Import a CSV file containing a list of addresses to add to the complaint list. The CSV file must be 25MB or under and can contain the following column headers: address, created_at. address is a valid email address (required). created_at is timestamp of complaint event in RFC2822 format (optional, default: current time)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

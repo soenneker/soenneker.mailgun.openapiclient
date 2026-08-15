@@ -52,7 +52,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Templates.Item
         {
         }
         /// <summary>
-        /// &quot;Delete the account-level template specified in the url NOTE: This method deletes all versions of the specified template.&quot;
+        /// Delete the account-level template specified in the url NOTE: This method deletes all versions of the specified template.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -135,7 +135,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Templates.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Delete the account-level template specified in the url NOTE: This method deletes all versions of the specified template.&quot;
+        /// Delete the account-level template specified in the url NOTE: This method deletes all versions of the specified template.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

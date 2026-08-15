@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Duration { get; set; }
 #endif
-        /// <summary>&quot;An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format&quot;</summary>
+        /// <summary>An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestEnd? End { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution Resolution { get; set; }
 #endif
-        /// <summary>&quot;A start timestamp (default: 7 days before current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format&quot;</summary>
+        /// <summary>A start timestamp (default: 7 days before current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestStart? Start { get; set; }
