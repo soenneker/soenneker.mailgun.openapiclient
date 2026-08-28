@@ -150,7 +150,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Tag { get; set; }
 #endif
-        /// <summary>Concatenated tags</summary>
+        /// <summary>Concatenated tags, e.g. &apos;tag1, tag2&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Tags { get; set; }

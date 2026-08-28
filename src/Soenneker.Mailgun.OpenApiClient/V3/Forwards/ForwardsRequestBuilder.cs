@@ -35,7 +35,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForwardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards{?domain%2Ename*}", pathParameters)
+        public ForwardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards{?domain%2Ename*,search*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,16 +43,18 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForwardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards{?domain%2Ename*}", rawUrl)
+        public ForwardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards{?domain%2Ename*,search*}", rawUrl)
         {
         }
         /// <summary>
-        /// By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain by providing the &apos;domain.name&apos; query parameter.
+        /// By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain with &apos;domain.name&apos;, or search match expressions and forwarding destinations with &apos;search&apos;. Requests with a non-empty search, including pagination, are limited to one request per second per account.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiListForwardsRulesResp"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +68,9 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiListForwardsRulesResp>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiListForwardsRulesResp.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
@@ -99,7 +103,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiForwardsRule>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiForwardsRule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain by providing the &apos;domain.name&apos; query parameter.
+        /// By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain with &apos;domain.name&apos;, or search match expressions and forwarding destinations with &apos;search&apos;. Requests with a non-empty search, including pagination, are limited to one request per second per account.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -112,7 +116,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.ForwardsRequestBuilder.ForwardsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/forwards?limit={limit}&page={page}{&domain%2Ename*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/forwards?limit={limit}&page={page}{&domain%2Ename*,search*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -146,7 +150,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
             return new global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.ForwardsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain by providing the &apos;domain.name&apos; query parameter.
+        /// By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain with &apos;domain.name&apos;, or search match expressions and forwarding destinations with &apos;search&apos;. Requests with a non-empty search, including pagination, are limited to one request per second per account.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ForwardsRequestBuilderGetQueryParameters 
@@ -173,6 +177,16 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
 #else
             [QueryParameter("page")]
             public string Page { get; set; }
+#endif
+            /// <summary>A case-insensitive literal substring to search for in match expressions and forwarding destinations (recipients, URLs, and store URLs)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("search")]
+            public string? Search { get; set; }
+#nullable restore
+#else
+            [QueryParameter("search")]
+            public string Search { get; set; }
 #endif
         }
         /// <summary>

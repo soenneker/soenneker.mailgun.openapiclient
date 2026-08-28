@@ -64,14 +64,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestPagination Pagination { get; set; }
 #endif
-        /// <summary>The resolution property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>Resolution of the metrics.</summary>
         public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution? Resolution { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution Resolution { get; set; }
-#endif
         /// <summary>A start timestamp (default: 7 days before current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,7 +106,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "include_subaccounts", n => { IncludeSubaccounts = n.GetBoolValue(); } },
                 { "metrics", n => { Metrics = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestPagination>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestPagination.CreateFromDiscriminatorValue); } },
-                { "resolution", n => { Resolution = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution.CreateFromDiscriminatorValue); } },
+                { "resolution", n => { Resolution = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution>(); } },
                 { "start", n => { Start = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestStart>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestStart.CreateFromDiscriminatorValue); } },
             };
         }
@@ -130,7 +124,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteBoolValue("include_subaccounts", IncludeSubaccounts);
             writer.WriteCollectionOfPrimitiveValues<string>("metrics", Metrics);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestPagination>("pagination", Pagination);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution>("resolution", Resolution);
+            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution>("resolution", Resolution);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationInternalApiMetricsRequestStart>("start", Start);
             writer.WriteAdditionalData(AdditionalData);
         }

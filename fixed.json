@@ -2417,8 +2417,8 @@
                       "message": "Domain tracking settings have been updated",
                       "unsubscribe": {
                         "active": true,
-                        "html_footer": "\u003Cbr\u003E\n\u003Cp\u003E\u003Ca href=\u0022%unsubscribe_url%\u0022\u003Eunsubscribe\u003C/a\u003E\u003C/p\u003E\n",
-                        "text_footer": "To unsubscribe click: \u003C%unsubscribe_url%\u003E\n\n"
+                        "html_footer": "\n\u003Cbr\u003E\n\u003Cp\u003E\u003Ca href=\u0022%unsubscribe_url%\u0022\u003Eunsubscribe\u003C/a\u003E\u003C/p\u003E\n",
+                        "text_footer": "\n\nTo unsubscribe click: \u003C%unsubscribe_url%\u003E\n\n"
                       }
                     }
                   }
@@ -21407,470 +21407,6 @@
         ]
       }
     },
-    "/v1/bounce-classification/stats": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List statistics, ordered by total bounces",
-        "description": "Deprecated: use POST /v2/bounce-classification/metrics instead",
-        "operationId": "GetV1BounceClassificationStats",
-        "parameters": [
-          {
-            "name": "group",
-            "in": "query",
-            "description": "Group response by fields: subaccount.id, domain.name, entity-id, rule-id",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Limits the number of items returned in a response",
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "include_subaccounts",
-            "in": "query",
-            "description": "Include subaccounts",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A 200 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListStatsResp"
-                },
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "items": [
-                        {
-                          "subaccount": {
-                            "id": "subaccount_id"
-                          },
-                          "domain": {
-                            "name": "example.com"
-                          },
-                          "rule-id": "55ff",
-                          "entity-id": "spamhaus",
-                          "short-explanation": "You\u0027re listed on Spamhaus!",
-                          "bounced": {
-                            "total": 4
-                          }
-                        }
-                      ],
-                      "_duration": "0s"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/v1/bounce-classification/domains": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List domains statistic per account",
-        "description": "Deprecated: use POST /v2/bounce-classification/metrics",
-        "operationId": "GetV1BounceClassificationDomains",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Limits the number of items returned in a response",
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "description": "Skips N items in a response",
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "query",
-            "in": "query",
-            "description": "Query filter, e.g.: \u0027domain.name:example.com\u0027",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "include_subaccounts",
-            "in": "query",
-            "description": "Include subaccounts",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A 200 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListAccountStatsResp"
-                },
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "items": [
-                        {
-                          "domain": {
-                            "name": "mailgun.net"
-                          },
-                          "bounced": {
-                            "total": 4
-                          }
-                        }
-                      ],
-                      "total": 1
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/v1/bounce-classification/domains/{domain}/entities": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List statistic per domain",
-        "description": "Deprecated: use POST /v2/bounce-classification/metrics",
-        "operationId": "GetV1BounceClassificationDomainsDomainEntities",
-        "parameters": [
-          {
-            "name": "domain",
-            "in": "path",
-            "description": "The sender domain name",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "include_subaccounts",
-            "in": "query",
-            "description": "Include subaccounts",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A 200 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListDomainStatsResp"
-                },
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "items": [
-                        {
-                          "entity-id": "gmail",
-                          "entity-name": "Gmail",
-                          "bounced": {
-                            "total": 1
-                          }
-                        },
-                        {
-                          "entity-id": "hotmail",
-                          "entity-name": "Microsoft (Hotmail)",
-                          "bounced": {
-                            "total": 3
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/v1/bounce-classification/domains/{domain}/entities/{entityId}/rules": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List statistic per entity",
-        "description": "Deprecated: use POST /v2/bounce-classification/metrics",
-        "operationId": "GetV1BounceClassificationDomainsDomainEntitiesEntityIdRules",
-        "parameters": [
-          {
-            "name": "domain",
-            "in": "path",
-            "description": "The sender domain name",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "entityId",
-            "in": "path",
-            "description": "The entity ID(Email Service Entity or Spam Filter / BL)",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "include_subaccounts",
-            "in": "query",
-            "description": "Include subaccounts",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A 200 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListEntityStatsResp"
-                },
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "items": [
-                        {
-                          "rule-id": "55ff",
-                          "category": "ESPBLOCK",
-                          "severity": "PERMANENT",
-                          "sample-text": "5.4.1 recipient address rejected: access denied.",
-                          "explanation": "Access denied",
-                          "bounced": {
-                            "total": 3
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "A 403 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/v1/bounce-classification/domains/{domain}/events": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List Bounce Logs",
-        "description": "Deprecated: use POST /v1/analytics/logs - https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/logs",
-        "operationId": "GetV1BounceClassificationDomainsDomainEvents",
-        "parameters": [
-          {
-            "name": "domain",
-            "in": "path",
-            "description": "The sender domain name",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "rule-id",
-            "in": "query",
-            "description": "Optional if \u0027page\u0027 is passed",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "entity-id",
-            "in": "query",
-            "description": "The entity ID(Email Service Entity or Spam Filter / BL)",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sort field and order. Default is \u0027@timestamp:asc\u0027",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Encoded paging information, provided via \u0027next\u0027, \u0027previous\u0027 links",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Limits the number of items returned in a response",
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "403": {
-            "description": "A 403 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
-                }
-              }
-            }
-          },
-          "410": {
-            "description": "A 410 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/v1/bounce-classification/config/entities": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List entities",
-        "description": "Deprecated: use POST /v2/bounce-classification/metrics",
-        "operationId": "GetV1BounceClassificationConfigEntities",
-        "responses": {
-          "200": {
-            "description": "A 200 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetV1BounceClassificationConfigEntities200Response"
-                },
-                "examples": {
-                  "Example": {}
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/v1/bounce-classification/config/rules": {
-      "get": {
-        "tags": [
-          "Bounce Classification"
-        ],
-        "summary": "List rules",
-        "description": "Deprecated: use GET /v2/bounce-classification/config/groups/{group-id}",
-        "operationId": "GetV1BounceClassificationConfigRules",
-        "responses": {
-          "200": {
-            "description": "A 200 response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetV1BounceClassificationConfigRules200Response"
-                },
-                "examples": {
-                  "Example": {}
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true,
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
     "/v2/bounce-classification/metrics": {
       "post": {
         "tags": [
@@ -22088,7 +21624,7 @@
           "Forwards"
         ],
         "summary": "Update a single forward rule by ID",
-        "description": "All parameters are optional, only the provided fields will be updated",
+        "description": "All parameters are optional; only the provided fields will be updated. Submit an explicit empty value for \u0060forward.recipient\u0060 or \u0060forward.url\u0060 to clear that destination type. A rule must retain at least one forwarding action.",
         "operationId": "PutV3ForwardsId",
         "parameters": [
           {
@@ -22103,8 +21639,7 @@
           {
             "name": "match",
             "in": "query",
-            "description": "A wildcard expression which matches the recipient address to forward. This is a insensitive match address",
-            "required": true,
+            "description": "A wildcard expression which matches the recipient address to forward. This is an insensitive match address",
             "schema": {
               "type": "string"
             }
@@ -22112,8 +21647,7 @@
           {
             "name": "forward.url",
             "in": "query",
-            "description": "A URL to forward when the rule matches the recipient. May be repeated up to 3 times. Must be a valid URL that resolves",
-            "required": true,
+            "description": "A URL to forward when the rule matches the recipient. May be repeated up to 3 times. Must be a valid URL that resolves. Submit an explicit empty value to clear all URL destinations.",
             "schema": {
               "type": "string"
             }
@@ -22121,8 +21655,7 @@
           {
             "name": "forward.recipient",
             "in": "query",
-            "description": "A email address to forward to when the rule matches the recipient. May be repeated up to 5 times",
-            "required": true,
+            "description": "An email address to forward to when the rule matches the recipient. May be repeated up to 5 times. Submit an explicit empty value to clear all recipient destinations.",
             "schema": {
               "type": "string"
             }
@@ -22130,8 +21663,7 @@
           {
             "name": "forward.store",
             "in": "query",
-            "description": "A URL which will be used to notify you when the email arrives along with a URL you can use to retrieve the message. Must be a valid URL that resolves",
-            "required": true,
+            "description": "A URL which will be used to notify you when the email arrives along with a URL you can use to retrieve the message. Must be a valid URL that resolves. Submit an explicit empty value to clear the store destination.",
             "schema": {
               "type": "string"
             }
@@ -22305,7 +21837,7 @@
           "Forwards"
         ],
         "summary": "List forward rules",
-        "description": "By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain by providing the \u0027domain.name\u0027 query parameter.",
+        "description": "By default this endpoint lists all rules defined on the account. You can scope the list of rules by domain with \u0027domain.name\u0027, or search match expressions and forwarding destinations with \u0027search\u0027. Requests with a non-empty search, including pagination, are limited to one request per second per account.",
         "operationId": "GetV3Forwards",
         "parameters": [
           {
@@ -22330,6 +21862,14 @@
             "name": "domain.name",
             "in": "query",
             "description": "The name of the domain the rule is scoped to",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "A case-insensitive literal substring to search for in match expressions and forwarding destinations (recipients, URLs, and store URLs)",
             "schema": {
               "type": "string"
             }
@@ -22378,8 +21918,28 @@
               }
             }
           },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                }
+              }
+            }
+          },
           "401": {
             "description": "A 401 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A 429 response",
             "content": {
               "application/json": {
                 "schema": {
@@ -31884,244 +31444,6 @@
           }
         }
       },
-      "GithubComMailgunBounceClassificationEntitiesSubaccount": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesDomain": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesBouncedStat": {
-        "required": [
-          "total"
-        ],
-        "type": "object",
-        "properties": {
-          "total": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesStat": {
-        "required": [
-          "bounced"
-        ],
-        "type": "object",
-        "properties": {
-          "subaccount": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStatSubaccount"
-          },
-          "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStatDomain"
-          },
-          "rule-id": {
-            "type": "string"
-          },
-          "entity-id": {
-            "type": "string"
-          },
-          "short-explanation": {
-            "type": "string"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListStatsResp": {
-        "required": [
-          "items",
-          "_duration"
-        ],
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListStatsRespItemsItem"
-            }
-          },
-          "_duration": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesAccountStat": {
-        "required": [
-          "domain",
-          "bounced"
-        ],
-        "type": "object",
-        "properties": {
-          "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListAccountStatsResp": {
-        "required": [
-          "items"
-        ],
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListAccountStatsRespItemsItem"
-            }
-          },
-          "total": {
-            "type": [
-              "null",
-              "integer"
-            ],
-            "format": "int32"
-          },
-          "req": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListAccountStatsRespReqProperty"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesDomainStat": {
-        "required": [
-          "entity-id",
-          "entity-name",
-          "bounced"
-        ],
-        "type": "object",
-        "properties": {
-          "entity-id": {
-            "type": "string"
-          },
-          "entity-name": {
-            "type": "string"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListDomainStatsResp": {
-        "required": [
-          "items"
-        ],
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListDomainStatsRespItemsItem"
-            }
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesEntityStat": {
-        "required": [
-          "rule-id",
-          "category",
-          "severity",
-          "sample-text",
-          "explanation",
-          "bounced"
-        ],
-        "type": "object",
-        "properties": {
-          "rule-id": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "severity": {
-            "type": "string"
-          },
-          "sample-text": {
-            "type": "string"
-          },
-          "explanation": {
-            "type": "string"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListEntityStatsResp": {
-        "required": [
-          "items"
-        ],
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiListEntityStatsRespItemsItem"
-            }
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalConfigEntity": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalConfigEntities": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalConfigEntity"
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalConfigRule": {
-        "type": "object",
-        "properties": {
-          "entity_id": {
-            "type": "string"
-          },
-          "class": {
-            "type": "string"
-          },
-          "sample-text": {
-            "type": "string"
-          },
-          "explanation": {
-            "type": "string"
-          },
-          "short-explanation": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalConfigRules": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalConfigRule"
-        }
-      },
       "GithubComMailgunBounceClassificationEntitiesResolution": {
         "enum": [
           "day",
@@ -32421,7 +31743,7 @@
               "null",
               "string"
             ],
-            "description": "Concatenated tags"
+            "description": "Concatenated tags, e.g. \u0027tag1, tag2\u0027"
           },
           "tag": {
             "type": [
@@ -36112,141 +35434,6 @@
           ]
         }
       },
-      "GithubComMailgunBounceClassificationEntitiesStatSubaccount": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesSubaccount"
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesStatDomain": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListStatsRespItemsItem": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStat"
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "properties": {
-          "subaccount": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStatSubaccount"
-          },
-          "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesStatDomain"
-          },
-          "rule-id": {
-            "type": "string"
-          },
-          "entity-id": {
-            "type": "string"
-          },
-          "short-explanation": {
-            "type": "string"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListAccountStatsRespItemsItem": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesAccountStat"
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "properties": {
-          "domain": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomain"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListDomainStatsRespItemsItem": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesDomainStat"
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "properties": {
-          "entity-id": {
-            "type": "string"
-          },
-          "entity-name": {
-            "type": "string"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiListEntityStatsRespItemsItem": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesEntityStat"
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "properties": {
-          "rule-id": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "severity": {
-            "type": "string"
-          },
-          "sample-text": {
-            "type": "string"
-          },
-          "explanation": {
-            "type": "string"
-          },
-          "bounced": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesBouncedStat"
-          }
-        }
-      },
       "GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics": {
         "required": [
           "critical_bounce_count",
@@ -36327,16 +35514,31 @@
         "description": "Counts and rates"
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution": {
-        "required": [
-          "value"
+        "enum": [
+          "day",
+          "hour"
         ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
-          }
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Resolution of the metrics.",
+        "x-enumDescriptions": {
+          "day": "Day",
+          "hour": "Hour"
         },
-        "description": "\u0027resolution\u0027 from the request"
+        "x-ms-enum": {
+          "name": "GithubComMailgunBounceClassificationInternalApiMetricsResponseResolution",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "day",
+              "name": "Day"
+            },
+            {
+              "value": "hour",
+              "name": "Hour"
+            }
+          ]
+        }
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem": {
         "type": "object",
@@ -36414,7 +35616,7 @@
               "null",
               "string"
             ],
-            "description": "Concatenated tags"
+            "description": "Concatenated tags, e.g. \u0027tag1, tag2\u0027"
           },
           "tag": {
             "type": [
@@ -36472,14 +35674,30 @@
         "description": "An end timestamp (default: current time). Must be in RFC 2822 format: https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview#date-format"
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution": {
-        "required": [
-          "value"
+        "enum": [
+          "day",
+          "hour"
         ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
-          }
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Resolution of the metrics.",
+        "x-enumDescriptions": {
+          "day": "Day",
+          "hour": "Hour"
+        },
+        "x-ms-enum": {
+          "name": "GithubComMailgunBounceClassificationInternalApiMetricsRequestResolution",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "day",
+              "name": "Day"
+            },
+            {
+              "value": "hour",
+              "name": "Hour"
+            }
+          ]
         }
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestFilter": {
@@ -36875,9 +36093,6 @@
           "type": "string"
         },
         "description": "Credential username/password values (when generated by Mailgun)"
-      },
-      "GithubComMailgunBounceClassificationInternalApiListAccountStatsRespReq": {
-        "type": "object"
       },
       "GithubComMailgunUsersApiUserResponseEmailDetails": {
         "type": "object",
@@ -37550,28 +36765,6 @@
           }
         }
       },
-      "GithubComMailgunBounceClassificationEntitiesResolutionWrapper": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesResolutionWrapper2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesResolution"
-          }
-        }
-      },
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
@@ -37863,18 +37056,6 @@
           }
         }
       },
-      "GetV1BounceClassificationConfigEntities200Response": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalConfigEntity"
-        }
-      },
-      "GetV1BounceClassificationConfigRules200Response": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalConfigRule"
-        }
-      },
       "GithubComMailgunScaffoldHttpapiResponseAdditionalPropertiesProperty": {
         "type": "object"
       },
@@ -37975,9 +37156,6 @@
           "type": "string"
         },
         "description": "Credential username/password values (when generated by Mailgun)"
-      },
-      "GithubComMailgunBounceClassificationInternalApiListAccountStatsRespReqProperty": {
-        "type": "object"
       },
       "GithubComMailgunUsersApiUserResponseMetadataProperty": {
         "type": "object",

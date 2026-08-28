@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForwardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards/{id}{?domain%2Ename*}", pathParameters)
+        public ForwardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards/{id}{?domain%2Ename*,forward%2Erecipient*,forward%2Estore*,forward%2Eurl*,match*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForwardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards/{id}{?domain%2Ename*}", rawUrl)
+        public ForwardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/forwards/{id}{?domain%2Ename*,forward%2Erecipient*,forward%2Estore*,forward%2Eurl*,match*}", rawUrl)
         {
         }
         /// <summary>
@@ -88,7 +88,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiForwardsRule>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiForwardsRule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// All parameters are optional, only the provided fields will be updated
+        /// All parameters are optional; only the provided fields will be updated. Submit an explicit empty value for `forward.recipient` or `forward.url` to clear that destination type. A rule must retain at least one forwarding action.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunPathfinderHttpapiForwardsRule"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -155,7 +155,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
             return requestInfo;
         }
         /// <summary>
-        /// All parameters are optional, only the provided fields will be updated
+        /// All parameters are optional; only the provided fields will be updated. Submit an explicit empty value for `forward.recipient` or `forward.url` to clear that destination type. A rule must retain at least one forwarding action.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -168,7 +168,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item.ForwardsItemRequestBuilder.ForwardsItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/v3/forwards/{id}?forward.recipient={forward%2Erecipient}&forward.store={forward%2Estore}&forward.url={forward%2Eurl}&match={match}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -200,12 +200,12 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
 #endif
         }
         /// <summary>
-        /// All parameters are optional, only the provided fields will be updated
+        /// All parameters are optional; only the provided fields will be updated. Submit an explicit empty value for `forward.recipient` or `forward.url` to clear that destination type. A rule must retain at least one forwarding action.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ForwardsItemRequestBuilderPutQueryParameters 
         {
-            /// <summary>A email address to forward to when the rule matches the recipient. May be repeated up to 5 times</summary>
+            /// <summary>An email address to forward to when the rule matches the recipient. May be repeated up to 5 times. Submit an explicit empty value to clear all recipient destinations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("forward%2Erecipient")]
@@ -215,7 +215,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
             [QueryParameter("forward%2Erecipient")]
             public string ForwardRecipient { get; set; }
 #endif
-            /// <summary>A URL which will be used to notify you when the email arrives along with a URL you can use to retrieve the message. Must be a valid URL that resolves</summary>
+            /// <summary>A URL which will be used to notify you when the email arrives along with a URL you can use to retrieve the message. Must be a valid URL that resolves. Submit an explicit empty value to clear the store destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("forward%2Estore")]
@@ -225,7 +225,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
             [QueryParameter("forward%2Estore")]
             public string ForwardStore { get; set; }
 #endif
-            /// <summary>A URL to forward when the rule matches the recipient. May be repeated up to 3 times. Must be a valid URL that resolves</summary>
+            /// <summary>A URL to forward when the rule matches the recipient. May be repeated up to 3 times. Must be a valid URL that resolves. Submit an explicit empty value to clear all URL destinations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("forward%2Eurl")]
@@ -235,7 +235,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards.Item
             [QueryParameter("forward%2Eurl")]
             public string ForwardUrl { get; set; }
 #endif
-            /// <summary>A wildcard expression which matches the recipient address to forward. This is a insensitive match address</summary>
+            /// <summary>A wildcard expression which matches the recipient address to forward. This is an insensitive match address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("match")]
