@@ -15126,13 +15126,12 @@
             "description": "Mailing list recipients in JSON array format. Can be, either, an array of string addresses or an array of ListMemberRequest JSON objects.",
             "required": true,
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string"
                 },
                 {
-                  "type": "object",
+                  "type": "array",
                   "items": {
                     "type": "array",
                     "items": {
