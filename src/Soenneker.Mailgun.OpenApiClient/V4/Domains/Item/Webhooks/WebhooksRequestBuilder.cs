@@ -132,7 +132,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v4/domains/{authorityName%2Did}/webhooks?url={url}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v4/domains/{authorityName%2Did}/webhooks{?url*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

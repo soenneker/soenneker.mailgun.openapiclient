@@ -171,8 +171,10 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members
             /// <summary>Maximum number of records to return. Max is 100. Defaults to 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("skip")]
             public int? Skip { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Filtering list on whether the member is subscribed or not.</summary>
             [QueryParameter("subscribed")]
             public bool? Subscribed { get; set; }
