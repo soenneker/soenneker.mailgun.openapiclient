@@ -4545,7 +4545,7 @@
                   "Example": {
                     "value": {
                       "extra_dedicated_ips": {
-                        "pool_id": "6a219e7515415d72b6e47358"
+                        "pool_id": "6aa038d260889bd1b36097ed"
                       }
                     }
                   }
@@ -4598,7 +4598,7 @@
                 "Example": {
                   "value": {
                     "extra_dedicated_ips": {
-                      "pool_id": "6a219e7515415d72b6e47359"
+                      "pool_id": "6aa038d260889bd1b36097ee"
                     }
                   }
                 }
@@ -4675,6 +4675,7 @@
             "name": "ip",
             "in": "query",
             "description": "Replacement IP or special value `shared`.",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -4683,6 +4684,7 @@
             "name": "pool_id",
             "in": "query",
             "description": "Replacement DIPP id.",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -4746,6 +4748,7 @@
             "name": "ip",
             "in": "query",
             "description": "Replacement IP or special value `shared`.",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -4754,6 +4757,7 @@
             "name": "pool_id",
             "in": "query",
             "description": "Replacement DIPP id.",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -4913,6 +4917,7 @@
             "name": "subaccount_id",
             "in": "query",
             "description": "If provided, queries domains belonging to the subaccount. Must be a valid account ID",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -4921,6 +4926,7 @@
             "name": "domain",
             "in": "query",
             "description": "Regex search term to query a domain by name",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -5024,7 +5030,7 @@
                   "Example": {
                     "value": {
                       "extra_dedicated_ips": {
-                        "pool_id": "6a219e7515415d72b6e4735f"
+                        "pool_id": "6aa038d260889bd1b36097f0"
                       }
                     }
                   }
@@ -5056,7 +5062,7 @@
                 "Example": {
                   "value": {
                     "extra_dedicated_ips": {
-                      "pool_id": "6a219e7515415d72b6e47360"
+                      "pool_id": "6aa038d260889bd1b36097f1"
                     }
                   }
                 }
@@ -5114,6 +5120,7 @@
             "name": "dedicated",
             "in": "query",
             "description": "Return only dedicated IPs",
+            "required": false,
             "schema": {
               "type": "boolean"
             }
@@ -5122,6 +5129,7 @@
             "name": "enabled",
             "in": "query",
             "description": "Return only enabled IPs",
+            "required": false,
             "schema": {
               "type": "boolean"
             }
@@ -5614,6 +5622,7 @@
             "name": "limit",
             "in": "query",
             "description": "Maximum records to return",
+            "required": false,
             "schema": {
               "type": "integer",
               "maximum": 100,
@@ -5625,6 +5634,7 @@
             "name": "skip",
             "in": "query",
             "description": "The amount of returned records to skip",
+            "required": false,
             "schema": {
               "type": "integer",
               "default": 0
@@ -5634,6 +5644,7 @@
             "name": "pool_id",
             "in": "query",
             "description": "Filter IPs linked to a pool. Value can be a specific pool ID, 'any' or 'none'",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -5642,6 +5653,7 @@
             "name": "domain_id",
             "in": "query",
             "description": "Filter IPs linked to a domain. Value can be a specific domain ID, 'any' or 'none'",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -5650,6 +5662,7 @@
             "name": "subaccount_id",
             "in": "query",
             "description": "Filter IPs linked to a subaccount. Value can be a specific subaccount ID, 'any' or 'none'",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -5658,6 +5671,7 @@
             "name": "ip",
             "in": "query",
             "description": "Search for IPs containing this text (supports partial matching)",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -5666,6 +5680,7 @@
             "name": "sort_by",
             "in": "query",
             "description": "Name of the field to sort results by",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -5674,6 +5689,7 @@
             "name": "sort_order",
             "in": "query",
             "description": "Sort results 'descending' or 'ascending'",
+            "required": false,
             "schema": {
               "type": "string",
               "default": "ascending"
@@ -5788,8 +5804,9 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "poor_reputation": [
-                        "1.0.0.3"
+                      "good_reputation": [
+                        "1.0.0.1",
+                        "1.0.0.2"
                       ],
                       "new_senders": [
                         "1.0.0.4"
@@ -5824,9 +5841,8 @@
                           "name": "dynamic_new"
                         }
                       ],
-                      "good_reputation": [
-                        "1.0.0.1",
-                        "1.0.0.2"
+                      "poor_reputation": [
+                        "1.0.0.3"
                       ]
                     }
                   }
@@ -5875,11 +5891,11 @@
                         "1.0.0.1",
                         "1.0.0.2"
                       ],
-                      "poor_reputation": [
-                        "1.0.0.3"
-                      ],
                       "new_senders": [
                         "1.0.0.4"
+                      ],
+                      "poor_reputation": [
+                        "1.0.0.3"
                       ]
                     }
                   }
@@ -6157,7 +6173,7 @@
           "IP Pools"
         ],
         "summary": "Get DIPP details",
-        "description": "`is_linked` in the response indicates whether the DIPP is currently linked to any\ndomains. If it's `true`, `linked_domain` lists those domains.",
+        "description": "`is_linked` in the response indicates whether the DIPP is currently linked to any\ndomains. If it's `true`, `linked_domain` contains a truncated list (limit 100) of those domains. To retrieve\nall domains linked to a pool, please refer to the paginated [Get domains linked to DIPP endpoint](https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/ip-pools/get-v3-ip-pools--pool-id--domains).",
         "operationId": "GET-v3-ip-pools--pool-id-",
         "parameters": [
           {
@@ -6349,6 +6365,7 @@
             "name": "limit",
             "in": "query",
             "description": "The maximum number of records to return",
+            "required": false,
             "schema": {
               "type": "integer",
               "maximum": 500,
@@ -6360,8 +6377,38 @@
             "name": "page",
             "in": "query",
             "description": "Encoded page identifier retrieved from previous call",
+            "required": false,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Filter domains by name (substring match)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "description": "Field to sort by. One of: `name`, `linked_at`. Defaults to `name`",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "name"
+            }
+          },
+          {
+            "name": "sort_order",
+            "in": "query",
+            "description": "Sort direction. One of: `ascending`, `descending`. Defaults to `ascending`",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "ascending"
             }
           }
         ],
@@ -6379,11 +6426,13 @@
                       "domains": [
                         {
                           "id": "69c42eba4fac947ac7bb3406",
-                          "name": "example1.com"
+                          "name": "example1.com",
+                          "linked_at": "2024-01-15T10:00:00Z"
                         },
                         {
                           "id": "69c42eba4fac947ac7bb3407",
-                          "name": "example2.com"
+                          "name": "example2.com",
+                          "linked_at": "2024-02-20T14:30:00Z"
                         }
                       ],
                       "paging": {
@@ -6781,6 +6830,7 @@
             "name": "page",
             "in": "query",
             "description": "The page to retrieve. If not specified, the first page is returned.",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -6789,6 +6839,7 @@
             "name": "limit",
             "in": "query",
             "description": "The number of results to return per page. Defaults to 10 if not specified.",
+            "required": false,
             "schema": {
               "type": "string"
             }

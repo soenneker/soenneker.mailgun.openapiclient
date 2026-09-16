@@ -75,7 +75,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// `is_linked` in the response indicates whether the DIPP is currently linked to anydomains. If it&apos;s `true`, `linked_domain` lists those domains.
+        /// `is_linked` in the response indicates whether the DIPP is currently linked to anydomains. If it&apos;s `true`, `linked_domain` contains a truncated list (limit 100) of those domains. To retrieveall domains linked to a pool, please refer to the paginated [Get domains linked to DIPP endpoint](https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/ip-pools/get-v3-ip-pools--pool-id--domains).
         /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -132,7 +132,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item
             return requestInfo;
         }
         /// <summary>
-        /// `is_linked` in the response indicates whether the DIPP is currently linked to anydomains. If it&apos;s `true`, `linked_domain` lists those domains.
+        /// `is_linked` in the response indicates whether the DIPP is currently linked to anydomains. If it&apos;s `true`, `linked_domain` contains a truncated list (limit 100) of those domains. To retrieveall domains linked to a pool, please refer to the paginated [Get domains linked to DIPP endpoint](https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/ip-pools/get-v3-ip-pools--pool-id--domains).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

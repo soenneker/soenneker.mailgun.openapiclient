@@ -21,7 +21,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Domains
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/domains{?limit*,page*}", pathParameters)
+        public DomainsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/domains{?limit*,page*,search*,sort_by*,sort_order*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Domains
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/domains{?limit*,page*}", rawUrl)
+        public DomainsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ip_pools/{poolId}/domains{?limit*,page*,search*,sort_by*,sort_order*}", rawUrl)
         {
         }
         /// <summary>
@@ -96,6 +96,36 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Domains
 #else
             [QueryParameter("page")]
             public string Page { get; set; }
+#endif
+            /// <summary>Filter domains by name (substring match)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("search")]
+            public string? Search { get; set; }
+#nullable restore
+#else
+            [QueryParameter("search")]
+            public string Search { get; set; }
+#endif
+            /// <summary>Field to sort by. One of: `name`, `linked_at`. Defaults to `name`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("sort_by")]
+            public string? SortBy { get; set; }
+#nullable restore
+#else
+            [QueryParameter("sort_by")]
+            public string SortBy { get; set; }
+#endif
+            /// <summary>Sort direction. One of: `ascending`, `descending`. Defaults to `ascending`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("sort_order")]
+            public string? SortOrder { get; set; }
+#nullable restore
+#else
+            [QueryParameter("sort_order")]
+            public string SortOrder { get; set; }
 #endif
         }
     }

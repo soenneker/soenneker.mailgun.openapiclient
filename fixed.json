@@ -4279,7 +4279,7 @@
                   "Example": {
                     "value": {
                       "extra_dedicated_ips": {
-                        "pool_id": "6a219e7515415d72b6e47358"
+                        "pool_id": "6aa038d260889bd1b36097ed"
                       }
                     }
                   }
@@ -4332,7 +4332,7 @@
                 "Example": {
                   "value": {
                     "extra_dedicated_ips": {
-                      "pool_id": "6a219e7515415d72b6e47359"
+                      "pool_id": "6aa038d260889bd1b36097ee"
                     }
                   }
                 }
@@ -4758,7 +4758,7 @@
                   "Example": {
                     "value": {
                       "extra_dedicated_ips": {
-                        "pool_id": "6a219e7515415d72b6e4735f"
+                        "pool_id": "6aa038d260889bd1b36097f0"
                       }
                     }
                   }
@@ -4790,7 +4790,7 @@
                 "Example": {
                   "value": {
                     "extra_dedicated_ips": {
-                      "pool_id": "6a219e7515415d72b6e47360"
+                      "pool_id": "6aa038d260889bd1b36097f1"
                     }
                   }
                 }
@@ -5522,8 +5522,9 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "poor_reputation": [
-                        "1.0.0.3"
+                      "good_reputation": [
+                        "1.0.0.1",
+                        "1.0.0.2"
                       ],
                       "new_senders": [
                         "1.0.0.4"
@@ -5558,9 +5559,8 @@
                           "name": "dynamic_new"
                         }
                       ],
-                      "good_reputation": [
-                        "1.0.0.1",
-                        "1.0.0.2"
+                      "poor_reputation": [
+                        "1.0.0.3"
                       ]
                     }
                   }
@@ -5609,11 +5609,11 @@
                         "1.0.0.1",
                         "1.0.0.2"
                       ],
-                      "poor_reputation": [
-                        "1.0.0.3"
-                      ],
                       "new_senders": [
                         "1.0.0.4"
+                      ],
+                      "poor_reputation": [
+                        "1.0.0.3"
                       ]
                     }
                   }
@@ -5891,7 +5891,7 @@
           "IP Pools"
         ],
         "summary": "Get DIPP details",
-        "description": "\u0060is_linked\u0060 in the response indicates whether the DIPP is currently linked to any\ndomains. If it\u0027s \u0060true\u0060, \u0060linked_domain\u0060 lists those domains.",
+        "description": "\u0060is_linked\u0060 in the response indicates whether the DIPP is currently linked to any\ndomains. If it\u0027s \u0060true\u0060, \u0060linked_domain\u0060 contains a truncated list (limit 100) of those domains. To retrieve\nall domains linked to a pool, please refer to the paginated [Get domains linked to DIPP endpoint](https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/ip-pools/get-v3-ip-pools--pool-id--domains).",
         "operationId": "GetV3IpPoolsPoolId",
         "parameters": [
           {
@@ -6097,6 +6097,32 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Filter domains by name (substring match)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "description": "Field to sort by. One of: \u0060name\u0060, \u0060linked_at\u0060. Defaults to \u0060name\u0060",
+            "schema": {
+              "type": "string",
+              "default": "name"
+            }
+          },
+          {
+            "name": "sort_order",
+            "in": "query",
+            "description": "Sort direction. One of: \u0060ascending\u0060, \u0060descending\u0060. Defaults to \u0060ascending\u0060",
+            "schema": {
+              "type": "string",
+              "default": "ascending"
+            }
           }
         ],
         "responses": {
@@ -6113,11 +6139,13 @@
                       "domains": [
                         {
                           "id": "69c42eba4fac947ac7bb3406",
-                          "name": "example1.com"
+                          "name": "example1.com",
+                          "linked_at": "2024-01-15T10:00:00Z"
                         },
                         {
                           "id": "69c42eba4fac947ac7bb3407",
-                          "name": "example2.com"
+                          "name": "example2.com",
+                          "linked_at": "2024-02-20T14:30:00Z"
                         }
                       ],
                       "paging": {
