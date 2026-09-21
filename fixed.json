@@ -39112,5 +39112,140 @@
       "description": "Mailgun API supports viewing user entities.",
       "x-displayName": "Users"
     }
+  ],
+  "x-tagGroups": [
+    {
+      "name": "Messages",
+      "tags": [
+        "Messages"
+      ]
+    },
+    {
+      "name": "Domains",
+      "tags": [
+        "Domains",
+        "Domain Connection",
+        "Domain Keys",
+        "Domain Tracking",
+        "DKIM Security"
+      ]
+    },
+    {
+      "name": "Webhooks",
+      "tags": [
+        "Account Webhooks",
+        "Domain Webhooks"
+      ]
+    },
+    {
+      "name": "Reporting",
+      "tags": [
+        "Metrics",
+        "Logs",
+        "Bounce Classification",
+        "Tags New",
+        "Stats",
+        "Tags",
+        "Events"
+      ]
+    },
+    {
+      "name": "Send Alerts",
+      "tags": [
+        "Send Alerts",
+        "Alerts"
+      ]
+    },
+    {
+      "name": "Threshold Limits",
+      "tags": [
+        "Limits"
+      ]
+    },
+    {
+      "name": "Suppressions",
+      "tags": [
+        "Unsubscribe",
+        "Complaints",
+        "Bounces",
+        "Allowlist"
+      ]
+    },
+    {
+      "name": "Receiving",
+      "tags": [
+        "Routes",
+        "Forwards"
+      ]
+    },
+    {
+      "name": "Mailing Lists",
+      "tags": [
+        "Mailing Lists"
+      ]
+    },
+    {
+      "name": "Templates",
+      "tags": [
+        "Account Templates",
+        "Domain Templates"
+      ]
+    },
+    {
+      "name": "IP Pools",
+      "tags": [
+        "IP Pools",
+        "Dynamic IP Pools"
+      ]
+    },
+    {
+      "name": "IPs",
+      "tags": [
+        "IPs",
+        "IP Address Warmup"
+      ]
+    },
+    {
+      "name": "Subaccounts",
+      "tags": [
+        "Subaccounts"
+      ]
+    },
+    {
+      "name": "Custom Message Limit",
+      "tags": [
+        "Custom Message Limit"
+      ]
+    },
+    {
+      "name": "Account Management",
+      "tags": [
+        "Account Management"
+      ]
+    },
+    {
+      "name": "Keys",
+      "tags": [
+        "Keys"
+      ]
+    },
+    {
+      "name": "Credentials",
+      "tags": [
+        "Credentials"
+      ]
+    },
+    {
+      "name": "IP Allowlist",
+      "tags": [
+        "IP Allowlist"
+      ]
+    },
+    {
+      "name": "Users",
+      "tags": [
+        "Users"
+      ]
+    }
   ]
 }
