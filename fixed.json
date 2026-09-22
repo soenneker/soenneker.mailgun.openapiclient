@@ -22420,7 +22420,7 @@
           }
         }
       },
-      "PostV1AnalyticsMetricsNoneRequest": {
+      "StringType": {
         "type": "string"
       },
       "PostV3DomainNameMessagesMultipartFormDataRequestBody": {
@@ -32287,6 +32287,9 @@
             "description": "Status message"
           }
         }
+      },
+      "PostV1AnalyticsMetricsNoneRequest": {
+        "type": "string"
       },
       "PostV1AnalyticsUsageMetricsNoneRequest": {
         "type": "string"
