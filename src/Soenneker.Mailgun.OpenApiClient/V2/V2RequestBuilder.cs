@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Mailgun.OpenApiClient.V2.BounceClassification;
 using Soenneker.Mailgun.OpenApiClient.V2.Ip_whitelist;
+using Soenneker.Mailgun.OpenApiClient.V2.Thresholds;
 using Soenneker.Mailgun.OpenApiClient.V2.X509;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V2
         public global::Soenneker.Mailgun.OpenApiClient.V2.Ip_whitelist.Ip_whitelistRequestBuilder Ip_whitelist
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V2.Ip_whitelist.Ip_whitelistRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The thresholds property</summary>
+        public global::Soenneker.Mailgun.OpenApiClient.V2.Thresholds.ThresholdsRequestBuilder Thresholds
+        {
+            get => new global::Soenneker.Mailgun.OpenApiClient.V2.Thresholds.ThresholdsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The x509 property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V2.X509.X509RequestBuilder X509

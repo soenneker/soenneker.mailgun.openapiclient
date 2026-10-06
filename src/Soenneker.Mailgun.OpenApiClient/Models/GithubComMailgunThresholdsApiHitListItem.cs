@@ -84,6 +84,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public bool? Triggered { get; set; }
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
+        /// <summary>The warning_level property</summary>
+        public int? WarningLevel { get; set; }
+        /// <summary>The warning_percent property</summary>
+        public float? WarningPercent { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiHitListItem"/> and sets the default values.
         /// </summary>
@@ -123,6 +127,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "subaccount_id", n => { SubaccountId = n.GetStringValue(); } },
                 { "triggered", n => { Triggered = n.GetBoolValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
+                { "warning_level", n => { WarningLevel = n.GetIntValue(); } },
+                { "warning_percent", n => { WarningPercent = n.GetFloatValue(); } },
             };
         }
         /// <summary>
@@ -146,6 +152,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("subaccount_id", SubaccountId);
             writer.WriteBoolValue("triggered", Triggered);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
+            writer.WriteIntValue("warning_level", WarningLevel);
+            writer.WriteFloatValue("warning_percent", WarningPercent);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

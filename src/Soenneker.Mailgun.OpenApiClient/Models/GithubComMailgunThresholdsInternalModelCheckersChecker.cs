@@ -9,10 +9,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GithubComMailgunThresholdsApiThresholdLimitItem : IAdditionalDataHolder, IParsable
+    public partial class GithubComMailgunThresholdsInternalModelCheckersChecker : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The group this account belongs to.</summary>
+        /// <summary>The account_group property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountGroup { get; set; }
@@ -22,19 +22,25 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Metric Comparator</summary>
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemComparator? Comparator { get; set; }
-        /// <summary>Timestamp of when the limit was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The metric&apos;s current value for this account, as of this request. Omitted if it could not be fetched.</summary>
+        /// <summary>The alert_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrentCount { get; set; }
+        public List<string>? AlertChannels { get; set; }
 #nullable restore
 #else
-        public string CurrentCount { get; set; }
+        public List<string> AlertChannels { get; set; }
 #endif
-        /// <summary>A description of what the limit does.</summary>
+        /// <summary>The comparator property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Comparator { get; set; }
+#nullable restore
+#else
+        public string Comparator { get; set; }
+#endif
+        /// <summary>The created_at property</summary>
+        public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -42,17 +48,23 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Dimension</summary>
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemDimension? Dimension { get; set; }
-        /// <summary>A list of filters to apply to the limit.</summary>
+        /// <summary>The dimension property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>? Filters { get; set; }
+        public string? Dimension { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter> Filters { get; set; }
+        public string Dimension { get; set; }
 #endif
-        /// <summary>The unique identifier for the limit.</summary>
+        /// <summary>The filters property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersCheckFilter>? Filters { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersCheckFilter> Filters { get; set; }
+#endif
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -60,9 +72,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Timestamp of when the limit was last checked.</summary>
+        /// <summary>The last_checked property</summary>
         public DateTimeOffset? LastChecked { get; set; }
-        /// <summary>The value of the limit.</summary>
+        /// <summary>The limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Limit { get; set; }
@@ -70,9 +82,15 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Limit { get; set; }
 #endif
-        /// <summary>Limit Metric</summary>
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemMetric? Metric { get; set; }
-        /// <summary>A user-friendly name for the limit.</summary>
+        /// <summary>The metric property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metric { get; set; }
+#nullable restore
+#else
+        public string Metric { get; set; }
+#endif
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -80,7 +98,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The parent account ID.</summary>
+        /// <summary>The next_check property</summary>
+        public DateTimeOffset? NextCheck { get; set; }
+        /// <summary>The parent_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentAccountId { get; set; }
@@ -88,7 +108,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string ParentAccountId { get; set; }
 #endif
-        /// <summary>The time period for the metric aggregation in the format of &apos;1h&apos; &apos;1d&apos;.</summary>
+        /// <summary>The period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Period { get; set; }
@@ -96,7 +116,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string Period { get; set; }
 #endif
-        /// <summary>The subaccount ID this limit belongs to.</summary>
+        /// <summary>The subaccount_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubaccountId { get; set; }
@@ -104,24 +124,48 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string SubaccountId { get; set; }
 #endif
-        /// <summary>Timestamp of when the limit was last updated.</summary>
+        /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
+        /// <summary>The warning_perc_one property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WarningPercOne { get; set; }
+#nullable restore
+#else
+        public string WarningPercOne { get; set; }
+#endif
+        /// <summary>The warning_perc_two property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WarningPercTwo { get; set; }
+#nullable restore
+#else
+        public string WarningPercTwo { get; set; }
+#endif
+        /// <summary>The watch_interval property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WatchInterval { get; set; }
+#nullable restore
+#else
+        public string WatchInterval { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersChecker"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunThresholdsApiThresholdLimitItem()
+        public GithubComMailgunThresholdsInternalModelCheckersChecker()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersChecker"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersChecker CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItem();
+            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersChecker();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,21 +176,25 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_group", n => { AccountGroup = n.GetStringValue(); } },
-                { "comparator", n => { Comparator = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemComparator>(); } },
+                { "alert_channels", n => { AlertChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "comparator", n => { Comparator = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "current_count", n => { CurrentCount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "dimension", n => { Dimension = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemDimension>(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dimension", n => { Dimension = n.GetStringValue(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersCheckFilter>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersCheckFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last_checked", n => { LastChecked = n.GetDateTimeOffsetValue(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "metric", n => { Metric = n.GetEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemMetric>(); } },
+                { "metric", n => { Metric = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "next_check", n => { NextCheck = n.GetDateTimeOffsetValue(); } },
                 { "parent_account_id", n => { ParentAccountId = n.GetStringValue(); } },
                 { "period", n => { Period = n.GetStringValue(); } },
                 { "subaccount_id", n => { SubaccountId = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
+                { "warning_perc_one", n => { WarningPercOne = n.GetStringValue(); } },
+                { "warning_perc_two", n => { WarningPercTwo = n.GetStringValue(); } },
+                { "watch_interval", n => { WatchInterval = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -157,21 +205,25 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_group", AccountGroup);
-            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemComparator>("comparator", Comparator);
+            writer.WriteCollectionOfPrimitiveValues<string>("alert_channels", AlertChannels);
+            writer.WriteStringValue("comparator", Comparator);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteStringValue("current_count", CurrentCount);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemDimension>("dimension", Dimension);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiFilter>("filters", Filters);
+            writer.WriteStringValue("dimension", Dimension);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsInternalModelCheckersCheckFilter>("filters", Filters);
             writer.WriteStringValue("id", Id);
             writer.WriteDateTimeOffsetValue("last_checked", LastChecked);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteEnumValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiThresholdLimitItemMetric>("metric", Metric);
+            writer.WriteStringValue("metric", Metric);
             writer.WriteStringValue("name", Name);
+            writer.WriteDateTimeOffsetValue("next_check", NextCheck);
             writer.WriteStringValue("parent_account_id", ParentAccountId);
             writer.WriteStringValue("period", Period);
             writer.WriteStringValue("subaccount_id", SubaccountId);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
+            writer.WriteStringValue("warning_perc_one", WarningPercOne);
+            writer.WriteStringValue("warning_perc_two", WarningPercTwo);
+            writer.WriteStringValue("watch_interval", WatchInterval);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

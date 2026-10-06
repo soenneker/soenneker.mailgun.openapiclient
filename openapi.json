@@ -10877,40 +10877,40 @@
                     "value": {
                       "items": [
                         {
-                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                          "parent_account_id": "12345",
-                          "subaccount_id": "67890",
-                          "name": "hard bounce rate",
                           "created_at": "2026-02-01T10:30:00Z",
-                          "updated_at": "2026-02-03T14:15:00Z",
                           "last_checked": "2026-02-04T16:00:00Z",
-                          "alert_channels": [
-                            "email",
-                            "webhook",
-                            "slack"
-                          ],
+                          "updated_at": "2026-02-03T14:15:00Z",
+                          "name": "hard bounce rate",
+                          "subaccount_id": "67890",
+                          "parent_account_id": "12345",
+                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
                           "metric": "hard_bounce_rate",
                           "comparator": "<",
                           "limit": ".99",
                           "dimension": "subaccount",
-                          "period": "1h"
+                          "period": "1h",
+                          "alert_channels": [
+                            "email",
+                            "webhook",
+                            "slack"
+                          ]
                         },
                         {
-                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
-                          "parent_account_id": "12345",
-                          "subaccount_id": "67890",
-                          "name": "complaint rate",
                           "created_at": "2026-02-01T10:30:00Z",
-                          "updated_at": "2026-02-03T14:15:00Z",
                           "last_checked": "2026-02-01T10:30:00Z",
-                          "alert_channels": [
-                            "email"
-                          ],
+                          "updated_at": "2026-02-03T14:15:00Z",
+                          "name": "complaint rate",
+                          "subaccount_id": "67890",
+                          "parent_account_id": "12345",
+                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
                           "metric": "complained_rate",
                           "comparator": ">",
                           "limit": ".01",
                           "dimension": "subaccount",
-                          "period": "1h"
+                          "period": "1h",
+                          "alert_channels": [
+                            "email"
+                          ]
                         }
                       ],
                       "total": 2
@@ -10957,12 +10957,12 @@
                     "comparator": "<",
                     "limit": ".99",
                     "dimension": "subaccount",
+                    "period": "1h",
                     "alert_channels": [
                       "email",
                       "webhook",
                       "slack"
-                    ],
-                    "period": "1h"
+                    ]
                   }
                 }
               }
@@ -10981,23 +10981,23 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                      "parent_account_id": "12345",
-                      "subaccount_id": "67890",
-                      "name": "delivery rate",
                       "created_at": "2026-02-01T10:30:00Z",
-                      "updated_at": "2026-02-01T10:30:00Z",
                       "last_checked": "2026-02-01T10:30:00Z",
-                      "alert_channels": [
-                        "email",
-                        "webhook",
-                        "slack"
-                      ],
+                      "updated_at": "2026-02-01T10:30:00Z",
+                      "name": "delivery rate",
+                      "subaccount_id": "67890",
+                      "parent_account_id": "12345",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
                       "metric": "delivered_rate",
                       "comparator": "<",
                       "limit": ".99",
                       "dimension": "subaccount",
-                      "period": "1h"
+                      "period": "1h",
+                      "alert_channels": [
+                        "email",
+                        "webhook",
+                        "slack"
+                      ]
                     }
                   }
                 }
@@ -11051,23 +11051,23 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                      "parent_account_id": "12345",
-                      "subaccount_id": "67890",
-                      "name": "delivery rate",
                       "created_at": "2026-02-01T10:30:00Z",
-                      "updated_at": "2026-02-03T14:15:00Z",
                       "last_checked": "2026-02-04T16:00:00Z",
-                      "alert_channels": [
-                        "email",
-                        "webhook",
-                        "slack"
-                      ],
+                      "updated_at": "2026-02-03T14:15:00Z",
+                      "name": "delivery rate",
+                      "subaccount_id": "67890",
+                      "parent_account_id": "12345",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
                       "metric": "delivered_rate",
                       "comparator": "<",
                       "limit": ".99",
                       "dimension": "subaccount",
-                      "period": "1h"
+                      "period": "1h",
+                      "alert_channels": [
+                        "email",
+                        "webhook",
+                        "slack"
+                      ]
                     }
                   }
                 }
@@ -11143,12 +11143,12 @@
                     "comparator": "<",
                     "limit": ".98",
                     "dimension": "subaccount",
+                    "period": "1h",
                     "alert_channels": [
                       "email",
                       "webhook",
                       "slack"
-                    ],
-                    "period": "1h"
+                    ]
                   }
                 }
               }
@@ -11290,13 +11290,13 @@
                     "value": {
                       "items": [
                         {
-                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                          "parent_account_id": "12345",
-                          "subaccount_id": "67890",
-                          "name": "email preview",
                           "created_at": "2026-02-01T10:30:00Z",
-                          "updated_at": "2026-02-03T14:15:00Z",
                           "last_checked": "2026-02-04T16:00:00Z",
+                          "updated_at": "2026-02-03T14:15:00Z",
+                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                          "subaccount_id": "67890",
+                          "parent_account_id": "12345",
+                          "name": "email preview",
                           "metric": "email_preview_success_count",
                           "comparator": ">=",
                           "limit": "2100",
@@ -11304,13 +11304,13 @@
                           "period": "1M"
                         },
                         {
-                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
-                          "parent_account_id": "12345",
-                          "subaccount_id": "67890",
-                          "name": "email preview strict",
                           "created_at": "2026-02-01T10:30:00Z",
-                          "updated_at": "2026-02-03T14:15:00Z",
                           "last_checked": "2026-02-04T16:00:00Z",
+                          "updated_at": "2026-02-03T14:15:00Z",
+                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
+                          "subaccount_id": "67890",
+                          "parent_account_id": "12345",
+                          "name": "email preview strict",
                           "metric": "email_preview_success_count",
                           "comparator": ">=",
                           "limit": "1000",
@@ -11381,13 +11381,13 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                      "parent_account_id": "12345",
-                      "subaccount_id": "67890",
-                      "name": "email preview",
                       "created_at": "2026-02-01T10:30:00Z",
-                      "updated_at": "0001-01-01T00:00:00Z",
                       "last_checked": "0001-01-01T00:00:00Z",
+                      "updated_at": "0001-01-01T00:00:00Z",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "subaccount_id": "67890",
+                      "parent_account_id": "12345",
+                      "name": "email preview",
                       "metric": "email_preview_success_count",
                       "comparator": ">=",
                       "limit": "2100",
@@ -11446,13 +11446,13 @@
                 "examples": {
                   "Example": {
                     "value": {
-                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                      "parent_account_id": "12345",
-                      "subaccount_id": "67890",
-                      "name": "email preview",
                       "created_at": "2026-02-01T10:30:00Z",
-                      "updated_at": "2026-02-03T14:15:00Z",
                       "last_checked": "2026-02-04T16:00:00Z",
+                      "updated_at": "2026-02-03T14:15:00Z",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "subaccount_id": "67890",
+                      "parent_account_id": "12345",
+                      "name": "email preview",
                       "metric": "email_preview_success_count",
                       "comparator": ">=",
                       "limit": "2100",
@@ -11654,6 +11654,675 @@
         ]
       }
     },
+    "/v2/thresholds/limits": {
+      "get": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "List all limits for a given subaccount",
+        "operationId": "GET-v2-thresholds-limits",
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-api-ListTrackerListResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "items": [
+                        {
+                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                          "created_at": "2026-02-01T10:30:00Z",
+                          "updated_at": "2026-02-03T14:15:00Z",
+                          "subaccount_id": "67890",
+                          "parent_account_id": "12345",
+                          "metric": "email_preview_success_count",
+                          "limit": "2100"
+                        },
+                        {
+                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
+                          "created_at": "2026-02-01T10:30:00Z",
+                          "updated_at": "2026-02-03T14:15:00Z",
+                          "subaccount_id": "67890",
+                          "parent_account_id": "12345",
+                          "metric": "email_preview_success_count",
+                          "limit": "1000"
+                        }
+                      ],
+                      "total": 2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Create a limit for an account or subaccount",
+        "description": "Creates a limit tracker for the given metric. When called by a parent account, 'subaccount_id' may be used to set the limit on a specific subaccount, otherwise the subaccount ID is taken from the X-Mailgun-On-Behalf-Of header. Settings must be configured at the parent account level using /v2/thresholds/limits-primary",
+        "operationId": "POST-v2-thresholds-limits",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-LimitRequestNew"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "metric": "email_preview_success_count",
+                    "limit": "200",
+                    "subaccount_id": "67890"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-limittracker-Tracker"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "created_at": "2026-02-01T10:30:00Z",
+                      "updated_at": "0001-01-01T00:00:00Z",
+                      "subaccount_id": "67890",
+                      "parent_account_id": "12345",
+                      "metric": "email_preview_success_count",
+                      "limit": "200"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/v2/thresholds/limits/{metric}": {
+      "get": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Get a limit for a subaccount for the given metric if it exists, otherwise returns 404. Takes the SubAccountID from the X-Mailgun-On-Behalf-Of header.",
+        "operationId": "GET-v2-thresholds-limits--metric-",
+        "parameters": [
+          {
+            "name": "metric",
+            "in": "path",
+            "description": "The metric that identifies this limit",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-limittracker-Tracker"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "created_at": "2026-02-01T10:30:00Z",
+                      "updated_at": "2026-02-03T14:15:00Z",
+                      "subaccount_id": "67890",
+                      "parent_account_id": "12345",
+                      "metric": "email_preview_success_count",
+                      "limit": "2100"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Update a limit for an account given the metric name in the path",
+        "operationId": "PUT-v2-thresholds-limits--metric-",
+        "parameters": [
+          {
+            "name": "metric",
+            "in": "path",
+            "description": "The metric that identifies this limit",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-LimitRequestNew"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "metric": "email_preview_success_count",
+                    "limit": "2500",
+                    "subaccount_id": "67890"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Delete a limit for an account given the metric name in the path",
+        "operationId": "DELETE-v2-thresholds-limits--metric-",
+        "parameters": [
+          {
+            "name": "metric",
+            "in": "path",
+            "description": "The metric that identifies this limit",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/v2/thresholds/limits-primary": {
+      "get": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Get parent-level limit warning settings for an account",
+        "operationId": "GET-v2-thresholds-limits-primary",
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-checkers-Checker"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "created_at": "2026-02-01T10:30:00Z",
+                      "last_checked": "0001-01-01T00:00:00Z",
+                      "next_check": "0001-01-01T00:00:00Z",
+                      "updated_at": "2026-02-03T14:15:00Z",
+                      "parent_account_id": "12345",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "description": "Track limits for account 12345",
+                      "name": "Usage limits for 12345",
+                      "dimension": "subaccount",
+                      "warning_perc_two": "75",
+                      "warning_perc_one": "50",
+                      "alert_channels": [
+                        "email",
+                        "webhook",
+                        "slack"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Update parent-level limit warning settings for an account",
+        "description": "Updates the alert channels and warning thresholds used across all limits belonging to a parent account. Only a parent account may update these settings.",
+        "operationId": "PUT-v2-thresholds-limits-primary",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-LimitParentRequest"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "alert_channels": [
+                      "email",
+                      "webhook"
+                    ],
+                    "warning_perc_one": 60,
+                    "warning_perc_two": 85
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-checkers-Checker"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "created_at": "2026-02-01T10:30:00Z",
+                      "last_checked": "0001-01-01T00:00:00Z",
+                      "next_check": "0001-01-01T00:00:00Z",
+                      "updated_at": "2026-02-03T14:15:00Z",
+                      "parent_account_id": "12345",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "description": "Track limits for account 12345",
+                      "name": "Usage limits for 12345",
+                      "dimension": "subaccount",
+                      "warning_perc_two": "85",
+                      "warning_perc_one": "60",
+                      "alert_channels": [
+                        "email",
+                        "webhook"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Create parent-level limit warning settings for an account",
+        "description": "Configures the alert channels and warning thresholds used across all limits belonging to a parent account. Only a parent account may create these settings; subaccounts are not permitted to call this endpoint.",
+        "operationId": "POST-v2-thresholds-limits-primary",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-LimitParentRequest"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "alert_channels": [
+                      "email",
+                      "webhook",
+                      "slack"
+                    ],
+                    "warning_perc_one": 50,
+                    "warning_perc_two": 75
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-checkers-Checker"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "created_at": "2026-02-01T10:30:00Z",
+                      "last_checked": "0001-01-01T00:00:00Z",
+                      "next_check": "0001-01-01T00:00:00Z",
+                      "updated_at": "0001-01-01T00:00:00Z",
+                      "parent_account_id": "12345",
+                      "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
+                      "description": "Track limits for account 12345",
+                      "name": "Usage limits for 12345",
+                      "dimension": "subaccount",
+                      "warning_perc_two": "75",
+                      "warning_perc_one": "50",
+                      "alert_channels": [
+                        "email",
+                        "webhook",
+                        "slack"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Delete parent-level limit warning settings for an account",
+        "operationId": "DELETE-v2-thresholds-limits-primary",
+        "responses": {
+          "200": {
+            "description": "A 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A 400 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A 404 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "A default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
     "/v1/thresholds/hits": {
       "get": {
         "tags": [
@@ -11674,34 +12343,34 @@
                     "value": {
                       "items": [
                         {
-                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
-                          "name": "hard bounce rate",
-                          "created_at": "2026-02-01T10:30:00Z",
                           "updated_at": "2026-02-03T14:15:00Z",
-                          "triggered": true,
                           "expires_at": "0001-01-01T00:00:00Z",
+                          "created_at": "2026-02-01T10:30:00Z",
                           "latest_value": "10",
+                          "name": "hard bounce rate",
+                          "id": "915ff385-0a9a-4087-86d5-6727ea7d9b49",
                           "metric": "hard_bounce_rate",
                           "comparator": "<",
                           "limit": "2100",
                           "parent_account_id": "12345",
                           "subaccount_id": "67890",
-                          "dimension": "subaccount"
+                          "dimension": "subaccount",
+                          "triggered": true
                         },
                         {
-                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
-                          "name": "complained rate",
-                          "created_at": "2026-02-01T10:30:00Z",
                           "updated_at": "2026-02-03T14:15:00Z",
-                          "triggered": true,
                           "expires_at": "0001-01-01T00:00:00Z",
+                          "created_at": "2026-02-01T10:30:00Z",
                           "latest_value": "7",
+                          "name": "complained rate",
+                          "id": "734ff385-0a9a-4087-86d5-6727ea7d9c34",
                           "metric": "complained_rate",
                           "comparator": ">",
                           "limit": "1000",
                           "parent_account_id": "12345",
                           "subaccount_id": "67890",
-                          "dimension": "subaccount"
+                          "dimension": "subaccount",
+                          "triggered": true
                         }
                       ],
                       "total": 2
@@ -29868,18 +30537,40 @@
           "limit_reached"
         ]
       },
-      "github.com-mailgun-thresholds-api-AlertChannel": {
+      "github.com-mailgun-thresholds-api-Metric": {
         "type": "string",
         "enum": [
-          "email",
-          "slack",
-          "webhook"
+          "hard_bounce_rate",
+          "temporary_fail_rate",
+          "delivered_rate",
+          "complained_rate"
         ],
-        "description": "Alert Channel",
+        "description": "Metric",
         "x-enumDescriptions": {
-          "email": "Email",
-          "slack": "Slack",
-          "webhook": "Webhook"
+          "hard_bounce_rate": "Hard bounce rate",
+          "temporary_fail_rate": "Temporary fail rate",
+          "delivered_rate": "Delivery rate",
+          "complained_rate": "Complaint rate"
+        }
+      },
+      "github.com-mailgun-thresholds-api-MetricComparator": {
+        "type": "string",
+        "enum": [
+          "=",
+          "!=",
+          "<",
+          "<=",
+          ">",
+          ">="
+        ],
+        "description": "Metric Comparator",
+        "x-enumDescriptions": {
+          "=": "Equal",
+          "!=": "Not equal",
+          "<": "Less than",
+          "<=": "Less than or equal",
+          ">": "Greater than",
+          ">=": "Greater than or equal"
         }
       },
       "github.com-mailgun-thresholds-api-Dimension": {
@@ -29898,6 +30589,20 @@
           "ip_pool": "IP Pool ID",
           "recipient_provider": "Recipient Provider, e.g. Gmail, Other US, etc.",
           "subaccount": "Subaccount name"
+        }
+      },
+      "github.com-mailgun-thresholds-api-AlertChannel": {
+        "type": "string",
+        "enum": [
+          "email",
+          "slack",
+          "webhook"
+        ],
+        "description": "Alert Channel",
+        "x-enumDescriptions": {
+          "email": "Email",
+          "slack": "Slack",
+          "webhook": "Webhook"
         }
       },
       "github.com-mailgun-thresholds-api-FilterComparator": {
@@ -29959,97 +30664,47 @@
           "values"
         ]
       },
-      "github.com-mailgun-thresholds-api-Metric": {
-        "type": "string",
-        "enum": [
-          "hard_bounce_rate",
-          "temporary_fail_rate",
-          "delivered_rate",
-          "complained_rate"
-        ],
-        "description": "Metric",
-        "x-enumDescriptions": {
-          "hard_bounce_rate": "Hard bounce rate",
-          "temporary_fail_rate": "Temporary fail rate",
-          "delivered_rate": "Delivery rate",
-          "complained_rate": "Complaint rate"
-        }
-      },
-      "github.com-mailgun-thresholds-api-MetricComparator": {
-        "type": "string",
-        "enum": [
-          "=",
-          "!=",
-          "<",
-          "<=",
-          ">",
-          ">="
-        ],
-        "description": "Metric Comparator",
-        "x-enumDescriptions": {
-          "=": "Equal",
-          "!=": "Not equal",
-          "<": "Less than",
-          "<=": "Less than or equal",
-          ">": "Greater than",
-          ">=": "Greater than or equal"
-        }
-      },
       "github.com-mailgun-thresholds-api-SendAlertItem": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "description": "The unique identifier for the alert."
-          },
-          "parent_account_id": {
-            "type": "string",
-            "description": "The parent account ID."
-          },
-          "subaccount_id": {
-            "type": "string",
-            "description": "The subaccount ID this alert belongs to."
-          },
-          "account_group": {
-            "type": "string",
-            "description": "The group this account belongs to."
-          },
-          "name": {
-            "type": "string",
-            "description": "A user-friendly name for the alert."
-          },
           "created_at": {
             "type": "string",
             "format": "date-time",
             "description": "Timestamp of when the alert was created."
-          },
-          "updated_at": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Timestamp of when the alert was last updated."
           },
           "last_checked": {
             "type": "string",
             "format": "date-time",
             "description": "Timestamp of the alert was last checked."
           },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of when the alert was last updated."
+          },
           "description": {
             "type": "string",
             "description": "A description of what the alert does."
           },
-          "alert_channels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-AlertChannel"
-            },
-            "description": "A list of alert channels to notify."
+          "name": {
+            "type": "string",
+            "description": "A user-friendly name for the alert."
           },
-          "filters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
-            },
-            "description": "A list of filters to apply to the alert."
+          "account_group": {
+            "type": "string",
+            "description": "The group this account belongs to."
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "The subaccount ID this alert belongs to."
+          },
+          "parent_account_id": {
+            "type": "string",
+            "description": "The parent account ID."
+          },
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the alert."
           },
           "metric": {
             "type": "string",
@@ -30085,11 +30740,25 @@
           "period": {
             "type": "string",
             "description": "The time period for the metric aggregation in the format of '1h' '1d'."
+          },
+          "alert_channels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-AlertChannel"
+            },
+            "description": "A list of alert channels to notify."
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
+            },
+            "description": "A list of filters to apply to the alert."
           }
         },
         "required": [
-          "name",
           "created_at",
+          "name",
           "metric",
           "comparator",
           "limit",
@@ -30134,6 +30803,14 @@
             ],
             "description": "The dimension to apply to the metric."
           },
+          "period": {
+            "type": "string",
+            "description": "The time period for the metric aggregation in the format of '1h' '1d'."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of what the alert does."
+          },
           "alert_channels": {
             "type": "array",
             "items": {
@@ -30147,14 +30824,6 @@
               "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
             },
             "description": "A list of filters to apply to the alert."
-          },
-          "period": {
-            "type": "string",
-            "description": "The time period for the metric aggregation in the format of '1h' '1d'."
-          },
-          "description": {
-            "type": "string",
-            "description": "A description of what the alert does."
           }
         },
         "required": [
@@ -30201,51 +30870,47 @@
       "github.com-mailgun-thresholds-api-ThresholdLimitItem": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "description": "The unique identifier for the limit."
-          },
-          "parent_account_id": {
-            "type": "string",
-            "description": "The parent account ID."
-          },
-          "subaccount_id": {
-            "type": "string",
-            "description": "The subaccount ID this limit belongs to."
-          },
-          "account_group": {
-            "type": "string",
-            "description": "The group this account belongs to."
-          },
-          "name": {
-            "type": "string",
-            "description": "A user-friendly name for the limit."
-          },
           "created_at": {
             "type": "string",
             "format": "date-time",
             "description": "Timestamp of when the limit was created."
-          },
-          "updated_at": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Timestamp of when the limit was last updated."
           },
           "last_checked": {
             "type": "string",
             "format": "date-time",
             "description": "Timestamp of when the limit was last checked."
           },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of when the limit was last updated."
+          },
+          "current_count": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The metric's current value for this account, as of this request. Omitted if it could not be fetched."
+          },
           "description": {
             "type": "string",
             "description": "A description of what the limit does."
           },
-          "filters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
-            },
-            "description": "A list of filters to apply to the limit."
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the limit."
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "The subaccount ID this limit belongs to."
+          },
+          "parent_account_id": {
+            "type": "string",
+            "description": "The parent account ID."
+          },
+          "name": {
+            "type": "string",
+            "description": "A user-friendly name for the limit."
           },
           "metric": {
             "type": "string",
@@ -30281,11 +30946,22 @@
           "period": {
             "type": "string",
             "description": "The time period for the metric aggregation in the format of '1h' '1d'."
+          },
+          "account_group": {
+            "type": "string",
+            "description": "The group this account belongs to."
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
+            },
+            "description": "A list of filters to apply to the limit."
           }
         },
         "required": [
-          "name",
           "created_at",
+          "name",
           "metric",
           "comparator",
           "limit",
@@ -30330,13 +31006,6 @@
             ],
             "description": "The dimension to apply to the metric."
           },
-          "filters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
-            },
-            "description": "A list of filters to apply to the limit."
-          },
           "period": {
             "type": "string",
             "description": "The time period for the metric aggregation in the format of '1h' '1d'."
@@ -30344,6 +31013,13 @@
           "description": {
             "type": "string",
             "description": "A description of what the limit does."
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-Filter"
+            },
+            "description": "A list of filters to apply to the limit."
           }
         },
         "required": [
@@ -30375,13 +31051,10 @@
           "total"
         ]
       },
-      "github.com-mailgun-thresholds-api-HitListItem": {
+      "github.com-mailgun-thresholds-internal-model-limittracker-Tracker": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "name": {
             "type": "string"
           },
           "created_at": {
@@ -30392,14 +31065,223 @@
             "type": "string",
             "format": "date-time"
           },
-          "triggered": {
-            "type": "boolean"
+          "subaccount_id": {
+            "type": "string"
+          },
+          "parent_account_id": {
+            "type": "string"
+          },
+          "metric": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "created_at",
+          "metric",
+          "limit"
+        ]
+      },
+      "github.com-mailgun-thresholds-api-LimitRequestNew": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-LimitMetric"
+              }
+            ],
+            "description": "The metric being monitored."
+          },
+          "limit": {
+            "type": "string",
+            "description": "The threshold limit."
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "Subaccount to set the limit on if using parent account"
+          }
+        },
+        "required": [
+          "metric",
+          "limit",
+          "subaccount_id"
+        ]
+      },
+      "github.com-mailgun-thresholds-internal-api-ListTrackerListResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-limittracker-Tracker"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "required": [
+          "items",
+          "total"
+        ]
+      },
+      "github.com-mailgun-thresholds-internal-model-checkers-CheckFilter": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string"
+          },
+          "comparator": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "dimension",
+          "comparator",
+          "values"
+        ]
+      },
+      "github.com-mailgun-thresholds-internal-model-checkers-Checker": {
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "last_checked": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "next_check": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "watch_interval": {
+            "type": "string"
+          },
+          "comparator": {
+            "type": "string"
+          },
+          "account_group": {
+            "type": "string"
+          },
+          "subaccount_id": {
+            "type": "string"
+          },
+          "parent_account_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "metric": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "dimension": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "warning_perc_two": {
+            "type": "string"
+          },
+          "warning_perc_one": {
+            "type": "string"
+          },
+          "alert_channels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-internal-model-checkers-CheckFilter"
+            }
+          }
+        },
+        "required": [
+          "created_at",
+          "comparator",
+          "metric",
+          "limit",
+          "name",
+          "dimension"
+        ]
+      },
+      "github.com-mailgun-thresholds-api-LimitParentRequest": {
+        "type": "object",
+        "properties": {
+          "alert_channels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/github.com-mailgun-thresholds-api-AlertChannel"
+            },
+            "description": "A list of alert channels to notify."
+          },
+          "warning_perc_one": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The percentage of the limit at which a warning will be sent given as an integer 1-99. Defaults to 50"
+          },
+          "warning_perc_two": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The percentage of the limit at which a second warning will be sent given as an integer 1-99. Defaults to 75"
+          }
+        },
+        "required": [
+          "alert_channels"
+        ]
+      },
+      "github.com-mailgun-thresholds-api-HitListItem": {
+        "type": "object",
+        "properties": {
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "expires_at": {
             "type": "string",
             "format": "date-time"
           },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
           "latest_value": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "id": {
             "type": "string"
           },
           "metric": {
@@ -30422,19 +31304,30 @@
           },
           "dimension_value": {
             "type": "string"
+          },
+          "warning_percent": {
+            "type": "number",
+            "format": "float"
+          },
+          "warning_level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "triggered": {
+            "type": "boolean"
           }
         },
         "required": [
-          "id",
-          "name",
-          "created_at",
           "updated_at",
-          "triggered",
           "expires_at",
+          "created_at",
           "latest_value",
+          "name",
+          "id",
           "metric",
           "comparator",
-          "limit"
+          "limit",
+          "triggered"
         ]
       },
       "github.com-mailgun-thresholds-api-HitListResponse": {
@@ -32473,7 +33366,7 @@
           },
           "user_id": {
             "type": "string",
-            "description": "API Key user's string user ID; should be provided for all keys of 'web' kind"
+            "description": "API Key user's string user ID; should be provided for all keys of 'web' kind. The user must belong to the authenticated account"
           },
           "user_name": {
             "type": "string",
