@@ -50,14 +50,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips
         }
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v3.ips.item collection</summary>
         /// <param name="position">IP address to get details about</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("addr%2Did", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("ip", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

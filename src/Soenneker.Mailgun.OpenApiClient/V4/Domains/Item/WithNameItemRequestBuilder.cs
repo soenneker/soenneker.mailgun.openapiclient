@@ -15,10 +15,10 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v4\domains\{authorityName-id}
+    /// Builds and executes requests for operations under \v4\domains\{name}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AuthorityNameItemRequestBuilder : BaseRequestBuilder
+    public partial class WithNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The keys property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Keys.KeysRequestBuilder Keys
@@ -36,19 +36,19 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item
             get => new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks.WebhooksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AuthorityNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authorityName%2Did}", pathParameters)
+        public WithNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{name}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AuthorityNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authorityName%2Did}", rawUrl)
+        public WithNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{name}", rawUrl)
         {
         }
         /// <summary>
@@ -147,11 +147,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

@@ -20,14 +20,14 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains
     {
         /// <summary>Gets an item from the Soenneker.Mailgun.OpenApiClient.v4.domains.item collection</summary>
         /// <param name="position">The name of the domain you want to fetch</param>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder"/></returns>
-        public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("authorityName%2Did", position);
-                return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.AuthorityNameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("name", position);
+                return new global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.WithNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

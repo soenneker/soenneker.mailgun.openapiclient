@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName-id}\templates\{templateName}
+    /// Builds and executes requests for operations under \v3\{domainName}\templates\{templateName}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithTemplateNameItemRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplateNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}{?active*}", pathParameters)
+        public WithTemplateNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}{?active*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Templates.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplateNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/templates/{templateName}{?active*}", rawUrl)
+        public WithTemplateNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/templates/{templateName}{?active*}", rawUrl)
         {
         }
         /// <summary>

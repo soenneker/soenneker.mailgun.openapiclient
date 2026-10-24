@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName-id}\tag
+    /// Builds and executes requests for operations under \v3\{domainName}\tag
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TagRequestBuilder : BaseRequestBuilder
@@ -29,7 +29,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TagRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/tag{?description*}", pathParameters)
+        public TagRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/tag{?description*}", pathParameters)
         {
         }
         /// <summary>
@@ -37,7 +37,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TagRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/tag{?description*}", rawUrl)
+        public TagRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/tag{?description*}", rawUrl)
         {
         }
         /// <summary>
@@ -147,7 +147,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/{domainName%2Did}/tag?tag={tag}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/{domainName}/tag?tag={tag}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -167,7 +167,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.TagRequestBuilder.TagRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/v3/{domainName%2Did}/tag?tag={tag}{&description*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/v3/{domainName}/tag?tag={tag}{&description*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

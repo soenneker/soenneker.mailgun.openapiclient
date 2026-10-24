@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v4\domains\{authorityName-id}\webhooks
+    /// Builds and executes requests for operations under \v4\domains\{name}\webhooks
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebhooksRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authorityName%2Did}/webhooks", pathParameters)
+        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{name}/webhooks", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{authorityName%2Did}/webhooks", rawUrl)
+        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v4/domains/{name}/webhooks", rawUrl)
         {
         }
         /// <summary>
@@ -132,7 +132,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v4/domains/{authorityName%2Did}/webhooks{?url*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v4/domains/{name}/webhooks{?url*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -156,7 +156,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -178,7 +178,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.Stats
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName-id}\tag\stats
+    /// Builds and executes requests for operations under \v3\{domainName}\tag\stats
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatsRequestBuilder : BaseRequestBuilder
@@ -29,7 +29,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.Stats
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StatsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/tag/stats?event={event}&tag={tag}{&country*,device*,duration*,end*,provider*,resolution*,start*}", pathParameters)
+        public StatsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/tag/stats?event={event}&tag={tag}{&country*,device*,duration*,end*,provider*,resolution*,start*}", pathParameters)
         {
         }
         /// <summary>
@@ -37,7 +37,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.Stats
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StatsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}/tag/stats?event={event}&tag={tag}{&country*,device*,duration*,end*,provider*,resolution*,start*}", rawUrl)
+        public StatsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}/tag/stats?event={event}&tag={tag}{&country*,device*,duration*,end*,provider*,resolution*,start*}", rawUrl)
         {
         }
         /// <summary>

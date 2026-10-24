@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\ips\{addr-id}\domains
+    /// Builds and executes requests for operations under \v3\ips\{ip}\domains
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DomainsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{addr%2Did}/domains", pathParameters)
+        public DomainsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{ip}/domains", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{addr%2Did}/domains", rawUrl)
+        public DomainsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{ip}/domains", rawUrl)
         {
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains.DomainsRequestBuilder.DomainsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v3/ips/{addr%2Did}/domains?alternative={alternative}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v3/ips/{ip}/domains?alternative={alternative}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -120,7 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains.DomainsRequestBuilder.DomainsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/ips/{addr%2Did}/domains?limit={limit}&search={search}&skip={skip}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/ips/{ip}/domains?limit={limit}&search={search}&skip={skip}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

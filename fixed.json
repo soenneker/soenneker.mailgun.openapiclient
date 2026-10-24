@@ -1115,7 +1115,7 @@
         ]
       }
     },
-    "/v3/domains/{name}": {
+    "/v3/domains/{domainName}": {
       "delete": {
         "tags": [
           "Domains"
@@ -1125,7 +1125,7 @@
         "operationId": "DeleteV3DomainsName",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The name of the domain to delete",
             "required": true,
@@ -1194,7 +1194,7 @@
         ]
       }
     },
-    "/v3/domains/{domain}/webhooks": {
+    "/v3/domains/{domainName}/webhooks": {
       "get": {
         "tags": [
           "Domain Webhooks"
@@ -1204,7 +1204,7 @@
         "operationId": "GetV3DomainsDomainWebhooks",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "Domain name you want webhooks for",
             "required": true,
@@ -1330,7 +1330,7 @@
         "operationId": "PostV3DomainsDomainWebhooks",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name to create the webhook for",
             "required": true,
@@ -1733,7 +1733,7 @@
         ]
       }
     },
-    "/v4/domains/{domain}/webhooks": {
+    "/v4/domains/{name}/webhooks": {
       "put": {
         "tags": [
           "Domain Webhooks"
@@ -1743,7 +1743,7 @@
         "operationId": "PutV4DomainsDomainWebhooks",
         "parameters": [
           {
-            "name": "domain",
+            "name": "name",
             "in": "path",
             "description": "The domain name to update webhooks for",
             "required": true,
@@ -1863,7 +1863,7 @@
         "operationId": "PostV4DomainsDomainWebhooks",
         "parameters": [
           {
-            "name": "domain",
+            "name": "name",
             "in": "path",
             "description": "The domain name to create webhooks for",
             "required": true,
@@ -1988,7 +1988,7 @@
         "operationId": "DeleteV4DomainsDomainWebhooks",
         "parameters": [
           {
-            "name": "domain",
+            "name": "name",
             "in": "path",
             "description": "The domain name to delete webhooks from",
             "required": true,
@@ -2098,7 +2098,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/tracking": {
+    "/v3/domains/{domainName}/tracking": {
       "get": {
         "tags": [
           "Domain Tracking"
@@ -2108,7 +2108,7 @@
         "operationId": "GetV3DomainsNameTracking",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The name of the domain to fetch tracking details for.",
             "required": true,
@@ -2190,7 +2190,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/tracking/click": {
+    "/v3/domains/{domainName}/tracking/click": {
       "put": {
         "tags": [
           "Domain Tracking"
@@ -2200,7 +2200,7 @@
         "operationId": "PutV3DomainsNameTrackingClick",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The name of the domain you want to update",
             "required": true,
@@ -2282,7 +2282,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/tracking/open": {
+    "/v3/domains/{domainName}/tracking/open": {
       "put": {
         "tags": [
           "Domain Tracking"
@@ -2292,7 +2292,7 @@
         "operationId": "PutV3DomainsNameTrackingOpen",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The name of the domain you want to update",
             "required": true,
@@ -2374,7 +2374,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/tracking/unsubscribe": {
+    "/v3/domains/{domainName}/tracking/unsubscribe": {
       "put": {
         "tags": [
           "Domain Tracking"
@@ -2384,7 +2384,7 @@
         "operationId": "PutV3DomainsNameTrackingUnsubscribe",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The name of the domain you want to update",
             "required": true,
@@ -2733,7 +2733,7 @@
         ]
       }
     },
-    "/v4/domains/{authorityName}/keys/{selector}/activate": {
+    "/v4/domains/{name}/keys/{selector}/activate": {
       "put": {
         "tags": [
           "Domain Keys"
@@ -2743,7 +2743,7 @@
         "operationId": "PutV4DomainsAuthorityNameKeysSelectorActivate",
         "parameters": [
           {
-            "name": "authorityName",
+            "name": "name",
             "in": "path",
             "description": "The domain authority name you want to activate. Must be a valid domain",
             "required": true,
@@ -2824,7 +2824,7 @@
         ]
       }
     },
-    "/v4/domains/{authorityName}/keys": {
+    "/v4/domains/{name}/keys": {
       "get": {
         "tags": [
           "Domain Keys"
@@ -2834,7 +2834,7 @@
         "operationId": "GetV4DomainsAuthorityNameKeys",
         "parameters": [
           {
-            "name": "authorityName",
+            "name": "name",
             "in": "path",
             "description": "The domain authority name you want to list the domain keys for. Must be a valid domain",
             "required": true,
@@ -2914,7 +2914,7 @@
         ]
       }
     },
-    "/v4/domains/{authorityName}/keys/{selector}/deactivate": {
+    "/v4/domains/{name}/keys/{selector}/deactivate": {
       "put": {
         "tags": [
           "Domain Keys"
@@ -2924,7 +2924,7 @@
         "operationId": "PutV4DomainsAuthorityNameKeysSelectorDeactivate",
         "parameters": [
           {
-            "name": "authorityName",
+            "name": "name",
             "in": "path",
             "description": "The domain authority name you want to deactivate. Must be a valid domain",
             "required": true,
@@ -3005,7 +3005,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/dkim_authority": {
+    "/v3/domains/{domainName}/dkim_authority": {
       "put": {
         "tags": [
           "Domain Keys"
@@ -3015,7 +3015,7 @@
         "operationId": "PutV3DomainsNameDkimAuthority",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -3087,7 +3087,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/dkim_selector": {
+    "/v3/domains/{domainName}/dkim_selector": {
       "put": {
         "tags": [
           "Domain Keys"
@@ -3097,7 +3097,7 @@
         "operationId": "PutV3DomainsNameDkimSelector",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -3733,7 +3733,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/sending_queues": {
+    "/v3/domains/{domainName}/sending_queues": {
       "get": {
         "tags": [
           "Messages"
@@ -3743,7 +3743,7 @@
         "operationId": "GetV3DomainsNameSendingQueues",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "The name of the domain you want get sending queues from",
             "required": true,
@@ -4377,7 +4377,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/ips/{ip}": {
+    "/v3/domains/{domainName}/ips/{ip}": {
       "delete": {
         "tags": [
           "IPs",
@@ -4397,7 +4397,7 @@
             }
           },
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "Domain name. Converted to \u0060X-Mailgun-Domain-Id\u0060 header by the middleware.",
             "required": true,
@@ -4448,7 +4448,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/pool/{ip}": {
+    "/v3/domains/{domainName}/pool/{ip}": {
       "delete": {
         "tags": [
           "IPs",
@@ -4468,7 +4468,7 @@
             }
           },
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "Domain name. Converted to \u0060X-Mailgun-Domain-Id\u0060 header by the middleware.",
             "required": true,
@@ -4519,7 +4519,7 @@
         ]
       }
     },
-    "/v3/domains/{name}/dynamic_pools": {
+    "/v3/domains/{domainName}/dynamic_pools": {
       "post": {
         "tags": [
           "Dynamic IP Pools"
@@ -4529,7 +4529,7 @@
         "operationId": "PostV3DomainsNameDynamicPools",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "Domain name",
             "required": true,
@@ -4581,7 +4581,7 @@
         "operationId": "DeleteV3DomainsNameDynamicPools",
         "parameters": [
           {
-            "name": "name",
+            "name": "domainName",
             "in": "path",
             "description": "Domain name",
             "required": true,
@@ -5143,7 +5143,7 @@
         ]
       }
     },
-    "/v3/ips/{addr}/ip_band": {
+    "/v3/ips/{ip}/ip_band": {
       "post": {
         "tags": [
           "IPs"
@@ -5153,7 +5153,7 @@
         "operationId": "PostV3IpsAddrIpBand",
         "parameters": [
           {
-            "name": "addr",
+            "name": "ip",
             "in": "path",
             "description": "IP address",
             "required": true,
@@ -8214,7 +8214,7 @@
         ]
       }
     },
-    "/v3/{domain}/tags": {
+    "/v3/{domainName}/tags": {
       "get": {
         "tags": [
           "Tags"
@@ -8224,7 +8224,7 @@
         "operationId": "GetV3DomainTags",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -8328,7 +8328,7 @@
         ]
       }
     },
-    "/v3/{domain}/tag": {
+    "/v3/{domainName}/tag": {
       "get": {
         "tags": [
           "Tags"
@@ -8338,7 +8338,7 @@
         "operationId": "GetV3DomainTag",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -8411,7 +8411,7 @@
         "operationId": "PutV3DomainTag",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain id",
             "required": true,
@@ -8489,7 +8489,7 @@
         "operationId": "DeleteV3DomainTag",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -8550,7 +8550,7 @@
         ]
       }
     },
-    "/v3/{domain}/tag/stats/aggregates": {
+    "/v3/{domainName}/tag/stats/aggregates": {
       "get": {
         "tags": [
           "Tags"
@@ -8560,7 +8560,7 @@
         "operationId": "GetV3DomainTagStatsAggregates",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -8647,7 +8647,7 @@
         ]
       }
     },
-    "/v3/{domain}/tag/stats": {
+    "/v3/{domainName}/tag/stats": {
       "get": {
         "tags": [
           "Tags"
@@ -8657,7 +8657,7 @@
         "operationId": "GetV3DomainTagStats",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain id",
             "required": true,
@@ -8812,7 +8812,7 @@
         ]
       }
     },
-    "/v3/domains/{domain}/tag/devices": {
+    "/v3/domains/{domainName}/tag/devices": {
       "get": {
         "tags": [
           "openapi-scout_other"
@@ -8822,7 +8822,7 @@
         "operationId": "GetV3DomainsDomainTagDevices",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -8863,7 +8863,7 @@
         ]
       }
     },
-    "/v3/domains/{domain}/tag/providers": {
+    "/v3/domains/{domainName}/tag/providers": {
       "get": {
         "tags": [
           "openapi-scout_other"
@@ -8873,7 +8873,7 @@
         "operationId": "GetV3DomainsDomainTagProviders",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -8936,7 +8936,7 @@
         ]
       }
     },
-    "/v3/domains/{domain}/tag/countries": {
+    "/v3/domains/{domainName}/tag/countries": {
       "get": {
         "tags": [
           "openapi-scout_other"
@@ -8946,7 +8946,7 @@
         "operationId": "GetV3DomainsDomainTagCountries",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -9097,7 +9097,7 @@
         ]
       }
     },
-    "/v3/{domain}/stats/total": {
+    "/v3/{domainName}/stats/total": {
       "get": {
         "tags": [
           "Stats"
@@ -9107,7 +9107,7 @@
         "operationId": "GetV3DomainStatsTotal",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -9481,7 +9481,7 @@
         ]
       }
     },
-    "/v3/domains/{domain}/limits/tag": {
+    "/v3/domains/{domainName}/limits/tag": {
       "get": {
         "tags": [
           "Tags"
@@ -9491,7 +9491,7 @@
         "operationId": "GetV3DomainsDomainLimitsTag",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -9545,7 +9545,7 @@
         ]
       }
     },
-    "/v3/{domain}/aggregates/providers": {
+    "/v3/{domainName}/aggregates/providers": {
       "get": {
         "tags": [
           "Stats"
@@ -9555,7 +9555,7 @@
         "operationId": "GetV3DomainAggregatesProviders",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -9623,7 +9623,7 @@
         ]
       }
     },
-    "/v3/{domain}/aggregates/devices": {
+    "/v3/{domainName}/aggregates/devices": {
       "get": {
         "tags": [
           "Stats"
@@ -9633,7 +9633,7 @@
         "operationId": "GetV3DomainAggregatesDevices",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -9715,7 +9715,7 @@
         ]
       }
     },
-    "/v3/{domain}/aggregates/countries": {
+    "/v3/{domainName}/aggregates/countries": {
       "get": {
         "tags": [
           "Stats"
@@ -9725,7 +9725,7 @@
         "operationId": "GetV3DomainAggregatesCountries",
         "parameters": [
           {
-            "name": "domain",
+            "name": "domainName",
             "in": "path",
             "description": "The domain name",
             "required": true,
@@ -25831,7 +25831,6 @@
           "list_uploaded"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The event name. See [Events](https://documentation.mailgun.com/docs/mailgun/user-manual/events/#introduction-to-events)",
         "x-enumDescriptions": {
           "accepted": "Mailgun accepted the request to send/forward the email and the message has been placed in queue",
@@ -25913,7 +25912,6 @@
           "permanent"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter by event severity, if exists. Currently for failed events only. See [Tracking Failures](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/#tracking-failures)",
         "x-enumDescriptions": {
           "temporary": "Mailgun could not deliver the email to the recipient email server, but will retry",
@@ -26850,7 +26848,6 @@
           "time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "bot": "The automated system that engaged with the email, e.g. apple, gmail",
@@ -26966,7 +26963,6 @@
           "delayed_first_attempt_rate"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric",
         "x-enumDescriptions": {
           "accepted_incoming_count": "Mailgun accepted the API request to forward, and the message has been put in your queue. These accepted events only cover routes, forwards, and mailing lists. Mailing lists will record a single accepted incoming event, with emails sent to recipients recording their own accepted outgoing events.",
@@ -27216,7 +27212,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter attribute",
         "x-enumDescriptions": {
           "bot": "The automated system that engaged with the email, e.g. apple, gmail",
@@ -27285,7 +27280,6 @@
           "not contains"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter comparator",
         "x-enumDescriptions": {
           "=": "Equals",
@@ -27598,7 +27592,6 @@
           "time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Usage Dimension",
         "x-enumDescriptions": {
           "subaccount": "Subaccount identifier",
@@ -27646,7 +27639,6 @@
           "processed_count"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Usage Metric",
         "x-enumDescriptions": {
           "email_validation_count": "Total number of email validations performed",
@@ -28351,7 +28343,6 @@
           "trapped"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Events",
         "x-enumDescriptions": {
           "accepted": "logs with event=accepted",
@@ -28482,7 +28473,6 @@
           "delayed_first_attempt"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric Events",
         "x-enumDescriptions": {
           "accepted_incoming": "accepted events where flags.is_authenticated is false",
@@ -28707,7 +28697,6 @@
           "recipients"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter Attribute",
         "x-enumDescriptions": {
           "id": "Filter on a specific id of a log message. Mostly used to retrieve a specific log found in Kibana",
@@ -29403,7 +29392,6 @@
           "complained_rate"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric",
         "x-enumDescriptions": {
           "hard_bounce_rate": "Hard bounce rate",
@@ -29444,7 +29432,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -29494,7 +29481,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "domain": "Sender domain name, e.g. example.com",
@@ -29537,7 +29523,6 @@
           "webhook"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Alert Channel",
         "x-enumDescriptions": {
           "email": "Email",
@@ -29575,7 +29560,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -29810,7 +29794,6 @@
           "seed_test_count"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Limit Metric",
         "x-enumDescriptions": {
           "email_preview_success_count": "The number of successful email previews",
@@ -30292,7 +30275,6 @@
           "slack"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Alert channel type.",
         "x-enumDescriptions": {
           "email": "email",
@@ -31704,7 +31686,6 @@
           "closed"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The status of the subaccount",
         "x-enumDescriptions": {
           "disabled": "Account is disabled",
@@ -31838,7 +31819,6 @@
           "web"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Kind",
         "x-enumDescriptions": {
           "domain": "Domain-specific API key for keys with \u0027sending\u0027 role",
@@ -31872,7 +31852,6 @@
           "developer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Role",
         "x-enumDescriptions": {
           "admin": "Provides admin-level permissions on an API key",
@@ -32364,7 +32343,6 @@
           "hour"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Resolution of the metrics.",
         "x-enumDescriptions": {
           "day": "Day",
@@ -32402,7 +32380,6 @@
           "timestamp"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "entity-name": "Recipient Provider/Spam Filter, e.g. Gmail, Other US, Spamcop, etc.",
@@ -32768,7 +32745,6 @@
           "category"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter attribute",
         "x-enumDescriptions": {
           "entity-name": "Recipient Provider/Spam Filter, e.g. Gmail, Other US, Spamcop, etc.",
@@ -33182,7 +33158,6 @@
         "type": "string"
       },
       "GithubComMailgunDomainsClientGolangDomainDisabled": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
@@ -33191,32 +33166,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "code": {
-            "type": "string",
-            "description": "Code indicating the reason for the domain being disabled"
-          },
-          "note": {
-            "type": "string",
-            "description": "Additional information about why the domain was disabled"
-          },
-          "permanently": {
-            "type": "boolean",
-            "description": "Indicates whether the domain is permanently disabled"
-          },
-          "reason": {
-            "type": "string",
-            "description": "Additional information about why the domain was disabled"
-          },
-          "until": {
-            "type": "string",
-            "description": "Timestamp in RFC1123 format indicating when the domain will be re-enabled if the disablement is temporary"
-          }
-        },
         "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable"
       },
       "GithubComMailgunDomainsHttpapiCreateDomainRespDomain": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
@@ -33225,100 +33177,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "archive_to": {
-            "type": "string",
-            "description": "URL that a copy of each successfully delivered message is going to be posted to."
-          },
-          "created_at": {
-            "type": "string",
-            "description": "Timestamp indicating when the domain was created in RFC1123 format"
-          },
-          "id": {
-            "type": "string",
-            "description": "Unique identifier of the domain"
-          },
-          "is_disabled": {
-            "type": "boolean",
-            "description": "Indicates whether the domain is currently disabled"
-          },
-          "name": {
-            "type": "string",
-            "description": "Fully qualified domain name registered with Mailgun"
-          },
-          "require_tls": {
-            "type": "boolean",
-            "description": "If true Mailgun will only send messages over a TLS connection"
-          },
-          "skip_verification": {
-            "type": "boolean",
-            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
-          },
-          "smtp_login": {
-            "type": "string",
-            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
-          },
-          "smtp_password": {
-            "type": "string",
-            "description": "Optional SMTP password for the domain used for SMTP authentication"
-          },
-          "spam_action": {
-            "type": "string",
-            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
-          },
-          "subaccount_id": {
-            "type": "string",
-            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
-          },
-          "state": {
-            "type": "string",
-            "description": "Current verification status of the domain"
-          },
-          "type": {
-            "type": "string",
-            "description": "Classification of the domain. Possible values are custom or sandbox"
-          },
-          "tracking_host": {
-            "type": "string",
-            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
-          },
-          "use_automatic_sender_security": {
-            "type": "boolean",
-            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
-          },
-          "webhooks_redact_pii": {
-            "type": "boolean",
-            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
-          },
-          "web_prefix": {
-            "type": "string",
-            "description": "Subdomain prefix used for open and click tracking"
-          },
-          "web_scheme": {
-            "type": "string",
-            "description": "Protocol scheme used for tracking"
-          },
-          "wildcard": {
-            "type": "boolean",
-            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
-          },
-          "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
-          },
-          "encrypt_incoming_message": {
-            "type": "boolean",
-            "description": "If true incoming messages to this domain will be encrypted"
-          },
-          "message_ttl": {
-            "type": "integer",
-            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
-            "format": "int32"
-          }
-        },
         "description": "Details of the newly created domain"
       },
       "GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -33326,43 +33187,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiCreateDomainRespSendingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -33370,43 +33197,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
@@ -33415,100 +33208,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "archive_to": {
-            "type": "string",
-            "description": "URL that a copy of each successfully delivered message is going to be posted to."
-          },
-          "created_at": {
-            "type": "string",
-            "description": "Timestamp indicating when the domain was created in RFC1123 format"
-          },
-          "id": {
-            "type": "string",
-            "description": "Unique identifier of the domain"
-          },
-          "is_disabled": {
-            "type": "boolean",
-            "description": "Indicates whether the domain is currently disabled"
-          },
-          "name": {
-            "type": "string",
-            "description": "Fully qualified domain name registered with Mailgun"
-          },
-          "require_tls": {
-            "type": "boolean",
-            "description": "If true Mailgun will only send messages over a TLS connection"
-          },
-          "skip_verification": {
-            "type": "boolean",
-            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
-          },
-          "smtp_login": {
-            "type": "string",
-            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
-          },
-          "smtp_password": {
-            "type": "string",
-            "description": "Optional SMTP password for the domain used for SMTP authentication"
-          },
-          "spam_action": {
-            "type": "string",
-            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
-          },
-          "subaccount_id": {
-            "type": "string",
-            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
-          },
-          "state": {
-            "type": "string",
-            "description": "Current verification status of the domain"
-          },
-          "type": {
-            "type": "string",
-            "description": "Classification of the domain. Possible values are custom or sandbox"
-          },
-          "tracking_host": {
-            "type": "string",
-            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
-          },
-          "use_automatic_sender_security": {
-            "type": "boolean",
-            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
-          },
-          "webhooks_redact_pii": {
-            "type": "boolean",
-            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
-          },
-          "web_prefix": {
-            "type": "string",
-            "description": "Subdomain prefix used for open and click tracking"
-          },
-          "web_scheme": {
-            "type": "string",
-            "description": "Protocol scheme used for tracking"
-          },
-          "wildcard": {
-            "type": "boolean",
-            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
-          },
-          "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
-          },
-          "encrypt_incoming_message": {
-            "type": "boolean",
-            "description": "If true incoming messages to this domain will be encrypted"
-          },
-          "message_ttl": {
-            "type": "integer",
-            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
-            "format": "int32"
-          }
-        },
         "description": "Domain details"
       },
       "GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -33516,43 +33218,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -33560,43 +33228,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiVerifyDomainResponseDomain": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
@@ -33605,100 +33239,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "archive_to": {
-            "type": "string",
-            "description": "URL that a copy of each successfully delivered message is going to be posted to."
-          },
-          "created_at": {
-            "type": "string",
-            "description": "Timestamp indicating when the domain was created in RFC1123 format"
-          },
-          "id": {
-            "type": "string",
-            "description": "Unique identifier of the domain"
-          },
-          "is_disabled": {
-            "type": "boolean",
-            "description": "Indicates whether the domain is currently disabled"
-          },
-          "name": {
-            "type": "string",
-            "description": "Fully qualified domain name registered with Mailgun"
-          },
-          "require_tls": {
-            "type": "boolean",
-            "description": "If true Mailgun will only send messages over a TLS connection"
-          },
-          "skip_verification": {
-            "type": "boolean",
-            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
-          },
-          "smtp_login": {
-            "type": "string",
-            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
-          },
-          "smtp_password": {
-            "type": "string",
-            "description": "Optional SMTP password for the domain used for SMTP authentication"
-          },
-          "spam_action": {
-            "type": "string",
-            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
-          },
-          "subaccount_id": {
-            "type": "string",
-            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
-          },
-          "state": {
-            "type": "string",
-            "description": "Current verification status of the domain"
-          },
-          "type": {
-            "type": "string",
-            "description": "Classification of the domain. Possible values are custom or sandbox"
-          },
-          "tracking_host": {
-            "type": "string",
-            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
-          },
-          "use_automatic_sender_security": {
-            "type": "boolean",
-            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
-          },
-          "webhooks_redact_pii": {
-            "type": "boolean",
-            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
-          },
-          "web_prefix": {
-            "type": "string",
-            "description": "Subdomain prefix used for open and click tracking"
-          },
-          "web_scheme": {
-            "type": "string",
-            "description": "Protocol scheme used for tracking"
-          },
-          "wildcard": {
-            "type": "boolean",
-            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
-          },
-          "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
-          },
-          "encrypt_incoming_message": {
-            "type": "boolean",
-            "description": "If true incoming messages to this domain will be encrypted"
-          },
-          "message_ttl": {
-            "type": "integer",
-            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
-            "format": "int32"
-          }
-        },
         "description": "Domain record information"
       },
       "GithubComMailgunDomainsHttpapiVerifyDomainResponseSendingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -33706,43 +33249,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiVerifyDomainResponseReceivingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -33750,40 +33259,7 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiCreateDomainWebhookRespWebhook": {
         "type": "object",
@@ -33812,7 +33288,6 @@
         "description": "List of webhooks"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseAccepted": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33821,19 +33296,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Accepted webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseDelivered": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33842,19 +33307,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Delivered webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseOpened": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33863,19 +33318,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Opened webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseClicked": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33884,19 +33329,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Clicked webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33905,19 +33340,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Unsubscribed webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseComplained": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33926,19 +33351,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Complained webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33947,19 +33362,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Temporary fail webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
@@ -33968,15 +33373,6 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        },
         "description": "Permanent fail webhook URLs"
       },
       "GithubComMailgunDomainsHttpapiGetAllDomainWebhooksRespWebhooks": {
@@ -34118,7 +33514,6 @@
         "description": "Unsubscribe settings"
       },
       "GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -34126,43 +33521,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiDomainKeyListResponseItemsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
@@ -34170,21 +33531,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "signing_domain": {
-            "type": "string"
-          },
-          "selector": {
-            "type": "string"
-          },
-          "dns_record": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
@@ -34192,28 +33541,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "previous": {
-            "type": "string",
-            "description": "Previous page URL"
-          },
-          "first": {
-            "type": "string",
-            "description": "First page URL"
-          },
-          "next": {
-            "type": "string",
-            "description": "Next page URL"
-          },
-          "last": {
-            "type": "string",
-            "description": "Last page URL"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
@@ -34221,21 +33551,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "signing_domain": {
-            "type": "string"
-          },
-          "selector": {
-            "type": "string"
-          },
-          "dns_record": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiReassignDkimAuthorityRespSendingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -34243,43 +33561,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiUpdateDomainRespDomain": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
@@ -34288,100 +33572,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "archive_to": {
-            "type": "string",
-            "description": "URL that a copy of each successfully delivered message is going to be posted to."
-          },
-          "created_at": {
-            "type": "string",
-            "description": "Timestamp indicating when the domain was created in RFC1123 format"
-          },
-          "id": {
-            "type": "string",
-            "description": "Unique identifier of the domain"
-          },
-          "is_disabled": {
-            "type": "boolean",
-            "description": "Indicates whether the domain is currently disabled"
-          },
-          "name": {
-            "type": "string",
-            "description": "Fully qualified domain name registered with Mailgun"
-          },
-          "require_tls": {
-            "type": "boolean",
-            "description": "If true Mailgun will only send messages over a TLS connection"
-          },
-          "skip_verification": {
-            "type": "boolean",
-            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
-          },
-          "smtp_login": {
-            "type": "string",
-            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
-          },
-          "smtp_password": {
-            "type": "string",
-            "description": "Optional SMTP password for the domain used for SMTP authentication"
-          },
-          "spam_action": {
-            "type": "string",
-            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
-          },
-          "subaccount_id": {
-            "type": "string",
-            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
-          },
-          "state": {
-            "type": "string",
-            "description": "Current verification status of the domain"
-          },
-          "type": {
-            "type": "string",
-            "description": "Classification of the domain. Possible values are custom or sandbox"
-          },
-          "tracking_host": {
-            "type": "string",
-            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
-          },
-          "use_automatic_sender_security": {
-            "type": "boolean",
-            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
-          },
-          "webhooks_redact_pii": {
-            "type": "boolean",
-            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
-          },
-          "web_prefix": {
-            "type": "string",
-            "description": "Subdomain prefix used for open and click tracking"
-          },
-          "web_scheme": {
-            "type": "string",
-            "description": "Protocol scheme used for tracking"
-          },
-          "wildcard": {
-            "type": "boolean",
-            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
-          },
-          "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
-          },
-          "encrypt_incoming_message": {
-            "type": "boolean",
-            "description": "If true incoming messages to this domain will be encrypted"
-          },
-          "message_ttl": {
-            "type": "integer",
-            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
-            "format": "int32"
-          }
-        },
         "description": "Domain object"
       },
       "GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -34389,43 +33582,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiUpdateDomainRespSendingDnsRecordsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
@@ -34433,40 +33592,7 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
-          }
-        }
+        ]
       },
       "GithubComMailgunDomainsHttpapiExceededQueueQuotaJsonDisabled": {
         "required": [
@@ -34619,7 +33745,6 @@
         "description": "Filters to apply to the query."
       },
       "GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
@@ -34627,24 +33752,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "to": {
-            "type": "string"
-          },
-          "message-id": {
-            "type": "string"
-          },
-          "from": {
-            "type": "string"
-          },
-          "subject": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelRoutesMatchComposed": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
@@ -34652,15 +33762,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "recipient": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventAccount": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
@@ -34668,18 +33772,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "parent-id": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventDeliveryStatus": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
@@ -34687,63 +33782,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "message": {
-            "type": "string"
-          },
-          "attempt-no": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "bounce-type": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "session-seconds": {
-            "type": "number",
-            "format": "float"
-          },
-          "retry-seconds": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "enhanced-code": {
-            "type": "string"
-          },
-          "mx-host": {
-            "type": "string"
-          },
-          "certificate-verified": {
-            "type": "boolean"
-          },
-          "tls": {
-            "type": "boolean"
-          },
-          "utf8": {
-            "type": "boolean"
-          },
-          "first-delivery-attempt-seconds": {
-            "type": "number",
-            "format": "float"
-          },
-          "last-code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "last-message": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventDomain": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
@@ -34751,15 +33792,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventEnvelope": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
@@ -34767,27 +33802,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "sender": {
-            "type": "string"
-          },
-          "transport": {
-            "type": "string"
-          },
-          "sending-ip": {
-            "type": "string"
-          },
-          "targets": {
-            "type": "string"
-          },
-          "i-ip-pool-id": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventStorage": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
@@ -34795,27 +33812,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "region": {
-            "type": "string"
-          },
-          "env": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "url": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventTemplate": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
@@ -34823,21 +33822,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          },
-          "is-text": {
-            "type": "boolean"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventMessage": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
@@ -34845,35 +33832,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "headers": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed"
-          },
-          "attachments": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAttachment"
-            }
-          },
-          "recipients": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "size": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "scheduled-for": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventFlags": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
@@ -34881,39 +33842,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "is-authenticated": {
-            "type": "boolean"
-          },
-          "is-system-test": {
-            "type": "boolean"
-          },
-          "is-routed": {
-            "type": "boolean"
-          },
-          "is-amp": {
-            "type": "boolean"
-          },
-          "is-test-mode": {
-            "type": "boolean"
-          },
-          "is-delayed-bounce": {
-            "type": "boolean"
-          },
-          "is-callback": {
-            "type": "boolean"
-          },
-          "is-encrypted": {
-            "type": "boolean"
-          },
-          "is-webhook": {
-            "type": "boolean"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventGeolocation": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
@@ -34921,24 +33852,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "city": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "region": {
-            "type": "string"
-          },
-          "timezone": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventClientInfo": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
@@ -34946,33 +33862,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "client-name": {
-            "type": "string"
-          },
-          "client-os": {
-            "type": "string"
-          },
-          "client-type": {
-            "type": "string"
-          },
-          "device-type": {
-            "type": "string"
-          },
-          "user-agent": {
-            "type": "string"
-          },
-          "ip": {
-            "type": "string"
-          },
-          "bot": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventRoutes": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
@@ -34980,31 +33872,9 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "actions": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "expression": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          },
-          "priority": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "match": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatchComposed"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventMailingList": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
@@ -35012,18 +33882,7 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "address": {
-            "type": "string"
-          },
-          "list-id": {
-            "type": "string"
-          },
-          "sid": {
-            "type": "string"
-          }
-        }
+        ]
       },
       "GithubComMailgunLogsApiPkgApiModelLogsRequestFilter": {
         "required": [
@@ -35049,7 +33908,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "domain": "Sender domain name, e.g. example.com",
@@ -35097,7 +33955,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Filter Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -35156,7 +34013,6 @@
           "complained_rate"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric",
         "x-enumDescriptions": {
           "hard_bounce_rate": "Hard bounce rate",
@@ -35197,7 +34053,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -35247,7 +34102,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "domain": "Sender domain name, e.g. example.com",
@@ -35291,7 +34145,6 @@
           "complained_rate"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric",
         "x-enumDescriptions": {
           "hard_bounce_rate": "Hard bounce rate",
@@ -35332,7 +34185,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -35382,7 +34234,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "domain": "Sender domain name, e.g. example.com",
@@ -35424,7 +34275,6 @@
           "seed_test_count"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Limit Metric",
         "x-enumDescriptions": {
           "email_preview_success_count": "The number of successful email previews",
@@ -35455,7 +34305,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -35505,7 +34354,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "domain": "Sender domain name, e.g. example.com",
@@ -35547,7 +34395,6 @@
           "seed_test_count"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Limit Metric",
         "x-enumDescriptions": {
           "email_preview_success_count": "The number of successful email previews",
@@ -35578,7 +34425,6 @@
           "\u003E="
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Metric Comparator",
         "x-enumDescriptions": {
           "=": "Equal",
@@ -35628,7 +34474,6 @@
           "subaccount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Dimension",
         "x-enumDescriptions": {
           "domain": "Sender domain name, e.g. example.com",
@@ -35670,7 +34515,6 @@
           "seed_test_count"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Limit Metric",
         "x-enumDescriptions": {
           "email_preview_success_count": "The number of successful email previews",
@@ -35698,7 +34542,6 @@
           "slack"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Alert channel type.",
         "x-enumDescriptions": {
           "email": "email",
@@ -35758,7 +34601,6 @@
           "slack"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Alert channel type.",
         "x-enumDescriptions": {
           "email": "email",
@@ -35828,7 +34670,6 @@
         "description": "Timestamp for when the entry was created in RFC822 format"
       },
       "GithubComMailgunTempleModelTemplateVersion": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
@@ -35837,50 +34678,10 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "tag": {
-            "type": "string",
-            "description": "Tag of the version. Must be unique to the template"
-          },
-          "template": {
-            "type": "string",
-            "description": "Template content"
-          },
-          "engine": {
-            "type": "string",
-            "description": "Rendering engine"
-          },
-          "mjml": {
-            "type": "string",
-            "description": "Template source"
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Creation date in RFC822 format",
-            "readOnly": true
-          },
-          "comment": {
-            "type": "string",
-            "description": "Comment related to the version"
-          },
-          "active": {
-            "type": "boolean",
-            "description": "If this flag is true"
-          },
-          "id": {
-            "type": "string",
-            "description": "Template ID",
-            "readOnly": true
-          },
-          "headers": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersionHeadersProperty"
-          }
-        },
         "description": "Active version information",
         "readOnly": true
       },
       "GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
@@ -35889,52 +34690,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the template"
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the template"
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Creation date in RFC822 format",
-            "readOnly": true
-          },
-          "createdBy": {
-            "type": "string",
-            "description": "Indicate who created the template"
-          },
-          "id": {
-            "type": "string",
-            "description": "Template ID",
-            "readOnly": true
-          },
-          "domain": {
-            "type": "string",
-            "description": "Domain of the template"
-          },
-          "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
-          },
-          "versions": {
-            "type": [
-              "null",
-              "array"
-            ],
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-            },
-            "description": "List of template\u0027s versions",
-            "readOnly": true
-          }
-        },
         "description": "Template details"
       },
       "GithubComMailgunTempleHttpapiGetTemplateOrVersionResponseTemplate": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
@@ -35943,52 +34701,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the template"
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the template"
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Creation date in RFC822 format",
-            "readOnly": true
-          },
-          "createdBy": {
-            "type": "string",
-            "description": "Indicate who created the template"
-          },
-          "id": {
-            "type": "string",
-            "description": "Template ID",
-            "readOnly": true
-          },
-          "domain": {
-            "type": "string",
-            "description": "Domain of the template"
-          },
-          "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
-          },
-          "versions": {
-            "type": [
-              "null",
-              "array"
-            ],
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-            },
-            "description": "List of template\u0027s versions",
-            "readOnly": true
-          }
-        },
         "description": "Template details"
       },
       "GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
@@ -35997,48 +34712,6 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the template"
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the template"
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Creation date in RFC822 format",
-            "readOnly": true
-          },
-          "createdBy": {
-            "type": "string",
-            "description": "Indicate who created the template"
-          },
-          "id": {
-            "type": "string",
-            "description": "Template ID",
-            "readOnly": true
-          },
-          "domain": {
-            "type": "string",
-            "description": "Domain of the template"
-          },
-          "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
-          },
-          "versions": {
-            "type": [
-              "null",
-              "array"
-            ],
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-            },
-            "description": "List of template\u0027s versions",
-            "readOnly": true
-          }
-        },
         "description": "Template details"
       },
       "GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging": {
@@ -36098,7 +34771,6 @@
         "description": "Pagination details"
       },
       "GithubComMailgunTempleHttpapiVersionCopyResponseVersion": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
@@ -36107,49 +34779,9 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "tag": {
-            "type": "string",
-            "description": "Tag of the version. Must be unique to the template"
-          },
-          "template": {
-            "type": "string",
-            "description": "Template content"
-          },
-          "engine": {
-            "type": "string",
-            "description": "Rendering engine"
-          },
-          "mjml": {
-            "type": "string",
-            "description": "Template source"
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Creation date in RFC822 format",
-            "readOnly": true
-          },
-          "comment": {
-            "type": "string",
-            "description": "Comment related to the version"
-          },
-          "active": {
-            "type": "boolean",
-            "description": "If this flag is true"
-          },
-          "id": {
-            "type": "string",
-            "description": "Template ID",
-            "readOnly": true
-          },
-          "headers": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersionHeadersProperty"
-          }
-        },
         "description": "Created version details"
       },
       "GithubComMailgunTempleHttpapiVersionCopyResponseTemplate": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
@@ -36158,50 +34790,10 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "tag": {
-            "type": "string",
-            "description": "Tag of the version. Must be unique to the template"
-          },
-          "template": {
-            "type": "string",
-            "description": "Template content"
-          },
-          "engine": {
-            "type": "string",
-            "description": "Rendering engine"
-          },
-          "mjml": {
-            "type": "string",
-            "description": "Template source"
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Creation date in RFC822 format",
-            "readOnly": true
-          },
-          "comment": {
-            "type": "string",
-            "description": "Comment related to the version"
-          },
-          "active": {
-            "type": "boolean",
-            "description": "If this flag is true"
-          },
-          "id": {
-            "type": "string",
-            "description": "Template ID",
-            "readOnly": true
-          },
-          "headers": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersionHeadersProperty"
-          }
-        },
         "description": "Deprecated: Use \u0027version\u0027 field",
         "deprecated": true
       },
       "GithubComMailgunTempleHttpapiTemplateUpdateVersion": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
@@ -36210,12 +34802,6 @@
             "type": "null"
           }
         ],
-        "properties": {
-          "tag": {
-            "type": "string",
-            "description": "Tag of the version. Must be unique to the template"
-          }
-        },
         "description": "Template version details"
       },
       "GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponseTemplate": {
@@ -36241,7 +34827,6 @@
           "web"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Kind",
         "x-enumDescriptions": {
           "domain": "Domain-specific API key for keys with \u0027sending\u0027 role",
@@ -36275,7 +34860,6 @@
           "developer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Role",
         "x-enumDescriptions": {
           "admin": "Provides admin-level permissions on an API key",
@@ -36313,7 +34897,6 @@
           "web"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Kind",
         "x-enumDescriptions": {
           "domain": "Domain-specific API key for keys with \u0027sending\u0027 role",
@@ -36347,7 +34930,6 @@
           "developer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Role",
         "x-enumDescriptions": {
           "admin": "Provides admin-level permissions on an API key",
@@ -36463,7 +35045,6 @@
           "hour"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Resolution of the metrics.",
         "x-enumDescriptions": {
           "day": "Day",
@@ -36485,7 +35066,6 @@
         }
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem": {
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItem"
@@ -36493,121 +35073,7 @@
           {
             "type": "null"
           }
-        ],
-        "properties": {
-          "account.id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "account.name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "entity-name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "recipient-provider": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "recipient-domain": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "domain.name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "envelope.i-ip-pool-id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "envelope.i-ip-pool-name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "envelope.sending-ip": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "timestamp": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "tags": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "Concatenated tags, e.g. \u0027tag1, tag2\u0027"
-          },
-          "tag": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "criticality": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "severity": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "category": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "group-id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "sample-text": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "explanation": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "metrics": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"
-          }
-        }
+        ]
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestStart": {
         "type": "object",
@@ -36623,7 +35089,6 @@
           "hour"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Resolution of the metrics.",
         "x-enumDescriptions": {
           "day": "Day",
@@ -37770,19 +36235,19 @@
       "GetV1DynamicPoolsDomainsNamePreview200Response": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/GetV1DynamicPoolsDomainsNamePreview200ResponseAdditionalProperties"
+          "$ref": "#/components/schemas/GetV3DynamicPools200ResponseAdditionalProperties"
         }
       },
       "PutV1DynamicPoolsDomainsNameOverride200Response": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/PutV1DynamicPoolsDomainsNameOverride200ResponseAdditionalProperties"
+          "$ref": "#/components/schemas/GetV3DynamicPools200ResponseAdditionalProperties"
         }
       },
       "DeleteV1DynamicPoolsDomainsNameOverride200Response": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/DeleteV1DynamicPoolsDomainsNameOverride200ResponseAdditionalProperties"
+          "$ref": "#/components/schemas/GetV3DynamicPools200ResponseAdditionalProperties"
         }
       },
       "PostV3DomainIdBouncesRequest": {
@@ -38203,15 +36668,6 @@
       "GetV3DynamicPools200ResponseAdditionalProperties": {
         "type": "object"
       },
-      "GetV1DynamicPoolsDomainsNamePreview200ResponseAdditionalProperties": {
-        "type": "object"
-      },
-      "PutV1DynamicPoolsDomainsNameOverride200ResponseAdditionalProperties": {
-        "type": "object"
-      },
-      "DeleteV1DynamicPoolsDomainsNameOverride200ResponseAdditionalProperties": {
-        "type": "object"
-      },
       "PutV5AccountsSubaccountsSubaccountIdFeatures200ResponseFeatures": {
         "type": "object"
       },
@@ -38262,7 +36718,6 @@
           "yes"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Generates a plain text version of the template alongside the HTML version when sending templated emails. When set to \u0027yes\u0027, instructs Mailgun to create a text/plain MIME part based on the template content, ensuring compatibility with email clients that don\u0027t support HTML or have HTML rendering disabled. This improves email deliverability and accessibility by providing a fallback text version in multipart emails.",
         "x-enumDescriptions": {
           "yes": "Render template in the text part of the message"
@@ -38286,7 +36741,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Enables or disables DKIM signatures on a per-message basis. Overrides the domain-level DKIM setting for this specific message.",
         "x-enumDescriptions": {
           "yes": "Enables DKIM signatures",
@@ -38322,7 +36776,6 @@
           "yes"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Enables sending in test mode. Messages are processed normally but not actually delivered to recipients. Useful for testing without sending real emails. See [Sending in Test Mode](https://documentation.mailgun.com/docs/mailgun/user-manual/sending-messages/test-mode)",
         "x-enumDescriptions": {
           "yes": "Send in test mode"
@@ -38347,7 +36800,6 @@
           "htmlonly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Toggles both click and open tracking on a per-message basis",
         "x-enumDescriptions": {
           "yes": "Enable tracking on a per-message basis",
@@ -38392,7 +36844,6 @@
           "htmlonly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Toggles click tracking on a per-message basis, see [Tracking Clicks](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/tracking-clicks).  This overrides the domain-level click tracking setting.",
         "x-enumDescriptions": {
           "yes": "Enable tracking on a per-message basis",
@@ -38436,7 +36887,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Toggles opens tracking on a per-message basis, see [Tracking Opens](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/tracking-opens).  Has higher priority than domain-level setting.",
         "x-enumDescriptions": {
           "yes": "Enables opens tracking",
@@ -38475,7 +36925,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "When set to \u0027yes\u0027, requires the message to be sent only over a TLS connection to the Email Service Provider. If TLS cannot be established, the message will not be delivered. When set to \u0027no\u0027 (default), Mailgun attempts TLS but falls back to plaintext SMTP if needed.",
         "x-enumDescriptions": {
           "yes": "Message only be sent over a TLS connection",
@@ -38514,7 +36963,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If \u0060true\u0060, the certificate and hostname of the resolved MX Host will not be verified when trying to establish a TLS connection. If \u0060false\u0060, Mailgun will verify the certificate and hostname. If either one can not be verified, a TLS connection will not be established. The default is \u0060false\u0060",
         "x-enumDescriptions": {
           "yes": "Verification skipped",
@@ -38554,7 +37002,6 @@
           "htmlonly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Places the tracking pixel at the top of emails instead of the bottom. Useful for long emails that may be truncated or have rendering issues, ensuring open tracking works accurately.",
         "x-enumDescriptions": {
           "yes": "Enables tracking",
@@ -38598,7 +37045,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Enables or disables DKIM signatures on a per-message basis. Overrides the domain-level DKIM setting for this specific message.",
         "x-enumDescriptions": {
           "yes": "Enables DKIM signatures",
@@ -38638,7 +37084,6 @@
           "htmlonly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Toggles both click and open tracking on a per-message basis, see [Tracking Messages](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages) for details.",
         "x-enumDescriptions": {
           "yes": "Enable tracking on a per-message basis",
@@ -38683,7 +37128,6 @@
           "htmlonly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Toggles click tracking on a per-message basis, see [Tracking Clicks](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/tracking-clicks).  This overrides the domain-level click tracking setting",
         "x-enumDescriptions": {
           "yes": "Enable tracking on a per-message basis",
@@ -38727,7 +37171,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Toggles opens tracking on a per-message basis, see [Tracking Opens](https://documentation.mailgun.com/docs/mailgun/user-manual/tracking-messages/tracking-opens). Has higher priority than domain-level setting.",
         "x-enumDescriptions": {
           "yes": "Enables opens tracking",
@@ -38766,7 +37209,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "When set to \u0027yes\u0027, requires the message to be sent only over a TLS connection. If TLS cannot be established, the message will not be delivered. When set to \u0027no\u0027 (default), Mailgun attempts TLS but falls back to plaintext SMTP if needed.",
         "x-enumDescriptions": {
           "yes": "Message only be sent over a TLS connection",
@@ -38805,7 +37247,6 @@
           "false"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "When set to \u0027true\u0027, skips certificate and hostname verification for TLS connections. When \u0027false\u0027 (default), Mailgun verifies certificates and hostnames - if verification fails, TLS connection is not established.",
         "x-enumDescriptions": {
           "yes": "Verification skipped",
@@ -38845,7 +37286,6 @@
           "htmlonly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Places the tracking pixel at the top of emails instead of the bottom. Useful for long emails that may be truncated or have rendering issues, ensuring open tracking works accurately.",
         "x-enumDescriptions": {
           "yes": "Enables tracking",
@@ -38893,7 +37333,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Webhook type to create.",
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
@@ -38956,7 +37395,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Event types. Use multiple times to specify multiple event types. ",
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
@@ -39019,7 +37457,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Event types to associate with this URL. Use multiple times to specify multiple event types. This replaces the existing associations. ",
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
@@ -39082,7 +37519,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Event types to subscribe to. Use multiple times to specify multiple event types. Maximum of 3 unique URLs per event type.",
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
@@ -39145,7 +37581,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Event types to subscribe to. Use multiple times to specify multiple event types. Maximum of 3 unique URLs per event type.",
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
@@ -39203,7 +37638,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Logging categorization between",
         "x-enumDescriptions": {
           "info": "Info event",
@@ -39236,7 +37670,6 @@
           "web"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Type of API key (\u0027domain\u0027, \u0027user\u0027, or \u0027web\u0027). Defaults to \u0027user\u0027 if not provided. Note: web keys are not subject to IP allowlisting and have a default/maximum validity period of 1 day.",
         "x-enumDescriptions": {
           "domain": "Create API key of type \u0027domain\u0027",
@@ -39270,7 +37703,6 @@
           "developer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Key role (\u0027admin\u0027, \u0027basic\u0027 [use in place of analyst], \u0027sending\u0027 [use with keys of domain kind], or \u0027developer\u0027)",
         "x-enumDescriptions": {
           "admin": "Provides admin-level permissions on an API key",
@@ -39313,7 +37745,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
           "clicked": "The clicked event occurs when a recipient clicks a link in the email. This requires click tracking to be enabled for the domain.",
@@ -39375,7 +37806,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
           "clicked": "The clicked event occurs when a recipient clicks a link in the email. This requires click tracking to be enabled for the domain.",
@@ -39437,7 +37867,6 @@
           "complained"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "accepted": "The accepted event occurs when Mailgun accepts a message for delivery.",
           "clicked": "The clicked event occurs when a recipient clicks a link in the email. This requires click tracking to be enabled for the domain.",
@@ -39494,7 +37923,6 @@
           "name"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "bounce_rate": "Sort domains by bounce rate",
           "complaint_rate": "Sort domains by complaint rate",
@@ -39525,7 +37953,6 @@
           "descending"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "ascending": "Sort domains ascending by the specified sort_by field",
           "descending": "Sort domains descending by the specified sort_by field"
@@ -39551,7 +37978,6 @@
           "no"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "yes": "Sort by ascending time",
           "no": "Do not sort"
@@ -39579,7 +38005,6 @@
           "previous"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "first": "Get the first list\u0027s page",
           "last": "Get the last list\u0027s page",
@@ -39617,7 +38042,6 @@
           "previous"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "first": "Get the first list\u0027s page",
           "last": "Get the last list\u0027s page",
@@ -39655,7 +38079,6 @@
           "previous"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "first": "Get the first list\u0027s page",
           "last": "Get the last list\u0027s page",
@@ -39693,7 +38116,6 @@
           "previous"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "first": "Get the first list\u0027s page",
           "last": "Get the last list\u0027s page",
@@ -39729,7 +38151,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "asc": "Sort by ascending order of name field",
           "desc": "Sort by descending order of name field"
@@ -39756,7 +38177,6 @@
           "web"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "domain": "Filter for domain keys",
           "user": "Filter for user keys",
@@ -39790,7 +38210,6 @@
           "admin"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-enumDescriptions": {
           "basic": "Basic/Analyst user role",
           "billing": "Billing user role",

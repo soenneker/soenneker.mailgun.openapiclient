@@ -22,10 +22,10 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\{domainName-id}
+    /// Builds and executes requests for operations under \v3\{domainName}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DomainNameItemRequestBuilder : BaseRequestBuilder
+    public partial class WithDomainNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The aggregates property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.AggregatesRequestBuilder Aggregates
@@ -93,19 +93,19 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Whitelists.WhitelistsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.DomainNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.WithDomainNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}", pathParameters)
+        public WithDomainNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.DomainNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Item.WithDomainNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName%2Did}", rawUrl)
+        public WithDomainNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/{domainName}", rawUrl)
         {
         }
     }

@@ -14,10 +14,10 @@ using System;
 namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v3\ips\{addr-id}
+    /// Builds and executes requests for operations under \v3\ips\{ip}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AddrItemRequestBuilder : BaseRequestBuilder
+    public partial class WithIpItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The domains property</summary>
         public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Domains.DomainsRequestBuilder Domains
@@ -30,19 +30,19 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.Ip_band.Ip_bandRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddrItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{addr%2Did}", pathParameters)
+        public WithIpItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{ip}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddrItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{addr%2Did}", rawUrl)
+        public WithIpItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v3/ips/{ip}", rawUrl)
         {
         }
         /// <summary>
@@ -90,11 +90,11 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.AddrItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Mailgun.OpenApiClient.V3.Ips.Item.WithIpItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }
