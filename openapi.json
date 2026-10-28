@@ -24087,28 +24087,28 @@
         "properties": {
           "from": {
             "type": "string",
-            "description": "Email address of the `From` header. Can include a friendly name using the format `\"Friendly Name <email@domain.com>\"`. Note: not required if sending with a template that has a pre-set From header, but will override the template's From header if provided."
+            "description": "Email address of the `From` header. Can include a friendly name using the format `Friendly Name <email@domain.com>`. Note: not required if sending with a template that has a pre-set From header, but will override the template's From header if provided. Friendly names (display names) with special characters, such as commas, should be enclosed in double quotes."
           },
           "to": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Email address of the recipient(s). Supports friendly name format. Example: `\"Bob <bob@host.com>\"`. Use commas to separate multiple recipients. Duplicate addresses are automatically ignored."
+            "description": "Email address of the recipient(s). Supports friendly name format. Example: `Bob <bob@host.com>`. If a friendly name contains a comma, we recommend submitting each recipient in a separate `to` field. Alternatively, use commas to separate multiple recipients. Duplicate addresses are automatically ignored. We recommend enclosing friendly names (display names) in double quotes when they contain special characters, such as commas. For example: `\"Bob, Account Manager\" <bob@example.com>`. This follows RFC 5322 formatting and helps avoid ambiguity when specifying multiple recipients. Simple names such as `Bob <bob@example.com>` do not require quotes."
           },
           "cc": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Same as `to` but for carbon copy recipients. Supports friendly name format."
+            "description": "Same as `to` but for carbon copy recipients. Supports friendly name format. See `to` for guidance on quoting friendly names."
           },
           "bcc": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Same as `to` but for blind carbon copy recipients. Supports friendly name format."
+            "description": "Same as `to` but for blind carbon copy recipients. Supports friendly name format. See `to` for guidance on quoting friendly names."
           },
           "subject": {
             "type": "string",
@@ -24372,7 +24372,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Email address of the recipient(s). Supports friendly name format. Example: `\"Bob <bob@host.com>\"`. Use commas to separate multiple recipients. Duplicate addresses are automatically ignored."
+            "description": "Email address of the recipient(s). Supports friendly name format. Example: `Bob <bob@host.com>`. If a friendly name contains a comma, we recommend submitting each recipient in a separate `to` field. Alternatively, use commas to separate multiple recipients. Duplicate addresses are automatically ignored. We recommend enclosing friendly names (display names) in double quotes when they contain special characters, such as commas. For example: `\"Bob, Account Manager\" <bob@example.com>`. This follows RFC 5322 formatting and helps avoid ambiguity when specifying multiple recipients. Simple names such as `Bob <bob@example.com>` do not require quotes."
           },
           "message": {
             "type": "string",
@@ -24604,7 +24604,7 @@
         "properties": {
           "to": {
             "type": "string",
-            "description": "Email address of the recipient(s). Supports friendly name format. Example: `\"Bob <bob@host.com>\"`. Use commas to separate multiple recipients. Duplicate addresses are automatically ignored."
+            "description": "Email address of the recipient(s). Supports friendly name format. Example: `Bob <bob@host.com>`. If a friendly name contains a comma, we recommend submitting each recipient in a separate `to` field. Alternatively, use commas to separate multiple recipients. Duplicate addresses are automatically ignored. We recommend enclosing friendly names (display names) in double quotes when they contain special characters, such as commas. For example: `\"Bob, Account Manager\" <bob@example.com>`. This follows RFC 5322 formatting and helps avoid ambiguity when specifying multiple recipients. Simple names such as `Bob <bob@example.com>` do not require quotes."
           }
         },
         "required": [
