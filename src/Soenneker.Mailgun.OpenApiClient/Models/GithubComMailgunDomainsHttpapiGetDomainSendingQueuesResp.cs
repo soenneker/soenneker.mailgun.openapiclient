@@ -17,8 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("regular") is { } nullNodeRegular && nullNodeRegular.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regular = null;
-            if (parseNode.GetChildNode("scheduled") is { } nullNodeScheduled && nullNodeScheduled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scheduled = null;
+            if (parseNode.GetChildNode("regular") is null) { _explicitNullValueRegular = default!; _explicitNullProperties?.Remove("regular"); }
+            else if (parseNode.GetChildNode("regular") is { } nullNodeRegular && nullNodeRegular.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regular = null;
+            if (parseNode.GetChildNode("scheduled") is null) { _explicitNullValueScheduled = default!; _explicitNullProperties?.Remove("scheduled"); }
+            else if (parseNode.GetChildNode("scheduled") is { } nullNodeScheduled && nullNodeScheduled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scheduled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Message queue response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular? Regular { get => _explicitNullValueRegular; set { _explicitNullValueRegular = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regular"); else _explicitNullProperties?.Remove("regular"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular? Regular { get => _explicitNullValueRegular; set { _explicitNullValueRegular = value; AdditionalData?.Remove("regular"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regular"); else _explicitNullProperties?.Remove("regular"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular? _explicitNullValueRegular = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular Regular { get => _explicitNullValueRegular; set { _explicitNullValueRegular = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regular"); else _explicitNullProperties?.Remove("regular"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular Regular { get => _explicitNullValueRegular; set { _explicitNullValueRegular = value; AdditionalData?.Remove("regular"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regular"); else _explicitNullProperties?.Remove("regular"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespRegular _explicitNullValueRegular = default!;
 #endif
         /// <summary>Scheduled message queue response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled? Scheduled { get => _explicitNullValueScheduled; set { _explicitNullValueScheduled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled"); else _explicitNullProperties?.Remove("scheduled"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled? Scheduled { get => _explicitNullValueScheduled; set { _explicitNullValueScheduled = value; AdditionalData?.Remove("scheduled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled"); else _explicitNullProperties?.Remove("scheduled"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled? _explicitNullValueScheduled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled Scheduled { get => _explicitNullValueScheduled; set { _explicitNullValueScheduled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled"); else _explicitNullProperties?.Remove("scheduled"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled Scheduled { get => _explicitNullValueScheduled; set { _explicitNullValueScheduled = value; AdditionalData?.Remove("scheduled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled"); else _explicitNullProperties?.Remove("scheduled"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetDomainSendingQueuesRespScheduled _explicitNullValueScheduled = default!;
 #endif
         /// <summary>

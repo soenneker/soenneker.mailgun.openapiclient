@@ -120,7 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.ForwardsRequestBuilder.ForwardsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v3/forwards?limit={limit}&page={page}{&domain%2Ename*,search*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/v3/forwards?limit={limit}&page={page}{&domain%2Ename*,search*}", RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v3/forwards", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -139,7 +139,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Forwards
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Forwards.ForwardsRequestBuilder.ForwardsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v3/forwards?forward.recipient={forward%2Erecipient}&forward.store={forward%2Estore}&forward.url={forward%2Eurl}&match={match}", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/v3/forwards?forward.recipient={forward%2Erecipient}&forward.store={forward%2Estore}&forward.url={forward%2Eurl}&match={match}", RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v3/forwards", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -18,34 +18,37 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("html_footer") is { } nullNodeHtmlFooter && nullNodeHtmlFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlFooter = null;
-            if (parseNode.GetChildNode("text_footer") is { } nullNodeTextFooter && nullNodeTextFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFooter = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("html_footer") is null) { _explicitNullValueHtmlFooter = default!; _explicitNullProperties?.Remove("html_footer"); }
+            else if (parseNode.GetChildNode("html_footer") is { } nullNodeHtmlFooter && nullNodeHtmlFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlFooter = null;
+            if (parseNode.GetChildNode("text_footer") is null) { _explicitNullValueTextFooter = default!; _explicitNullProperties?.Remove("text_footer"); }
+            else if (parseNode.GetChildNode("text_footer") is { } nullNodeTextFooter && nullNodeTextFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFooter = null;
         }
 
         /// <summary>Whether unsubscribe tracking is enabled or not</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTML footer for the unsubscribe link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlFooter { get => _explicitNullValueHtmlFooter; set { _explicitNullValueHtmlFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_footer"); else _explicitNullProperties?.Remove("html_footer"); } }
+        public string? HtmlFooter { get => _explicitNullValueHtmlFooter; set { _explicitNullValueHtmlFooter = value; AdditionalData?.Remove("html_footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_footer"); else _explicitNullProperties?.Remove("html_footer"); } }
         private string? _explicitNullValueHtmlFooter = default!;
 #nullable restore
 #else
-        public string HtmlFooter { get => _explicitNullValueHtmlFooter; set { _explicitNullValueHtmlFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_footer"); else _explicitNullProperties?.Remove("html_footer"); } }
+        public string HtmlFooter { get => _explicitNullValueHtmlFooter; set { _explicitNullValueHtmlFooter = value; AdditionalData?.Remove("html_footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_footer"); else _explicitNullProperties?.Remove("html_footer"); } }
         private string _explicitNullValueHtmlFooter = default!;
 #endif
         /// <summary>The text footer for the unsubscribe link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextFooter { get => _explicitNullValueTextFooter; set { _explicitNullValueTextFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_footer"); else _explicitNullProperties?.Remove("text_footer"); } }
+        public string? TextFooter { get => _explicitNullValueTextFooter; set { _explicitNullValueTextFooter = value; AdditionalData?.Remove("text_footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_footer"); else _explicitNullProperties?.Remove("text_footer"); } }
         private string? _explicitNullValueTextFooter = default!;
 #nullable restore
 #else
-        public string TextFooter { get => _explicitNullValueTextFooter; set { _explicitNullValueTextFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_footer"); else _explicitNullProperties?.Remove("text_footer"); } }
+        public string TextFooter { get => _explicitNullValueTextFooter; set { _explicitNullValueTextFooter = value; AdditionalData?.Remove("text_footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_footer"); else _explicitNullProperties?.Remove("text_footer"); } }
         private string _explicitNullValueTextFooter = default!;
 #endif
         /// <summary>

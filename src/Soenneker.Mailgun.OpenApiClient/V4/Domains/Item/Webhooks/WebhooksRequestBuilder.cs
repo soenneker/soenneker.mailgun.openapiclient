@@ -138,7 +138,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v4/domains/{name}/webhooks{?url*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/v4/domains/{name}/webhooks{?url*}", RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v4/domains/{name}/webhooks", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -159,7 +159,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v4/domains/{name}/webhooks", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
@@ -181,7 +181,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Domains.Item.Webhooks
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v4/domains/{name}/webhooks", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");

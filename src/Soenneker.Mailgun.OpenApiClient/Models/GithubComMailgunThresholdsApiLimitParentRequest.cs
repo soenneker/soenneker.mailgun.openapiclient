@@ -17,9 +17,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alert_channels") is { } nullNodeAlertChannels && nullNodeAlertChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertChannels = null;
-            if (parseNode.GetChildNode("warning_perc_one") is { } nullNodeWarningPercOne && nullNodeWarningPercOne.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningPercOne = null;
-            if (parseNode.GetChildNode("warning_perc_two") is { } nullNodeWarningPercTwo && nullNodeWarningPercTwo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningPercTwo = null;
+            if (parseNode.GetChildNode("alert_channels") is null) { _explicitNullValueAlertChannels = default!; _explicitNullProperties?.Remove("alert_channels"); }
+            else if (parseNode.GetChildNode("alert_channels") is { } nullNodeAlertChannels && nullNodeAlertChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertChannels = null;
+            if (parseNode.GetChildNode("warning_perc_one") is null) { _explicitNullValueWarningPercOne = default!; _explicitNullProperties?.Remove("warning_perc_one"); }
+            else if (parseNode.GetChildNode("warning_perc_one") is { } nullNodeWarningPercOne && nullNodeWarningPercOne.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningPercOne = null;
+            if (parseNode.GetChildNode("warning_perc_two") is null) { _explicitNullValueWarningPercTwo = default!; _explicitNullProperties?.Remove("warning_perc_two"); }
+            else if (parseNode.GetChildNode("warning_perc_two") is { } nullNodeWarningPercTwo && nullNodeWarningPercTwo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningPercTwo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>A list of alert channels to notify.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?>? AlertChannels { get => _explicitNullValueAlertChannels; set { _explicitNullValueAlertChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alert_channels"); else _explicitNullProperties?.Remove("alert_channels"); } }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?>? AlertChannels { get => _explicitNullValueAlertChannels; set { _explicitNullValueAlertChannels = value; AdditionalData?.Remove("alert_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alert_channels"); else _explicitNullProperties?.Remove("alert_channels"); } }
         private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?>? _explicitNullValueAlertChannels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?> AlertChannels { get => _explicitNullValueAlertChannels; set { _explicitNullValueAlertChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alert_channels"); else _explicitNullProperties?.Remove("alert_channels"); } }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?> AlertChannels { get => _explicitNullValueAlertChannels; set { _explicitNullValueAlertChannels = value; AdditionalData?.Remove("alert_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alert_channels"); else _explicitNullProperties?.Remove("alert_channels"); } }
         private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?> _explicitNullValueAlertChannels = default!;
 #endif
         /// <summary>The percentage of the limit at which a warning will be sent given as an integer 1-99. Defaults to 50</summary>
-        public int? WarningPercOne { get => _explicitNullValueWarningPercOne; set { _explicitNullValueWarningPercOne = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_perc_one"); else _explicitNullProperties?.Remove("warning_perc_one"); } }
+        public int? WarningPercOne { get => _explicitNullValueWarningPercOne; set { _explicitNullValueWarningPercOne = value; AdditionalData?.Remove("warning_perc_one"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_perc_one"); else _explicitNullProperties?.Remove("warning_perc_one"); } }
         private int? _explicitNullValueWarningPercOne = default!;
         /// <summary>The percentage of the limit at which a second warning will be sent given as an integer 1-99. Defaults to 75</summary>
-        public int? WarningPercTwo { get => _explicitNullValueWarningPercTwo; set { _explicitNullValueWarningPercTwo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_perc_two"); else _explicitNullProperties?.Remove("warning_perc_two"); } }
+        public int? WarningPercTwo { get => _explicitNullValueWarningPercTwo; set { _explicitNullValueWarningPercTwo = value; AdditionalData?.Remove("warning_perc_two"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_perc_two"); else _explicitNullProperties?.Remove("warning_perc_two"); } }
         private int? _explicitNullValueWarningPercTwo = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitParentRequest"/> and sets the default values.

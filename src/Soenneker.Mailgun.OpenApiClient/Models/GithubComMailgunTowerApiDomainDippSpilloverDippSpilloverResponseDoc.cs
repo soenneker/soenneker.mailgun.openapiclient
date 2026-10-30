@@ -17,7 +17,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("extra_dedicated_ips") is { } nullNodeExtraDedicatedIps && nullNodeExtraDedicatedIps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraDedicatedIps = null;
+            if (parseNode.GetChildNode("extra_dedicated_ips") is null) { _explicitNullValueExtraDedicatedIps = default!; _explicitNullProperties?.Remove("extra_dedicated_ips"); }
+            else if (parseNode.GetChildNode("extra_dedicated_ips") is { } nullNodeExtraDedicatedIps && nullNodeExtraDedicatedIps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraDedicatedIps = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>the DIPP spillover settings for the account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps? ExtraDedicatedIps { get => _explicitNullValueExtraDedicatedIps; set { _explicitNullValueExtraDedicatedIps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_dedicated_ips"); else _explicitNullProperties?.Remove("extra_dedicated_ips"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps? ExtraDedicatedIps { get => _explicitNullValueExtraDedicatedIps; set { _explicitNullValueExtraDedicatedIps = value; AdditionalData?.Remove("extra_dedicated_ips"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_dedicated_ips"); else _explicitNullProperties?.Remove("extra_dedicated_ips"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps? _explicitNullValueExtraDedicatedIps = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps ExtraDedicatedIps { get => _explicitNullValueExtraDedicatedIps; set { _explicitNullValueExtraDedicatedIps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_dedicated_ips"); else _explicitNullProperties?.Remove("extra_dedicated_ips"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps ExtraDedicatedIps { get => _explicitNullValueExtraDedicatedIps; set { _explicitNullValueExtraDedicatedIps = value; AdditionalData?.Remove("extra_dedicated_ips"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_dedicated_ips"); else _explicitNullProperties?.Remove("extra_dedicated_ips"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps _explicitNullValueExtraDedicatedIps = default!;
 #endif
         /// <summary>

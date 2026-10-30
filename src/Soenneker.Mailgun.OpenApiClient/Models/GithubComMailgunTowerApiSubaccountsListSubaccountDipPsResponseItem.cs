@@ -17,8 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pool_id") is { } nullNodePoolId && nullNodePoolId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoolId = null;
-            if (parseNode.GetChildNode("subaccount_id") is { } nullNodeSubaccountId && nullNodeSubaccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubaccountId = null;
+            if (parseNode.GetChildNode("pool_id") is null) { _explicitNullValuePoolId = default!; _explicitNullProperties?.Remove("pool_id"); }
+            else if (parseNode.GetChildNode("pool_id") is { } nullNodePoolId && nullNodePoolId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoolId = null;
+            if (parseNode.GetChildNode("subaccount_id") is null) { _explicitNullValueSubaccountId = default!; _explicitNullProperties?.Remove("subaccount_id"); }
+            else if (parseNode.GetChildNode("subaccount_id") is { } nullNodeSubaccountId && nullNodeSubaccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubaccountId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The pool_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PoolId { get => _explicitNullValuePoolId; set { _explicitNullValuePoolId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pool_id"); else _explicitNullProperties?.Remove("pool_id"); } }
+        public string? PoolId { get => _explicitNullValuePoolId; set { _explicitNullValuePoolId = value; AdditionalData?.Remove("pool_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pool_id"); else _explicitNullProperties?.Remove("pool_id"); } }
         private string? _explicitNullValuePoolId = default!;
 #nullable restore
 #else
-        public string PoolId { get => _explicitNullValuePoolId; set { _explicitNullValuePoolId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pool_id"); else _explicitNullProperties?.Remove("pool_id"); } }
+        public string PoolId { get => _explicitNullValuePoolId; set { _explicitNullValuePoolId = value; AdditionalData?.Remove("pool_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pool_id"); else _explicitNullProperties?.Remove("pool_id"); } }
         private string _explicitNullValuePoolId = default!;
 #endif
         /// <summary>The subaccount_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubaccountId { get => _explicitNullValueSubaccountId; set { _explicitNullValueSubaccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount_id"); else _explicitNullProperties?.Remove("subaccount_id"); } }
+        public string? SubaccountId { get => _explicitNullValueSubaccountId; set { _explicitNullValueSubaccountId = value; AdditionalData?.Remove("subaccount_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount_id"); else _explicitNullProperties?.Remove("subaccount_id"); } }
         private string? _explicitNullValueSubaccountId = default!;
 #nullable restore
 #else
-        public string SubaccountId { get => _explicitNullValueSubaccountId; set { _explicitNullValueSubaccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount_id"); else _explicitNullProperties?.Remove("subaccount_id"); } }
+        public string SubaccountId { get => _explicitNullValueSubaccountId; set { _explicitNullValueSubaccountId = value; AdditionalData?.Remove("subaccount_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount_id"); else _explicitNullProperties?.Remove("subaccount_id"); } }
         private string _explicitNullValueSubaccountId = default!;
 #endif
         /// <summary>

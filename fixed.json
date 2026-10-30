@@ -23723,7 +23723,7 @@
           "sending_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespSendingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": "List of DNS records required for sending emails"
           }
@@ -23862,14 +23862,14 @@
           "receiving_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": "List of DNS records required for receiving emails"
           },
           "sending_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": "List of DNS records required for sending emails"
           }
@@ -23894,14 +23894,14 @@
           "sending_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiVerifyDomainResponseSendingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": "List of DNS records required for sending emails"
           },
           "receiving_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiVerifyDomainResponseReceivingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": "List of DNS records required for receiving emails"
           }
@@ -24248,7 +24248,7 @@
             "type": "string"
           },
           "dns_record": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord"
+            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
           }
         }
       },
@@ -24336,7 +24336,7 @@
           "items": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyListResponseItemsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem"
             }
           },
           "paging": {
@@ -24397,7 +24397,7 @@
           "sending_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiReassignDkimAuthorityRespSendingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             }
           },
           "changed": {
@@ -24542,14 +24542,14 @@
           "receiving_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": "List of DNS records required for receiving emails"
           },
           "sending_dns_records": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiUpdateDomainRespSendingDnsRecordsItem"
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
             },
             "description": " List of DNS records required for sending emails"
           }
@@ -31344,7 +31344,7 @@
         "type": "object",
         "properties": {
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetTemplateOrVersionResponseTemplate"
+            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate"
           }
         }
       },
@@ -31356,7 +31356,7 @@
         "type": "object",
         "properties": {
           "template": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate"
+            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate"
           },
           "paging": {
             "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging"

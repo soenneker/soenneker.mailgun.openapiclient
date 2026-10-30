@@ -17,7 +17,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("subaccount") is { } nullNodeSubaccount && nullNodeSubaccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subaccount = null;
+            if (parseNode.GetChildNode("subaccount") is null) { _explicitNullValueSubaccount = default!; _explicitNullProperties?.Remove("subaccount"); }
+            else if (parseNode.GetChildNode("subaccount") is { } nullNodeSubaccount && nullNodeSubaccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subaccount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The subaccount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount? Subaccount { get => _explicitNullValueSubaccount; set { _explicitNullValueSubaccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount"); else _explicitNullProperties?.Remove("subaccount"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount? Subaccount { get => _explicitNullValueSubaccount; set { _explicitNullValueSubaccount = value; AdditionalData?.Remove("subaccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount"); else _explicitNullProperties?.Remove("subaccount"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount? _explicitNullValueSubaccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount Subaccount { get => _explicitNullValueSubaccount; set { _explicitNullValueSubaccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount"); else _explicitNullProperties?.Remove("subaccount"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount Subaccount { get => _explicitNullValueSubaccount; set { _explicitNullValueSubaccount = value; AdditionalData?.Remove("subaccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount"); else _explicitNullProperties?.Remove("subaccount"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccount _explicitNullValueSubaccount = default!;
 #endif
         /// <summary>

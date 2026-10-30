@@ -17,9 +17,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
-            if (parseNode.GetChildNode("prior_details") is { } nullNodePriorDetails && nullNodePriorDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorDetails = null;
-            if (parseNode.GetChildNode("prior_method") is { } nullNodePriorMethod && nullNodePriorMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorMethod = null;
+            if (parseNode.GetChildNode("method") is null) { _explicitNullValueMethod = default!; _explicitNullProperties?.Remove("method"); }
+            else if (parseNode.GetChildNode("method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
+            if (parseNode.GetChildNode("prior_details") is null) { _explicitNullValuePriorDetails = default!; _explicitNullProperties?.Remove("prior_details"); }
+            else if (parseNode.GetChildNode("prior_details") is { } nullNodePriorDetails && nullNodePriorDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorDetails = null;
+            if (parseNode.GetChildNode("prior_method") is null) { _explicitNullValuePriorMethod = default!; _explicitNullProperties?.Remove("prior_method"); }
+            else if (parseNode.GetChildNode("prior_method") is { } nullNodePriorMethod && nullNodePriorMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorMethod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The user-level auth method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        public string? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
         private string? _explicitNullValueMethod = default!;
 #nullable restore
 #else
-        public string Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        public string Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
         private string _explicitNullValueMethod = default!;
 #endif
         /// <summary>Details that may be needed for an auth method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty? PriorDetails { get => _explicitNullValuePriorDetails; set { _explicitNullValuePriorDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_details"); else _explicitNullProperties?.Remove("prior_details"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty? PriorDetails { get => _explicitNullValuePriorDetails; set { _explicitNullValuePriorDetails = value; AdditionalData?.Remove("prior_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_details"); else _explicitNullProperties?.Remove("prior_details"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty? _explicitNullValuePriorDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty PriorDetails { get => _explicitNullValuePriorDetails; set { _explicitNullValuePriorDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_details"); else _explicitNullProperties?.Remove("prior_details"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty PriorDetails { get => _explicitNullValuePriorDetails; set { _explicitNullValuePriorDetails = value; AdditionalData?.Remove("prior_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_details"); else _explicitNullProperties?.Remove("prior_details"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunUsersApiUserAuthResponsePriorDetailsProperty _explicitNullValuePriorDetails = default!;
 #endif
         /// <summary>The previous auth method for the user, if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriorMethod { get => _explicitNullValuePriorMethod; set { _explicitNullValuePriorMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_method"); else _explicitNullProperties?.Remove("prior_method"); } }
+        public string? PriorMethod { get => _explicitNullValuePriorMethod; set { _explicitNullValuePriorMethod = value; AdditionalData?.Remove("prior_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_method"); else _explicitNullProperties?.Remove("prior_method"); } }
         private string? _explicitNullValuePriorMethod = default!;
 #nullable restore
 #else
-        public string PriorMethod { get => _explicitNullValuePriorMethod; set { _explicitNullValuePriorMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_method"); else _explicitNullProperties?.Remove("prior_method"); } }
+        public string PriorMethod { get => _explicitNullValuePriorMethod; set { _explicitNullValuePriorMethod = value; AdditionalData?.Remove("prior_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prior_method"); else _explicitNullProperties?.Remove("prior_method"); } }
         private string _explicitNullValuePriorMethod = default!;
 #endif
         /// <summary>

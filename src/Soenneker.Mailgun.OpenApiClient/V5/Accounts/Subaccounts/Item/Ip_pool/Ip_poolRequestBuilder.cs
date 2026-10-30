@@ -104,7 +104,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool.Ip_poolRequestBuilder.Ip_poolRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v5/accounts/subaccounts/{subaccountId}/ip_pool?pool_id={pool_id}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/v5/accounts/subaccounts/{subaccountId}/ip_pool?pool_id={pool_id}", RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v5/accounts/subaccounts/{subaccountId}/ip_pool", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -124,7 +124,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v5/accounts/subaccounts/{subaccountId}/ip_pool", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -18,7 +18,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AND") is { } nullNodeAND && nullNodeAND.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AND = null;
+            if (parseNode.GetChildNode("AND") is null) { _explicitNullValueAND = default!; _explicitNullProperties?.Remove("AND"); }
+            else if (parseNode.GetChildNode("AND") is { } nullNodeAND && nullNodeAND.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AND = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The AND property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFilterPredicate>? AND { get => _explicitNullValueAND; set { _explicitNullValueAND = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AND"); else _explicitNullProperties?.Remove("AND"); } }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFilterPredicate>? AND { get => _explicitNullValueAND; set { _explicitNullValueAND = value; AdditionalData?.Remove("AND"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AND"); else _explicitNullProperties?.Remove("AND"); } }
         private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFilterPredicate>? _explicitNullValueAND = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFilterPredicate> AND { get => _explicitNullValueAND; set { _explicitNullValueAND = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AND"); else _explicitNullProperties?.Remove("AND"); } }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFilterPredicate> AND { get => _explicitNullValueAND; set { _explicitNullValueAND = value; AdditionalData?.Remove("AND"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AND"); else _explicitNullProperties?.Remove("AND"); } }
         private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFilterPredicate> _explicitNullValueAND = default!;
 #endif
         /// <summary>

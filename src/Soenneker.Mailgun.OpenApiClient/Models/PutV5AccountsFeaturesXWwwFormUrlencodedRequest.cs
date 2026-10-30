@@ -17,8 +17,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ai_insights") is { } nullNodeAiInsights && nullNodeAiInsights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiInsights = null;
-            if (parseNode.GetChildNode("webhooks_redact_pii") is { } nullNodeWebhooksRedactPii && nullNodeWebhooksRedactPii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksRedactPii = null;
+            if (parseNode.GetChildNode("ai_insights") is null) { _explicitNullValueAiInsights = default!; _explicitNullProperties?.Remove("ai_insights"); }
+            else if (parseNode.GetChildNode("ai_insights") is { } nullNodeAiInsights && nullNodeAiInsights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiInsights = null;
+            if (parseNode.GetChildNode("webhooks_redact_pii") is null) { _explicitNullValueWebhooksRedactPii = default!; _explicitNullProperties?.Remove("webhooks_redact_pii"); }
+            else if (parseNode.GetChildNode("webhooks_redact_pii") is { } nullNodeWebhooksRedactPii && nullNodeWebhooksRedactPii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksRedactPii = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
+        public string? AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; AdditionalData?.Remove("ai_insights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
         private string? _explicitNullValueAiInsights = default!;
 #nullable restore
 #else
-        public string AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
+        public string AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; AdditionalData?.Remove("ai_insights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
         private string _explicitNullValueAiInsights = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
+        public string? WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; AdditionalData?.Remove("webhooks_redact_pii"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
         private string? _explicitNullValueWebhooksRedactPii = default!;
 #nullable restore
 #else
-        public string WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
+        public string WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; AdditionalData?.Remove("webhooks_redact_pii"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
         private string _explicitNullValueWebhooksRedactPii = default!;
 #endif
         /// <summary>

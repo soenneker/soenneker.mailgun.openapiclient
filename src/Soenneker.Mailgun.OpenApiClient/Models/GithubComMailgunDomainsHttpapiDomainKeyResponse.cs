@@ -17,9 +17,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dns_record") is { } nullNodeDnsRecord && nullNodeDnsRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DnsRecord = null;
-            if (parseNode.GetChildNode("selector") is { } nullNodeSelector && nullNodeSelector.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Selector = null;
-            if (parseNode.GetChildNode("signing_domain") is { } nullNodeSigningDomain && nullNodeSigningDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningDomain = null;
+            if (parseNode.GetChildNode("dns_record") is null) { _explicitNullValueDnsRecord = default!; _explicitNullProperties?.Remove("dns_record"); }
+            else if (parseNode.GetChildNode("dns_record") is { } nullNodeDnsRecord && nullNodeDnsRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DnsRecord = null;
+            if (parseNode.GetChildNode("selector") is null) { _explicitNullValueSelector = default!; _explicitNullProperties?.Remove("selector"); }
+            else if (parseNode.GetChildNode("selector") is { } nullNodeSelector && nullNodeSelector.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Selector = null;
+            if (parseNode.GetChildNode("signing_domain") is null) { _explicitNullValueSigningDomain = default!; _explicitNullProperties?.Remove("signing_domain"); }
+            else if (parseNode.GetChildNode("signing_domain") is { } nullNodeSigningDomain && nullNodeSigningDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningDomain = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The dns_record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord? DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord? DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; AdditionalData?.Remove("dns_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord? _explicitNullValueDnsRecord = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; AdditionalData?.Remove("dns_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord _explicitNullValueDnsRecord = default!;
 #endif
         /// <summary>The selector property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Selector { get => _explicitNullValueSelector; set { _explicitNullValueSelector = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selector"); else _explicitNullProperties?.Remove("selector"); } }
+        public string? Selector { get => _explicitNullValueSelector; set { _explicitNullValueSelector = value; AdditionalData?.Remove("selector"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selector"); else _explicitNullProperties?.Remove("selector"); } }
         private string? _explicitNullValueSelector = default!;
 #nullable restore
 #else
-        public string Selector { get => _explicitNullValueSelector; set { _explicitNullValueSelector = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selector"); else _explicitNullProperties?.Remove("selector"); } }
+        public string Selector { get => _explicitNullValueSelector; set { _explicitNullValueSelector = value; AdditionalData?.Remove("selector"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selector"); else _explicitNullProperties?.Remove("selector"); } }
         private string _explicitNullValueSelector = default!;
 #endif
         /// <summary>The signing_domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningDomain { get => _explicitNullValueSigningDomain; set { _explicitNullValueSigningDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_domain"); else _explicitNullProperties?.Remove("signing_domain"); } }
+        public string? SigningDomain { get => _explicitNullValueSigningDomain; set { _explicitNullValueSigningDomain = value; AdditionalData?.Remove("signing_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_domain"); else _explicitNullProperties?.Remove("signing_domain"); } }
         private string? _explicitNullValueSigningDomain = default!;
 #nullable restore
 #else
-        public string SigningDomain { get => _explicitNullValueSigningDomain; set { _explicitNullValueSigningDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_domain"); else _explicitNullProperties?.Remove("signing_domain"); } }
+        public string SigningDomain { get => _explicitNullValueSigningDomain; set { _explicitNullValueSigningDomain = value; AdditionalData?.Remove("signing_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_domain"); else _explicitNullProperties?.Remove("signing_domain"); } }
         private string _explicitNullValueSigningDomain = default!;
 #endif
         /// <summary>

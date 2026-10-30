@@ -18,7 +18,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assignments") is { } nullNodeAssignments && nullNodeAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assignments = null;
+            if (parseNode.GetChildNode("assignments") is null) { _explicitNullValueAssignments = default!; _explicitNullProperties?.Remove("assignments"); }
+            else if (parseNode.GetChildNode("assignments") is { } nullNodeAssignments && nullNodeAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assignments = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>assignment metadata keyed by IP address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments? Assignments { get => _explicitNullValueAssignments; set { _explicitNullValueAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignments"); else _explicitNullProperties?.Remove("assignments"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments? Assignments { get => _explicitNullValueAssignments; set { _explicitNullValueAssignments = value; AdditionalData?.Remove("assignments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignments"); else _explicitNullProperties?.Remove("assignments"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments? _explicitNullValueAssignments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments Assignments { get => _explicitNullValueAssignments; set { _explicitNullValueAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignments"); else _explicitNullProperties?.Remove("assignments"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments Assignments { get => _explicitNullValueAssignments; set { _explicitNullValueAssignments = value; AdditionalData?.Remove("assignments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignments"); else _explicitNullProperties?.Remove("assignments"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiIpPoolsListDippDetailsResponseMetadataAssignments _explicitNullValueAssignments = default!;
 #endif
         /// <summary>

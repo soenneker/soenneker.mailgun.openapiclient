@@ -17,10 +17,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("click") is { } nullNodeClick && nullNodeClick.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Click = null;
-            if (parseNode.GetChildNode("open") is { } nullNodeOpen && nullNodeOpen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Open = null;
-            if (parseNode.GetChildNode("unsubscribe") is { } nullNodeUnsubscribe && nullNodeUnsubscribe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unsubscribe = null;
-            if (parseNode.GetChildNode("web_scheme") is { } nullNodeWebScheme && nullNodeWebScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebScheme = null;
+            if (parseNode.GetChildNode("click") is null) { _explicitNullValueClick = default!; _explicitNullProperties?.Remove("click"); }
+            else if (parseNode.GetChildNode("click") is { } nullNodeClick && nullNodeClick.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Click = null;
+            if (parseNode.GetChildNode("open") is null) { _explicitNullValueOpen = default!; _explicitNullProperties?.Remove("open"); }
+            else if (parseNode.GetChildNode("open") is { } nullNodeOpen && nullNodeOpen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Open = null;
+            if (parseNode.GetChildNode("unsubscribe") is null) { _explicitNullValueUnsubscribe = default!; _explicitNullProperties?.Remove("unsubscribe"); }
+            else if (parseNode.GetChildNode("unsubscribe") is { } nullNodeUnsubscribe && nullNodeUnsubscribe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unsubscribe = null;
+            if (parseNode.GetChildNode("web_scheme") is null) { _explicitNullValueWebScheme = default!; _explicitNullProperties?.Remove("web_scheme"); }
+            else if (parseNode.GetChildNode("web_scheme") is { } nullNodeWebScheme && nullNodeWebScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebScheme = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Click tracking settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick? Click { get => _explicitNullValueClick; set { _explicitNullValueClick = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click"); else _explicitNullProperties?.Remove("click"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick? Click { get => _explicitNullValueClick; set { _explicitNullValueClick = value; AdditionalData?.Remove("click"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click"); else _explicitNullProperties?.Remove("click"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick? _explicitNullValueClick = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick Click { get => _explicitNullValueClick; set { _explicitNullValueClick = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click"); else _explicitNullProperties?.Remove("click"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick Click { get => _explicitNullValueClick; set { _explicitNullValueClick = value; AdditionalData?.Remove("click"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click"); else _explicitNullProperties?.Remove("click"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsClick _explicitNullValueClick = default!;
 #endif
         /// <summary>Open tracking settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen? Open { get => _explicitNullValueOpen; set { _explicitNullValueOpen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open"); else _explicitNullProperties?.Remove("open"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen? Open { get => _explicitNullValueOpen; set { _explicitNullValueOpen = value; AdditionalData?.Remove("open"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open"); else _explicitNullProperties?.Remove("open"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen? _explicitNullValueOpen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen Open { get => _explicitNullValueOpen; set { _explicitNullValueOpen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open"); else _explicitNullProperties?.Remove("open"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen Open { get => _explicitNullValueOpen; set { _explicitNullValueOpen = value; AdditionalData?.Remove("open"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open"); else _explicitNullProperties?.Remove("open"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsOpen _explicitNullValueOpen = default!;
 #endif
         /// <summary>Unsubscribe tracking settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe? Unsubscribe { get => _explicitNullValueUnsubscribe; set { _explicitNullValueUnsubscribe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribe"); else _explicitNullProperties?.Remove("unsubscribe"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe? Unsubscribe { get => _explicitNullValueUnsubscribe; set { _explicitNullValueUnsubscribe = value; AdditionalData?.Remove("unsubscribe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribe"); else _explicitNullProperties?.Remove("unsubscribe"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe? _explicitNullValueUnsubscribe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe Unsubscribe { get => _explicitNullValueUnsubscribe; set { _explicitNullValueUnsubscribe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribe"); else _explicitNullProperties?.Remove("unsubscribe"); } }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe Unsubscribe { get => _explicitNullValueUnsubscribe; set { _explicitNullValueUnsubscribe = value; AdditionalData?.Remove("unsubscribe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribe"); else _explicitNullProperties?.Remove("unsubscribe"); } }
         private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiTrackingSettingsUnsubscribe _explicitNullValueUnsubscribe = default!;
 #endif
         /// <summary>The web scheme for the domain</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebScheme { get => _explicitNullValueWebScheme; set { _explicitNullValueWebScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_scheme"); else _explicitNullProperties?.Remove("web_scheme"); } }
+        public string? WebScheme { get => _explicitNullValueWebScheme; set { _explicitNullValueWebScheme = value; AdditionalData?.Remove("web_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_scheme"); else _explicitNullProperties?.Remove("web_scheme"); } }
         private string? _explicitNullValueWebScheme = default!;
 #nullable restore
 #else
-        public string WebScheme { get => _explicitNullValueWebScheme; set { _explicitNullValueWebScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_scheme"); else _explicitNullProperties?.Remove("web_scheme"); } }
+        public string WebScheme { get => _explicitNullValueWebScheme; set { _explicitNullValueWebScheme = value; AdditionalData?.Remove("web_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_scheme"); else _explicitNullProperties?.Remove("web_scheme"); } }
         private string _explicitNullValueWebScheme = default!;
 #endif
         /// <summary>
