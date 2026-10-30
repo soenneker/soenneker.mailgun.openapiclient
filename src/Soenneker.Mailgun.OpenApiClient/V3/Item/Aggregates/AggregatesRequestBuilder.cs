@@ -18,16 +18,19 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates
     public partial class AggregatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The countries property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.Countries.CountriesRequestBuilder Countries
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.Countries.CountriesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The devices property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.Devices.DevicesRequestBuilder Devices
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.Devices.DevicesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The providers property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.Providers.ProvidersRequestBuilder Providers
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Aggregates.Providers.ProvidersRequestBuilder(PathParameters, RequestAdapter);

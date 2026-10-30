@@ -11,16 +11,26 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunScoutApiCountriesAggregateResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty? Countries { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty Countries { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty _explicitNullValueCountries = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponse"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutApiCountriesAggregateResponseCountriesProperty>("countries", Countries);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

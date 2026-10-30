@@ -11,137 +11,202 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunDomainsClientGolangDomain : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("archive_to") is { } nullNodeArchiveTo && nullNodeArchiveTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchiveTo = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("disabled") is { } nullNodeDisabled && nullNodeDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disabled = null;
+            if (parseNode.GetChildNode("encrypt_incoming_message") is { } nullNodeEncryptIncomingMessage && nullNodeEncryptIncomingMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptIncomingMessage = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_disabled") is { } nullNodeIsDisabled && nullNodeIsDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDisabled = null;
+            if (parseNode.GetChildNode("message_ttl") is { } nullNodeMessageTtl && nullNodeMessageTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageTtl = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("require_tls") is { } nullNodeRequireTls && nullNodeRequireTls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireTls = null;
+            if (parseNode.GetChildNode("skip_verification") is { } nullNodeSkipVerification && nullNodeSkipVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipVerification = null;
+            if (parseNode.GetChildNode("smtp_login") is { } nullNodeSmtpLogin && nullNodeSmtpLogin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmtpLogin = null;
+            if (parseNode.GetChildNode("smtp_password") is { } nullNodeSmtpPassword && nullNodeSmtpPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmtpPassword = null;
+            if (parseNode.GetChildNode("spam_action") is { } nullNodeSpamAction && nullNodeSpamAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpamAction = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("subaccount_id") is { } nullNodeSubaccountId && nullNodeSubaccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubaccountId = null;
+            if (parseNode.GetChildNode("tracking_host") is { } nullNodeTrackingHost && nullNodeTrackingHost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingHost = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("use_automatic_sender_security") is { } nullNodeUseAutomaticSenderSecurity && nullNodeUseAutomaticSenderSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseAutomaticSenderSecurity = null;
+            if (parseNode.GetChildNode("webhooks_redact_pii") is { } nullNodeWebhooksRedactPii && nullNodeWebhooksRedactPii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksRedactPii = null;
+            if (parseNode.GetChildNode("web_prefix") is { } nullNodeWebPrefix && nullNodeWebPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebPrefix = null;
+            if (parseNode.GetChildNode("web_scheme") is { } nullNodeWebScheme && nullNodeWebScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebScheme = null;
+            if (parseNode.GetChildNode("wildcard") is { } nullNodeWildcard && nullNodeWildcard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Wildcard = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>URL that a copy of each successfully delivered message is going to be posted to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArchiveTo { get; set; }
+        public string? ArchiveTo { get => _explicitNullValueArchiveTo; set { _explicitNullValueArchiveTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_to"); else _explicitNullProperties?.Remove("archive_to"); } }
+        private string? _explicitNullValueArchiveTo = default!;
 #nullable restore
 #else
-        public string ArchiveTo { get; set; }
+        public string ArchiveTo { get => _explicitNullValueArchiveTo; set { _explicitNullValueArchiveTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_to"); else _explicitNullProperties?.Remove("archive_to"); } }
+        private string _explicitNullValueArchiveTo = default!;
 #endif
         /// <summary>Timestamp indicating when the domain was created in RFC1123 format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>Optional field containing additional details about the domain&apos;s disabled status if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled? Disabled { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled? Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled? _explicitNullValueDisabled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled Disabled { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled _explicitNullValueDisabled = default!;
 #endif
         /// <summary>If true incoming messages to this domain will be encrypted</summary>
-        public bool? EncryptIncomingMessage { get; set; }
+        public bool? EncryptIncomingMessage { get => _explicitNullValueEncryptIncomingMessage; set { _explicitNullValueEncryptIncomingMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encrypt_incoming_message"); else _explicitNullProperties?.Remove("encrypt_incoming_message"); } }
+        private bool? _explicitNullValueEncryptIncomingMessage = default!;
         /// <summary>Unique identifier of the domain</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Indicates whether the domain is currently disabled</summary>
-        public bool? IsDisabled { get; set; }
+        public bool? IsDisabled { get => _explicitNullValueIsDisabled; set { _explicitNullValueIsDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_disabled"); else _explicitNullProperties?.Remove("is_disabled"); } }
+        private bool? _explicitNullValueIsDisabled = default!;
         /// <summary>Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan</summary>
-        public int? MessageTtl { get; set; }
+        public int? MessageTtl { get => _explicitNullValueMessageTtl; set { _explicitNullValueMessageTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_ttl"); else _explicitNullProperties?.Remove("message_ttl"); } }
+        private int? _explicitNullValueMessageTtl = default!;
         /// <summary>Fully qualified domain name registered with Mailgun</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>If true Mailgun will only send messages over a TLS connection</summary>
-        public bool? RequireTls { get; set; }
+        public bool? RequireTls { get => _explicitNullValueRequireTls; set { _explicitNullValueRequireTls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_tls"); else _explicitNullProperties?.Remove("require_tls"); } }
+        private bool? _explicitNullValueRequireTls = default!;
         /// <summary>If true Mailgun will not verify the certificate and hostname when setting up a TLS connection</summary>
-        public bool? SkipVerification { get; set; }
+        public bool? SkipVerification { get => _explicitNullValueSkipVerification; set { _explicitNullValueSkipVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_verification"); else _explicitNullProperties?.Remove("skip_verification"); } }
+        private bool? _explicitNullValueSkipVerification = default!;
         /// <summary>SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmtpLogin { get; set; }
+        public string? SmtpLogin { get => _explicitNullValueSmtpLogin; set { _explicitNullValueSmtpLogin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smtp_login"); else _explicitNullProperties?.Remove("smtp_login"); } }
+        private string? _explicitNullValueSmtpLogin = default!;
 #nullable restore
 #else
-        public string SmtpLogin { get; set; }
+        public string SmtpLogin { get => _explicitNullValueSmtpLogin; set { _explicitNullValueSmtpLogin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smtp_login"); else _explicitNullProperties?.Remove("smtp_login"); } }
+        private string _explicitNullValueSmtpLogin = default!;
 #endif
         /// <summary>Optional SMTP password for the domain used for SMTP authentication</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmtpPassword { get; set; }
+        public string? SmtpPassword { get => _explicitNullValueSmtpPassword; set { _explicitNullValueSmtpPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smtp_password"); else _explicitNullProperties?.Remove("smtp_password"); } }
+        private string? _explicitNullValueSmtpPassword = default!;
 #nullable restore
 #else
-        public string SmtpPassword { get; set; }
+        public string SmtpPassword { get => _explicitNullValueSmtpPassword; set { _explicitNullValueSmtpPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smtp_password"); else _explicitNullProperties?.Remove("smtp_password"); } }
+        private string _explicitNullValueSmtpPassword = default!;
 #endif
         /// <summary>Action to take when a message is flagged as spam. Options are disabled, tag, or block</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpamAction { get; set; }
+        public string? SpamAction { get => _explicitNullValueSpamAction; set { _explicitNullValueSpamAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_action"); else _explicitNullProperties?.Remove("spam_action"); } }
+        private string? _explicitNullValueSpamAction = default!;
 #nullable restore
 #else
-        public string SpamAction { get; set; }
+        public string SpamAction { get => _explicitNullValueSpamAction; set { _explicitNullValueSpamAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_action"); else _explicitNullProperties?.Remove("spam_action"); } }
+        private string _explicitNullValueSpamAction = default!;
 #endif
         /// <summary>Current verification status of the domain</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubaccountId { get; set; }
+        public string? SubaccountId { get => _explicitNullValueSubaccountId; set { _explicitNullValueSubaccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount_id"); else _explicitNullProperties?.Remove("subaccount_id"); } }
+        private string? _explicitNullValueSubaccountId = default!;
 #nullable restore
 #else
-        public string SubaccountId { get; set; }
+        public string SubaccountId { get => _explicitNullValueSubaccountId; set { _explicitNullValueSubaccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subaccount_id"); else _explicitNullProperties?.Remove("subaccount_id"); } }
+        private string _explicitNullValueSubaccountId = default!;
 #endif
         /// <summary>Custom tracking host for the domain used for tracking opens and clicks if configured</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingHost { get; set; }
+        public string? TrackingHost { get => _explicitNullValueTrackingHost; set { _explicitNullValueTrackingHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_host"); else _explicitNullProperties?.Remove("tracking_host"); } }
+        private string? _explicitNullValueTrackingHost = default!;
 #nullable restore
 #else
-        public string TrackingHost { get; set; }
+        public string TrackingHost { get => _explicitNullValueTrackingHost; set { _explicitNullValueTrackingHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_host"); else _explicitNullProperties?.Remove("tracking_host"); } }
+        private string _explicitNullValueTrackingHost = default!;
 #endif
         /// <summary>Classification of the domain. Possible values are custom or sandbox</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>If true Mailgun manages DKIM key generation and DNS record configuration automatically</summary>
-        public bool? UseAutomaticSenderSecurity { get; set; }
+        public bool? UseAutomaticSenderSecurity { get => _explicitNullValueUseAutomaticSenderSecurity; set { _explicitNullValueUseAutomaticSenderSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_automatic_sender_security"); else _explicitNullProperties?.Remove("use_automatic_sender_security"); } }
+        private bool? _explicitNullValueUseAutomaticSenderSecurity = default!;
         /// <summary>If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain</summary>
-        public bool? WebhooksRedactPii { get; set; }
+        public bool? WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
+        private bool? _explicitNullValueWebhooksRedactPii = default!;
         /// <summary>Subdomain prefix used for open and click tracking</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebPrefix { get; set; }
+        public string? WebPrefix { get => _explicitNullValueWebPrefix; set { _explicitNullValueWebPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_prefix"); else _explicitNullProperties?.Remove("web_prefix"); } }
+        private string? _explicitNullValueWebPrefix = default!;
 #nullable restore
 #else
-        public string WebPrefix { get; set; }
+        public string WebPrefix { get => _explicitNullValueWebPrefix; set { _explicitNullValueWebPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_prefix"); else _explicitNullProperties?.Remove("web_prefix"); } }
+        private string _explicitNullValueWebPrefix = default!;
 #endif
         /// <summary>Protocol scheme used for tracking</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebScheme { get; set; }
+        public string? WebScheme { get => _explicitNullValueWebScheme; set { _explicitNullValueWebScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_scheme"); else _explicitNullProperties?.Remove("web_scheme"); } }
+        private string? _explicitNullValueWebScheme = default!;
 #nullable restore
 #else
-        public string WebScheme { get; set; }
+        public string WebScheme { get => _explicitNullValueWebScheme; set { _explicitNullValueWebScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_scheme"); else _explicitNullProperties?.Remove("web_scheme"); } }
+        private string _explicitNullValueWebScheme = default!;
 #endif
         /// <summary>Indicates if the domain is a wildcard domain and can receive emails for any subdomain</summary>
-        public bool? Wildcard { get; set; }
+        public bool? Wildcard { get => _explicitNullValueWildcard; set { _explicitNullValueWildcard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wildcard"); else _explicitNullProperties?.Remove("wildcard"); } }
+        private bool? _explicitNullValueWildcard = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain"/> and sets the default values.
         /// </summary>
@@ -157,7 +222,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomain(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -220,6 +285,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("web_prefix", WebPrefix);
             writer.WriteStringValue("web_scheme", WebScheme);
             writer.WriteBoolValue("wildcard", Wildcard);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

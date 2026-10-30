@@ -11,41 +11,80 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunAnalyticsInternalApiUsageMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("domain_blocklist_monitoring_count") is { } nullNodeDomainBlocklistMonitoringCount && nullNodeDomainBlocklistMonitoringCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainBlocklistMonitoringCount = null;
+            if (parseNode.GetChildNode("email_preview_count") is { } nullNodeEmailPreviewCount && nullNodeEmailPreviewCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPreviewCount = null;
+            if (parseNode.GetChildNode("email_preview_failed_count") is { } nullNodeEmailPreviewFailedCount && nullNodeEmailPreviewFailedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPreviewFailedCount = null;
+            if (parseNode.GetChildNode("email_validation_bulk_count") is { } nullNodeEmailValidationBulkCount && nullNodeEmailValidationBulkCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationBulkCount = null;
+            if (parseNode.GetChildNode("email_validation_count") is { } nullNodeEmailValidationCount && nullNodeEmailValidationCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationCount = null;
+            if (parseNode.GetChildNode("email_validation_list_count") is { } nullNodeEmailValidationListCount && nullNodeEmailValidationListCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationListCount = null;
+            if (parseNode.GetChildNode("email_validation_mailgun_count") is { } nullNodeEmailValidationMailgunCount && nullNodeEmailValidationMailgunCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationMailgunCount = null;
+            if (parseNode.GetChildNode("email_validation_mailjet_count") is { } nullNodeEmailValidationMailjetCount && nullNodeEmailValidationMailjetCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationMailjetCount = null;
+            if (parseNode.GetChildNode("email_validation_public_count") is { } nullNodeEmailValidationPublicCount && nullNodeEmailValidationPublicCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationPublicCount = null;
+            if (parseNode.GetChildNode("email_validation_single_count") is { } nullNodeEmailValidationSingleCount && nullNodeEmailValidationSingleCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationSingleCount = null;
+            if (parseNode.GetChildNode("email_validation_valid_count") is { } nullNodeEmailValidationValidCount && nullNodeEmailValidationValidCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidationValidCount = null;
+            if (parseNode.GetChildNode("ip_blocklist_monitoring_count") is { } nullNodeIpBlocklistMonitoringCount && nullNodeIpBlocklistMonitoringCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpBlocklistMonitoringCount = null;
+            if (parseNode.GetChildNode("link_validation_count") is { } nullNodeLinkValidationCount && nullNodeLinkValidationCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkValidationCount = null;
+            if (parseNode.GetChildNode("link_validation_failed_count") is { } nullNodeLinkValidationFailedCount && nullNodeLinkValidationFailedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkValidationFailedCount = null;
+            if (parseNode.GetChildNode("processed_count") is { } nullNodeProcessedCount && nullNodeProcessedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessedCount = null;
+            if (parseNode.GetChildNode("seed_test_count") is { } nullNodeSeedTestCount && nullNodeSeedTestCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeedTestCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The domain_blocklist_monitoring_count property</summary>
-        public long? DomainBlocklistMonitoringCount { get; set; }
+        public long? DomainBlocklistMonitoringCount { get => _explicitNullValueDomainBlocklistMonitoringCount; set { _explicitNullValueDomainBlocklistMonitoringCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_blocklist_monitoring_count"); else _explicitNullProperties?.Remove("domain_blocklist_monitoring_count"); } }
+        private long? _explicitNullValueDomainBlocklistMonitoringCount = default!;
         /// <summary>The email_preview_count property</summary>
-        public long? EmailPreviewCount { get; set; }
+        public long? EmailPreviewCount { get => _explicitNullValueEmailPreviewCount; set { _explicitNullValueEmailPreviewCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview_count"); else _explicitNullProperties?.Remove("email_preview_count"); } }
+        private long? _explicitNullValueEmailPreviewCount = default!;
         /// <summary>The email_preview_failed_count property</summary>
-        public long? EmailPreviewFailedCount { get; set; }
+        public long? EmailPreviewFailedCount { get => _explicitNullValueEmailPreviewFailedCount; set { _explicitNullValueEmailPreviewFailedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview_failed_count"); else _explicitNullProperties?.Remove("email_preview_failed_count"); } }
+        private long? _explicitNullValueEmailPreviewFailedCount = default!;
         /// <summary>The email_validation_bulk_count property</summary>
-        public long? EmailValidationBulkCount { get; set; }
+        public long? EmailValidationBulkCount { get => _explicitNullValueEmailValidationBulkCount; set { _explicitNullValueEmailValidationBulkCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_bulk_count"); else _explicitNullProperties?.Remove("email_validation_bulk_count"); } }
+        private long? _explicitNullValueEmailValidationBulkCount = default!;
         /// <summary>The email_validation_count property</summary>
-        public long? EmailValidationCount { get; set; }
+        public long? EmailValidationCount { get => _explicitNullValueEmailValidationCount; set { _explicitNullValueEmailValidationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_count"); else _explicitNullProperties?.Remove("email_validation_count"); } }
+        private long? _explicitNullValueEmailValidationCount = default!;
         /// <summary>The email_validation_list_count property</summary>
-        public long? EmailValidationListCount { get; set; }
+        public long? EmailValidationListCount { get => _explicitNullValueEmailValidationListCount; set { _explicitNullValueEmailValidationListCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_list_count"); else _explicitNullProperties?.Remove("email_validation_list_count"); } }
+        private long? _explicitNullValueEmailValidationListCount = default!;
         /// <summary>The email_validation_mailgun_count property</summary>
-        public long? EmailValidationMailgunCount { get; set; }
+        public long? EmailValidationMailgunCount { get => _explicitNullValueEmailValidationMailgunCount; set { _explicitNullValueEmailValidationMailgunCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_mailgun_count"); else _explicitNullProperties?.Remove("email_validation_mailgun_count"); } }
+        private long? _explicitNullValueEmailValidationMailgunCount = default!;
         /// <summary>The email_validation_mailjet_count property</summary>
-        public long? EmailValidationMailjetCount { get; set; }
+        public long? EmailValidationMailjetCount { get => _explicitNullValueEmailValidationMailjetCount; set { _explicitNullValueEmailValidationMailjetCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_mailjet_count"); else _explicitNullProperties?.Remove("email_validation_mailjet_count"); } }
+        private long? _explicitNullValueEmailValidationMailjetCount = default!;
         /// <summary>The email_validation_public_count property</summary>
-        public long? EmailValidationPublicCount { get; set; }
+        public long? EmailValidationPublicCount { get => _explicitNullValueEmailValidationPublicCount; set { _explicitNullValueEmailValidationPublicCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_public_count"); else _explicitNullProperties?.Remove("email_validation_public_count"); } }
+        private long? _explicitNullValueEmailValidationPublicCount = default!;
         /// <summary>The email_validation_single_count property</summary>
-        public long? EmailValidationSingleCount { get; set; }
+        public long? EmailValidationSingleCount { get => _explicitNullValueEmailValidationSingleCount; set { _explicitNullValueEmailValidationSingleCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_single_count"); else _explicitNullProperties?.Remove("email_validation_single_count"); } }
+        private long? _explicitNullValueEmailValidationSingleCount = default!;
         /// <summary>The email_validation_valid_count property</summary>
-        public long? EmailValidationValidCount { get; set; }
+        public long? EmailValidationValidCount { get => _explicitNullValueEmailValidationValidCount; set { _explicitNullValueEmailValidationValidCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation_valid_count"); else _explicitNullProperties?.Remove("email_validation_valid_count"); } }
+        private long? _explicitNullValueEmailValidationValidCount = default!;
         /// <summary>The ip_blocklist_monitoring_count property</summary>
-        public long? IpBlocklistMonitoringCount { get; set; }
+        public long? IpBlocklistMonitoringCount { get => _explicitNullValueIpBlocklistMonitoringCount; set { _explicitNullValueIpBlocklistMonitoringCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_blocklist_monitoring_count"); else _explicitNullProperties?.Remove("ip_blocklist_monitoring_count"); } }
+        private long? _explicitNullValueIpBlocklistMonitoringCount = default!;
         /// <summary>The link_validation_count property</summary>
-        public long? LinkValidationCount { get; set; }
+        public long? LinkValidationCount { get => _explicitNullValueLinkValidationCount; set { _explicitNullValueLinkValidationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_validation_count"); else _explicitNullProperties?.Remove("link_validation_count"); } }
+        private long? _explicitNullValueLinkValidationCount = default!;
         /// <summary>The link_validation_failed_count property</summary>
-        public long? LinkValidationFailedCount { get; set; }
+        public long? LinkValidationFailedCount { get => _explicitNullValueLinkValidationFailedCount; set { _explicitNullValueLinkValidationFailedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_validation_failed_count"); else _explicitNullProperties?.Remove("link_validation_failed_count"); } }
+        private long? _explicitNullValueLinkValidationFailedCount = default!;
         /// <summary>The processed_count property</summary>
-        public long? ProcessedCount { get; set; }
+        public long? ProcessedCount { get => _explicitNullValueProcessedCount; set { _explicitNullValueProcessedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processed_count"); else _explicitNullProperties?.Remove("processed_count"); } }
+        private long? _explicitNullValueProcessedCount = default!;
         /// <summary>The seed_test_count property</summary>
-        public long? SeedTestCount { get; set; }
+        public long? SeedTestCount { get => _explicitNullValueSeedTestCount; set { _explicitNullValueSeedTestCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seed_test_count"); else _explicitNullProperties?.Remove("seed_test_count"); } }
+        private long? _explicitNullValueSeedTestCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsInternalApiUsageMetrics"/> and sets the default values.
         /// </summary>
@@ -61,7 +100,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsInternalApiUsageMetrics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsInternalApiUsageMetrics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAnalyticsInternalApiUsageMetrics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +151,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteLongValue("link_validation_failed_count", LinkValidationFailedCount);
             writer.WriteLongValue("processed_count", ProcessedCount);
             writer.WriteLongValue("seed_test_count", SeedTestCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

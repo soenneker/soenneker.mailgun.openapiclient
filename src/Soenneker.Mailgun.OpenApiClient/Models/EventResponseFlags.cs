@@ -11,19 +11,36 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EventResponseFlags : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is-amp") is { } nullNodeIsAmp && nullNodeIsAmp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAmp = null;
+            if (parseNode.GetChildNode("is-authenticated") is { } nullNodeIsAuthenticated && nullNodeIsAuthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAuthenticated = null;
+            if (parseNode.GetChildNode("is-encrypted") is { } nullNodeIsEncrypted && nullNodeIsEncrypted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEncrypted = null;
+            if (parseNode.GetChildNode("is-routed") is { } nullNodeIsRouted && nullNodeIsRouted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRouted = null;
+            if (parseNode.GetChildNode("is-test-mode") is { } nullNodeIsTestMode && nullNodeIsTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTestMode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Tells if the message has AMP component in</summary>
-        public bool? IsAmp { get; set; }
+        public bool? IsAmp { get => _explicitNullValueIsAmp; set { _explicitNullValueIsAmp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-amp"); else _explicitNullProperties?.Remove("is-amp"); } }
+        private bool? _explicitNullValueIsAmp = default!;
         /// <summary>`true` if it’s an outgoing message. `false` if it’s incoming.</summary>
-        public bool? IsAuthenticated { get; set; }
+        public bool? IsAuthenticated { get => _explicitNullValueIsAuthenticated; set { _explicitNullValueIsAuthenticated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-authenticated"); else _explicitNullProperties?.Remove("is-authenticated"); } }
+        private bool? _explicitNullValueIsAuthenticated = default!;
         /// <summary>Tells if the message has been encrypted before stored</summary>
-        public bool? IsEncrypted { get; set; }
+        public bool? IsEncrypted { get => _explicitNullValueIsEncrypted; set { _explicitNullValueIsEncrypted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-encrypted"); else _explicitNullProperties?.Remove("is-encrypted"); } }
+        private bool? _explicitNullValueIsEncrypted = default!;
         /// <summary>`true` if the message was sent as a result of a Route match</summary>
-        public bool? IsRouted { get; set; }
+        public bool? IsRouted { get => _explicitNullValueIsRouted; set { _explicitNullValueIsRouted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-routed"); else _explicitNullProperties?.Remove("is-routed"); } }
+        private bool? _explicitNullValueIsRouted = default!;
         /// <summary>If `true`, the message has been marked as delivered but the actual send stop before sending to the ESP</summary>
-        public bool? IsTestMode { get; set; }
+        public bool? IsTestMode { get => _explicitNullValueIsTestMode; set { _explicitNullValueIsTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-test-mode"); else _explicitNullProperties?.Remove("is-test-mode"); } }
+        private bool? _explicitNullValueIsTestMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.EventResponseFlags(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteBoolValue("is-encrypted", IsEncrypted);
             writer.WriteBoolValue("is-routed", IsRouted);
             writer.WriteBoolValue("is-test-mode", IsTestMode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

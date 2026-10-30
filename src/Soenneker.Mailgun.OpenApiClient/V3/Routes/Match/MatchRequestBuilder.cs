@@ -53,6 +53,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Routes.Match
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesMatch404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesMatch200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3RoutesMatch200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

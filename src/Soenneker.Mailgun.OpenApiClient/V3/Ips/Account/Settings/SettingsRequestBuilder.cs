@@ -49,7 +49,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Account.Settings
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint allows you to set or update the DIPP spillover settings for an account .You can specify the ID of the IP pool that spillover IPs are assigned to. The IP pool must contain at least one fully warmed IP address to be valid.To disable DIPP spillover, set the pool_id to an empty string (&quot;&quot;).
@@ -73,6 +73,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ips.Account.Settings
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiGenericResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

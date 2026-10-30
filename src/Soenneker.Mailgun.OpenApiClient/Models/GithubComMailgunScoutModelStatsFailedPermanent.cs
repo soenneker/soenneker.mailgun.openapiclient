@@ -11,25 +11,48 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunScoutModelStatsFailedPermanent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bounce") is { } nullNodeBounce && nullNodeBounce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bounce = null;
+            if (parseNode.GetChildNode("delayed-bounce") is { } nullNodeDelayedBounce && nullNodeDelayedBounce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayedBounce = null;
+            if (parseNode.GetChildNode("optimized") is { } nullNodeOptimized && nullNodeOptimized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Optimized = null;
+            if (parseNode.GetChildNode("suppress-bounce") is { } nullNodeSuppressBounce && nullNodeSuppressBounce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressBounce = null;
+            if (parseNode.GetChildNode("suppress-complaint") is { } nullNodeSuppressComplaint && nullNodeSuppressComplaint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressComplaint = null;
+            if (parseNode.GetChildNode("suppress-unsubscribe") is { } nullNodeSuppressUnsubscribe && nullNodeSuppressUnsubscribe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressUnsubscribe = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("webhook") is { } nullNodeWebhook && nullNodeWebhook.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Webhook = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bounce property</summary>
-        public int? Bounce { get; set; }
+        public int? Bounce { get => _explicitNullValueBounce; set { _explicitNullValueBounce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bounce"); else _explicitNullProperties?.Remove("bounce"); } }
+        private int? _explicitNullValueBounce = default!;
         /// <summary>The delayedBounce property</summary>
-        public int? DelayedBounce { get; set; }
+        public int? DelayedBounce { get => _explicitNullValueDelayedBounce; set { _explicitNullValueDelayedBounce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayed-bounce"); else _explicitNullProperties?.Remove("delayed-bounce"); } }
+        private int? _explicitNullValueDelayedBounce = default!;
         /// <summary>The optimized property</summary>
-        public int? Optimized { get; set; }
+        public int? Optimized { get => _explicitNullValueOptimized; set { _explicitNullValueOptimized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optimized"); else _explicitNullProperties?.Remove("optimized"); } }
+        private int? _explicitNullValueOptimized = default!;
         /// <summary>The suppressBounce property</summary>
-        public int? SuppressBounce { get; set; }
+        public int? SuppressBounce { get => _explicitNullValueSuppressBounce; set { _explicitNullValueSuppressBounce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress-bounce"); else _explicitNullProperties?.Remove("suppress-bounce"); } }
+        private int? _explicitNullValueSuppressBounce = default!;
         /// <summary>The suppressComplaint property</summary>
-        public int? SuppressComplaint { get; set; }
+        public int? SuppressComplaint { get => _explicitNullValueSuppressComplaint; set { _explicitNullValueSuppressComplaint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress-complaint"); else _explicitNullProperties?.Remove("suppress-complaint"); } }
+        private int? _explicitNullValueSuppressComplaint = default!;
         /// <summary>The suppressUnsubscribe property</summary>
-        public int? SuppressUnsubscribe { get; set; }
+        public int? SuppressUnsubscribe { get => _explicitNullValueSuppressUnsubscribe; set { _explicitNullValueSuppressUnsubscribe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress-unsubscribe"); else _explicitNullProperties?.Remove("suppress-unsubscribe"); } }
+        private int? _explicitNullValueSuppressUnsubscribe = default!;
         /// <summary>The total property</summary>
-        public int? Total { get; set; }
+        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private int? _explicitNullValueTotal = default!;
         /// <summary>The webhook property</summary>
-        public int? Webhook { get; set; }
+        public int? Webhook { get => _explicitNullValueWebhook; set { _explicitNullValueWebhook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook"); else _explicitNullProperties?.Remove("webhook"); } }
+        private int? _explicitNullValueWebhook = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailedPermanent"/> and sets the default values.
         /// </summary>
@@ -45,7 +68,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailedPermanent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailedPermanent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailedPermanent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +103,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteIntValue("suppress-unsubscribe", SuppressUnsubscribe);
             writer.WriteIntValue("total", Total);
             writer.WriteIntValue("webhook", Webhook);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

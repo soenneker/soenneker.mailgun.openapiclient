@@ -49,7 +49,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Events
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV3DomainNameEvents200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Mailgun tracks every inbound and outbound message event and retains this data for at least 3 days.See [Filter expression](https://documentation.mailgun.com/docs/mailgun/user-manual/events/#filter-expression) for details about filtering expressions

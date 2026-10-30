@@ -68,11 +68,13 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Stats.StatsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tag property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.TagRequestBuilder Tag
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Tag.TagRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tags property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Tags.TagsRequestBuilder Tags
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);

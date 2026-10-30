@@ -11,21 +11,35 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunThresholdsApiLimitParentRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alert_channels") is { } nullNodeAlertChannels && nullNodeAlertChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertChannels = null;
+            if (parseNode.GetChildNode("warning_perc_one") is { } nullNodeWarningPercOne && nullNodeWarningPercOne.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningPercOne = null;
+            if (parseNode.GetChildNode("warning_perc_two") is { } nullNodeWarningPercTwo && nullNodeWarningPercTwo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningPercTwo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of alert channels to notify.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?>? AlertChannels { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?>? AlertChannels { get => _explicitNullValueAlertChannels; set { _explicitNullValueAlertChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alert_channels"); else _explicitNullProperties?.Remove("alert_channels"); } }
+        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?>? _explicitNullValueAlertChannels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?> AlertChannels { get; set; }
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?> AlertChannels { get => _explicitNullValueAlertChannels; set { _explicitNullValueAlertChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alert_channels"); else _explicitNullProperties?.Remove("alert_channels"); } }
+        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel?> _explicitNullValueAlertChannels = default!;
 #endif
         /// <summary>The percentage of the limit at which a warning will be sent given as an integer 1-99. Defaults to 50</summary>
-        public int? WarningPercOne { get; set; }
+        public int? WarningPercOne { get => _explicitNullValueWarningPercOne; set { _explicitNullValueWarningPercOne = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_perc_one"); else _explicitNullProperties?.Remove("warning_perc_one"); } }
+        private int? _explicitNullValueWarningPercOne = default!;
         /// <summary>The percentage of the limit at which a second warning will be sent given as an integer 1-99. Defaults to 75</summary>
-        public int? WarningPercTwo { get; set; }
+        public int? WarningPercTwo { get => _explicitNullValueWarningPercTwo; set { _explicitNullValueWarningPercTwo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_perc_two"); else _explicitNullProperties?.Remove("warning_perc_two"); } }
+        private int? _explicitNullValueWarningPercTwo = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitParentRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitParentRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitParentRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiLimitParentRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunThresholdsApiAlertChannel>("alert_channels", AlertChannels);
             writer.WriteIntValue("warning_perc_one", WarningPercOne);
             writer.WriteIntValue("warning_perc_two", WarningPercTwo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

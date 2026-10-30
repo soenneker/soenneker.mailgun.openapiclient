@@ -11,48 +11,70 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutV5AccountsSubaccountsSubaccountIdFeaturesXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email_preview") is { } nullNodeEmailPreview && nullNodeEmailPreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPreview = null;
+            if (parseNode.GetChildNode("inbox_placement") is { } nullNodeInboxPlacement && nullNodeInboxPlacement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboxPlacement = null;
+            if (parseNode.GetChildNode("sending") is { } nullNodeSending && nullNodeSending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sending = null;
+            if (parseNode.GetChildNode("validations") is { } nullNodeValidations && nullNodeValidations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validations = null;
+            if (parseNode.GetChildNode("validations_bulk") is { } nullNodeValidationsBulk && nullNodeValidationsBulk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationsBulk = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailPreview { get; set; }
+        public string? EmailPreview { get => _explicitNullValueEmailPreview; set { _explicitNullValueEmailPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview"); else _explicitNullProperties?.Remove("email_preview"); } }
+        private string? _explicitNullValueEmailPreview = default!;
 #nullable restore
 #else
-        public string EmailPreview { get; set; }
+        public string EmailPreview { get => _explicitNullValueEmailPreview; set { _explicitNullValueEmailPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview"); else _explicitNullProperties?.Remove("email_preview"); } }
+        private string _explicitNullValueEmailPreview = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboxPlacement { get; set; }
+        public string? InboxPlacement { get => _explicitNullValueInboxPlacement; set { _explicitNullValueInboxPlacement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbox_placement"); else _explicitNullProperties?.Remove("inbox_placement"); } }
+        private string? _explicitNullValueInboxPlacement = default!;
 #nullable restore
 #else
-        public string InboxPlacement { get; set; }
+        public string InboxPlacement { get => _explicitNullValueInboxPlacement; set { _explicitNullValueInboxPlacement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbox_placement"); else _explicitNullProperties?.Remove("inbox_placement"); } }
+        private string _explicitNullValueInboxPlacement = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sending { get; set; }
+        public string? Sending { get => _explicitNullValueSending; set { _explicitNullValueSending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sending"); else _explicitNullProperties?.Remove("sending"); } }
+        private string? _explicitNullValueSending = default!;
 #nullable restore
 #else
-        public string Sending { get; set; }
+        public string Sending { get => _explicitNullValueSending; set { _explicitNullValueSending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sending"); else _explicitNullProperties?.Remove("sending"); } }
+        private string _explicitNullValueSending = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Validations { get; set; }
+        public string? Validations { get => _explicitNullValueValidations; set { _explicitNullValueValidations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validations"); else _explicitNullProperties?.Remove("validations"); } }
+        private string? _explicitNullValueValidations = default!;
 #nullable restore
 #else
-        public string Validations { get; set; }
+        public string Validations { get => _explicitNullValueValidations; set { _explicitNullValueValidations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validations"); else _explicitNullProperties?.Remove("validations"); } }
+        private string _explicitNullValueValidations = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidationsBulk { get; set; }
+        public string? ValidationsBulk { get => _explicitNullValueValidationsBulk; set { _explicitNullValueValidationsBulk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validations_bulk"); else _explicitNullProperties?.Remove("validations_bulk"); } }
+        private string? _explicitNullValueValidationsBulk = default!;
 #nullable restore
 #else
-        public string ValidationsBulk { get; set; }
+        public string ValidationsBulk { get => _explicitNullValueValidationsBulk; set { _explicitNullValueValidationsBulk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validations_bulk"); else _explicitNullProperties?.Remove("validations_bulk"); } }
+        private string _explicitNullValueValidationsBulk = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeaturesXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeaturesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeaturesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsSubaccountsSubaccountIdFeaturesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteStringValue("sending", Sending);
             writer.WriteStringValue("validations", Validations);
             writer.WriteStringValue("validations_bulk", ValidationsBulk);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

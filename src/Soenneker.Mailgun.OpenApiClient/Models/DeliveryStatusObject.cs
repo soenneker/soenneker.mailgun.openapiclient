@@ -11,57 +11,92 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeliveryStatusObject : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attempt-no") is { } nullNodeAttemptNo && nullNodeAttemptNo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttemptNo = null;
+            if (parseNode.GetChildNode("certificate-verified") is { } nullNodeCertificateVerified && nullNodeCertificateVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateVerified = null;
+            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("enhanced-code") is { } nullNodeEnhancedCode && nullNodeEnhancedCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnhancedCode = null;
+            if (parseNode.GetChildNode("first-delivery-attempt-seconds") is { } nullNodeFirstDeliveryAttemptSeconds && nullNodeFirstDeliveryAttemptSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstDeliveryAttemptSeconds = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("mxhost") is { } nullNodeMxhost && nullNodeMxhost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mxhost = null;
+            if (parseNode.GetChildNode("retry-seconds") is { } nullNodeRetrySeconds && nullNodeRetrySeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetrySeconds = null;
+            if (parseNode.GetChildNode("session-seconds") is { } nullNodeSessionSeconds && nullNodeSessionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionSeconds = null;
+            if (parseNode.GetChildNode("tls") is { } nullNodeTls && nullNodeTls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tls = null;
+            if (parseNode.GetChildNode("utf8") is { } nullNodeUtf8 && nullNodeUtf8.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Utf8 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current attempt number trying to deliver the message to the ESP</summary>
-        public int? AttemptNo { get; set; }
+        public int? AttemptNo { get => _explicitNullValueAttemptNo; set { _explicitNullValueAttemptNo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt-no"); else _explicitNullProperties?.Remove("attempt-no"); } }
+        private int? _explicitNullValueAttemptNo = default!;
         /// <summary>The certificateVerified property</summary>
-        public bool? CertificateVerified { get; set; }
+        public bool? CertificateVerified { get => _explicitNullValueCertificateVerified; set { _explicitNullValueCertificateVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate-verified"); else _explicitNullProperties?.Remove("certificate-verified"); } }
+        private bool? _explicitNullValueCertificateVerified = default!;
         /// <summary>SMTP status code received as a result of the ESP session</summary>
-        public int? Code { get; set; }
+        public int? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private int? _explicitNullValueCode = default!;
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A more specific SMTP error code from the ESP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnhancedCode { get; set; }
+        public string? EnhancedCode { get => _explicitNullValueEnhancedCode; set { _explicitNullValueEnhancedCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enhanced-code"); else _explicitNullProperties?.Remove("enhanced-code"); } }
+        private string? _explicitNullValueEnhancedCode = default!;
 #nullable restore
 #else
-        public string EnhancedCode { get; set; }
+        public string EnhancedCode { get => _explicitNullValueEnhancedCode; set { _explicitNullValueEnhancedCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enhanced-code"); else _explicitNullProperties?.Remove("enhanced-code"); } }
+        private string _explicitNullValueEnhancedCode = default!;
 #endif
         /// <summary>Time elapsed between when the message is accepted by us and the first delivery attempt to the email service provider (ESP)</summary>
-        public double? FirstDeliveryAttemptSeconds { get; set; }
+        public double? FirstDeliveryAttemptSeconds { get => _explicitNullValueFirstDeliveryAttemptSeconds; set { _explicitNullValueFirstDeliveryAttemptSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first-delivery-attempt-seconds"); else _explicitNullProperties?.Remove("first-delivery-attempt-seconds"); } }
+        private double? _explicitNullValueFirstDeliveryAttemptSeconds = default!;
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The mailing host connected to for the SMTP session</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mxhost { get; set; }
+        public string? Mxhost { get => _explicitNullValueMxhost; set { _explicitNullValueMxhost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mxhost"); else _explicitNullProperties?.Remove("mxhost"); } }
+        private string? _explicitNullValueMxhost = default!;
 #nullable restore
 #else
-        public string Mxhost { get; set; }
+        public string Mxhost { get => _explicitNullValueMxhost; set { _explicitNullValueMxhost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mxhost"); else _explicitNullProperties?.Remove("mxhost"); } }
+        private string _explicitNullValueMxhost = default!;
 #endif
         /// <summary>If the message failed for a reason that can be retried, the number of seconds between retry attempts. This value changes as the number of retries grows!</summary>
-        public int? RetrySeconds { get; set; }
+        public int? RetrySeconds { get => _explicitNullValueRetrySeconds; set { _explicitNullValueRetrySeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retry-seconds"); else _explicitNullProperties?.Remove("retry-seconds"); } }
+        private int? _explicitNullValueRetrySeconds = default!;
         /// <summary>The time, in seconds, the SMTP session for this message took</summary>
-        public double? SessionSeconds { get; set; }
+        public double? SessionSeconds { get => _explicitNullValueSessionSeconds; set { _explicitNullValueSessionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session-seconds"); else _explicitNullProperties?.Remove("session-seconds"); } }
+        private double? _explicitNullValueSessionSeconds = default!;
         /// <summary>True if the SMTP session was performed over a TLS connection with the ESP</summary>
-        public bool? Tls { get; set; }
+        public bool? Tls { get => _explicitNullValueTls; set { _explicitNullValueTls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls"); else _explicitNullProperties?.Remove("tls"); } }
+        private bool? _explicitNullValueTls = default!;
         /// <summary>True if the SMTP session was able to use UTF-8 encoding</summary>
-        public bool? Utf8 { get; set; }
+        public bool? Utf8 { get => _explicitNullValueUtf8; set { _explicitNullValueUtf8 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utf8"); else _explicitNullProperties?.Remove("utf8"); } }
+        private bool? _explicitNullValueUtf8 = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject"/> and sets the default values.
         /// </summary>
@@ -77,7 +112,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.DeliveryStatusObject(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +155,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteDoubleValue("session-seconds", SessionSeconds);
             writer.WriteBoolValue("tls", Tls);
             writer.WriteBoolValue("utf8", Utf8);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

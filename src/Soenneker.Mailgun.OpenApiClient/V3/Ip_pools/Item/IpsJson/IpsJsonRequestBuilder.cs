@@ -51,7 +51,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.IpsJson
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The account must have &apos;DIPPs&apos; feature enabled.It is not allowed to modify a DIPP inherited from the parent account.All IPs must be dedicated ones, belong to the account and not belong to any otherDIPP.All domains linked to the DIPP will be updated so that their IPs include the newlyadded addresses. If the DIPP is delegated to subaccounts, those will also be updated.The processing of affected domains and subaccounts happens asynchronously after theendpoint returns a response.

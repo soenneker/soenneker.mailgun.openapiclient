@@ -38,6 +38,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item
             get => new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Features.FeaturesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The ip_pool property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool.Ip_poolRequestBuilder Ip_pool
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item.Ip_pool.Ip_poolRequestBuilder(PathParameters, RequestAdapter);
@@ -83,6 +84,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Accounts.Subaccounts.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "404", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiSubaccountResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

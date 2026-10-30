@@ -11,27 +11,52 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunLogsApiPkgApiModelFlags : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is-amp") is { } nullNodeIsAmp && nullNodeIsAmp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAmp = null;
+            if (parseNode.GetChildNode("is-authenticated") is { } nullNodeIsAuthenticated && nullNodeIsAuthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAuthenticated = null;
+            if (parseNode.GetChildNode("is-callback") is { } nullNodeIsCallback && nullNodeIsCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCallback = null;
+            if (parseNode.GetChildNode("is-delayed-bounce") is { } nullNodeIsDelayedBounce && nullNodeIsDelayedBounce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDelayedBounce = null;
+            if (parseNode.GetChildNode("is-encrypted") is { } nullNodeIsEncrypted && nullNodeIsEncrypted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEncrypted = null;
+            if (parseNode.GetChildNode("is-routed") is { } nullNodeIsRouted && nullNodeIsRouted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRouted = null;
+            if (parseNode.GetChildNode("is-system-test") is { } nullNodeIsSystemTest && nullNodeIsSystemTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSystemTest = null;
+            if (parseNode.GetChildNode("is-test-mode") is { } nullNodeIsTestMode && nullNodeIsTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTestMode = null;
+            if (parseNode.GetChildNode("is-webhook") is { } nullNodeIsWebhook && nullNodeIsWebhook.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWebhook = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isAmp property</summary>
-        public bool? IsAmp { get; set; }
+        public bool? IsAmp { get => _explicitNullValueIsAmp; set { _explicitNullValueIsAmp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-amp"); else _explicitNullProperties?.Remove("is-amp"); } }
+        private bool? _explicitNullValueIsAmp = default!;
         /// <summary>The isAuthenticated property</summary>
-        public bool? IsAuthenticated { get; set; }
+        public bool? IsAuthenticated { get => _explicitNullValueIsAuthenticated; set { _explicitNullValueIsAuthenticated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-authenticated"); else _explicitNullProperties?.Remove("is-authenticated"); } }
+        private bool? _explicitNullValueIsAuthenticated = default!;
         /// <summary>The isCallback property</summary>
-        public bool? IsCallback { get; set; }
+        public bool? IsCallback { get => _explicitNullValueIsCallback; set { _explicitNullValueIsCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-callback"); else _explicitNullProperties?.Remove("is-callback"); } }
+        private bool? _explicitNullValueIsCallback = default!;
         /// <summary>The isDelayedBounce property</summary>
-        public bool? IsDelayedBounce { get; set; }
+        public bool? IsDelayedBounce { get => _explicitNullValueIsDelayedBounce; set { _explicitNullValueIsDelayedBounce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-delayed-bounce"); else _explicitNullProperties?.Remove("is-delayed-bounce"); } }
+        private bool? _explicitNullValueIsDelayedBounce = default!;
         /// <summary>The isEncrypted property</summary>
-        public bool? IsEncrypted { get; set; }
+        public bool? IsEncrypted { get => _explicitNullValueIsEncrypted; set { _explicitNullValueIsEncrypted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-encrypted"); else _explicitNullProperties?.Remove("is-encrypted"); } }
+        private bool? _explicitNullValueIsEncrypted = default!;
         /// <summary>The isRouted property</summary>
-        public bool? IsRouted { get; set; }
+        public bool? IsRouted { get => _explicitNullValueIsRouted; set { _explicitNullValueIsRouted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-routed"); else _explicitNullProperties?.Remove("is-routed"); } }
+        private bool? _explicitNullValueIsRouted = default!;
         /// <summary>The isSystemTest property</summary>
-        public bool? IsSystemTest { get; set; }
+        public bool? IsSystemTest { get => _explicitNullValueIsSystemTest; set { _explicitNullValueIsSystemTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-system-test"); else _explicitNullProperties?.Remove("is-system-test"); } }
+        private bool? _explicitNullValueIsSystemTest = default!;
         /// <summary>The isTestMode property</summary>
-        public bool? IsTestMode { get; set; }
+        public bool? IsTestMode { get => _explicitNullValueIsTestMode; set { _explicitNullValueIsTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-test-mode"); else _explicitNullProperties?.Remove("is-test-mode"); } }
+        private bool? _explicitNullValueIsTestMode = default!;
         /// <summary>The isWebhook property</summary>
-        public bool? IsWebhook { get; set; }
+        public bool? IsWebhook { get => _explicitNullValueIsWebhook; set { _explicitNullValueIsWebhook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is-webhook"); else _explicitNullProperties?.Remove("is-webhook"); } }
+        private bool? _explicitNullValueIsWebhook = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFlags"/> and sets the default values.
         /// </summary>
@@ -47,7 +72,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFlags CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFlags();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunLogsApiPkgApiModelFlags(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +109,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteBoolValue("is-system-test", IsSystemTest);
             writer.WriteBoolValue("is-test-mode", IsTestMode);
             writer.WriteBoolValue("is-webhook", IsWebhook);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

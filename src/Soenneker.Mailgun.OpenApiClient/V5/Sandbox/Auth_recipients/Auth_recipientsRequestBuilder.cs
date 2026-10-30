@@ -62,7 +62,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV5SandboxAuthRecipients200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add authorized email recipient for a sandbox domain
@@ -84,6 +84,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V5.Sandbox.Auth_recipients
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunAccountsApiGenericMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PostV5SandboxAuthRecipients200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

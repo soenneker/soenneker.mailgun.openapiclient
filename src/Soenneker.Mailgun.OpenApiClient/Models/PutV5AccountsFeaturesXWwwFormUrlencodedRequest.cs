@@ -11,24 +11,37 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutV5AccountsFeaturesXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ai_insights") is { } nullNodeAiInsights && nullNodeAiInsights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiInsights = null;
+            if (parseNode.GetChildNode("webhooks_redact_pii") is { } nullNodeWebhooksRedactPii && nullNodeWebhooksRedactPii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksRedactPii = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AiInsights { get; set; }
+        public string? AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
+        private string? _explicitNullValueAiInsights = default!;
 #nullable restore
 #else
-        public string AiInsights { get; set; }
+        public string AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
+        private string _explicitNullValueAiInsights = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksRedactPii { get; set; }
+        public string? WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
+        private string? _explicitNullValueWebhooksRedactPii = default!;
 #nullable restore
 #else
-        public string WebhooksRedactPii { get; set; }
+        public string WebhooksRedactPii { get => _explicitNullValueWebhooksRedactPii; set { _explicitNullValueWebhooksRedactPii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_redact_pii"); else _explicitNullProperties?.Remove("webhooks_redact_pii"); } }
+        private string _explicitNullValueWebhooksRedactPii = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsFeaturesXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsFeaturesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsFeaturesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.PutV5AccountsFeaturesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ai_insights", AiInsights);
             writer.WriteStringValue("webhooks_redact_pii", WebhooksRedactPii);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

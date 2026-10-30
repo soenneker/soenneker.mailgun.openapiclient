@@ -17,11 +17,13 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Stats
     public partial class StatsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The filter property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Stats.Filter.FilterRequestBuilder Filter
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Stats.Filter.FilterRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The total property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Stats.Total.TotalRequestBuilder Total
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Stats.Total.TotalRequestBuilder(PathParameters, RequestAdapter);

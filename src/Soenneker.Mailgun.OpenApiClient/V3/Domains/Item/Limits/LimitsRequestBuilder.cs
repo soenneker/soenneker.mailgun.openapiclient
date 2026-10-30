@@ -16,6 +16,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Limits
     public partial class LimitsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The tag property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Limits.Tag.TagRequestBuilder Tag
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Limits.Tag.TagRequestBuilder(PathParameters, RequestAdapter);

@@ -49,7 +49,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V1.Dynamic_pools.Domains.Item.Preview
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.GetV1DynamicPoolsDomainsNamePreview200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Runs a health check on a domain and returns which pool it would be placed in. It does NOT enroll the domain or set the band

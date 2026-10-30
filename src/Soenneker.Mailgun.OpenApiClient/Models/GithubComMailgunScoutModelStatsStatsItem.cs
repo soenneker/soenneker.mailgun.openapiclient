@@ -11,152 +11,213 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GithubComMailgunScoutModelStatsStatsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accepted") is { } nullNodeAccepted && nullNodeAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accepted = null;
+            if (parseNode.GetChildNode("campaign") is { } nullNodeCampaign && nullNodeCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Campaign = null;
+            if (parseNode.GetChildNode("clicked") is { } nullNodeClicked && nullNodeClicked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clicked = null;
+            if (parseNode.GetChildNode("complained") is { } nullNodeComplained && nullNodeComplained.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Complained = null;
+            if (parseNode.GetChildNode("delivered") is { } nullNodeDelivered && nullNodeDelivered.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delivered = null;
+            if (parseNode.GetChildNode("domain_blocklist_monitoring") is { } nullNodeDomainBlocklistMonitoring && nullNodeDomainBlocklistMonitoring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainBlocklistMonitoring = null;
+            if (parseNode.GetChildNode("email_preview") is { } nullNodeEmailPreview && nullNodeEmailPreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPreview = null;
+            if (parseNode.GetChildNode("email_preview_failed") is { } nullNodeEmailPreviewFailed && nullNodeEmailPreviewFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPreviewFailed = null;
+            if (parseNode.GetChildNode("email_validation") is { } nullNodeEmailValidation && nullNodeEmailValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailValidation = null;
+            if (parseNode.GetChildNode("failed") is { } nullNodeFailed && nullNodeFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failed = null;
+            if (parseNode.GetChildNode("ip_blocklist_monitoring") is { } nullNodeIpBlocklistMonitoring && nullNodeIpBlocklistMonitoring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpBlocklistMonitoring = null;
+            if (parseNode.GetChildNode("link_validation") is { } nullNodeLinkValidation && nullNodeLinkValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkValidation = null;
+            if (parseNode.GetChildNode("link_validation_failed") is { } nullNodeLinkValidationFailed && nullNodeLinkValidationFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkValidationFailed = null;
+            if (parseNode.GetChildNode("opened") is { } nullNodeOpened && nullNodeOpened.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opened = null;
+            if (parseNode.GetChildNode("seed_test") is { } nullNodeSeedTest && nullNodeSeedTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeedTest = null;
+            if (parseNode.GetChildNode("stored") is { } nullNodeStored && nullNodeStored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stored = null;
+            if (parseNode.GetChildNode("time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
+            if (parseNode.GetChildNode("unsubscribed") is { } nullNodeUnsubscribed && nullNodeUnsubscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unsubscribed = null;
+        }
+
         /// <summary>The accepted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsAccepted? Accepted { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsAccepted? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsAccepted? _explicitNullValueAccepted = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsAccepted Accepted { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsAccepted Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsAccepted _explicitNullValueAccepted = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The campaign property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsCampaign? Campaign { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsCampaign? Campaign { get => _explicitNullValueCampaign; set { _explicitNullValueCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign"); else _explicitNullProperties?.Remove("campaign"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsCampaign? _explicitNullValueCampaign = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsCampaign Campaign { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsCampaign Campaign { get => _explicitNullValueCampaign; set { _explicitNullValueCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign"); else _explicitNullProperties?.Remove("campaign"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsCampaign _explicitNullValueCampaign = default!;
 #endif
         /// <summary>The clicked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsClicked? Clicked { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsClicked? Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsClicked? _explicitNullValueClicked = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsClicked Clicked { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsClicked Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsClicked _explicitNullValueClicked = default!;
 #endif
         /// <summary>The complained property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsComplained? Complained { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsComplained? Complained { get => _explicitNullValueComplained; set { _explicitNullValueComplained = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complained"); else _explicitNullProperties?.Remove("complained"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsComplained? _explicitNullValueComplained = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsComplained Complained { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsComplained Complained { get => _explicitNullValueComplained; set { _explicitNullValueComplained = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complained"); else _explicitNullProperties?.Remove("complained"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsComplained _explicitNullValueComplained = default!;
 #endif
         /// <summary>The delivered property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsDelivered? Delivered { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsDelivered? Delivered { get => _explicitNullValueDelivered; set { _explicitNullValueDelivered = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered"); else _explicitNullProperties?.Remove("delivered"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsDelivered? _explicitNullValueDelivered = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsDelivered Delivered { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsDelivered Delivered { get => _explicitNullValueDelivered; set { _explicitNullValueDelivered = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered"); else _explicitNullProperties?.Remove("delivered"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsDelivered _explicitNullValueDelivered = default!;
 #endif
         /// <summary>The domain_blocklist_monitoring property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring? DomainBlocklistMonitoring { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring? DomainBlocklistMonitoring { get => _explicitNullValueDomainBlocklistMonitoring; set { _explicitNullValueDomainBlocklistMonitoring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_blocklist_monitoring"); else _explicitNullProperties?.Remove("domain_blocklist_monitoring"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring? _explicitNullValueDomainBlocklistMonitoring = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring DomainBlocklistMonitoring { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring DomainBlocklistMonitoring { get => _explicitNullValueDomainBlocklistMonitoring; set { _explicitNullValueDomainBlocklistMonitoring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_blocklist_monitoring"); else _explicitNullProperties?.Remove("domain_blocklist_monitoring"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring _explicitNullValueDomainBlocklistMonitoring = default!;
 #endif
         /// <summary>The email_preview property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreview? EmailPreview { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreview? EmailPreview { get => _explicitNullValueEmailPreview; set { _explicitNullValueEmailPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview"); else _explicitNullProperties?.Remove("email_preview"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreview? _explicitNullValueEmailPreview = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreview EmailPreview { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreview EmailPreview { get => _explicitNullValueEmailPreview; set { _explicitNullValueEmailPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview"); else _explicitNullProperties?.Remove("email_preview"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreview _explicitNullValueEmailPreview = default!;
 #endif
         /// <summary>The email_preview_failed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreviewFailed? EmailPreviewFailed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreviewFailed? EmailPreviewFailed { get => _explicitNullValueEmailPreviewFailed; set { _explicitNullValueEmailPreviewFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview_failed"); else _explicitNullProperties?.Remove("email_preview_failed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreviewFailed? _explicitNullValueEmailPreviewFailed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreviewFailed EmailPreviewFailed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreviewFailed EmailPreviewFailed { get => _explicitNullValueEmailPreviewFailed; set { _explicitNullValueEmailPreviewFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_preview_failed"); else _explicitNullProperties?.Remove("email_preview_failed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailPreviewFailed _explicitNullValueEmailPreviewFailed = default!;
 #endif
         /// <summary>The email_validation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailValidation? EmailValidation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailValidation? EmailValidation { get => _explicitNullValueEmailValidation; set { _explicitNullValueEmailValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation"); else _explicitNullProperties?.Remove("email_validation"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailValidation? _explicitNullValueEmailValidation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailValidation EmailValidation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailValidation EmailValidation { get => _explicitNullValueEmailValidation; set { _explicitNullValueEmailValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_validation"); else _explicitNullProperties?.Remove("email_validation"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsEmailValidation _explicitNullValueEmailValidation = default!;
 #endif
         /// <summary>The failed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailed? Failed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailed? Failed { get => _explicitNullValueFailed; set { _explicitNullValueFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed"); else _explicitNullProperties?.Remove("failed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailed? _explicitNullValueFailed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailed Failed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailed Failed { get => _explicitNullValueFailed; set { _explicitNullValueFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed"); else _explicitNullProperties?.Remove("failed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsFailed _explicitNullValueFailed = default!;
 #endif
         /// <summary>The ip_blocklist_monitoring property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring? IpBlocklistMonitoring { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring? IpBlocklistMonitoring { get => _explicitNullValueIpBlocklistMonitoring; set { _explicitNullValueIpBlocklistMonitoring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_blocklist_monitoring"); else _explicitNullProperties?.Remove("ip_blocklist_monitoring"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring? _explicitNullValueIpBlocklistMonitoring = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring IpBlocklistMonitoring { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring IpBlocklistMonitoring { get => _explicitNullValueIpBlocklistMonitoring; set { _explicitNullValueIpBlocklistMonitoring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_blocklist_monitoring"); else _explicitNullProperties?.Remove("ip_blocklist_monitoring"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsBlocklistMonitoring _explicitNullValueIpBlocklistMonitoring = default!;
 #endif
         /// <summary>The link_validation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidation? LinkValidation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidation? LinkValidation { get => _explicitNullValueLinkValidation; set { _explicitNullValueLinkValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_validation"); else _explicitNullProperties?.Remove("link_validation"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidation? _explicitNullValueLinkValidation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidation LinkValidation { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidation LinkValidation { get => _explicitNullValueLinkValidation; set { _explicitNullValueLinkValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_validation"); else _explicitNullProperties?.Remove("link_validation"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidation _explicitNullValueLinkValidation = default!;
 #endif
         /// <summary>The link_validation_failed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidationFailed? LinkValidationFailed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidationFailed? LinkValidationFailed { get => _explicitNullValueLinkValidationFailed; set { _explicitNullValueLinkValidationFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_validation_failed"); else _explicitNullProperties?.Remove("link_validation_failed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidationFailed? _explicitNullValueLinkValidationFailed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidationFailed LinkValidationFailed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidationFailed LinkValidationFailed { get => _explicitNullValueLinkValidationFailed; set { _explicitNullValueLinkValidationFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_validation_failed"); else _explicitNullProperties?.Remove("link_validation_failed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsLinkValidationFailed _explicitNullValueLinkValidationFailed = default!;
 #endif
         /// <summary>The opened property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsOpened? Opened { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsOpened? Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsOpened? _explicitNullValueOpened = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsOpened Opened { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsOpened Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsOpened _explicitNullValueOpened = default!;
 #endif
         /// <summary>The seed_test property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsSeedTest? SeedTest { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsSeedTest? SeedTest { get => _explicitNullValueSeedTest; set { _explicitNullValueSeedTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seed_test"); else _explicitNullProperties?.Remove("seed_test"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsSeedTest? _explicitNullValueSeedTest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsSeedTest SeedTest { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsSeedTest SeedTest { get => _explicitNullValueSeedTest; set { _explicitNullValueSeedTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seed_test"); else _explicitNullProperties?.Remove("seed_test"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsSeedTest _explicitNullValueSeedTest = default!;
 #endif
         /// <summary>The stored property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored? Stored { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored? Stored { get => _explicitNullValueStored; set { _explicitNullValueStored = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored"); else _explicitNullProperties?.Remove("stored"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored? _explicitNullValueStored = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored Stored { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored Stored { get => _explicitNullValueStored; set { _explicitNullValueStored = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stored"); else _explicitNullProperties?.Remove("stored"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored _explicitNullValueStored = default!;
 #endif
         /// <summary>The time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Time { get; set; }
+        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private string? _explicitNullValueTime = default!;
 #nullable restore
 #else
-        public string Time { get; set; }
+        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private string _explicitNullValueTime = default!;
 #endif
         /// <summary>The unsubscribed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed? Unsubscribed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed? Unsubscribed { get => _explicitNullValueUnsubscribed; set { _explicitNullValueUnsubscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribed"); else _explicitNullProperties?.Remove("unsubscribed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed? _explicitNullValueUnsubscribed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed Unsubscribed { get; set; }
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed Unsubscribed { get => _explicitNullValueUnsubscribed; set { _explicitNullValueUnsubscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribed"); else _explicitNullProperties?.Remove("unsubscribed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed _explicitNullValueUnsubscribed = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStatsItem"/> and sets the default values.
@@ -173,7 +234,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStatsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStatsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStatsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -228,6 +289,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsStored>("stored", Stored);
             writer.WriteStringValue("time", Time);
             writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScoutModelStatsUnsubscribed>("unsubscribed", Unsubscribed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

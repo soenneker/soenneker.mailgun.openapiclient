@@ -12,29 +12,56 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("classified_failures_count") is { } nullNodeClassifiedFailuresCount && nullNodeClassifiedFailuresCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassifiedFailuresCount = null;
+            if (parseNode.GetChildNode("critical_bounce_count") is { } nullNodeCriticalBounceCount && nullNodeCriticalBounceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriticalBounceCount = null;
+            if (parseNode.GetChildNode("critical_bounce_rate") is { } nullNodeCriticalBounceRate && nullNodeCriticalBounceRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriticalBounceRate = null;
+            if (parseNode.GetChildNode("critical_delay_count") is { } nullNodeCriticalDelayCount && nullNodeCriticalDelayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriticalDelayCount = null;
+            if (parseNode.GetChildNode("critical_delay_rate") is { } nullNodeCriticalDelayRate && nullNodeCriticalDelayRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriticalDelayRate = null;
+            if (parseNode.GetChildNode("delivered_smtp_count") is { } nullNodeDeliveredSmtpCount && nullNodeDeliveredSmtpCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveredSmtpCount = null;
+            if (parseNode.GetChildNode("non_critical_bounce_count") is { } nullNodeNonCriticalBounceCount && nullNodeNonCriticalBounceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonCriticalBounceCount = null;
+            if (parseNode.GetChildNode("non_critical_bounce_rate") is { } nullNodeNonCriticalBounceRate && nullNodeNonCriticalBounceRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonCriticalBounceRate = null;
+            if (parseNode.GetChildNode("non_critical_delay_count") is { } nullNodeNonCriticalDelayCount && nullNodeNonCriticalDelayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonCriticalDelayCount = null;
+            if (parseNode.GetChildNode("non_critical_delay_rate") is { } nullNodeNonCriticalDelayRate && nullNodeNonCriticalDelayRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonCriticalDelayRate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total bounces and delays</summary>
-        public long? ClassifiedFailuresCount { get; set; }
+        public long? ClassifiedFailuresCount { get => _explicitNullValueClassifiedFailuresCount; set { _explicitNullValueClassifiedFailuresCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classified_failures_count"); else _explicitNullProperties?.Remove("classified_failures_count"); } }
+        private long? _explicitNullValueClassifiedFailuresCount = default!;
         /// <summary>The critical_bounce_count property</summary>
-        public long? CriticalBounceCount { get; set; }
+        public long? CriticalBounceCount { get => _explicitNullValueCriticalBounceCount; set { _explicitNullValueCriticalBounceCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("critical_bounce_count"); else _explicitNullProperties?.Remove("critical_bounce_count"); } }
+        private long? _explicitNullValueCriticalBounceCount = default!;
         /// <summary>Percentages; null for Spam Filters</summary>
-        public long? CriticalBounceRate { get; set; }
+        public long? CriticalBounceRate { get => _explicitNullValueCriticalBounceRate; set { _explicitNullValueCriticalBounceRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("critical_bounce_rate"); else _explicitNullProperties?.Remove("critical_bounce_rate"); } }
+        private long? _explicitNullValueCriticalBounceRate = default!;
         /// <summary>The critical_delay_count property</summary>
-        public long? CriticalDelayCount { get; set; }
+        public long? CriticalDelayCount { get => _explicitNullValueCriticalDelayCount; set { _explicitNullValueCriticalDelayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("critical_delay_count"); else _explicitNullProperties?.Remove("critical_delay_count"); } }
+        private long? _explicitNullValueCriticalDelayCount = default!;
         /// <summary>Percentages; null for Spam Filters</summary>
-        public long? CriticalDelayRate { get; set; }
+        public long? CriticalDelayRate { get => _explicitNullValueCriticalDelayRate; set { _explicitNullValueCriticalDelayRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("critical_delay_rate"); else _explicitNullProperties?.Remove("critical_delay_rate"); } }
+        private long? _explicitNullValueCriticalDelayRate = default!;
         /// <summary>null for Spam Filters</summary>
-        public long? DeliveredSmtpCount { get; set; }
+        public long? DeliveredSmtpCount { get => _explicitNullValueDeliveredSmtpCount; set { _explicitNullValueDeliveredSmtpCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered_smtp_count"); else _explicitNullProperties?.Remove("delivered_smtp_count"); } }
+        private long? _explicitNullValueDeliveredSmtpCount = default!;
         /// <summary>The non_critical_bounce_count property</summary>
-        public long? NonCriticalBounceCount { get; set; }
+        public long? NonCriticalBounceCount { get => _explicitNullValueNonCriticalBounceCount; set { _explicitNullValueNonCriticalBounceCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_critical_bounce_count"); else _explicitNullProperties?.Remove("non_critical_bounce_count"); } }
+        private long? _explicitNullValueNonCriticalBounceCount = default!;
         /// <summary>Percentages; null for Spam Filters</summary>
-        public long? NonCriticalBounceRate { get; set; }
+        public long? NonCriticalBounceRate { get => _explicitNullValueNonCriticalBounceRate; set { _explicitNullValueNonCriticalBounceRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_critical_bounce_rate"); else _explicitNullProperties?.Remove("non_critical_bounce_rate"); } }
+        private long? _explicitNullValueNonCriticalBounceRate = default!;
         /// <summary>The non_critical_delay_count property</summary>
-        public long? NonCriticalDelayCount { get; set; }
+        public long? NonCriticalDelayCount { get => _explicitNullValueNonCriticalDelayCount; set { _explicitNullValueNonCriticalDelayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_critical_delay_count"); else _explicitNullProperties?.Remove("non_critical_delay_count"); } }
+        private long? _explicitNullValueNonCriticalDelayCount = default!;
         /// <summary>Percentages; null for Spam Filters</summary>
-        public long? NonCriticalDelayRate { get; set; }
+        public long? NonCriticalDelayRate { get => _explicitNullValueNonCriticalDelayRate; set { _explicitNullValueNonCriticalDelayRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_critical_delay_rate"); else _explicitNullProperties?.Remove("non_critical_delay_rate"); } }
+        private long? _explicitNullValueNonCriticalDelayRate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"/> and sets the default values.
         /// </summary>
@@ -50,7 +77,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +116,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteLongValue("non_critical_bounce_rate", NonCriticalBounceRate);
             writer.WriteLongValue("non_critical_delay_count", NonCriticalDelayCount);
             writer.WriteLongValue("non_critical_delay_rate", NonCriticalDelayRate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

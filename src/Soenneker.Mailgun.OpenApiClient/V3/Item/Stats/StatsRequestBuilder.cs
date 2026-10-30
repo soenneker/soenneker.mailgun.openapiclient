@@ -16,6 +16,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.Stats
     public partial class StatsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The total property</summary>
+        [Obsolete("")]
         public global::Soenneker.Mailgun.OpenApiClient.V3.Item.Stats.Total.TotalRequestBuilder Total
         {
             get => new global::Soenneker.Mailgun.OpenApiClient.V3.Item.Stats.Total.TotalRequestBuilder(PathParameters, RequestAdapter);

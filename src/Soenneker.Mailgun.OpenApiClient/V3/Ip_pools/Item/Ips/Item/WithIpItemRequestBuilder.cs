@@ -48,7 +48,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Ips.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The account must have &apos;DIPPs&apos; feature enabled.It is not allowed to modify a DIPP inherited from the parent account.The IP must be a dedicated one, belong to the account and not belong to any otherDIPP.All domains linked to the DIPP will be updated so that their IPs include the newlyadded address. If the DIPP is delegated to subaccounts, those will also be updated.The processing of affected domains and subaccounts happens asynchronously after theendpoint returns a response.
@@ -66,7 +66,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Ip_pools.Item.Ips.Item
         {
 #endif
             var requestInfo = ToPutRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The account must have &apos;DIPPs&apos; feature enabled.It&apos;s not allowed to edit a DIPP inherited from the parent account.If the DIPP is linked to domains, the domains will be updated asynchronously (afterthis endpoint returns response).

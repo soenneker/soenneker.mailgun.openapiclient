@@ -53,6 +53,8 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Lists.Item.Members.Pages
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GetListsListAddressMembersPages429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Mailgun.OpenApiClient.Models.PaginateListMemberResponse>(requestInfo, global::Soenneker.Mailgun.OpenApiClient.Models.PaginateListMemberResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

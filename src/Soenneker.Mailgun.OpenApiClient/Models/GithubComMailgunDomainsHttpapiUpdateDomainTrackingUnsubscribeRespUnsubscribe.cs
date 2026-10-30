@@ -12,26 +12,41 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("html_footer") is { } nullNodeHtmlFooter && nullNodeHtmlFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlFooter = null;
+            if (parseNode.GetChildNode("text_footer") is { } nullNodeTextFooter && nullNodeTextFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFooter = null;
+        }
+
         /// <summary>Whether unsubscribe tracking is enabled or not</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTML footer for the unsubscribe link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlFooter { get; set; }
+        public string? HtmlFooter { get => _explicitNullValueHtmlFooter; set { _explicitNullValueHtmlFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_footer"); else _explicitNullProperties?.Remove("html_footer"); } }
+        private string? _explicitNullValueHtmlFooter = default!;
 #nullable restore
 #else
-        public string HtmlFooter { get; set; }
+        public string HtmlFooter { get => _explicitNullValueHtmlFooter; set { _explicitNullValueHtmlFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_footer"); else _explicitNullProperties?.Remove("html_footer"); } }
+        private string _explicitNullValueHtmlFooter = default!;
 #endif
         /// <summary>The text footer for the unsubscribe link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextFooter { get; set; }
+        public string? TextFooter { get => _explicitNullValueTextFooter; set { _explicitNullValueTextFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_footer"); else _explicitNullProperties?.Remove("text_footer"); } }
+        private string? _explicitNullValueTextFooter = default!;
 #nullable restore
 #else
-        public string TextFooter { get; set; }
+        public string TextFooter { get => _explicitNullValueTextFooter; set { _explicitNullValueTextFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_footer"); else _explicitNullProperties?.Remove("text_footer"); } }
+        private string _explicitNullValueTextFooter = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiUpdateDomainTrackingUnsubscribeRespUnsubscribe(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("html_footer", HtmlFooter);
             writer.WriteStringValue("text_footer", TextFooter);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
