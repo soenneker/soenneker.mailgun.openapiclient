@@ -83,7 +83,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/v3/domains/{domainName}/dynamic_pools?replacement_ip={replacement_ip}&replacement_pool_id={replacement_pool_id}", RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v3/domains/{domainName}/dynamic_pools", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v3/domains/{domainName}/dynamic_pools?replacement_ip={replacement_ip}&replacement_pool_id={replacement_pool_id}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -102,7 +102,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V3.Domains.Item.Dynamic_pools.Dynamic_poolsRequestBuilder.Dynamic_poolsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v3/domains/{domainName}/dynamic_pools", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

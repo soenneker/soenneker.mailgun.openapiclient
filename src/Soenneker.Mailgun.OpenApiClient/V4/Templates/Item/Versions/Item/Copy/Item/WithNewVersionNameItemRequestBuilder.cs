@@ -78,7 +78,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.Versions.Item.Copy.I
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Mailgun.OpenApiClient.V4.Templates.Item.Versions.Item.Copy.Item.WithNewVersionNameItemRequestBuilder.WithNewVersionNameItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.mailgun.net", "/v4/templates/{templateName}/versions/{versionName}/copy/{newVersionName}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
