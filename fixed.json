@@ -7542,6 +7542,25 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A 202 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunTerminatorHttpapiGenerateResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "Initiated x509 key pair generation",
+                      "location": "/v2/x509/example.com/status"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -7654,6 +7673,25 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A 202 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunTerminatorHttpapiGenerateResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "Initiated x509 key pair generation",
+                      "location": "/v2/x509/example.com/status"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -13021,6 +13059,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A 202 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "file uploaded successfully for processing. standby..."
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -13119,6 +13175,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A 202 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "file uploaded successfully for processing. standby..."
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -13217,6 +13291,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A 202 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "ffile uploaded successfully for processing. standby..."
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -13315,6 +13407,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "A 202 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiGenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "file uploaded successfully for processing. standby..."
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -15491,6 +15601,33 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Mailing list creation success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostV3Lists201Response"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "list": {
+                        "address": "developers@mailgun.net",
+                        "name": "Developers",
+                        "description": "Describe the mailing list",
+                        "access_level": "readonly",
+                        "reply_preference": "list",
+                        "created_at": "Tue, 09 Aug 2011 20:50:27 -0000",
+                        "members_count": 2
+                      },
+                      "message": "Mailing list has been created"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
