@@ -88,12 +88,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Optional field containing additional details about the domain&apos;s disabled status if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled? Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; AdditionalData?.Remove("disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled? _explicitNullValueDisabled = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled? Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; AdditionalData?.Remove("disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled? _explicitNullValueDisabled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; AdditionalData?.Remove("disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled _explicitNullValueDisabled = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; AdditionalData?.Remove("disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled _explicitNullValueDisabled = default!;
 #endif
         /// <summary>If true incoming messages to this domain will be encrypted</summary>
         public bool? EncryptIncomingMessage { get => _explicitNullValueEncryptIncomingMessage; set { _explicitNullValueEncryptIncomingMessage = value; AdditionalData?.Remove("encrypt_incoming_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encrypt_incoming_message"); else _explicitNullProperties?.Remove("encrypt_incoming_message"); } }
@@ -256,7 +256,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "archive_to", n => { ArchiveTo = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled.CreateFromDiscriminatorValue); } },
+                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled.CreateFromDiscriminatorValue); } },
                 { "encrypt_incoming_message", n => { EncryptIncomingMessage = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
@@ -287,7 +287,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("archive_to", ArchiveTo);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled>("disabled", Disabled);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled>("disabled", Disabled);
             writer.WriteBoolValue("encrypt_incoming_message", EncryptIncomingMessage);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_disabled", IsDisabled);

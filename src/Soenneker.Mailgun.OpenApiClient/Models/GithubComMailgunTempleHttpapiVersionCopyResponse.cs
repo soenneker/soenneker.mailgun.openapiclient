@@ -41,22 +41,22 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion? _explicitNullValueTemplate = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion _explicitNullValueTemplate = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate _explicitNullValueTemplate = default!;
 #endif
         /// <summary>Created version details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion? _explicitNullValueVersion = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion _explicitNullValueVersion = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponse"/> and sets the default values.
@@ -84,8 +84,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion.CreateFromDiscriminatorValue); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate.CreateFromDiscriminatorValue); } },
+                { "version", n => { Version = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -96,8 +96,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion>("template", Template);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelVersion>("version", Version);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseTemplate>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiVersionCopyResponseVersion>("version", Version);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

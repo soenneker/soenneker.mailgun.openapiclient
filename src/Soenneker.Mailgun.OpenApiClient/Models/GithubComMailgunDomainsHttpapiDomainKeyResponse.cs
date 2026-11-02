@@ -30,12 +30,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The dns_record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord? DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; AdditionalData?.Remove("dns_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord? _explicitNullValueDnsRecord = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem? DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; AdditionalData?.Remove("dns_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem? _explicitNullValueDnsRecord = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; AdditionalData?.Remove("dns_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord _explicitNullValueDnsRecord = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem DnsRecord { get => _explicitNullValueDnsRecord; set { _explicitNullValueDnsRecord = value; AdditionalData?.Remove("dns_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dns_record"); else _explicitNullProperties?.Remove("dns_record"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem _explicitNullValueDnsRecord = default!;
 #endif
         /// <summary>The selector property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dns_record", n => { DnsRecord = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord.CreateFromDiscriminatorValue); } },
+                { "dns_record", n => { DnsRecord = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem.CreateFromDiscriminatorValue); } },
                 { "selector", n => { Selector = n.GetStringValue(); } },
                 { "signing_domain", n => { SigningDomain = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>("dns_record", DnsRecord);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem>("dns_record", DnsRecord);
             writer.WriteStringValue("selector", Selector);
             writer.WriteStringValue("signing_domain", SigningDomain);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

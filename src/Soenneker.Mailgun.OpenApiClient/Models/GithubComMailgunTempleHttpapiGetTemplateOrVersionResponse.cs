@@ -26,12 +26,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Template details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate? _explicitNullValueTemplate = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate _explicitNullValueTemplate = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate _explicitNullValueTemplate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiGetTemplateOrVersionResponse"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleModelTemplate>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate>("template", Template);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

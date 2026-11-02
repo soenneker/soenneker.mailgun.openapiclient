@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
+    /// <summary>
+    /// Temporary fail webhook URLs
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubComMailgunDomainsHttpapiWebhookUrLs : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail : IAdditionalDataHolder, IParsable
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -34,21 +35,23 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         private List<string> _explicitNullValueUrls = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsHttpapiWebhookUrLs()
+        public GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs(), parseNode);
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

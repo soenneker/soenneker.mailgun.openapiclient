@@ -28,22 +28,22 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
-        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>? _explicitNullValueItems = default!;
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
-        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse> _explicitNullValueItems = default!;
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem> _explicitNullValueItems = default!;
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse? _explicitNullValuePaging = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging? _explicitNullValuePaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse _explicitNullValuePaging = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging _explicitNullValuePaging = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponse"/> and sets the default values.
@@ -70,8 +70,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse.CreateFromDiscriminatorValue); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyResponse>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunScaffoldHttpapiPagingPagingResponse>("paging", Paging);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem>("items", Items);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging>("paging", Paging);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

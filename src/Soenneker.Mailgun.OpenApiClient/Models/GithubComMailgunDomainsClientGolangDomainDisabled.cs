@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Mailgun.OpenApiClient.Models
 {
+    /// <summary>
+    /// Optional field containing additional details about the domain&apos;s disabled status if applicable
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubComMailgunDomainsClientGolangDisabled : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubComMailgunDomainsClientGolangDomainDisabled : IAdditionalDataHolder, IParsable
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -75,21 +76,23 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         private string _explicitNullValueUntil = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled"/> and sets the default values.
         /// </summary>
-        public GithubComMailgunDomainsClientGolangDisabled()
+        public GithubComMailgunDomainsClientGolangDomainDisabled()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDisabled(), parseNode);
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangDomainDisabled(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

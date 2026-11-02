@@ -9,10 +9,6 @@
     {
       "url": "https://api.mailgun.net",
       "description": "US Mailgun"
-    },
-    {
-      "url": "https://api.eu.mailgun.net",
-      "description": "EU Mailgun"
     }
   ],
   "paths": {
@@ -86,7 +82,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3DomainNameMessages401ResponseSchema"
+                  "$ref": "#/components/schemas/PostV3DomainNameMessages401ResponseSchemaError"
                 },
                 "examples": {
                   "Example": {
@@ -208,7 +204,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostV3DomainNameMessagesMime401ResponseSchema"
+                  "$ref": "#/components/schemas/PostV3DomainNameMessagesMime401ResponseSchemaError"
                 },
                 "examples": {
                   "Example": {
@@ -2005,7 +2001,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "format": "uri"
+                "x-client-original-format": "uri"
               }
             }
           }
@@ -15068,7 +15064,7 @@
         "operationId": "PostV3Routes",
         "requestBody": {
           "content": {
-            "application/x-www-form-urlencoded": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/PostV3RoutesXWwwFormUrlencodedRequest"
               },
@@ -15084,12 +15080,30 @@
                     ]
                   }
                 }
-              },
-              "encoding": {
-                "action": {
-                  "style": "form",
-                  "explode": true
+              }
+            }
+          },
+          "x-client-original-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/PostV3RoutesXWwwFormUrlencodedRequest"
+            },
+            "examples": {
+              "Example": {
+                "value": {
+                  "priority": 0,
+                  "description": "it\u0027s a new route",
+                  "expression": "match_recipient(\u0027.*@gmail.com\u0027)",
+                  "action": [
+                    "forward(\u0022http://myhost.com/messages/\u0022)",
+                    "stop()"
+                  ]
                 }
+              }
+            },
+            "encoding": {
+              "action": {
+                "style": "form",
+                "explode": true
               }
             }
           }
@@ -15301,7 +15315,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/x-www-form-urlencoded": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/PutV3RoutesIdXWwwFormUrlencodedRequest"
               },
@@ -15316,6 +15330,24 @@
                       "stop()"
                     ]
                   }
+                }
+              }
+            }
+          },
+          "x-client-original-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/PutV3RoutesIdXWwwFormUrlencodedRequest"
+            },
+            "examples": {
+              "Example": {
+                "value": {
+                  "priority": 0,
+                  "description": "Sample route",
+                  "expression": "match_recipient(\u0022.*@samples.mailgun.org\u0022)",
+                  "action": [
+                    "forward(\u0022http://myhost.com/messages/\u0022)",
+                    "stop()"
+                  ]
                 }
               }
             }
@@ -23226,9 +23258,6 @@
           }
         }
       },
-      "StringType": {
-        "type": "string"
-      },
       "PostV3DomainNameMessagesMultipartFormDataRequestBody": {
         "required": [
           "from",
@@ -23293,7 +23322,7 @@
               "format": "binary"
             },
             "description": "Attachment with \u0060inline\u0060 disposition.  Can be used to send inline images (see example). You can post multiple \u0060inline\u0060 values",
-            "format": "binary"
+            "x-client-original-format": "binary"
           },
           "template": {
             "type": "string",
@@ -23649,37 +23678,6 @@
           }
         }
       },
-      "GithubComMailgunDomainsClientGolangDisabled": {
-        "required": [
-          "code",
-          "note",
-          "permanently",
-          "reason"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "string",
-            "description": "Code indicating the reason for the domain being disabled"
-          },
-          "note": {
-            "type": "string",
-            "description": "Additional information about why the domain was disabled"
-          },
-          "permanently": {
-            "type": "boolean",
-            "description": "Indicates whether the domain is permanently disabled"
-          },
-          "reason": {
-            "type": "string",
-            "description": "Additional information about why the domain was disabled"
-          },
-          "until": {
-            "type": "string",
-            "description": "Timestamp in RFC1123 format indicating when the domain will be re-enabled if the disablement is temporary"
-          }
-        }
-      },
       "GithubComMailgunDomainsClientGolangDomain": {
         "required": [
           "created_at",
@@ -23788,49 +23786,6 @@
             "type": "integer",
             "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
             "format": "int32"
-          }
-        }
-      },
-      "GithubComMailgunDomainsClientGolangRecord": {
-        "required": [
-          "is_active",
-          "cached",
-          "record_type",
-          "valid",
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "is_active": {
-            "type": "boolean",
-            "description": "Indicates whether the DNS record is currently active"
-          },
-          "cached": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of Mailguns cached values for the DNS record"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the DNS record if applicable"
-          },
-          "priority": {
-            "type": "string",
-            "description": "Priority value for MX DNS records"
-          },
-          "record_type": {
-            "type": "string",
-            "description": "Type of DNS record such as MX TXT or CNAME"
-          },
-          "valid": {
-            "type": "string",
-            "description": "Indicates whether the DNS record is valid"
-          },
-          "value": {
-            "type": "string",
-            "description": "Expected value of the DNS record"
           }
         }
       },
@@ -24044,18 +23999,6 @@
           }
         }
       },
-      "GithubComMailgunDomainsHttpapiWebhookResponse": {
-        "type": "object",
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of webhooks"
-          }
-        }
-      },
       "GithubComMailgunDomainsHttpapiCreateDomainWebhookResp": {
         "required": [
           "message",
@@ -24111,50 +24054,6 @@
           }
         }
       },
-      "GithubComMailgunDomainsHttpapiWebhookUrLs": {
-        "required": [
-          "urls"
-        ],
-        "type": "object",
-        "properties": {
-          "urls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of URLs"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiWebhooksResponse": {
-        "type": "object",
-        "properties": {
-          "accepted": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseAccepted"
-          },
-          "delivered": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseDelivered"
-          },
-          "opened": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseOpened"
-          },
-          "clicked": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseClicked"
-          },
-          "unsubscribed": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed"
-          },
-          "complained": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseComplained"
-          },
-          "temporary_fail": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail"
-          },
-          "permanent_fail": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail"
-          }
-        }
-      },
       "GithubComMailgunDomainsHttpapiGetAllDomainWebhooksResp": {
         "required": [
           "webhooks"
@@ -24195,57 +24094,6 @@
           },
           "event_types": {
             "$ref": "#/components/schemas/PutV4DomainsDomainWebhooksApplicationXWwwFormUrlencodedRequestBodyEventTypes"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiOpenSettings": {
-        "required": [
-          "active",
-          "place_at_the_top"
-        ],
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean",
-            "description": "Whether open tracking is enabled or not"
-          },
-          "place_at_the_top": {
-            "type": "boolean",
-            "description": "If the pixel should be placed at the top of the email"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiClickSettings": {
-        "required": [
-          "active"
-        ],
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean",
-            "description": "Whether click tracking is enabled or not"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiUnsubscribeSettings": {
-        "required": [
-          "active",
-          "html_footer",
-          "text_footer"
-        ],
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean",
-            "description": "Whether unsubscribe tracking is enabled or not"
-          },
-          "html_footer": {
-            "type": "string",
-            "description": "The HTML footer for the unsubscribe link"
-          },
-          "text_footer": {
-            "type": "string",
-            "description": "The text footer for the unsubscribe link"
           }
         }
       },
@@ -24745,38 +24593,6 @@
           }
         }
       },
-      "GithubComMailgunDomainsHttpapiExceededQueueQuotaDisabledJson": {
-        "required": [
-          "until",
-          "reason"
-        ],
-        "type": "object",
-        "properties": {
-          "until": {
-            "type": "string",
-            "description": "End date in RFC-822 date format"
-          },
-          "reason": {
-            "type": "string",
-            "description": "Cause description"
-          }
-        }
-      },
-      "GithubComMailgunDomainsHttpapiExceededQueueQuotaJson": {
-        "required": [
-          "is_disabled"
-        ],
-        "type": "object",
-        "properties": {
-          "is_disabled": {
-            "type": "boolean",
-            "description": "Flag indicating no new messages are able to be submitted"
-          },
-          "disabled": {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJsonDisabled"
-          }
-        }
-      },
       "GithubComMailgunDomainsHttpapiGetDomainSendingQueuesResp": {
         "required": [
           "regular",
@@ -24961,18 +24777,6 @@
           }
         }
       },
-      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverDoc": {
-        "required": [
-          "pool_id"
-        ],
-        "type": "object",
-        "properties": {
-          "pool_id": {
-            "type": "string",
-            "description": "the ID of the IP pool that spillover IPs are assigned to"
-          }
-        }
-      },
       "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDoc": {
         "required": [
           "extra_dedicated_ips"
@@ -24981,21 +24785,6 @@
         "properties": {
           "extra_dedicated_ips": {
             "$ref": "#/components/schemas/GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverResponseDocExtraDedicatedIps"
-          }
-        }
-      },
-      "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverRequest": {
-        "required": [
-          "pool_id"
-        ],
-        "type": "object",
-        "properties": {
-          "pool_id": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "the ID of the IP pool that spillover IPs are assigned to"
           }
         }
       },
@@ -25010,18 +24799,6 @@
           }
         }
       },
-      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverDoc": {
-        "required": [
-          "pool_id"
-        ],
-        "type": "object",
-        "properties": {
-          "pool_id": {
-            "type": "string",
-            "description": "the ID of the IP pool that spillover IPs are assigned to"
-          }
-        }
-      },
       "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDoc": {
         "required": [
           "extra_dedicated_ips"
@@ -25030,21 +24807,6 @@
         "properties": {
           "extra_dedicated_ips": {
             "$ref": "#/components/schemas/GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverResponseDocExtraDedicatedIps"
-          }
-        }
-      },
-      "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverRequest": {
-        "required": [
-          "pool_id"
-        ],
-        "type": "object",
-        "properties": {
-          "pool_id": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "the ID of the IP pool that spillover IPs are assigned to"
           }
         }
       },
@@ -25274,12 +25036,6 @@
           }
         }
       },
-      "GithubComMailgunScaffoldHttpapiResponse": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiResponseAdditionalPropertiesProperty"
-        }
-      },
       "PostV3DynamicPoolsAllMultipartFormDataRequestBody": {
         "required": [
           "good_reputation",
@@ -25328,17 +25084,6 @@
           "linked_at": {
             "type": "string",
             "description": "a UTC timestamp in RFC3339 format representing when the IP was linked to the pool"
-          }
-        }
-      },
-      "GithubComMailgunTowerApiIpPoolsListPoolMetadata": {
-        "required": [
-          "assignments"
-        ],
-        "type": "object",
-        "properties": {
-          "assignments": {
-            "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignmentsProperty"
           }
         }
       },
@@ -27483,20 +27228,6 @@
           }
         }
       },
-      "GithubComMailgunAnalyticsClientGolangFilterPredicateGroup": {
-        "required": [
-          "AND"
-        ],
-        "type": "object",
-        "properties": {
-          "AND": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicate"
-            }
-          }
-        }
-      },
       "GithubComMailgunAnalyticsClientGolangQuery": {
         "type": "object",
         "properties": {
@@ -27947,17 +27678,6 @@
           }
         }
       },
-      "GithubComMailgunLogsApiPkgApiModelAccount": {
-        "type": "object",
-        "properties": {
-          "parent-id": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          }
-        }
-      },
       "GithubComMailgunLogsApiPkgApiModelCampaign": {
         "type": "object",
         "properties": {
@@ -27965,144 +27685,6 @@
             "type": "string"
           },
           "name": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelDeliveryStatus": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          },
-          "attempt-no": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "bounce-type": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "session-seconds": {
-            "type": "number",
-            "format": "float"
-          },
-          "retry-seconds": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "enhanced-code": {
-            "type": "string"
-          },
-          "mx-host": {
-            "type": "string"
-          },
-          "certificate-verified": {
-            "type": "boolean"
-          },
-          "tls": {
-            "type": "boolean"
-          },
-          "utf8": {
-            "type": "boolean"
-          },
-          "first-delivery-attempt-seconds": {
-            "type": "number",
-            "format": "float"
-          },
-          "last-code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "last-message": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelDomain": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelEnvelope": {
-        "type": "object",
-        "properties": {
-          "sender": {
-            "type": "string"
-          },
-          "transport": {
-            "type": "string"
-          },
-          "sending-ip": {
-            "type": "string"
-          },
-          "targets": {
-            "type": "string"
-          },
-          "i-ip-pool-id": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelStorage": {
-        "type": "object",
-        "properties": {
-          "region": {
-            "type": "string"
-          },
-          "env": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "url": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelTemplate": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          },
-          "is-text": {
-            "type": "boolean"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelMessageHeaders": {
-        "type": "object",
-        "properties": {
-          "to": {
-            "type": "string"
-          },
-          "message-id": {
-            "type": "string"
-          },
-          "from": {
-            "type": "string"
-          },
-          "subject": {
             "type": "string"
           }
         }
@@ -28119,164 +27701,6 @@
           "size": {
             "type": "integer",
             "format": "int32"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelMessage": {
-        "type": "object",
-        "properties": {
-          "headers": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed"
-          },
-          "attachments": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAttachment"
-            }
-          },
-          "recipients": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "size": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "scheduled-for": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelFlags": {
-        "required": [
-          "is-authenticated",
-          "is-system-test",
-          "is-routed",
-          "is-test-mode",
-          "is-delayed-bounce",
-          "is-callback",
-          "is-webhook"
-        ],
-        "type": "object",
-        "properties": {
-          "is-authenticated": {
-            "type": "boolean"
-          },
-          "is-system-test": {
-            "type": "boolean"
-          },
-          "is-routed": {
-            "type": "boolean"
-          },
-          "is-amp": {
-            "type": "boolean"
-          },
-          "is-test-mode": {
-            "type": "boolean"
-          },
-          "is-delayed-bounce": {
-            "type": "boolean"
-          },
-          "is-callback": {
-            "type": "boolean"
-          },
-          "is-encrypted": {
-            "type": "boolean"
-          },
-          "is-webhook": {
-            "type": "boolean"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelGeoLocation": {
-        "type": "object",
-        "properties": {
-          "city": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "region": {
-            "type": "string"
-          },
-          "timezone": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelClientInfo": {
-        "type": "object",
-        "properties": {
-          "client-name": {
-            "type": "string"
-          },
-          "client-os": {
-            "type": "string"
-          },
-          "client-type": {
-            "type": "string"
-          },
-          "device-type": {
-            "type": "string"
-          },
-          "user-agent": {
-            "type": "string"
-          },
-          "ip": {
-            "type": "string"
-          },
-          "bot": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelRoutesMatch": {
-        "type": "object",
-        "properties": {
-          "recipient": {
-            "type": "string"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelRoutes": {
-        "type": "object",
-        "properties": {
-          "actions": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "expression": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          },
-          "priority": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "match": {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatchComposed"
-          }
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelMailingList": {
-        "type": "object",
-        "properties": {
-          "address": {
-            "type": "string"
-          },
-          "list-id": {
-            "type": "string"
-          },
-          "sid": {
-            "type": "string"
           }
         }
       },
@@ -29031,20 +28455,6 @@
           }
         }
       },
-      "GithubComMailgunLogsApiPkgApiModelFilterPredicateGroup": {
-        "required": [
-          "AND"
-        ],
-        "type": "object",
-        "properties": {
-          "AND": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFilterPredicate"
-            }
-          }
-        }
-      },
       "GithubComMailgunLogsApiPkgApiModelPagination": {
         "type": "object",
         "properties": {
@@ -29110,9 +28520,6 @@
             "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelPagination"
           }
         }
-      },
-      "GithubComMailgunTagsApiPkgApiModelCustomTime": {
-        "type": "object"
       },
       "GithubComMailgunAnalyticsClientGolangMetrics": {
         "type": "object",
@@ -29685,68 +29092,6 @@
           ]
         }
       },
-      "GithubComMailgunThresholdsApiFilterComparator": {
-        "enum": [
-          "=",
-          "!=",
-          "contains",
-          "not contains",
-          "\u003C",
-          "\u003C=",
-          "\u003E",
-          "\u003E="
-        ],
-        "type": "string",
-        "description": "Filter Comparator",
-        "x-enumDescriptions": {
-          "=": "Equal",
-          "!=": "Not equal",
-          "contains": "Contains",
-          "not contains": "Does not contain",
-          "\u003C": "Less than",
-          "\u003C=": "Less than or equal",
-          "\u003E": "Greater than",
-          "\u003E=": "Greater than or equal"
-        },
-        "x-ms-enum": {
-          "name": "GithubComMailgunThresholdsApiFilterComparator",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "=",
-              "name": "Equal"
-            },
-            {
-              "value": "!=",
-              "name": "ExclamationEqual"
-            },
-            {
-              "value": "contains",
-              "name": "Contains"
-            },
-            {
-              "value": "not contains",
-              "name": "NotContains"
-            },
-            {
-              "value": "\u003C",
-              "name": "LessThan"
-            },
-            {
-              "value": "\u003C=",
-              "name": "LessThanOrEqual"
-            },
-            {
-              "value": "\u003E",
-              "name": "GreaterThan"
-            },
-            {
-              "value": "\u003E=",
-              "name": "GreaterThanOrEqual"
-            }
-          ]
-        }
-      },
       "GithubComMailgunThresholdsApiFilter": {
         "required": [
           "dimension",
@@ -29923,32 +29268,6 @@
             "description": "Total number of send alerts.",
             "format": "int64"
           }
-        }
-      },
-      "GithubComMailgunThresholdsApiLimitMetric": {
-        "enum": [
-          "email_preview_success_count",
-          "seed_test_count"
-        ],
-        "type": "string",
-        "description": "Limit Metric",
-        "x-enumDescriptions": {
-          "email_preview_success_count": "The number of successful email previews",
-          "seed_test_count": "The number of inbox placement tests"
-        },
-        "x-ms-enum": {
-          "name": "GithubComMailgunThresholdsApiLimitMetric",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "email_preview_success_count",
-              "name": "EmailPreviewSuccessCount"
-            },
-            {
-              "value": "seed_test_count",
-              "name": "SeedTestCount"
-            }
-          ]
         }
       },
       "GithubComMailgunThresholdsApiThresholdLimitItem": {
@@ -30405,38 +29724,6 @@
           }
         }
       },
-      "GithubComMailgunAlertsChannelsChannel": {
-        "enum": [
-          "email",
-          "webhook",
-          "slack"
-        ],
-        "type": "string",
-        "description": "Alert channel type.",
-        "x-enumDescriptions": {
-          "email": "email",
-          "webhook": "webhook",
-          "slack": "Slack"
-        },
-        "x-ms-enum": {
-          "name": "GithubComMailgunAlertsChannelsChannel",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "email",
-              "name": "Email"
-            },
-            {
-              "value": "webhook",
-              "name": "Webhook"
-            },
-            {
-              "value": "slack",
-              "name": "Slack"
-            }
-          ]
-        }
-      },
       "GithubComMailgunAlertsInternalSettingsDisabledChannel": {
         "required": [
           "disabled_at",
@@ -30452,32 +29739,6 @@
           "reason": {
             "type": "string",
             "description": "Why the channel was disabled."
-          }
-        }
-      },
-      "GithubComMailgunAlertsInternalSettingsChannelSettings": {
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string",
-            "description": "For webhook channel."
-          },
-          "emails": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "For email channel"
-          },
-          "channel_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "For slack channel"
-          },
-          "disabled_channel_ids": {
-            "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIdsProperty"
           }
         }
       },
@@ -30746,9 +30007,6 @@
           }
         }
       },
-      "GithubComMailgunMimeRfc822Time": {
-        "type": "object"
-      },
       "GithubComMailgunBlackbookModelBounce": {
         "required": [
           "address",
@@ -30791,12 +30049,6 @@
           "paging": {
             "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
           }
-        }
-      },
-      "GithubComMailgunBlackbookApiBouncesList": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GithubComMailgunBlackbookModelBounce"
         }
       },
       "PostV3DomainIdBouncesApplicationFormDataRequestBody": {
@@ -30882,12 +30134,6 @@
           }
         }
       },
-      "GithubComMailgunBlackbookApiUnsubscribesList": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GithubComMailgunBlackbookModelUnsubscribe"
-        }
-      },
       "PostV3DomainIdUnsubscribesApplicationFormDataRequestBody": {
         "required": [
           "address"
@@ -30940,12 +30186,6 @@
           "paging": {
             "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
           }
-        }
-      },
-      "GithubComMailgunBlackbookApiComplaintsList": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GithubComMailgunBlackbookModelComplaint"
         }
       },
       "PostV3DomainIdComplaintsApplicationFormDataRequestBody": {
@@ -31625,33 +30865,6 @@
           }
         }
       },
-      "GithubComMailgunTempleHttpapiVersionUpdate": {
-        "required": [
-          "tag"
-        ],
-        "type": "object",
-        "properties": {
-          "tag": {
-            "type": "string",
-            "description": "Tag of the version. Must be unique to the template"
-          }
-        }
-      },
-      "GithubComMailgunTempleHttpapiTemplateUpdate": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the template"
-          },
-          "version": {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiTemplateUpdateVersion"
-          }
-        }
-      },
       "GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponse": {
         "required": [
           "message",
@@ -31928,9 +31141,6 @@
           }
         }
       },
-      "GithubComMailgunAccountsApiFeaturesResponse": {
-        "type": "object"
-      },
       "GithubComMailgunAccountsApiGenericSuccess": {
         "type": "object",
         "properties": {
@@ -31947,76 +31157,6 @@
             "type": "string",
             "description": "Response message"
           }
-        }
-      },
-      "GithubComMailgunCerberusKeysKind": {
-        "enum": [
-          "domain",
-          "user",
-          "web"
-        ],
-        "type": "string",
-        "description": "Kind",
-        "x-enumDescriptions": {
-          "domain": "Domain-specific API key for keys with \u0027sending\u0027 role",
-          "user": "API key tied to a user role for RBAC limitations",
-          "web": "Web session API key generated for user login sessions"
-        },
-        "x-ms-enum": {
-          "name": "GithubComMailgunCerberusKeysKind",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "domain",
-              "name": "Domain"
-            },
-            {
-              "value": "user",
-              "name": "User"
-            },
-            {
-              "value": "web",
-              "name": "Web"
-            }
-          ]
-        }
-      },
-      "GithubComMailgunCerberusKeysRole": {
-        "enum": [
-          "admin",
-          "basic",
-          "sending",
-          "developer"
-        ],
-        "type": "string",
-        "description": "Role",
-        "x-enumDescriptions": {
-          "admin": "Provides admin-level permissions on an API key",
-          "basic": "Provides basic aka analyst-level permissions on an API key",
-          "sending": "Provides domain-scoped permissions on an API key for use only with \u0027domain\u0027 kind key",
-          "developer": "Provides developer-level permissions on an API key"
-        },
-        "x-ms-enum": {
-          "name": "GithubComMailgunCerberusKeysRole",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "admin",
-              "name": "Admin"
-            },
-            {
-              "value": "basic",
-              "name": "Basic"
-            },
-            {
-              "value": "sending",
-              "name": "Sending"
-            },
-            {
-              "value": "developer",
-              "name": "Developer"
-            }
-          ]
         }
       },
       "GithubComMailgunCerberusKeysKeyInfoResp": {
@@ -32197,7 +31337,7 @@
           "secret": {
             "type": "string",
             "description": "The full API key secret in plain text returned only once upon key creation",
-            "format": "password"
+            "x-client-original-format": "password"
           }
         }
       },
@@ -32474,32 +31614,6 @@
           }
         }
       },
-      "GithubComMailgunBounceClassificationEntitiesResolution": {
-        "enum": [
-          "day",
-          "hour"
-        ],
-        "type": "string",
-        "description": "Resolution of the metrics.",
-        "x-enumDescriptions": {
-          "day": "Day",
-          "hour": "Hour"
-        },
-        "x-ms-enum": {
-          "name": "GithubComMailgunBounceClassificationEntitiesResolution",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "day",
-              "name": "Day"
-            },
-            {
-              "value": "hour",
-              "name": "Hour"
-            }
-          ]
-        }
-      },
       "GithubComMailgunBounceClassificationInternalApiDimension": {
         "enum": [
           "entity-name",
@@ -32622,204 +31736,6 @@
           }
         }
       },
-      "GithubComMailgunBounceClassificationEntitiesMetricsCountsAndRates": {
-        "required": [
-          "critical_bounce_count",
-          "non_critical_bounce_count",
-          "critical_delay_count",
-          "non_critical_delay_count",
-          "classified_failures_count",
-          "delivered_smtp_count",
-          "critical_bounce_rate",
-          "non_critical_bounce_rate",
-          "critical_delay_rate",
-          "non_critical_delay_rate"
-        ],
-        "type": "object",
-        "properties": {
-          "critical_bounce_count": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "non_critical_bounce_count": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "critical_delay_count": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "non_critical_delay_count": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "classified_failures_count": {
-            "type": "integer",
-            "description": "Total bounces and delays",
-            "format": "int64"
-          },
-          "delivered_smtp_count": {
-            "type": [
-              "null",
-              "integer"
-            ],
-            "description": "null for Spam Filters",
-            "format": "int64"
-          },
-          "critical_bounce_rate": {
-            "type": [
-              "null",
-              "integer"
-            ],
-            "description": "Percentages; null for Spam Filters",
-            "format": "int64"
-          },
-          "non_critical_bounce_rate": {
-            "type": [
-              "null",
-              "integer"
-            ],
-            "description": "Percentages; null for Spam Filters",
-            "format": "int64"
-          },
-          "critical_delay_rate": {
-            "type": [
-              "null",
-              "integer"
-            ],
-            "description": "Percentages; null for Spam Filters",
-            "format": "int64"
-          },
-          "non_critical_delay_rate": {
-            "type": [
-              "null",
-              "integer"
-            ],
-            "description": "Percentages; null for Spam Filters",
-            "format": "int64"
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationEntitiesMetricsItem": {
-        "required": [
-          "metrics"
-        ],
-        "type": "object",
-        "properties": {
-          "account.id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "account.name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "entity-name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "recipient-provider": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "recipient-domain": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "domain.name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "envelope.i-ip-pool-id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "envelope.i-ip-pool-name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "envelope.sending-ip": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "timestamp": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "tags": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "Concatenated tags, e.g. \u0027tag1, tag2\u0027"
-          },
-          "tag": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "criticality": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "severity": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "category": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "group-id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "sample-text": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "explanation": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "metrics": {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"
-          }
-        }
-      },
       "GithubComMailgunBounceClassificationInternalApiMetricsResponse": {
         "required": [
           "start",
@@ -32862,9 +31778,6 @@
             }
           }
         }
-      },
-      "GithubComMailgunHolsterV4ClockRfc822Time": {
-        "type": "object"
       },
       "GithubComMailgunBounceClassificationInternalApiFilterAttribute": {
         "enum": [
@@ -32985,41 +31898,6 @@
             "items": {
               "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiLabeledValue"
             }
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiFilterPredicateGroup": {
-        "required": [
-          "AND"
-        ],
-        "type": "object",
-        "properties": {
-          "AND": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiFilterPredicate"
-            }
-          }
-        }
-      },
-      "GithubComMailgunBounceClassificationInternalApiPaginationReq": {
-        "type": "object",
-        "properties": {
-          "sort": {
-            "type": "string",
-            "description": "Colon-separated value indicating column name and sort direction e.g. \u0027entity-name:asc\u0027."
-          },
-          "skip": {
-            "type": "integer",
-            "description": "The number of items to skip over when satisfying the request. To get the first page of data set skip to zero. Then increment the skip by the limit for subsequent calls.",
-            "format": "int64"
-          },
-          "limit": {
-            "maximum": 50,
-            "type": "integer",
-            "description": "The maximum number of items returned in the response.",
-            "format": "int64",
-            "default": 10
           }
         }
       },
@@ -33288,115 +32166,485 @@
           }
         }
       },
-      "PostV1AnalyticsMetricsNoneRequest": {
-        "type": "string"
-      },
-      "PostV1AnalyticsUsageMetricsNoneRequest": {
-        "type": "string"
-      },
       "GithubComMailgunDomainsClientGolangDomainDisabled": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "code",
+          "note",
+          "permanently",
+          "reason"
         ],
-        "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Code indicating the reason for the domain being disabled"
+          },
+          "note": {
+            "type": "string",
+            "description": "Additional information about why the domain was disabled"
+          },
+          "permanently": {
+            "type": "boolean",
+            "description": "Indicates whether the domain is permanently disabled"
+          },
+          "reason": {
+            "type": "string",
+            "description": "Additional information about why the domain was disabled"
+          },
+          "until": {
+            "type": "string",
+            "description": "Timestamp in RFC1123 format indicating when the domain will be re-enabled if the disablement is temporary"
+          }
+        },
+        "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDisabled"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional field containing additional details about the domain\u0027s disabled status if applicable"
+        }
       },
       "GithubComMailgunDomainsHttpapiCreateDomainRespDomain": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "created_at",
+          "id",
+          "is_disabled",
+          "name",
+          "require_tls",
+          "skip_verification",
+          "smtp_login",
+          "spam_action",
+          "state",
+          "type",
+          "use_automatic_sender_security",
+          "web_prefix",
+          "web_scheme",
+          "wildcard",
+          "encrypt_incoming_message",
+          "message_ttl"
         ],
-        "description": "Details of the newly created domain"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "archive_to": {
+            "type": "string",
+            "description": "URL that a copy of each successfully delivered message is going to be posted to."
+          },
+          "created_at": {
+            "type": "string",
+            "description": "Timestamp indicating when the domain was created in RFC1123 format"
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique identifier of the domain"
+          },
+          "is_disabled": {
+            "type": "boolean",
+            "description": "Indicates whether the domain is currently disabled"
+          },
+          "name": {
+            "type": "string",
+            "description": "Fully qualified domain name registered with Mailgun"
+          },
+          "require_tls": {
+            "type": "boolean",
+            "description": "If true Mailgun will only send messages over a TLS connection"
+          },
+          "skip_verification": {
+            "type": "boolean",
+            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
+          },
+          "smtp_login": {
+            "type": "string",
+            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
+          },
+          "smtp_password": {
+            "type": "string",
+            "description": "Optional SMTP password for the domain used for SMTP authentication"
+          },
+          "spam_action": {
+            "type": "string",
+            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
+          },
+          "state": {
+            "type": "string",
+            "description": "Current verification status of the domain"
+          },
+          "type": {
+            "type": "string",
+            "description": "Classification of the domain. Possible values are custom or sandbox"
+          },
+          "tracking_host": {
+            "type": "string",
+            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
+          },
+          "use_automatic_sender_security": {
+            "type": "boolean",
+            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
+          },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
+          },
+          "web_prefix": {
+            "type": "string",
+            "description": "Subdomain prefix used for open and click tracking"
+          },
+          "web_scheme": {
+            "type": "string",
+            "description": "Protocol scheme used for tracking"
+          },
+          "wildcard": {
+            "type": "boolean",
+            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
+          },
+          "disabled": {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
+          },
+          "encrypt_incoming_message": {
+            "type": "boolean",
+            "description": "If true incoming messages to this domain will be encrypted"
+          },
+          "message_ttl": {
+            "type": "integer",
+            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
+            "format": "int32"
+          }
+        },
+        "description": "Details of the newly created domain",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Details of the newly created domain"
+        }
       },
       "GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+        "required": [
+          "is_active",
+          "cached",
+          "record_type",
+          "valid",
+          "value"
+        ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "is_active": {
+            "type": "boolean",
+            "description": "Indicates whether the DNS record is currently active"
           },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GithubComMailgunDomainsHttpapiCreateDomainRespSendingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          "cached": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of Mailguns cached values for the DNS record"
           },
-          {
-            "type": "null"
+          "name": {
+            "type": "string",
+            "description": "Name of the DNS record if applicable"
+          },
+          "priority": {
+            "type": "string",
+            "description": "Priority value for MX DNS records"
+          },
+          "record_type": {
+            "type": "string",
+            "description": "Type of DNS record such as MX TXT or CNAME"
+          },
+          "valid": {
+            "type": "string",
+            "description": "Indicates whether the DNS record is valid"
+          },
+          "value": {
+            "type": "string",
+            "description": "Expected value of the DNS record"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunDomainsHttpapiFindDomainByNameRespDomain": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "created_at",
+          "id",
+          "is_disabled",
+          "name",
+          "require_tls",
+          "skip_verification",
+          "smtp_login",
+          "spam_action",
+          "state",
+          "type",
+          "use_automatic_sender_security",
+          "web_prefix",
+          "web_scheme",
+          "wildcard",
+          "encrypt_incoming_message",
+          "message_ttl"
         ],
-        "description": "Domain details"
-      },
-      "GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "archive_to": {
+            "type": "string",
+            "description": "URL that a copy of each successfully delivered message is going to be posted to."
           },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          "created_at": {
+            "type": "string",
+            "description": "Timestamp indicating when the domain was created in RFC1123 format"
           },
-          {
-            "type": "null"
+          "id": {
+            "type": "string",
+            "description": "Unique identifier of the domain"
+          },
+          "is_disabled": {
+            "type": "boolean",
+            "description": "Indicates whether the domain is currently disabled"
+          },
+          "name": {
+            "type": "string",
+            "description": "Fully qualified domain name registered with Mailgun"
+          },
+          "require_tls": {
+            "type": "boolean",
+            "description": "If true Mailgun will only send messages over a TLS connection"
+          },
+          "skip_verification": {
+            "type": "boolean",
+            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
+          },
+          "smtp_login": {
+            "type": "string",
+            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
+          },
+          "smtp_password": {
+            "type": "string",
+            "description": "Optional SMTP password for the domain used for SMTP authentication"
+          },
+          "spam_action": {
+            "type": "string",
+            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
+          },
+          "state": {
+            "type": "string",
+            "description": "Current verification status of the domain"
+          },
+          "type": {
+            "type": "string",
+            "description": "Classification of the domain. Possible values are custom or sandbox"
+          },
+          "tracking_host": {
+            "type": "string",
+            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
+          },
+          "use_automatic_sender_security": {
+            "type": "boolean",
+            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
+          },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
+          },
+          "web_prefix": {
+            "type": "string",
+            "description": "Subdomain prefix used for open and click tracking"
+          },
+          "web_scheme": {
+            "type": "string",
+            "description": "Protocol scheme used for tracking"
+          },
+          "wildcard": {
+            "type": "boolean",
+            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
+          },
+          "disabled": {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
+          },
+          "encrypt_incoming_message": {
+            "type": "boolean",
+            "description": "If true incoming messages to this domain will be encrypted"
+          },
+          "message_ttl": {
+            "type": "integer",
+            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
+            "format": "int32"
           }
-        ]
+        },
+        "description": "Domain details",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Domain details"
+        }
       },
       "GithubComMailgunDomainsHttpapiVerifyDomainResponseDomain": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "created_at",
+          "id",
+          "is_disabled",
+          "name",
+          "require_tls",
+          "skip_verification",
+          "smtp_login",
+          "spam_action",
+          "state",
+          "type",
+          "use_automatic_sender_security",
+          "web_prefix",
+          "web_scheme",
+          "wildcard",
+          "encrypt_incoming_message",
+          "message_ttl"
         ],
-        "description": "Domain record information"
-      },
-      "GithubComMailgunDomainsHttpapiVerifyDomainResponseSendingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "archive_to": {
+            "type": "string",
+            "description": "URL that a copy of each successfully delivered message is going to be posted to."
           },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GithubComMailgunDomainsHttpapiVerifyDomainResponseReceivingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          "created_at": {
+            "type": "string",
+            "description": "Timestamp indicating when the domain was created in RFC1123 format"
           },
-          {
-            "type": "null"
+          "id": {
+            "type": "string",
+            "description": "Unique identifier of the domain"
+          },
+          "is_disabled": {
+            "type": "boolean",
+            "description": "Indicates whether the domain is currently disabled"
+          },
+          "name": {
+            "type": "string",
+            "description": "Fully qualified domain name registered with Mailgun"
+          },
+          "require_tls": {
+            "type": "boolean",
+            "description": "If true Mailgun will only send messages over a TLS connection"
+          },
+          "skip_verification": {
+            "type": "boolean",
+            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
+          },
+          "smtp_login": {
+            "type": "string",
+            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
+          },
+          "smtp_password": {
+            "type": "string",
+            "description": "Optional SMTP password for the domain used for SMTP authentication"
+          },
+          "spam_action": {
+            "type": "string",
+            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
+          },
+          "state": {
+            "type": "string",
+            "description": "Current verification status of the domain"
+          },
+          "type": {
+            "type": "string",
+            "description": "Classification of the domain. Possible values are custom or sandbox"
+          },
+          "tracking_host": {
+            "type": "string",
+            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
+          },
+          "use_automatic_sender_security": {
+            "type": "boolean",
+            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
+          },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
+          },
+          "web_prefix": {
+            "type": "string",
+            "description": "Subdomain prefix used for open and click tracking"
+          },
+          "web_scheme": {
+            "type": "string",
+            "description": "Protocol scheme used for tracking"
+          },
+          "wildcard": {
+            "type": "boolean",
+            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
+          },
+          "disabled": {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
+          },
+          "encrypt_incoming_message": {
+            "type": "boolean",
+            "description": "If true incoming messages to this domain will be encrypted"
+          },
+          "message_ttl": {
+            "type": "integer",
+            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
+            "format": "int32"
           }
-        ]
+        },
+        "description": "Domain record information",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Domain record information"
+        }
       },
       "GithubComMailgunDomainsHttpapiCreateDomainWebhookRespWebhook": {
         "type": "object",
@@ -33425,92 +32673,244 @@
         "description": "List of webhooks"
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseAccepted": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Accepted webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Accepted webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Accepted webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseDelivered": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Delivered webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Delivered webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Delivered webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseOpened": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Opened webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Opened webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Opened webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseClicked": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Clicked webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Clicked webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Clicked webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Unsubscribed webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Unsubscribed webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Unsubscribed webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseComplained": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Complained webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Complained webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Complained webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Temporary fail webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Temporary fail webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Temporary fail webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "urls"
         ],
-        "description": "Permanent fail webhook URLs"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs"
+          }
+        },
+        "description": "Permanent fail webhook URLs",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhookUrLs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Permanent fail webhook URLs"
+        }
       },
       "GithubComMailgunDomainsHttpapiGetAllDomainWebhooksRespWebhooks": {
         "type": "object",
@@ -33650,86 +33050,202 @@
         },
         "description": "Unsubscribe settings"
       },
-      "GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
-          },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GithubComMailgunDomainsHttpapiDomainKeyListResponseItemsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
-          },
-          {
-            "type": "null"
-          }
-        ]
-      },
       "GithubComMailgunDomainsHttpapiDomainKeyListResponsePaging": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
+        "required": [
+          "previous",
+          "first",
+          "next",
+          "last"
+        ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "previous": {
+            "type": "string",
+            "description": "Previous page URL"
           },
-          {
-            "type": "null"
+          "first": {
+            "type": "string",
+            "description": "First page URL"
+          },
+          "next": {
+            "type": "string",
+            "description": "Next page URL"
+          },
+          "last": {
+            "type": "string",
+            "description": "Last page URL"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiPagingPagingResponse"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunDomainsHttpapiAuthorityKeysResponseItemsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
+        "required": [
+          "signing_domain",
+          "selector"
+        ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "signing_domain": {
+            "type": "string"
           },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GithubComMailgunDomainsHttpapiReassignDkimAuthorityRespSendingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          "selector": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "dns_record": {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunDomainsHttpapiUpdateDomainRespDomain": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "created_at",
+          "id",
+          "is_disabled",
+          "name",
+          "require_tls",
+          "skip_verification",
+          "smtp_login",
+          "spam_action",
+          "state",
+          "type",
+          "use_automatic_sender_security",
+          "web_prefix",
+          "web_scheme",
+          "wildcard",
+          "encrypt_incoming_message",
+          "message_ttl"
         ],
-        "description": "Domain object"
-      },
-      "GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "archive_to": {
+            "type": "string",
+            "description": "URL that a copy of each successfully delivered message is going to be posted to."
           },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GithubComMailgunDomainsHttpapiUpdateDomainRespSendingDnsRecordsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          "created_at": {
+            "type": "string",
+            "description": "Timestamp indicating when the domain was created in RFC1123 format"
           },
-          {
-            "type": "null"
+          "id": {
+            "type": "string",
+            "description": "Unique identifier of the domain"
+          },
+          "is_disabled": {
+            "type": "boolean",
+            "description": "Indicates whether the domain is currently disabled"
+          },
+          "name": {
+            "type": "string",
+            "description": "Fully qualified domain name registered with Mailgun"
+          },
+          "require_tls": {
+            "type": "boolean",
+            "description": "If true Mailgun will only send messages over a TLS connection"
+          },
+          "skip_verification": {
+            "type": "boolean",
+            "description": "If true Mailgun will not verify the certificate and hostname when setting up a TLS connection"
+          },
+          "smtp_login": {
+            "type": "string",
+            "description": "SMTP login username for the domain, only present if the user provides an smtp_password. Use the Credentials API for SMTP credentials management"
+          },
+          "smtp_password": {
+            "type": "string",
+            "description": "Optional SMTP password for the domain used for SMTP authentication"
+          },
+          "spam_action": {
+            "type": "string",
+            "description": "Action to take when a message is flagged as spam. Options are disabled, tag, or block"
+          },
+          "subaccount_id": {
+            "type": "string",
+            "description": "The subaccount ID the domain belongs to. This field is only present if the domain is associated with a subaccount"
+          },
+          "state": {
+            "type": "string",
+            "description": "Current verification status of the domain"
+          },
+          "type": {
+            "type": "string",
+            "description": "Classification of the domain. Possible values are custom or sandbox"
+          },
+          "tracking_host": {
+            "type": "string",
+            "description": "Custom tracking host for the domain used for tracking opens and clicks if configured"
+          },
+          "use_automatic_sender_security": {
+            "type": "boolean",
+            "description": "If true Mailgun manages DKIM key generation and DNS record configuration automatically"
+          },
+          "webhooks_redact_pii": {
+            "type": "boolean",
+            "description": "If true Personally Identifiable Information (PII) will be redacted from the payload of any webhook posted for this domain"
+          },
+          "web_prefix": {
+            "type": "string",
+            "description": "Subdomain prefix used for open and click tracking"
+          },
+          "web_scheme": {
+            "type": "string",
+            "description": "Protocol scheme used for tracking"
+          },
+          "wildcard": {
+            "type": "boolean",
+            "description": "Indicates if the domain is a wildcard domain and can receive emails for any subdomain"
+          },
+          "disabled": {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomainDisabled"
+          },
+          "encrypt_incoming_message": {
+            "type": "boolean",
+            "description": "If true incoming messages to this domain will be encrypted"
+          },
+          "message_ttl": {
+            "type": "integer",
+            "description": "Specifies the time-to-live (TTL) in seconds for retrieving both incoming and outgoing messages. The maximum TTL value is determined by your subscription plan",
+            "format": "int32"
           }
-        ]
+        },
+        "description": "Domain object",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangDomain"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Domain object"
+        }
       },
       "GithubComMailgunDomainsHttpapiExceededQueueQuotaJsonDisabled": {
         "required": [
@@ -33882,144 +33398,493 @@
         "description": "Filters to apply to the query."
       },
       "GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "to": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "message-id": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeaders"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelRoutesMatchComposed": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
-          },
-          {
-            "type": "null"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "recipient": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatch"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventAccount": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "parent-id": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "id": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAccount"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventDeliveryStatus": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "message": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "attempt-no": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bounce-type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "session-seconds": {
+            "type": "number",
+            "format": "float"
+          },
+          "retry-seconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enhanced-code": {
+            "type": "string"
+          },
+          "mx-host": {
+            "type": "string"
+          },
+          "certificate-verified": {
+            "type": "boolean"
+          },
+          "tls": {
+            "type": "boolean"
+          },
+          "utf8": {
+            "type": "boolean"
+          },
+          "first-delivery-attempt-seconds": {
+            "type": "number",
+            "format": "float"
+          },
+          "last-code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "last-message": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDeliveryStatus"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventDomain": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
-          },
-          {
-            "type": "null"
+        "required": [
+          "name"
+        ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelDomain"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventEnvelope": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "sender": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "transport": {
+            "type": "string"
+          },
+          "sending-ip": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "string"
+          },
+          "i-ip-pool-id": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelEnvelope"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventStorage": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "region": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "env": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "url": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelStorage"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventTemplate": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "version": {
+            "type": "string"
+          },
+          "is-text": {
+            "type": "boolean"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelTemplate"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventMessage": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "headers": {
+            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed"
           },
-          {
-            "type": "null"
+          "attachments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAttachment"
+            }
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduled-for": {
+            "type": "integer",
+            "format": "int64"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessage"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventFlags": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
+        "required": [
+          "is-authenticated",
+          "is-system-test",
+          "is-routed",
+          "is-test-mode",
+          "is-delayed-bounce",
+          "is-callback",
+          "is-webhook"
+        ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "is-authenticated": {
+            "type": "boolean"
           },
-          {
-            "type": "null"
+          "is-system-test": {
+            "type": "boolean"
+          },
+          "is-routed": {
+            "type": "boolean"
+          },
+          "is-amp": {
+            "type": "boolean"
+          },
+          "is-test-mode": {
+            "type": "boolean"
+          },
+          "is-delayed-bounce": {
+            "type": "boolean"
+          },
+          "is-callback": {
+            "type": "boolean"
+          },
+          "is-encrypted": {
+            "type": "boolean"
+          },
+          "is-webhook": {
+            "type": "boolean"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFlags"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventGeolocation": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "city": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "country": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelGeoLocation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventClientInfo": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "client-name": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "client-os": {
+            "type": "string"
+          },
+          "client-type": {
+            "type": "string"
+          },
+          "device-type": {
+            "type": "string"
+          },
+          "user-agent": {
+            "type": "string"
+          },
+          "ip": {
+            "type": "string"
+          },
+          "bot": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelClientInfo"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventRoutes": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "actions": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "description": {
+            "type": "string"
+          },
+          "expression": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "match": {
+            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatchComposed"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutes"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogEventMailingList": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "address": {
+            "type": "string"
           },
-          {
-            "type": "null"
+          "list-id": {
+            "type": "string"
+          },
+          "sid": {
+            "type": "string"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMailingList"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunLogsApiPkgApiModelLogsRequestFilter": {
         "required": [
@@ -34807,49 +34672,135 @@
         "description": "Timestamp for when the entry was created in RFC822 format"
       },
       "GithubComMailgunTempleModelTemplateVersion": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "tag",
+          "engine",
+          "mjml",
+          "createdAt",
+          "comment",
+          "active",
+          "id"
         ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "tag": {
+            "type": "string",
+            "description": "Tag of the version. Must be unique to the template"
+          },
+          "template": {
+            "type": "string",
+            "description": "Template content"
+          },
+          "engine": {
+            "type": "string",
+            "description": "Rendering engine"
+          },
+          "mjml": {
+            "type": "string",
+            "description": "Template source"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Creation date in RFC822 format",
+            "readOnly": true
+          },
+          "comment": {
+            "type": "string",
+            "description": "Comment related to the version"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "If this flag is true"
+          },
+          "id": {
+            "type": "string",
+            "description": "Template ID",
+            "readOnly": true
+          },
+          "headers": {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersionHeadersProperty"
+          }
+        },
         "description": "Active version information",
-        "readOnly": true
+        "readOnly": true,
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Active version information",
+          "readOnly": true
+        }
       },
       "GithubComMailgunTempleHttpapiCreateTemplateOrVersionResponseTemplate": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "name"
         ],
-        "description": "Template details"
-      },
-      "GithubComMailgunTempleHttpapiGetTemplateOrVersionResponseTemplate": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "object",
+          "null"
         ],
-        "description": "Template details"
-      },
-      "GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the template"
           },
-          {
-            "type": "null"
+          "description": {
+            "type": "string",
+            "description": "Description of the template"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Creation date in RFC822 format",
+            "readOnly": true
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "Indicate who created the template"
+          },
+          "id": {
+            "type": "string",
+            "description": "Template ID",
+            "readOnly": true
+          },
+          "domain": {
+            "type": "string",
+            "description": "Domain of the template"
+          },
+          "version": {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
+          },
+          "versions": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+            },
+            "description": "List of template\u0027s versions",
+            "readOnly": true
           }
-        ],
-        "description": "Template details"
+        },
+        "description": "Template details",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Template details"
+        }
       },
       "GithubComMailgunTempleHttpapiGetVersionsPageResponsePaging": {
         "required": [
@@ -34908,38 +34859,165 @@
         "description": "Pagination details"
       },
       "GithubComMailgunTempleHttpapiVersionCopyResponseVersion": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "tag",
+          "engine",
+          "mjml",
+          "createdAt",
+          "comment",
+          "active",
+          "id"
         ],
-        "description": "Created version details"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "tag": {
+            "type": "string",
+            "description": "Tag of the version. Must be unique to the template"
+          },
+          "template": {
+            "type": "string",
+            "description": "Template content"
+          },
+          "engine": {
+            "type": "string",
+            "description": "Rendering engine"
+          },
+          "mjml": {
+            "type": "string",
+            "description": "Template source"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Creation date in RFC822 format",
+            "readOnly": true
+          },
+          "comment": {
+            "type": "string",
+            "description": "Comment related to the version"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "If this flag is true"
+          },
+          "id": {
+            "type": "string",
+            "description": "Template ID",
+            "readOnly": true
+          },
+          "headers": {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersionHeadersProperty"
+          }
+        },
+        "description": "Created version details",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Created version details"
+        }
       },
       "GithubComMailgunTempleHttpapiVersionCopyResponseTemplate": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "tag",
+          "engine",
+          "mjml",
+          "createdAt",
+          "comment",
+          "active",
+          "id"
         ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "tag": {
+            "type": "string",
+            "description": "Tag of the version. Must be unique to the template"
+          },
+          "template": {
+            "type": "string",
+            "description": "Template content"
+          },
+          "engine": {
+            "type": "string",
+            "description": "Rendering engine"
+          },
+          "mjml": {
+            "type": "string",
+            "description": "Template source"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Creation date in RFC822 format",
+            "readOnly": true
+          },
+          "comment": {
+            "type": "string",
+            "description": "Comment related to the version"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "If this flag is true"
+          },
+          "id": {
+            "type": "string",
+            "description": "Template ID",
+            "readOnly": true
+          },
+          "headers": {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersionHeadersProperty"
+          }
+        },
         "description": "Deprecated: Use \u0027version\u0027 field",
-        "deprecated": true
+        "deprecated": true,
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Deprecated: Use \u0027version\u0027 field",
+          "deprecated": true
+        }
       },
       "GithubComMailgunTempleHttpapiTemplateUpdateVersion": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
-          },
-          {
-            "type": "null"
-          }
+        "required": [
+          "tag"
         ],
-        "description": "Template version details"
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "tag": {
+            "type": "string",
+            "description": "Tag of the version. Must be unique to the template"
+          }
+        },
+        "description": "Template version details",
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiVersionUpdate"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Template version details"
+        }
       },
       "GithubComMailgunTempleHttpapiUpdateOrDeleteTemplateOrVersionResponseTemplate": {
         "required": [
@@ -35203,14 +35281,137 @@
         }
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsResponseItemsItem": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItem"
+        "required": [
+          "metrics"
+        ],
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "account.id": {
+            "type": [
+              "null",
+              "string"
+            ]
           },
-          {
-            "type": "null"
+          "account.name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "entity-name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recipient-provider": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recipient-domain": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "domain.name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "envelope.i-ip-pool-id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "envelope.i-ip-pool-name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "envelope.sending-ip": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timestamp": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tags": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Concatenated tags, e.g. \u0027tag1, tag2\u0027"
+          },
+          "tag": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "criticality": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "severity": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "category": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "group-id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sample-text": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "explanation": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "metrics": {
+            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"
           }
-        ]
+        },
+        "x-client-original-nullable-union": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItem"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
       "GithubComMailgunBounceClassificationInternalApiMetricsRequestStart": {
         "type": "object",
@@ -35283,20 +35484,6 @@
         },
         "description": "Attributes used for pagination and sorting."
       },
-      "GithubComMailgunScaffoldHttpapiResponseAdditionalProperties": {
-        "type": "object"
-      },
-      "GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignments": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
-        },
-        "description": "assignment metadata keyed by IP address"
-      },
-      "GithubComMailgunTerminatorHttpapiStatusResponseStatus": {
-        "type": "object",
-        "description": "Status of certificate. Either \u0027expired\u0027 \u0027processing\u0027 \u0027active\u0027 or \u0027error\u0027"
-      },
       "EventResponseFlags": {
         "type": "object",
         "properties": {
@@ -35332,10 +35519,6 @@
             "type": "string"
           }
         }
-      },
-      "EventResponseUserVariables": {
-        "type": "object",
-        "description": "Variables included in the email"
       },
       "EventResponseStorage": {
         "type": "object",
@@ -35464,24 +35647,6 @@
           }
         }
       },
-      "GithubComMailgunScoutApiTagAggregateResponseProvider": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScoutApiTagAggregateResponseProviderAdditionalPropertiesProperty"
-        }
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseCountry": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScoutApiTagAggregateResponseCountryAdditionalPropertiesProperty"
-        }
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseDevice": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScoutApiTagAggregateResponseDeviceAdditionalPropertiesProperty"
-        }
-      },
       "GithubComMailgunScoutModelStatsFailedTemporary": {
         "required": [
           "espblock",
@@ -35546,45 +35711,6 @@
           }
         }
       },
-      "GithubComMailgunScoutApiProvidersAggregateResponseProviders": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScoutApiProvidersAggregateResponseProvidersAdditionalPropertiesProperty"
-        }
-      },
-      "GithubComMailgunScoutApiDevicesAggregateResponseDevices": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScoutApiDevicesAggregateResponseDevicesAdditionalPropertiesProperty"
-        }
-      },
-      "GithubComMailgunScoutApiCountriesAggregateResponseCountries": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunScoutApiCountriesAggregateResponseCountriesAdditionalPropertiesProperty"
-        }
-      },
-      "GithubComMailgunLogsApiPkgApiModelAggregatesMetrics": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int64"
-        }
-      },
-      "GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIds": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
-        },
-        "description": "List of disabled Slack channels."
-      },
-      "ListMemberRequestVars": {
-        "type": "object"
-      },
-      "ListMemberResponseVars": {
-        "type": "object",
-        "description": "A JSON-encoded dictionary string with arbitrary parameters, e.g. {\u0022gender\u0022:\u0022female\u0022,\u0022age\u0022:27}"
-      },
       "PaginateMailingListResponsePaging": {
         "type": "object",
         "properties": {
@@ -35623,23 +35749,6 @@
           }
         }
       },
-      "GithubComMailgunTempleModelVersionHeaders": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "Key value JSON object of headers to be stored with the template. Where key is the header name and value is the header value. The header names \u0060From\u0060"
-      },
-      "GithubComMailgunScaffoldHttpapiResponseWithStatusResponse": {
-        "type": "object"
-      },
-      "GithubComMailgunCerberusCredentialsCreateCredsRespCredentials": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "Credential username/password values (when generated by Mailgun)"
-      },
       "GithubComMailgunUsersApiUserResponseEmailDetails": {
         "type": "object",
         "properties": {
@@ -35660,10 +35769,6 @@
           }
         }
       },
-      "GithubComMailgunUsersApiUserResponseMetadata": {
-        "type": "object",
-        "description": "any optional metadata for the user"
-      },
       "GithubComMailgunUsersApiUserResponsePreferences": {
         "type": "object",
         "properties": {
@@ -35679,52 +35784,6 @@
             "type": "string",
             "description": "preferred programming language"
           }
-        }
-      },
-      "GithubComMailgunUsersApiUserAuthResponsePriorDetails": {
-        "type": "object",
-        "description": "Details that may be needed for an auth method"
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseProviderAdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseCountryAdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseDeviceAdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiProvidersAggregateResponseProvidersAdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiDevicesAggregateResponseDevicesAdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiCountriesAggregateResponseCountriesAdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
         }
       },
       "GithubComMailgunUsersApiUserResponseEmailDetailsParts": {
@@ -35743,54 +35802,6 @@
             "description": "email display name, if applicable"
           }
         }
-      },
-      "PostV3DomainNameMessages401Response": {
-        "type": "string"
-      },
-      "PostV3DomainNameMessagesMime401Response": {
-        "type": "string"
-      },
-      "GetV3IpsRequestNew200Response": {
-        "type": "string"
-      },
-      "PostV3IpsRequestNew200Response": {
-        "type": "string"
-      },
-      "PostV3DynamicPoolsPoolNameIp200Response": {
-        "type": "string"
-      },
-      "PatchV3DynamicPoolsPoolName200Response": {
-        "type": "string"
-      },
-      "PostV3IpPools200Response": {
-        "type": "string"
-      },
-      "GetV3IpPoolsPoolId200Response": {
-        "type": "string"
-      },
-      "DeleteV3IpPoolsPoolId200Response": {
-        "type": "string"
-      },
-      "PatchV3IpPoolsPoolId200Response": {
-        "type": "string"
-      },
-      "GetV3IpPoolsPoolIdDomains200Response": {
-        "type": "string"
-      },
-      "PutV3IpPoolsPoolIdIpsIp200Response": {
-        "type": "string"
-      },
-      "DeleteV3IpPoolsPoolIdIpsIp200Response": {
-        "type": "string"
-      },
-      "PostV3IpPoolsPoolIdIpsJson200Response": {
-        "type": "string"
-      },
-      "PutV3IpPoolsPoolIdDelegate200Response": {
-        "type": "string"
-      },
-      "DeleteV3IpPoolsPoolIdDelegate200Response": {
-        "type": "string"
       },
       "GetV3DomainNameEvents200Response": {
         "type": "object",
@@ -36265,14 +36276,14 @@
           "webhooks_redact_pii": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           },
           "ai_insights": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           }
         }
       },
@@ -36282,38 +36293,34 @@
           "email_preview": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           },
           "inbox_placement": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           },
           "sending": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           },
           "validations": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           },
           "validations_bulk": {
             "type": "string",
             "description": "JSON object encoded as a string",
-            "format": "json",
-            "example": "{\u0022enabled\u0022: false}"
+            "example": "{\u0022enabled\u0022: false}",
+            "x-client-original-format": "json"
           }
         }
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
       },
       "PostV3DomainNameMessages401ResponseSchema": {
         "type": "string"
@@ -36602,16 +36609,6 @@
           }
         }
       },
-      "GithubComMailgunScaffoldHttpapiResponseAdditionalPropertiesProperty": {
-        "type": "object"
-      },
-      "GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignmentsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
-        },
-        "description": "assignment metadata keyed by IP address"
-      },
       "GithubComMailgunTerminatorHttpapiStatusResponseStatusProperty": {
         "type": "object",
         "description": "Status of certificate. Either \u0027expired\u0027 \u0027processing\u0027 \u0027active\u0027 or \u0027error\u0027"
@@ -36669,13 +36666,6 @@
       "GithubComMailgunTagsApiPkgApiModelTagLastSeen": {
         "type": "object"
       },
-      "GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIdsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
-        },
-        "description": "List of disabled Slack channels."
-      },
       "ListMemberRequestVarsProperty": {
         "type": "object"
       },
@@ -36731,48 +36721,6 @@
           "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
         },
         "description": "List of disabled Slack channels."
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseProviderAdditionalPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseCountryAdditionalPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiTagAggregateResponseDeviceAdditionalPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiProvidersAggregateResponseProvidersAdditionalPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiDevicesAggregateResponseDevicesAdditionalPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "GithubComMailgunScoutApiCountriesAggregateResponseCountriesAdditionalPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer",
-          "format": "int32"
-        }
       },
       "GetV3DomainNameEvents200ResponsePaging": {
         "type": "object",
@@ -38380,6 +38328,36 @@
             }
           ]
         }
+      },
+      "PostV3DomainNameMessages401ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostV3DomainNameMessages401ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostV3DomainNameMessages401ResponseSchema"
+        }
+      },
+      "PostV3DomainNameMessagesMime401ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostV3DomainNameMessagesMime401ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostV3DomainNameMessagesMime401ResponseSchema"
+        }
       }
     },
     "securitySchemes": {
@@ -38720,5 +38698,2091 @@
         "Users"
       ]
     }
-  ]
+  ],
+  "x-client-original-servers": [
+    {
+      "url": "https://api.mailgun.net",
+      "description": "US Mailgun"
+    },
+    {
+      "url": "https://api.eu.mailgun.net",
+      "description": "EU Mailgun"
+    }
+  ],
+  "x-client-unused-schemas": {
+    "StringType": {
+      "type": "string"
+    },
+    "GithubComMailgunDomainsClientGolangDisabled": {
+      "required": [
+        "code",
+        "note",
+        "permanently",
+        "reason"
+      ],
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Code indicating the reason for the domain being disabled"
+        },
+        "note": {
+          "type": "string",
+          "description": "Additional information about why the domain was disabled"
+        },
+        "permanently": {
+          "type": "boolean",
+          "description": "Indicates whether the domain is permanently disabled"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Additional information about why the domain was disabled"
+        },
+        "until": {
+          "type": "string",
+          "description": "Timestamp in RFC1123 format indicating when the domain will be re-enabled if the disablement is temporary"
+        }
+      }
+    },
+    "GithubComMailgunDomainsClientGolangRecord": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiWebhookResponse": {
+      "type": "object",
+      "properties": {
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of webhooks"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiWebhookUrLs": {
+      "required": [
+        "urls"
+      ],
+      "type": "object",
+      "properties": {
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of URLs"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiWebhooksResponse": {
+      "type": "object",
+      "properties": {
+        "accepted": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseAccepted"
+        },
+        "delivered": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseDelivered"
+        },
+        "opened": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseOpened"
+        },
+        "clicked": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseClicked"
+        },
+        "unsubscribed": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed"
+        },
+        "complained": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseComplained"
+        },
+        "temporary_fail": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail"
+        },
+        "permanent_fail": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiOpenSettings": {
+      "required": [
+        "active",
+        "place_at_the_top"
+      ],
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "Whether open tracking is enabled or not"
+        },
+        "place_at_the_top": {
+          "type": "boolean",
+          "description": "If the pixel should be placed at the top of the email"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiClickSettings": {
+      "required": [
+        "active"
+      ],
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "Whether click tracking is enabled or not"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiUnsubscribeSettings": {
+      "required": [
+        "active",
+        "html_footer",
+        "text_footer"
+      ],
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "Whether unsubscribe tracking is enabled or not"
+        },
+        "html_footer": {
+          "type": "string",
+          "description": "The HTML footer for the unsubscribe link"
+        },
+        "text_footer": {
+          "type": "string",
+          "description": "The text footer for the unsubscribe link"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiExceededQueueQuotaDisabledJson": {
+      "required": [
+        "until",
+        "reason"
+      ],
+      "type": "object",
+      "properties": {
+        "until": {
+          "type": "string",
+          "description": "End date in RFC-822 date format"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Cause description"
+        }
+      }
+    },
+    "GithubComMailgunDomainsHttpapiExceededQueueQuotaJson": {
+      "required": [
+        "is_disabled"
+      ],
+      "type": "object",
+      "properties": {
+        "is_disabled": {
+          "type": "boolean",
+          "description": "Flag indicating no new messages are able to be submitted"
+        },
+        "disabled": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiExceededQueueQuotaJsonDisabled"
+        }
+      }
+    },
+    "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverDoc": {
+      "required": [
+        "pool_id"
+      ],
+      "type": "object",
+      "properties": {
+        "pool_id": {
+          "type": "string",
+          "description": "the ID of the IP pool that spillover IPs are assigned to"
+        }
+      }
+    },
+    "GithubComMailgunTowerApiDomainDippSpilloverDippSpilloverRequest": {
+      "required": [
+        "pool_id"
+      ],
+      "type": "object",
+      "properties": {
+        "pool_id": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "the ID of the IP pool that spillover IPs are assigned to"
+        }
+      }
+    },
+    "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverDoc": {
+      "required": [
+        "pool_id"
+      ],
+      "type": "object",
+      "properties": {
+        "pool_id": {
+          "type": "string",
+          "description": "the ID of the IP pool that spillover IPs are assigned to"
+        }
+      }
+    },
+    "GithubComMailgunTowerApiAccountDippSpilloverDippSpilloverRequest": {
+      "required": [
+        "pool_id"
+      ],
+      "type": "object",
+      "properties": {
+        "pool_id": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "the ID of the IP pool that spillover IPs are assigned to"
+        }
+      }
+    },
+    "GithubComMailgunScaffoldHttpapiResponse": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScaffoldHttpapiResponseAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunTowerApiIpPoolsListPoolMetadata": {
+      "required": [
+        "assignments"
+      ],
+      "type": "object",
+      "properties": {
+        "assignments": {
+          "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignmentsProperty"
+        }
+      }
+    },
+    "GithubComMailgunAnalyticsClientGolangFilterPredicateGroup": {
+      "required": [
+        "AND"
+      ],
+      "type": "object",
+      "properties": {
+        "AND": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GithubComMailgunAnalyticsClientGolangFilterPredicate"
+          }
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelAccount": {
+      "type": "object",
+      "properties": {
+        "parent-id": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelDeliveryStatus": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "attempt-no": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "bounce-type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "session-seconds": {
+          "type": "number",
+          "format": "float"
+        },
+        "retry-seconds": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "enhanced-code": {
+          "type": "string"
+        },
+        "mx-host": {
+          "type": "string"
+        },
+        "certificate-verified": {
+          "type": "boolean"
+        },
+        "tls": {
+          "type": "boolean"
+        },
+        "utf8": {
+          "type": "boolean"
+        },
+        "first-delivery-attempt-seconds": {
+          "type": "number",
+          "format": "float"
+        },
+        "last-code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "last-message": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelDomain": {
+      "required": [
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelEnvelope": {
+      "type": "object",
+      "properties": {
+        "sender": {
+          "type": "string"
+        },
+        "transport": {
+          "type": "string"
+        },
+        "sending-ip": {
+          "type": "string"
+        },
+        "targets": {
+          "type": "string"
+        },
+        "i-ip-pool-id": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelStorage": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string"
+        },
+        "env": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "url": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelTemplate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "is-text": {
+          "type": "boolean"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelMessageHeaders": {
+      "type": "object",
+      "properties": {
+        "to": {
+          "type": "string"
+        },
+        "message-id": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelMessage": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelMessageHeadersComposed"
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelAttachment"
+          }
+        },
+        "recipients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "scheduled-for": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelFlags": {
+      "required": [
+        "is-authenticated",
+        "is-system-test",
+        "is-routed",
+        "is-test-mode",
+        "is-delayed-bounce",
+        "is-callback",
+        "is-webhook"
+      ],
+      "type": "object",
+      "properties": {
+        "is-authenticated": {
+          "type": "boolean"
+        },
+        "is-system-test": {
+          "type": "boolean"
+        },
+        "is-routed": {
+          "type": "boolean"
+        },
+        "is-amp": {
+          "type": "boolean"
+        },
+        "is-test-mode": {
+          "type": "boolean"
+        },
+        "is-delayed-bounce": {
+          "type": "boolean"
+        },
+        "is-callback": {
+          "type": "boolean"
+        },
+        "is-encrypted": {
+          "type": "boolean"
+        },
+        "is-webhook": {
+          "type": "boolean"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelGeoLocation": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelClientInfo": {
+      "type": "object",
+      "properties": {
+        "client-name": {
+          "type": "string"
+        },
+        "client-os": {
+          "type": "string"
+        },
+        "client-type": {
+          "type": "string"
+        },
+        "device-type": {
+          "type": "string"
+        },
+        "user-agent": {
+          "type": "string"
+        },
+        "ip": {
+          "type": "string"
+        },
+        "bot": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelRoutesMatch": {
+      "type": "object",
+      "properties": {
+        "recipient": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelRoutes": {
+      "type": "object",
+      "properties": {
+        "actions": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "expression": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "match": {
+          "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelRoutesMatchComposed"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelMailingList": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "list-id": {
+          "type": "string"
+        },
+        "sid": {
+          "type": "string"
+        }
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelFilterPredicateGroup": {
+      "required": [
+        "AND"
+      ],
+      "type": "object",
+      "properties": {
+        "AND": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GithubComMailgunLogsApiPkgApiModelFilterPredicate"
+          }
+        }
+      }
+    },
+    "GithubComMailgunTagsApiPkgApiModelCustomTime": {
+      "type": "object"
+    },
+    "GithubComMailgunThresholdsApiFilterComparator": {
+      "enum": [
+        "=",
+        "!=",
+        "contains",
+        "not contains",
+        "\u003C",
+        "\u003C=",
+        "\u003E",
+        "\u003E="
+      ],
+      "type": "string",
+      "description": "Filter Comparator",
+      "x-enumDescriptions": {
+        "=": "Equal",
+        "!=": "Not equal",
+        "contains": "Contains",
+        "not contains": "Does not contain",
+        "\u003C": "Less than",
+        "\u003C=": "Less than or equal",
+        "\u003E": "Greater than",
+        "\u003E=": "Greater than or equal"
+      },
+      "x-ms-enum": {
+        "name": "GithubComMailgunThresholdsApiFilterComparator",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "=",
+            "name": "Equal"
+          },
+          {
+            "value": "!=",
+            "name": "ExclamationEqual"
+          },
+          {
+            "value": "contains",
+            "name": "Contains"
+          },
+          {
+            "value": "not contains",
+            "name": "NotContains"
+          },
+          {
+            "value": "\u003C",
+            "name": "LessThan"
+          },
+          {
+            "value": "\u003C=",
+            "name": "LessThanOrEqual"
+          },
+          {
+            "value": "\u003E",
+            "name": "GreaterThan"
+          },
+          {
+            "value": "\u003E=",
+            "name": "GreaterThanOrEqual"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunThresholdsApiLimitMetric": {
+      "enum": [
+        "email_preview_success_count",
+        "seed_test_count"
+      ],
+      "type": "string",
+      "description": "Limit Metric",
+      "x-enumDescriptions": {
+        "email_preview_success_count": "The number of successful email previews",
+        "seed_test_count": "The number of inbox placement tests"
+      },
+      "x-ms-enum": {
+        "name": "GithubComMailgunThresholdsApiLimitMetric",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "email_preview_success_count",
+            "name": "EmailPreviewSuccessCount"
+          },
+          {
+            "value": "seed_test_count",
+            "name": "SeedTestCount"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunAlertsChannelsChannel": {
+      "enum": [
+        "email",
+        "webhook",
+        "slack"
+      ],
+      "type": "string",
+      "description": "Alert channel type.",
+      "x-enumDescriptions": {
+        "email": "email",
+        "webhook": "webhook",
+        "slack": "Slack"
+      },
+      "x-ms-enum": {
+        "name": "GithubComMailgunAlertsChannelsChannel",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "email",
+            "name": "Email"
+          },
+          {
+            "value": "webhook",
+            "name": "Webhook"
+          },
+          {
+            "value": "slack",
+            "name": "Slack"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunAlertsInternalSettingsChannelSettings": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "For webhook channel."
+        },
+        "emails": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "For email channel"
+        },
+        "channel_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "For slack channel"
+        },
+        "disabled_channel_ids": {
+          "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIdsProperty"
+        }
+      }
+    },
+    "GithubComMailgunMimeRfc822Time": {
+      "type": "object"
+    },
+    "GithubComMailgunBlackbookApiBouncesList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GithubComMailgunBlackbookModelBounce"
+      }
+    },
+    "GithubComMailgunBlackbookApiUnsubscribesList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GithubComMailgunBlackbookModelUnsubscribe"
+      }
+    },
+    "GithubComMailgunBlackbookApiComplaintsList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GithubComMailgunBlackbookModelComplaint"
+      }
+    },
+    "GithubComMailgunTempleHttpapiVersionUpdate": {
+      "required": [
+        "tag"
+      ],
+      "type": "object",
+      "properties": {
+        "tag": {
+          "type": "string",
+          "description": "Tag of the version. Must be unique to the template"
+        }
+      }
+    },
+    "GithubComMailgunTempleHttpapiTemplateUpdate": {
+      "required": [
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the template"
+        },
+        "version": {
+          "$ref": "#/components/schemas/GithubComMailgunTempleHttpapiTemplateUpdateVersion"
+        }
+      }
+    },
+    "GithubComMailgunAccountsApiFeaturesResponse": {
+      "type": "object"
+    },
+    "GithubComMailgunCerberusKeysKind": {
+      "enum": [
+        "domain",
+        "user",
+        "web"
+      ],
+      "type": "string",
+      "description": "Kind",
+      "x-enumDescriptions": {
+        "domain": "Domain-specific API key for keys with \u0027sending\u0027 role",
+        "user": "API key tied to a user role for RBAC limitations",
+        "web": "Web session API key generated for user login sessions"
+      },
+      "x-ms-enum": {
+        "name": "GithubComMailgunCerberusKeysKind",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "domain",
+            "name": "Domain"
+          },
+          {
+            "value": "user",
+            "name": "User"
+          },
+          {
+            "value": "web",
+            "name": "Web"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunCerberusKeysRole": {
+      "enum": [
+        "admin",
+        "basic",
+        "sending",
+        "developer"
+      ],
+      "type": "string",
+      "description": "Role",
+      "x-enumDescriptions": {
+        "admin": "Provides admin-level permissions on an API key",
+        "basic": "Provides basic aka analyst-level permissions on an API key",
+        "sending": "Provides domain-scoped permissions on an API key for use only with \u0027domain\u0027 kind key",
+        "developer": "Provides developer-level permissions on an API key"
+      },
+      "x-ms-enum": {
+        "name": "GithubComMailgunCerberusKeysRole",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "admin",
+            "name": "Admin"
+          },
+          {
+            "value": "basic",
+            "name": "Basic"
+          },
+          {
+            "value": "sending",
+            "name": "Sending"
+          },
+          {
+            "value": "developer",
+            "name": "Developer"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunBounceClassificationEntitiesResolution": {
+      "enum": [
+        "day",
+        "hour"
+      ],
+      "type": "string",
+      "description": "Resolution of the metrics.",
+      "x-enumDescriptions": {
+        "day": "Day",
+        "hour": "Hour"
+      },
+      "x-ms-enum": {
+        "name": "GithubComMailgunBounceClassificationEntitiesResolution",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "day",
+            "name": "Day"
+          },
+          {
+            "value": "hour",
+            "name": "Hour"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunBounceClassificationEntitiesMetricsCountsAndRates": {
+      "required": [
+        "critical_bounce_count",
+        "non_critical_bounce_count",
+        "critical_delay_count",
+        "non_critical_delay_count",
+        "classified_failures_count",
+        "delivered_smtp_count",
+        "critical_bounce_rate",
+        "non_critical_bounce_rate",
+        "critical_delay_rate",
+        "non_critical_delay_rate"
+      ],
+      "type": "object",
+      "properties": {
+        "critical_bounce_count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "non_critical_bounce_count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "critical_delay_count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "non_critical_delay_count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "classified_failures_count": {
+          "type": "integer",
+          "description": "Total bounces and delays",
+          "format": "int64"
+        },
+        "delivered_smtp_count": {
+          "type": [
+            "null",
+            "integer"
+          ],
+          "description": "null for Spam Filters",
+          "format": "int64"
+        },
+        "critical_bounce_rate": {
+          "type": [
+            "null",
+            "integer"
+          ],
+          "description": "Percentages; null for Spam Filters",
+          "format": "int64"
+        },
+        "non_critical_bounce_rate": {
+          "type": [
+            "null",
+            "integer"
+          ],
+          "description": "Percentages; null for Spam Filters",
+          "format": "int64"
+        },
+        "critical_delay_rate": {
+          "type": [
+            "null",
+            "integer"
+          ],
+          "description": "Percentages; null for Spam Filters",
+          "format": "int64"
+        },
+        "non_critical_delay_rate": {
+          "type": [
+            "null",
+            "integer"
+          ],
+          "description": "Percentages; null for Spam Filters",
+          "format": "int64"
+        }
+      }
+    },
+    "GithubComMailgunBounceClassificationEntitiesMetricsItem": {
+      "required": [
+        "metrics"
+      ],
+      "type": "object",
+      "properties": {
+        "account.id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "account.name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "entity-name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "recipient-provider": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "recipient-domain": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "domain.name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "envelope.i-ip-pool-id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "envelope.i-ip-pool-name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "envelope.sending-ip": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "timestamp": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "tags": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Concatenated tags, e.g. \u0027tag1, tag2\u0027"
+        },
+        "tag": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "criticality": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "severity": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "category": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "group-id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "sample-text": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "explanation": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "metrics": {
+          "$ref": "#/components/schemas/GithubComMailgunBounceClassificationEntitiesMetricsItemMetrics"
+        }
+      }
+    },
+    "GithubComMailgunHolsterV4ClockRfc822Time": {
+      "type": "object"
+    },
+    "GithubComMailgunBounceClassificationInternalApiFilterPredicateGroup": {
+      "required": [
+        "AND"
+      ],
+      "type": "object",
+      "properties": {
+        "AND": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GithubComMailgunBounceClassificationInternalApiFilterPredicate"
+          }
+        }
+      }
+    },
+    "GithubComMailgunBounceClassificationInternalApiPaginationReq": {
+      "type": "object",
+      "properties": {
+        "sort": {
+          "type": "string",
+          "description": "Colon-separated value indicating column name and sort direction e.g. \u0027entity-name:asc\u0027."
+        },
+        "skip": {
+          "type": "integer",
+          "description": "The number of items to skip over when satisfying the request. To get the first page of data set skip to zero. Then increment the skip by the limit for subsequent calls.",
+          "format": "int64"
+        },
+        "limit": {
+          "maximum": 50,
+          "type": "integer",
+          "description": "The maximum number of items returned in the response.",
+          "format": "int64",
+          "default": 10
+        }
+      }
+    },
+    "PostV1AnalyticsMetricsNoneRequest": {
+      "type": "string"
+    },
+    "PostV1AnalyticsUsageMetricsNoneRequest": {
+      "type": "string"
+    },
+    "GithubComMailgunDomainsHttpapiCreateDomainRespSendingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiFindDomainByNameRespReceivingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiFindDomainByNameRespSendingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiVerifyDomainResponseSendingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiVerifyDomainResponseReceivingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiDomainKeyResponseDnsRecord": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiDomainKeyListResponseItemsItem": {
+      "required": [
+        "signing_domain",
+        "selector"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "signing_domain": {
+          "type": "string"
+        },
+        "selector": {
+          "type": "string"
+        },
+        "dns_record": {
+          "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsHttpapiDomainKeyResponse"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiReassignDkimAuthorityRespSendingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiUpdateDomainRespReceivingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunDomainsHttpapiUpdateDomainRespSendingDnsRecordsItem": {
+      "required": [
+        "is_active",
+        "cached",
+        "record_type",
+        "valid",
+        "value"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "is_active": {
+          "type": "boolean",
+          "description": "Indicates whether the DNS record is currently active"
+        },
+        "cached": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of Mailguns cached values for the DNS record"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the DNS record if applicable"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority value for MX DNS records"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "Type of DNS record such as MX TXT or CNAME"
+        },
+        "valid": {
+          "type": "string",
+          "description": "Indicates whether the DNS record is valid"
+        },
+        "value": {
+          "type": "string",
+          "description": "Expected value of the DNS record"
+        }
+      },
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunDomainsClientGolangRecord"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "GithubComMailgunTempleHttpapiGetTemplateOrVersionResponseTemplate": {
+      "required": [
+        "name"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the template"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the template"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation date in RFC822 format",
+          "readOnly": true
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "Indicate who created the template"
+        },
+        "id": {
+          "type": "string",
+          "description": "Template ID",
+          "readOnly": true
+        },
+        "domain": {
+          "type": "string",
+          "description": "Domain of the template"
+        },
+        "version": {
+          "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
+        },
+        "versions": {
+          "type": [
+            "null",
+            "array"
+          ],
+          "items": {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+          },
+          "description": "List of template\u0027s versions",
+          "readOnly": true
+        }
+      },
+      "description": "Template details",
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "description": "Template details"
+      }
+    },
+    "GithubComMailgunTempleHttpapiGetVersionsPageResponseTemplate": {
+      "required": [
+        "name"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the template"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the template"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation date in RFC822 format",
+          "readOnly": true
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "Indicate who created the template"
+        },
+        "id": {
+          "type": "string",
+          "description": "Template ID",
+          "readOnly": true
+        },
+        "domain": {
+          "type": "string",
+          "description": "Domain of the template"
+        },
+        "version": {
+          "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplateVersion"
+        },
+        "versions": {
+          "type": [
+            "null",
+            "array"
+          ],
+          "items": {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelVersion"
+          },
+          "description": "List of template\u0027s versions",
+          "readOnly": true
+        }
+      },
+      "description": "Template details",
+      "x-client-original-nullable-union": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GithubComMailgunTempleModelTemplate"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "description": "Template details"
+      }
+    },
+    "GithubComMailgunScaffoldHttpapiResponseAdditionalProperties": {
+      "type": "object"
+    },
+    "GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignments": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
+      },
+      "description": "assignment metadata keyed by IP address"
+    },
+    "GithubComMailgunTerminatorHttpapiStatusResponseStatus": {
+      "type": "object",
+      "description": "Status of certificate. Either \u0027expired\u0027 \u0027processing\u0027 \u0027active\u0027 or \u0027error\u0027"
+    },
+    "EventResponseUserVariables": {
+      "type": "object",
+      "description": "Variables included in the email"
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseProvider": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScoutApiTagAggregateResponseProviderAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseCountry": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScoutApiTagAggregateResponseCountryAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseDevice": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScoutApiTagAggregateResponseDeviceAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunScoutApiProvidersAggregateResponseProviders": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScoutApiProvidersAggregateResponseProvidersAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunScoutApiDevicesAggregateResponseDevices": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScoutApiDevicesAggregateResponseDevicesAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunScoutApiCountriesAggregateResponseCountries": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunScoutApiCountriesAggregateResponseCountriesAdditionalPropertiesProperty"
+      }
+    },
+    "GithubComMailgunLogsApiPkgApiModelAggregatesMetrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int64"
+      }
+    },
+    "GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIds": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
+      },
+      "description": "List of disabled Slack channels."
+    },
+    "ListMemberRequestVars": {
+      "type": "object"
+    },
+    "ListMemberResponseVars": {
+      "type": "object",
+      "description": "A JSON-encoded dictionary string with arbitrary parameters, e.g. {\u0022gender\u0022:\u0022female\u0022,\u0022age\u0022:27}"
+    },
+    "GithubComMailgunTempleModelVersionHeaders": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Key value JSON object of headers to be stored with the template. Where key is the header name and value is the header value. The header names \u0060From\u0060"
+    },
+    "GithubComMailgunScaffoldHttpapiResponseWithStatusResponse": {
+      "type": "object"
+    },
+    "GithubComMailgunCerberusCredentialsCreateCredsRespCredentials": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Credential username/password values (when generated by Mailgun)"
+    },
+    "GithubComMailgunUsersApiUserResponseMetadata": {
+      "type": "object",
+      "description": "any optional metadata for the user"
+    },
+    "GithubComMailgunUsersApiUserAuthResponsePriorDetails": {
+      "type": "object",
+      "description": "Details that may be needed for an auth method"
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseProviderAdditionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseCountryAdditionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseDeviceAdditionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiProvidersAggregateResponseProvidersAdditionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiDevicesAggregateResponseDevicesAdditionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiCountriesAggregateResponseCountriesAdditionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "PostV3DomainNameMessages401Response": {
+      "type": "string"
+    },
+    "PostV3DomainNameMessagesMime401Response": {
+      "type": "string"
+    },
+    "GetV3IpsRequestNew200Response": {
+      "type": "string"
+    },
+    "PostV3IpsRequestNew200Response": {
+      "type": "string"
+    },
+    "PostV3DynamicPoolsPoolNameIp200Response": {
+      "type": "string"
+    },
+    "PatchV3DynamicPoolsPoolName200Response": {
+      "type": "string"
+    },
+    "PostV3IpPools200Response": {
+      "type": "string"
+    },
+    "GetV3IpPoolsPoolId200Response": {
+      "type": "string"
+    },
+    "DeleteV3IpPoolsPoolId200Response": {
+      "type": "string"
+    },
+    "PatchV3IpPoolsPoolId200Response": {
+      "type": "string"
+    },
+    "GetV3IpPoolsPoolIdDomains200Response": {
+      "type": "string"
+    },
+    "PutV3IpPoolsPoolIdIpsIp200Response": {
+      "type": "string"
+    },
+    "DeleteV3IpPoolsPoolIdIpsIp200Response": {
+      "type": "string"
+    },
+    "PostV3IpPoolsPoolIdIpsJson200Response": {
+      "type": "string"
+    },
+    "PutV3IpPoolsPoolIdDelegate200Response": {
+      "type": "string"
+    },
+    "DeleteV3IpPoolsPoolIdDelegate200Response": {
+      "type": "string"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "GithubComMailgunScaffoldHttpapiResponseAdditionalPropertiesProperty": {
+      "type": "object"
+    },
+    "GithubComMailgunTowerApiIpPoolsListPoolMetadataAssignmentsProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunTowerApiIpPoolsListIpAssignment"
+      },
+      "description": "assignment metadata keyed by IP address"
+    },
+    "GithubComMailgunAlertsInternalSettingsChannelSettingsDisabledChannelIdsProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GithubComMailgunAlertsInternalSettingsDisabledChannel"
+      },
+      "description": "List of disabled Slack channels."
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseProviderAdditionalPropertiesProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseCountryAdditionalPropertiesProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiTagAggregateResponseDeviceAdditionalPropertiesProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiProvidersAggregateResponseProvidersAdditionalPropertiesProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiDevicesAggregateResponseDevicesAdditionalPropertiesProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "GithubComMailgunScoutApiCountriesAggregateResponseCountriesAdditionalPropertiesProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
 }

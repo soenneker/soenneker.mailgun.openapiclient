@@ -39,84 +39,84 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>Accepted webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; AdditionalData?.Remove("accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueAccepted = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted? Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; AdditionalData?.Remove("accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted? _explicitNullValueAccepted = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; AdditionalData?.Remove("accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueAccepted = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted Accepted { get => _explicitNullValueAccepted; set { _explicitNullValueAccepted = value; AdditionalData?.Remove("accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted"); else _explicitNullProperties?.Remove("accepted"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted _explicitNullValueAccepted = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Clicked webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; AdditionalData?.Remove("clicked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueClicked = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked? Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; AdditionalData?.Remove("clicked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked? _explicitNullValueClicked = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; AdditionalData?.Remove("clicked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueClicked = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; AdditionalData?.Remove("clicked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked _explicitNullValueClicked = default!;
 #endif
         /// <summary>Complained webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? Complained { get => _explicitNullValueComplained; set { _explicitNullValueComplained = value; AdditionalData?.Remove("complained"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complained"); else _explicitNullProperties?.Remove("complained"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueComplained = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained? Complained { get => _explicitNullValueComplained; set { _explicitNullValueComplained = value; AdditionalData?.Remove("complained"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complained"); else _explicitNullProperties?.Remove("complained"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained? _explicitNullValueComplained = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs Complained { get => _explicitNullValueComplained; set { _explicitNullValueComplained = value; AdditionalData?.Remove("complained"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complained"); else _explicitNullProperties?.Remove("complained"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueComplained = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained Complained { get => _explicitNullValueComplained; set { _explicitNullValueComplained = value; AdditionalData?.Remove("complained"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complained"); else _explicitNullProperties?.Remove("complained"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained _explicitNullValueComplained = default!;
 #endif
         /// <summary>Delivered webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? Delivered { get => _explicitNullValueDelivered; set { _explicitNullValueDelivered = value; AdditionalData?.Remove("delivered"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered"); else _explicitNullProperties?.Remove("delivered"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueDelivered = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered? Delivered { get => _explicitNullValueDelivered; set { _explicitNullValueDelivered = value; AdditionalData?.Remove("delivered"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered"); else _explicitNullProperties?.Remove("delivered"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered? _explicitNullValueDelivered = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs Delivered { get => _explicitNullValueDelivered; set { _explicitNullValueDelivered = value; AdditionalData?.Remove("delivered"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered"); else _explicitNullProperties?.Remove("delivered"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueDelivered = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered Delivered { get => _explicitNullValueDelivered; set { _explicitNullValueDelivered = value; AdditionalData?.Remove("delivered"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered"); else _explicitNullProperties?.Remove("delivered"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered _explicitNullValueDelivered = default!;
 #endif
         /// <summary>Opened webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; AdditionalData?.Remove("opened"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueOpened = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened? Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; AdditionalData?.Remove("opened"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened? _explicitNullValueOpened = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; AdditionalData?.Remove("opened"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueOpened = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; AdditionalData?.Remove("opened"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened _explicitNullValueOpened = default!;
 #endif
         /// <summary>Permanent fail webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? PermanentFail { get => _explicitNullValuePermanentFail; set { _explicitNullValuePermanentFail = value; AdditionalData?.Remove("permanent_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permanent_fail"); else _explicitNullProperties?.Remove("permanent_fail"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValuePermanentFail = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail? PermanentFail { get => _explicitNullValuePermanentFail; set { _explicitNullValuePermanentFail = value; AdditionalData?.Remove("permanent_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permanent_fail"); else _explicitNullProperties?.Remove("permanent_fail"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail? _explicitNullValuePermanentFail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs PermanentFail { get => _explicitNullValuePermanentFail; set { _explicitNullValuePermanentFail = value; AdditionalData?.Remove("permanent_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permanent_fail"); else _explicitNullProperties?.Remove("permanent_fail"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValuePermanentFail = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail PermanentFail { get => _explicitNullValuePermanentFail; set { _explicitNullValuePermanentFail = value; AdditionalData?.Remove("permanent_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permanent_fail"); else _explicitNullProperties?.Remove("permanent_fail"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail _explicitNullValuePermanentFail = default!;
 #endif
         /// <summary>Temporary fail webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? TemporaryFail { get => _explicitNullValueTemporaryFail; set { _explicitNullValueTemporaryFail = value; AdditionalData?.Remove("temporary_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary_fail"); else _explicitNullProperties?.Remove("temporary_fail"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueTemporaryFail = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail? TemporaryFail { get => _explicitNullValueTemporaryFail; set { _explicitNullValueTemporaryFail = value; AdditionalData?.Remove("temporary_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary_fail"); else _explicitNullProperties?.Remove("temporary_fail"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail? _explicitNullValueTemporaryFail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs TemporaryFail { get => _explicitNullValueTemporaryFail; set { _explicitNullValueTemporaryFail = value; AdditionalData?.Remove("temporary_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary_fail"); else _explicitNullProperties?.Remove("temporary_fail"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueTemporaryFail = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail TemporaryFail { get => _explicitNullValueTemporaryFail; set { _explicitNullValueTemporaryFail = value; AdditionalData?.Remove("temporary_fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary_fail"); else _explicitNullProperties?.Remove("temporary_fail"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail _explicitNullValueTemporaryFail = default!;
 #endif
         /// <summary>Unsubscribed webhook URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? Unsubscribed { get => _explicitNullValueUnsubscribed; set { _explicitNullValueUnsubscribed = value; AdditionalData?.Remove("unsubscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribed"); else _explicitNullProperties?.Remove("unsubscribed"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs? _explicitNullValueUnsubscribed = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed? Unsubscribed { get => _explicitNullValueUnsubscribed; set { _explicitNullValueUnsubscribed = value; AdditionalData?.Remove("unsubscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribed"); else _explicitNullProperties?.Remove("unsubscribed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed? _explicitNullValueUnsubscribed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs Unsubscribed { get => _explicitNullValueUnsubscribed; set { _explicitNullValueUnsubscribed = value; AdditionalData?.Remove("unsubscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribed"); else _explicitNullProperties?.Remove("unsubscribed"); } }
-        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs _explicitNullValueUnsubscribed = default!;
+        public global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed Unsubscribed { get => _explicitNullValueUnsubscribed; set { _explicitNullValueUnsubscribed = value; AdditionalData?.Remove("unsubscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribed"); else _explicitNullProperties?.Remove("unsubscribed"); } }
+        private global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed _explicitNullValueUnsubscribed = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiGetAllDomainWebhooksRespWebhooks"/> and sets the default values.
@@ -143,14 +143,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accepted", n => { Accepted = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "clicked", n => { Clicked = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "complained", n => { Complained = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "delivered", n => { Delivered = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "opened", n => { Opened = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "permanent_fail", n => { PermanentFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "temporary_fail", n => { TemporaryFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
-                { "unsubscribed", n => { Unsubscribed = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs.CreateFromDiscriminatorValue); } },
+                { "accepted", n => { Accepted = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted.CreateFromDiscriminatorValue); } },
+                { "clicked", n => { Clicked = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked.CreateFromDiscriminatorValue); } },
+                { "complained", n => { Complained = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained.CreateFromDiscriminatorValue); } },
+                { "delivered", n => { Delivered = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered.CreateFromDiscriminatorValue); } },
+                { "opened", n => { Opened = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened.CreateFromDiscriminatorValue); } },
+                { "permanent_fail", n => { PermanentFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail.CreateFromDiscriminatorValue); } },
+                { "temporary_fail", n => { TemporaryFail = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail.CreateFromDiscriminatorValue); } },
+                { "unsubscribed", n => { Unsubscribed = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -160,14 +160,14 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("accepted", Accepted);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("clicked", Clicked);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("complained", Complained);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("delivered", Delivered);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("opened", Opened);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("permanent_fail", PermanentFail);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("temporary_fail", TemporaryFail);
-            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhookUrLs>("unsubscribed", Unsubscribed);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseAccepted>("accepted", Accepted);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseClicked>("clicked", Clicked);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseComplained>("complained", Complained);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseDelivered>("delivered", Delivered);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseOpened>("opened", Opened);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponsePermanentFail>("permanent_fail", PermanentFail);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseTemporaryFail>("temporary_fail", TemporaryFail);
+            writer.WriteObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiWebhooksResponseUnsubscribed>("unsubscribed", Unsubscribed);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -41,6 +41,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.PostV3DomainNameMessagesMime401ResponseSchemaError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,6 +58,7 @@ namespace Soenneker.Mailgun.OpenApiClient.V3.Item.MessagesMime
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Mailgun.OpenApiClient.Models.PostV3DomainNameMessagesMime401ResponseSchemaError.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunInfluxHttpapiGetMessageResponseNotFound.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },

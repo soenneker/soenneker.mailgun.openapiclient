@@ -43,12 +43,12 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <summary>The sending_dns_records property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>? SendingDnsRecords { get => _explicitNullValueSendingDnsRecords; set { _explicitNullValueSendingDnsRecords = value; AdditionalData?.Remove("sending_dns_records"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sending_dns_records"); else _explicitNullProperties?.Remove("sending_dns_records"); } }
-        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>? _explicitNullValueSendingDnsRecords = default!;
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem>? SendingDnsRecords { get => _explicitNullValueSendingDnsRecords; set { _explicitNullValueSendingDnsRecords = value; AdditionalData?.Remove("sending_dns_records"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sending_dns_records"); else _explicitNullProperties?.Remove("sending_dns_records"); } }
+        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem>? _explicitNullValueSendingDnsRecords = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord> SendingDnsRecords { get => _explicitNullValueSendingDnsRecords; set { _explicitNullValueSendingDnsRecords = value; AdditionalData?.Remove("sending_dns_records"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sending_dns_records"); else _explicitNullProperties?.Remove("sending_dns_records"); } }
-        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord> _explicitNullValueSendingDnsRecords = default!;
+        public List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem> SendingDnsRecords { get => _explicitNullValueSendingDnsRecords; set { _explicitNullValueSendingDnsRecords = value; AdditionalData?.Remove("sending_dns_records"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sending_dns_records"); else _explicitNullProperties?.Remove("sending_dns_records"); } }
+        private List<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem> _explicitNullValueSendingDnsRecords = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiReassignDkimAuthorityResp"/> and sets the default values.
@@ -77,7 +77,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             {
                 { "changed", n => { Changed = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "sending_dns_records", n => { SendingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sending_dns_records", n => { SendingDnsRecords = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("changed", Changed);
             writer.WriteStringValue("message", Message);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsClientGolangRecord>("sending_dns_records", SendingDnsRecords);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunDomainsHttpapiCreateDomainRespReceivingDnsRecordsItem>("sending_dns_records", SendingDnsRecords);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
