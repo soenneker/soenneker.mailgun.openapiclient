@@ -19,6 +19,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("ai_insights") is null) { _explicitNullValueAiInsights = default!; _explicitNullProperties?.Remove("ai_insights"); }
             else if (parseNode.GetChildNode("ai_insights") is { } nullNodeAiInsights && nullNodeAiInsights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiInsights = null;
+            if (parseNode.GetChildNode("spam_content_check_ai_analysis") is null) { _explicitNullValueSpamContentCheckAiAnalysis = default!; _explicitNullProperties?.Remove("spam_content_check_ai_analysis"); }
+            else if (parseNode.GetChildNode("spam_content_check_ai_analysis") is { } nullNodeSpamContentCheckAiAnalysis && nullNodeSpamContentCheckAiAnalysis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpamContentCheckAiAnalysis = null;
             if (parseNode.GetChildNode("webhooks_redact_pii") is null) { _explicitNullValueWebhooksRedactPii = default!; _explicitNullProperties?.Remove("webhooks_redact_pii"); }
             else if (parseNode.GetChildNode("webhooks_redact_pii") is { } nullNodeWebhooksRedactPii && nullNodeWebhooksRedactPii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksRedactPii = null;
         }
@@ -34,6 +36,16 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
 #else
         public string AiInsights { get => _explicitNullValueAiInsights; set { _explicitNullValueAiInsights = value; AdditionalData?.Remove("ai_insights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_insights"); else _explicitNullProperties?.Remove("ai_insights"); } }
         private string _explicitNullValueAiInsights = default!;
+#endif
+        /// <summary>JSON object encoded as a string</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SpamContentCheckAiAnalysis { get => _explicitNullValueSpamContentCheckAiAnalysis; set { _explicitNullValueSpamContentCheckAiAnalysis = value; AdditionalData?.Remove("spam_content_check_ai_analysis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_content_check_ai_analysis"); else _explicitNullProperties?.Remove("spam_content_check_ai_analysis"); } }
+        private string? _explicitNullValueSpamContentCheckAiAnalysis = default!;
+#nullable restore
+#else
+        public string SpamContentCheckAiAnalysis { get => _explicitNullValueSpamContentCheckAiAnalysis; set { _explicitNullValueSpamContentCheckAiAnalysis = value; AdditionalData?.Remove("spam_content_check_ai_analysis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_content_check_ai_analysis"); else _explicitNullProperties?.Remove("spam_content_check_ai_analysis"); } }
+        private string _explicitNullValueSpamContentCheckAiAnalysis = default!;
 #endif
         /// <summary>JSON object encoded as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,6 +83,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ai_insights", n => { AiInsights = n.GetStringValue(); } },
+                { "spam_content_check_ai_analysis", n => { SpamContentCheckAiAnalysis = n.GetStringValue(); } },
                 { "webhooks_redact_pii", n => { WebhooksRedactPii = n.GetStringValue(); } },
             };
         }
@@ -82,6 +95,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ai_insights", AiInsights);
+            writer.WriteStringValue("spam_content_check_ai_analysis", SpamContentCheckAiAnalysis);
             writer.WriteStringValue("webhooks_redact_pii", WebhooksRedactPii);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

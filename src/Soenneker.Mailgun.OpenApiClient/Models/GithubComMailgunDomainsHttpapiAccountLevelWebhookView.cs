@@ -23,6 +23,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
             if (parseNode.GetChildNode("event_types") is null) { _explicitNullValueEventTypes = default!; _explicitNullProperties?.Remove("event_types"); }
             else if (parseNode.GetChildNode("event_types") is { } nullNodeEventTypes && nullNodeEventTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTypes = null;
+            if (parseNode.GetChildNode("exclude_subaccounts") is null) { _explicitNullValueExcludeSubaccounts = default!; _explicitNullProperties?.Remove("exclude_subaccounts"); }
+            else if (parseNode.GetChildNode("exclude_subaccounts") is { } nullNodeExcludeSubaccounts && nullNodeExcludeSubaccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeSubaccounts = null;
             if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
             else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
             if (parseNode.GetChildNode("webhook_id") is null) { _explicitNullValueWebhookId = default!; _explicitNullProperties?.Remove("webhook_id"); }
@@ -54,6 +56,9 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public List<string> EventTypes { get => _explicitNullValueEventTypes; set { _explicitNullValueEventTypes = value; AdditionalData?.Remove("event_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_types"); else _explicitNullProperties?.Remove("event_types"); } }
         private List<string> _explicitNullValueEventTypes = default!;
 #endif
+        /// <summary>If true, the webhook applies only to domains on this account and not to domains on its subaccounts</summary>
+        public bool? ExcludeSubaccounts { get => _explicitNullValueExcludeSubaccounts; set { _explicitNullValueExcludeSubaccounts = value; AdditionalData?.Remove("exclude_subaccounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude_subaccounts"); else _explicitNullProperties?.Remove("exclude_subaccounts"); } }
+        private bool? _explicitNullValueExcludeSubaccounts = default!;
         /// <summary>The endpoint URL where webhook events are delivered</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,6 +107,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "event_types", n => { EventTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "exclude_subaccounts", n => { ExcludeSubaccounts = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "webhook_id", n => { WebhookId = n.GetStringValue(); } },
             };
@@ -116,6 +122,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("event_types", EventTypes);
+            writer.WriteBoolValue("exclude_subaccounts", ExcludeSubaccounts);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("webhook_id", WebhookId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -3489,7 +3489,8 @@
                             "opened",
                             "clicked"
                           ],
-                          "created_at": "2026-02-16T19:06:01Z"
+                          "created_at": "2026-02-16T19:06:01Z",
+                          "exclude_subaccounts": true
                         }
                       ]
                     }
@@ -21026,6 +21027,12 @@
                     "format": "json",
                     "description": "JSON object encoded as a string",
                     "example": "{\"enabled\": false}"
+                  },
+                  "spam_content_check_ai_analysis": {
+                    "type": "string",
+                    "format": "json",
+                    "description": "JSON object encoded as a string",
+                    "example": "{\"enabled\": false}"
                   }
                 }
               },
@@ -21034,6 +21041,9 @@
                   "contentType": "application/json"
                 },
                 "ai_insights": {
+                  "contentType": "application/json"
+                },
+                "spam_content_check_ai_analysis": {
                   "contentType": "application/json"
                 }
               }
@@ -22449,6 +22459,23 @@
                 }
               }
             }
+          },
+          "403": {
+            "description": "A 403 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/github.com-mailgun-scaffold-httpapi-GenericResponse"
+                },
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "message": "public key regeneration is not available in this region; regenerate it from a global region"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "security": [
@@ -22511,7 +22538,8 @@
                           "mailbox": "someone@example.com",
                           "login": "someone@example.com",
                           "created_at": "Wed, 08 Mar 2023 23:34:57 +0000",
-                          "size_bytes": null
+                          "size_bytes": null,
+                          "is_disabled": false
                         }
                       ],
                       "total_count": 1
@@ -25973,6 +26001,10 @@
           "url": {
             "type": "string",
             "description": "URL for webhook to be sent to"
+          },
+          "exclude_subaccounts": {
+            "type": "boolean",
+            "description": "If true, the webhook applies only to domains on this account and not to domains on its subaccounts"
           }
         },
         "required": [
@@ -26006,6 +26038,10 @@
             "type": "string",
             "format": "date-time",
             "description": "Timestamp indicating when the webhook was created in RFC3339 format"
+          },
+          "exclude_subaccounts": {
+            "type": "boolean",
+            "description": "If true, the webhook applies only to domains on this account and not to domains on its subaccounts"
           }
         },
         "required": [
@@ -26064,6 +26100,10 @@
           "url": {
             "type": "string",
             "description": "URL for webhook to be sent to"
+          },
+          "exclude_subaccounts": {
+            "type": "boolean",
+            "description": "If true, the webhook applies only to domains on this account and not to domains on its subaccounts"
           }
         },
         "required": [
@@ -33424,13 +33464,20 @@
                 "type": "null"
               }
             ]
+          },
+          "is_disabled": {
+            "type": "boolean"
+          },
+          "disabled_reason": {
+            "type": "string"
           }
         },
         "required": [
           "mailbox",
           "login",
           "created_at",
-          "size_bytes"
+          "size_bytes",
+          "is_disabled"
         ]
       },
       "github.com-mailgun-cerberus-credentials-ListCredsResp": {
@@ -34416,7 +34463,7 @@
       "basicAuth": {
         "type": "http",
         "scheme": "basic",
-        "description": "HTTP Basic auth using api:YOUR_API_KEY. See [documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/authentication/)"
+        "description": "HTTP Basic auth using api:YOUR_API_KEY. See [documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/mg-auth)"
       }
     }
   },

@@ -19,6 +19,10 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
             else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("disabled_reason") is null) { _explicitNullValueDisabledReason = default!; _explicitNullProperties?.Remove("disabled_reason"); }
+            else if (parseNode.GetChildNode("disabled_reason") is { } nullNodeDisabledReason && nullNodeDisabledReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisabledReason = null;
+            if (parseNode.GetChildNode("is_disabled") is null) { _explicitNullValueIsDisabled = default!; _explicitNullProperties?.Remove("is_disabled"); }
+            else if (parseNode.GetChildNode("is_disabled") is { } nullNodeIsDisabled && nullNodeIsDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDisabled = null;
             if (parseNode.GetChildNode("login") is null) { _explicitNullValueLogin = default!; _explicitNullProperties?.Remove("login"); }
             else if (parseNode.GetChildNode("login") is { } nullNodeLogin && nullNodeLogin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Login = null;
             if (parseNode.GetChildNode("mailbox") is null) { _explicitNullValueMailbox = default!; _explicitNullProperties?.Remove("mailbox"); }
@@ -39,6 +43,19 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private string _explicitNullValueCreatedAt = default!;
 #endif
+        /// <summary>The disabled_reason property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DisabledReason { get => _explicitNullValueDisabledReason; set { _explicitNullValueDisabledReason = value; AdditionalData?.Remove("disabled_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_reason"); else _explicitNullProperties?.Remove("disabled_reason"); } }
+        private string? _explicitNullValueDisabledReason = default!;
+#nullable restore
+#else
+        public string DisabledReason { get => _explicitNullValueDisabledReason; set { _explicitNullValueDisabledReason = value; AdditionalData?.Remove("disabled_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_reason"); else _explicitNullProperties?.Remove("disabled_reason"); } }
+        private string _explicitNullValueDisabledReason = default!;
+#endif
+        /// <summary>The is_disabled property</summary>
+        public bool? IsDisabled { get => _explicitNullValueIsDisabled; set { _explicitNullValueIsDisabled = value; AdditionalData?.Remove("is_disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_disabled"); else _explicitNullProperties?.Remove("is_disabled"); } }
+        private bool? _explicitNullValueIsDisabled = default!;
         /// <summary>The email address-style username associated with this credential</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,6 +112,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
+                { "disabled_reason", n => { DisabledReason = n.GetStringValue(); } },
+                { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
                 { "login", n => { Login = n.GetStringValue(); } },
                 { "mailbox", n => { Mailbox = n.GetStringValue(); } },
                 { "size_bytes", n => { SizeBytes = n.GetStringValue(); } },
@@ -108,6 +127,8 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("created_at", CreatedAt);
+            writer.WriteStringValue("disabled_reason", DisabledReason);
+            writer.WriteBoolValue("is_disabled", IsDisabled);
             writer.WriteStringValue("login", Login);
             writer.WriteStringValue("mailbox", Mailbox);
             writer.WriteStringValue("size_bytes", SizeBytes);
