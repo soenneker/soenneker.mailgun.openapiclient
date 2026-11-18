@@ -85,7 +85,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders>(global::Soenneker.Mailgun.OpenApiClient.Models.MessageObjectHeaders.CreateFromDiscriminatorValue); } },

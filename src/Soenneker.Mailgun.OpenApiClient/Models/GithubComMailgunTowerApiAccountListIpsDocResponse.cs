@@ -85,7 +85,7 @@ namespace Soenneker.Mailgun.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "assignable_to_pools", n => { AssignableToPools = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsDetailsDocResponse>(global::Soenneker.Mailgun.OpenApiClient.Models.GithubComMailgunTowerApiAccountListIpsDetailsDocResponse.CreateFromDiscriminatorValue)?.AsList(); } },
